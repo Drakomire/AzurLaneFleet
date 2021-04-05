@@ -371,7 +371,8 @@ function shipDisplay() {
             }
         }
     });
-    hideShipInFleet();
+    //I prefer to allow duplicate ships
+    // hideShipInFleet();
 }
 
 function hideShipInFleet() {
