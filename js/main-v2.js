@@ -402,7 +402,6 @@ function isShipSelect(nation, type, rarity, retro, name) {
 
     let lang = shipSelect.lang;
     let s = search
-    console.log(lang)
     //Check if the ship is in the search
     //Handle certain non-english cahracters for ease of use
     getMatch = (name) => {
