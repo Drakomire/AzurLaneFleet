@@ -472,6 +472,10 @@ function isShipSelect(nation, type, rarity, retro, name) {
 }
 
 function setCurrent(item) {
+    //Clear the search bar
+    document.getElementById("ship search bar").value = "";
+    updateSearch();
+
     let pos = item.name;
     [c_fleet, c_side, c_pos, c_item] = [pos[1], pos[2], pos[3], pos[4]];
     if (c_item === "0") {
