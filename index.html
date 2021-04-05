@@ -29,15 +29,15 @@
             color: white;
             background-color: rgb(58, 58, 58);
         }
-        
+
         .fleet_container {
             background-color: rgb(58, 58, 58);
         }
-        
+
         .ship_container {
             background-color: blue;
         }
-        
+
         .item_container {
             background-color: transparent;
             border-style: none;
@@ -45,15 +45,15 @@
             height: 6.8rem;
             position: initial;
         }
-        
+
         .modal-dialog {
             max-width: 71%;
         }
-        
+
         .modal-body {
             max-width: 100%;
         }
-        
+
         .bg {
             position: absolute;
             top: 0px;
@@ -61,7 +61,7 @@
             z-index: 100;
             width: 100%;
         }
-        
+
         .icon {
             position: relative;
             height: 5.3rem;
@@ -69,7 +69,7 @@
             z-index: 101;
             object-fit: scale-down;
         }
-        
+
         .frame {
             position: absolute;
             top: 0px;
@@ -77,26 +77,26 @@
             z-index: 102;
             width: 100%;
         }
-        
+
         .icon_box {
             position: relative;
             width: 100%;
             margin: 0px;
             padding: 0px;
         }
-        
+
         .box {
             overflow: hidden;
             color: white;
             position: relative;
         }
-        
+
         .box:hover {
             overflow: visible;
             z-index: 105;
             background-color: black;
         }
-        
+
         .box:hover>span {
             color: Tomato;
             background-color: black;
@@ -104,7 +104,7 @@
             border-color: black;
             border-style: solid;
         }
-        
+
         .item_name {
             font-family: monospace;
             white-space: nowrap;
@@ -115,11 +115,11 @@
             top: -0.05rem;
             text-shadow: 0 0 0.2rem black;
         }
-        
+
         .app {
             max-width: 70%;
         }
-        
+
         .itemq {
             font-family: monospace;
             position: absolute;
@@ -131,13 +131,13 @@
             font-weight: bold;
             text-shadow: 0 0 0.2rem black, 0 0 0.3rem black;
         }
-        
+
         .databox {
             width: 30rem;
             height: 5rem;
             background-color: rgb(58, 58, 58);
         }
-        
+
         a:link,
         a:visited {
             background-color: rgba(60, 60, 60, 0.7);
@@ -152,7 +152,7 @@
             border-style: ridge;
             border-radius: 2px;
         }
-        
+
         a:hover,
         a:active {
             color: black;
@@ -202,7 +202,11 @@
     </div>
     <br>
     <div class="container" align="center">
-        <a href="https://github.com/x94fujo6rpg/AzurLaneFleet">Github</a>
+        <div>
+          This project was made by x94fujo6rpg
+        </div>
+        <a href="https://github.com/x94fujo6rpg/AzurLaneFleet">Original Github</a>
+        <a href="https://github.com/Drakomire/AzurLaneFleet">Forked Github</a>
     </div>
     <br>
     <br>
@@ -236,8 +240,11 @@
                         <div class="container">只顯示改造後的船 / 改造完了のみ / Retrofitted Ship Only</div>
                         <div class="container">
                             <button id='shipretro' name="shipretro" type="button" class="btn btn-outline-light btn-sm active" aria-pressed="true" value="1" onclick="setRetro(this)">Yes</button>
-                        </div>
                     </div>
+                    <div class="container">
+                        <div>Search</div>
+                        <input type="text" placeholder="Type ship name.." id="ship search bar" onkeyup="updateSearch(this)">
+                      </div>
                     <div class="container-fluid">
                         <div class="container">　　　</div>
                     </div>

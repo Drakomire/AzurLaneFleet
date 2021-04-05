@@ -5530,7 +5530,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "大鳳(μ兵装)",
-        "en_name": "Taihō",
+        "en_name": "Taihou",
         "cn_name": "大凤",
         "equip_1": [
             7
@@ -5676,7 +5676,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "大鳳",
-        "en_name": "Taihō",
+        "en_name": "Taihou",
         "cn_name": "大凤",
         "equip_1": [
             7
@@ -5748,7 +5748,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "翔鶴",
-        "en_name": "Shōkaku",
+        "en_name": "Shoukaku",
         "cn_name": "翔鹤",
         "equip_1": [
             7
@@ -5784,7 +5784,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SSR",
         "jp_name": "飛龍改",
-        "en_name": "Hiryū",
+        "en_name": "Hiryuu",
         "cn_name": "飞龙改",
         "equip_1": [
             7
@@ -5820,7 +5820,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "飛龍",
-        "en_name": "Hiryū",
+        "en_name": "Hiryuu",
         "cn_name": "飞龙",
         "equip_1": [
             7
@@ -5856,7 +5856,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SSR",
         "jp_name": "蒼龍改",
-        "en_name": "Sōryū",
+        "en_name": "Souryuu",
         "cn_name": "苍龙改",
         "equip_1": [
             7
@@ -5892,7 +5892,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "蒼龍",
-        "en_name": "Sōryū",
+        "en_name": "Souryuu",
         "cn_name": "苍龙",
         "equip_1": [
             7
@@ -6076,7 +6076,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "龍鳳",
-        "en_name": "Ryūhō",
+        "en_name": "Ryuuhou",
         "cn_name": "龙凤",
         "equip_1": [
             7
@@ -6114,7 +6114,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "龍驤",
-        "en_name": "Ryūjō",
+        "en_name": "Ryuujou",
         "cn_name": "龙骧",
         "equip_1": [
             7
@@ -6152,7 +6152,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "祥鳳改",
-        "en_name": "Shōhō",
+        "en_name": "Shouhou",
         "cn_name": "祥凤改",
         "equip_1": [
             9
@@ -6190,7 +6190,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "祥鳳",
-        "en_name": "Shōhō",
+        "en_name": "Shouhou",
         "cn_name": "祥凤",
         "equip_1": [
             9
@@ -6228,7 +6228,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "鳳翔",
-        "en_name": "Hōshō",
+        "en_name": "Houshou",
         "cn_name": "凤翔",
         "equip_1": [
             2
@@ -6266,7 +6266,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "隼鷹",
-        "en_name": "Jun'yō",
+        "en_name": "Jun'you",
         "cn_name": "隼鹰",
         "equip_1": [
             7
@@ -6304,7 +6304,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "飛鷹",
-        "en_name": "Hiyō",
+        "en_name": "Hiyou",
         "cn_name": "飞鹰",
         "equip_1": [
             7
@@ -6638,7 +6638,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "日向改",
-        "en_name": "Hyūga",
+        "en_name": "Hyuuga",
         "cn_name": "日向改",
         "equip_1": [
             4
@@ -6677,7 +6677,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "日向",
-        "en_name": "Hyūga",
+        "en_name": "Hyuuga",
         "cn_name": "日向",
         "equip_1": [
             4
@@ -7127,7 +7127,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "金剛",
-        "en_name": "Kongō",
+        "en_name": "Kongou",
         "cn_name": "金刚",
         "equip_1": [
             4
@@ -7274,7 +7274,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "鳥海",
-        "en_name": "Chōkai",
+        "en_name": "Choukai",
         "cn_name": "鸟海",
         "equip_1": [
             3
@@ -7490,7 +7490,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "妙高",
-        "en_name": "Myōkō",
+        "en_name": "Myoukou",
         "cn_name": "妙高",
         "equip_1": [
             3
@@ -7856,7 +7856,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SSR",
         "jp_name": "神通改",
-        "en_name": "Jintsū",
+        "en_name": "Jintsuu",
         "cn_name": "神通改",
         "equip_1": [
             2
@@ -7894,7 +7894,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "神通",
-        "en_name": "Jintsū",
+        "en_name": "Jintsuu",
         "cn_name": "神通",
         "equip_1": [
             2
@@ -8388,7 +8388,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SSR",
         "jp_name": "夕張改",
-        "en_name": "Yūbari",
+        "en_name": "Yuubari",
         "cn_name": "夕张改",
         "equip_1": [
             2
@@ -8426,7 +8426,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "夕張",
-        "en_name": "Yūbari",
+        "en_name": "Yuubari",
         "cn_name": "夕张",
         "equip_1": [
             2
@@ -8844,7 +8844,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "大潮",
-        "en_name": "Ōshio",
+        "en_name": "ooshio",
         "cn_name": "大潮",
         "equip_1": [
             1
@@ -9908,7 +9908,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "夕暮改",
-        "en_name": "Yūgure",
+        "en_name": "Yuugure",
         "cn_name": "夕暮改",
         "equip_1": [
             1
@@ -9946,7 +9946,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "夕暮",
-        "en_name": "Yūgure",
+        "en_name": "Yuugure",
         "cn_name": "夕暮",
         "equip_1": [
             1
@@ -10364,7 +10364,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "SR",
         "jp_name": "陽炎改",
-        "en_name": "Kagerō",
+        "en_name": "Kagerou",
         "cn_name": "阳炎改",
         "equip_1": [
             1
@@ -10402,7 +10402,7 @@ var ship_data = {
         "star_string": "★★★★★",
         "rarity_string": "R",
         "jp_name": "陽炎",
-        "en_name": "Kagerō",
+        "en_name": "Kagerou",
         "cn_name": "阳炎",
         "equip_1": [
             1
@@ -10554,7 +10554,7 @@ var ship_data = {
         "star_string": "★★★★★★",
         "rarity_string": "SSR",
         "jp_name": "夕立",
-        "en_name": "Yūdachi",
+        "en_name": "Yuudachi",
         "cn_name": "夕立",
         "equip_1": [
             1

@@ -2,14 +2,14 @@ Vue.component("item-container", {
     props: ["item", "lang"],
     template: `
         <button
-          class="p-1 item_container" 
+          class="p-1 item_container"
 
           v-bind:name="item.id"
           v-bind:pos="item.property.pos"
           v-bind:data-target="item.property.target"
 
           onclick="setCurrent(this)"
-          data-toggle="modal"          
+          data-toggle="modal"
           >
             <div class="container-fluid p-0 box">
               <div class="icon_box">
@@ -45,18 +45,18 @@ Vue.component("fleet-container", {
     template: `
         <div class="row m-auto">
             <div class="flex-col m-auto">
-                <ship-container 
-                    v-for="back_ship in fleet.back_ship" 
-                    v-bind:key="back_ship.id" 
+                <ship-container
+                    v-for="back_ship in fleet.back_ship"
+                    v-bind:key="back_ship.id"
                     v-bind:ship="back_ship"
                     v-bind:name="back_ship.id"
                     v-bind:lang="lang"
                 ></ship-container>
             </div>
             <div class="flex-col m-auto">
-                <ship-container 
-                    v-for="front_ship in fleet.front_ship" 
-                    v-bind:key="front_ship.id" 
+                <ship-container
+                    v-for="front_ship in fleet.front_ship"
+                    v-bind:key="front_ship.id"
                     v-bind:ship="front_ship"
                     v-bind:name="front_ship.id"
                     v-bind:lang="lang"
@@ -123,6 +123,7 @@ let back = [4, 5, 6, 7, 10, 12, 13];
 let c_ships = [];
 let version = 0.03;
 let eqck = false;
+let search = "";
 
 initial();
 //---------------------------------------------
@@ -326,6 +327,11 @@ function updateSetting(item) {
     shipDisplay();
 }
 
+function updateSearch(query){
+  search = document.getElementById("ship search bar").value;
+  shipDisplay();
+}
+
 function checksetting(key, value) {
     let index = shipsetting[key].indexOf(value);
     if (value > -1) {
@@ -357,7 +363,8 @@ function shipDisplay() {
             let type = ship_data[id].type;
             let rarity = ship_data[id].rarity;
             let retro = ship_data[id].retro;
-            if (isShipSelect(nation, type, rarity, retro)) {
+            let name = ship_data[id][shipSelect.lang+"_name"];
+            if (isShipSelect(nation, type, rarity, retro, name)) {
                 item.style.display = "";
             } else {
                 item.style.display = "none";
@@ -385,13 +392,45 @@ function hideShipInFleet() {
     });
 }
 
-function isShipSelect(nation, type, rarity, retro) {
+function isShipSelect(nation, type, rarity, retro, name) {
     let indicator_nation = false;
     let indicator_type = false;
     let indicator_rarity = false;
     let other_nation = [98, 101, 103, 104, 105, 106, 107, 108, 109, 110];
     let other_front = [19];
     let other_back = [10];
+
+    let lang = shipSelect.lang;
+    let s = search
+    console.log(lang)
+    //Check if the ship is in the search
+    //Handle certain non-english cahracters for ease of use
+    getMatch = (name) => {
+      if (s.length > name.length){
+        return false;
+      }
+      for (i in s){
+        if (name[i] != s[i]){
+          if (lang == 'en'){
+            if (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122){
+              return false;
+            }
+          }else{
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    if (lang == 'en'){
+      name = name.toLowerCase();
+      s = s.toLowerCase();
+    }
+    if (!getMatch(name)){
+      return false;
+    }
+
+
     if (c_side === "0" && front.indexOf(type) === -1) {
         return false;
     }
