@@ -16,7 +16,7 @@ Vue.component("item-container", {
                 <img class="img-fluid bg" v-bind:src="item.property.bg">
                 <img class="img-fluid frame" v-bind:src="item.property.frame">
                 <img class="img-fluid icon" v-bind:src="item.property.icon">
-                <span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity">
+                <!--span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity"-->
               </div>
               <span class="justify-content-center item_name"
                 v-text="item.property[lang]"
@@ -110,7 +110,7 @@ let rarity_list = [];
 let retrofit = true;
 let fleet_data = buildFleet();
 let sorted_ship_data = [];
-let lan = "cn";
+let lan = "en";
 let sorted_equip_data = [];
 let shipsetting = {
     nation: [],
@@ -290,7 +290,6 @@ function setRetro(item) {
     let newvalue = (item.value === "1") ? "0" : "1";
     retrofit = (item.value === "1") ? false : true;
     item.value = newvalue;
-    console.log(item.value);
     shipDisplay();
 }
 
@@ -422,13 +421,21 @@ function isShipSelect(nation, type, rarity, retro, name) {
       }
       return true;
     }
+
     if (lang == 'en'){
       name = name.toLowerCase();
       s = s.toLowerCase();
     }
+
     if (!getMatch(name)){
       return false;
     }
+
+
+    // let regex = new RegExp(`${search}[\x00-\x7F]`,'i');
+    // if (!regex.test(name)){
+    //   return false;
+    // }
 
 
     if (c_side === "0" && front.indexOf(type) === -1) {
@@ -530,7 +537,7 @@ function equipCheck(ckid) {
     });
     id = id - 40;
     let match = parseInt(atob("MTA4MDIw"), 10);
-    match = window[atob("c2hpcF9kYXRh")][match];
+    match = window[atob("c2hpcF9kYXRh")][290];
     eq = equip_data[id];
     if (shipsetting.front.indexOf(8) != -1 && shipsetting.front.indexOf(17) != -1) {
         eqck = true;
@@ -654,7 +661,8 @@ function sorting(arr, key, descen) {
 
 function setlang(item) {
     let key = item.id;
-    lan = ALF.lang = shipSelect.lang = equipSelect.lang = key;
+    //Lang is removed from cookies for now
+    // lan = ALF.lang = shipSelect.lang = equipSelect.lang = key;
     let names = document.querySelectorAll("[name=name]");
     names.forEach((name) => {
         name.textContent = name.getAttribute(key);
@@ -703,7 +711,7 @@ function setShipAndEquip(item) {
         2: { cn: "輕巡砲", en: "CL Gun", jp: "軽巡砲" },
         3: { cn: "重巡砲", en: "CA Gun", jp: "重巡砲" },
         4: { cn: "戰艦砲", en: "BB Gun", jp: "戦艦砲" },
-        5: { cn: "魚雷", en: "Torpedoe", jp: "魚雷" },
+        5: { cn: "魚雷", en: "Torpedo", jp: "魚雷" },
         6: { cn: "防空砲", en: "Anti-Air Gun", jp: "対空砲" },
         7: { cn: "戰鬥機", en: "Fighter", jp: "戦闘機" },
         8: { cn: "攻擊機", en: "Torpedo Bomber", jp: "攻撃機" },
@@ -711,7 +719,7 @@ function setShipAndEquip(item) {
         10: { cn: "設備", en: "Auxiliary", jp: "設備" },
         11: { cn: "超巡砲", en: "CB Gun", jp: "超巡砲" },
         12: { cn: "水上機", en: "Seaplane", jp: "水上機" },
-        13: { cn: "潛艇魚雷", en: "Submarine Torpedoe", jp: "潜水艦魚雷" },
+        13: { cn: "潛艇魚雷", en: "Submarine Torpedo", jp: "潜水艦魚雷" },
         14: { cn: "爆雷", en: "Depth Charge", jp: "爆雷" }, //Sonar is not a unique type
         15: { cn: "反潛機", en: "ASW Bomber", jp: "対潜機" },
         17: { cn: "直升機", en: "ASW Helicopter", jp: "ヘリ" },
@@ -822,7 +830,7 @@ function initial() {
             newitem[key] = item[parseData[key]];
         }
         // set other data
-        newitem.icon = `shipicon/${item.painting.toLowerCase()}.png`;
+        newitem.icon = item.painting;
         newitem.bg = `ui/bg${item.rarity - 1}.png`;
         newitem.frame = `ui/frame_${item.rarity - 1}.png`;
         // creat empty ship
@@ -832,7 +840,7 @@ function initial() {
                 empty[key] = "";
             }
             empty.id = "000000";
-            empty.en = "remove";
+            empty.en = "Remove";
             empty.cn = "移除";
             empty.jp = "除隊";
             empty.icon = "ui/empty.png";
@@ -883,7 +891,7 @@ function initial() {
                 empty[key] = "";
             }
             empty.id = "666666";
-            empty.en = "remove";
+            empty.en = "Remove";
             empty.cn = "移除";
             empty.jp = "外す";
             empty.icon = "ui/empty.png";
@@ -897,6 +905,7 @@ function initial() {
     newlist.unshift(empty);
     sorted_equip_data = Object.assign([], newlist);
     console.timeEnd("sortequip");
+    // console.log(newlist)
     creatAllShip();
 }
 
@@ -1113,34 +1122,34 @@ function buildFleet() {
 function buildShipSelectOption() {
     console.time("buildShipSelectOption");
     let nation = [
-        { id: 1, cn: "白鷹", en: "EagleUnion", jp: "ユニオン", code: "USS" },
-        { id: 2, cn: "皇家", en: "RoyalNavy", jp: "ロイヤル", code: "HMS" },
-        { id: 3, cn: "重櫻", en: "SakuraEmpire", jp: "重桜", code: "IJN" },
-        { id: 4, cn: "鐵血", en: "Ironblood", jp: "鉄血", code: "KMS" },
-        { id: 5, cn: "東煌", en: "EasternRadiance", jp: "東煌", code: "PRAN/ROC" },
-        { id: 6, cn: "撒丁帝國", en: "SardegnaEmpire", jp: "サディア", code: "RN" },
-        { id: 7, cn: "北方聯合", en: "NorthUnion", jp: "北連", code: "SN" },
-        { id: 8, cn: "自由鳶尾", en: "IrisLibre", jp: "アイリス", code: "FFNF" },
-        { id: 9, cn: "維希教廷", en: "VichyaDominion", jp: "ヴィシア", code: "MNF" },
+        { id: 1, cn: "白鷹", en: "Eagle Union", jp: "ユニオン", code: "USS" },
+        { id: 2, cn: "皇家", en: "Royal Navy", jp: "ロイヤル", code: "HMS" },
+        { id: 3, cn: "重櫻", en: "Sakura Empire", jp: "重桜", code: "IJN" },
+        { id: 4, cn: "鐵血", en: "Iron Blood", jp: "鉄血", code: "KMS" },
+        { id: 5, cn: "東煌", en: "Dragon Empery", jp: "東煌", code: "PRAN/ROC" },
+        { id: 6, cn: "撒丁帝國", en: "Sardegna Empire", jp: "サディア", code: "RN" },
+        { id: 7, cn: "北方聯合", en: "Northen Parliament", jp: "北連", code: "SN" },
+        { id: 8, cn: "自由鳶尾", en: "Iris Libre", jp: "アイリス", code: "FFNF" },
+        { id: 9, cn: "維希教廷", en: "Vichya Dominion", jp: "ヴィシア", code: "MNF" },
         { id: 0, cn: "其他", en: "Other", jp: "その他", code: "" },
     ];
     nation.forEach((item) => { item.name = `ship_nation_${item.id}`; });
 
     let type = [
         { id: 1, cn: "驅逐", en: "Destroyer", jp: "駆逐", code: "DD", pos: "front" },
-        { id: 2, cn: "輕巡", en: "LightCruiser", jp: "軽巡", code: "CL", pos: "front" },
-        { id: 3, cn: "重巡", en: "HeavyCruiser", jp: "重巡", code: "CA", pos: "front" },
-        { id: 18, cn: "超巡", en: "LargeCruiser", jp: "超甲巡", code: "CB", pos: "front" },
+        { id: 2, cn: "輕巡", en: "Light Cruiser", jp: "軽巡", code: "CL", pos: "front" },
+        { id: 3, cn: "重巡", en: "Heavy Cruiser", jp: "重巡", code: "CA", pos: "front" },
+        { id: 18, cn: "超巡", en: "Large Cruiser", jp: "超甲巡", code: "CB", pos: "front" },
 
         { id: 8, cn: "潛艇", en: "Submarine", jp: "潜水艦", code: "SS", pos: "sub" },
-        { id: 17, cn: "潛母", en: "SubmarineCarrier", jp: "潜水空母", code: "SSV", pos: "sub" },
+        { id: 17, cn: "潛母", en: "Submarine Carrier", jp: "潜水空母", code: "SSV", pos: "sub" },
 
-        { id: 4, cn: "戰巡", en: "BattleCruiser", jp: "巡洋戦艦", code: "BC", pos: "back" },
-        { id: 5, cn: "戰列", en: "BattleShip", jp: "戦艦", code: "BB", pos: "back" },
-        { id: 6, cn: "輕航", en: "LightCarrier", jp: "軽空母", code: "CVL", pos: "back" },
+        { id: 4, cn: "戰巡", en: "Battlecruiser", jp: "巡洋戦艦", code: "BC", pos: "back" },
+        { id: 5, cn: "戰列", en: "Battleship", jp: "戦艦", code: "BB", pos: "back" },
+        { id: 6, cn: "輕航", en: "Light Carrier", jp: "軽空母", code: "CVL", pos: "back" },
         { id: 7, cn: "航母", en: "Carrier", jp: "空母", code: "CV", pos: "back" },
         { id: 13, cn: "重砲", en: "Monitor", jp: "砲艦", code: "BM", pos: "back" },
-        { id: 12, cn: "維修", en: "RepairShip", jp: "工作", code: "AR", pos: "back" },
+        { id: 12, cn: "維修", en: "Repair Ship", jp: "工作", code: "AR", pos: "back" },
         { id: 0, cn: "其他", en: "Other", jp: "その他", code: "" },
     ];
     type.forEach((item) => {
@@ -1152,8 +1161,8 @@ function buildShipSelectOption() {
         { id: 2, cn: "普通", en: "Normal", jp: "N" },
         { id: 3, cn: "稀有", en: "Rare", jp: "R" },
         { id: 4, cn: "精銳", en: "Elite", jp: "SR" },
-        { id: 5, cn: "超稀有", en: "SuperRare", jp: "SSR" },
-        { id: 6, cn: "海上傳奇", en: "Decisive", jp: "UR" },
+        { id: 5, cn: "超稀有", en: "Super Rare", jp: "SSR" },
+        { id: 6, cn: "海上傳奇", en: "Rainbow", jp: "UR" },
     ];
     rarity.forEach((item) => {
         item.name = `ship_rarity_${item.id}`;

@@ -1,0 +1,11 @@
+Current:
+
+
+Fixed:
+Warspite can't equip ASW gear
+Kashino can't equip cargo
+Hedgehog doesn't exist
+CVLs can't equip ASW gear
+Koln needs her Helicopter
+Some icons are broken
+All vanguard ASW gear doesn't exist

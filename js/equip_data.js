@@ -466,7 +466,7 @@ var equip_data = {
         ],
         "jp_name": "対潜迫撃砲「ヘッジホッグ」",
         "cn_name": "刺猬弹",
-        "en_name": "\"Hedgehog\" Anti-Submarine Mortar",
+        "en_name": "Hedgehog Anti-Submarine Mortar",
         "equip_limit": 25800
     },
     "4140": {
