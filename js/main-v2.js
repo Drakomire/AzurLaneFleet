@@ -193,16 +193,6 @@ let equipSelect = new Vue({
 //---------------------------------------------
 uiAdjust();
 
-// Load the fleet when the webpage is opened. Need a better way to wait for the page to load.
-setTimeout(async ()=>{
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const fleetArg = urlParams.get('fleet')
-  console.log(fleetArg)
-  console.log(loadData(atob(fleetArg)))
-},100)
-
-
 // var string = "This is my compression test.";
 // alert("Size of sample is: " + string.length);
 // var compressed = LZString.compress(string);
@@ -345,7 +335,7 @@ function loadDataByID() {
       message = "Error: Corrupted data";
       textbox.value = message;
       console.log(message);
-      console.log(main_data);
+      // console.log(main_data);
       return;
     }
 
@@ -359,7 +349,6 @@ function loadData(data){
     return false;
   }
   parseIdData(main_data);
-  console.log(main_data)
   return true;
 }
 
@@ -405,7 +394,6 @@ function parseIdData(data) {
     data = JSON.parse(data);
     //Add required fleets
     for (i of data){
-      console.log(i);
       //Check if surface fleet
       if (i[0].length == 3){
         addFleet(true);
@@ -1233,7 +1221,24 @@ function creatAllEquip() {
             if (index === arr.length - 1) {
                 console.timeEnd("creatAllEquip");
                 console.timeEnd("initial");
-                loadCookie();
+                //Try loading cookies if the share URL is empty
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const fleetArg = urlParams.get('fleet')
+                if (fleetArg != null){
+                  console.log("Fleet Loaded URL");
+                  loadData(atob(fleetArg))
+                }else{
+                  console.log("Fleet Loaded from Cookies")
+                  loadCookie();
+                }
+
+
+
+                // Load the fleet when the webpage is opened. Need a better way to wait for the page to load.
+                setTimeout(async ()=>{
+
+                },0)
             }
         });
     });
