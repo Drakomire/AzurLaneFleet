@@ -41,27 +41,44 @@ Vue.component("ship-container", {
 });
 
 Vue.component("fleet-container", {
-    props: ["fleet", "lang"],
+    props: ["fleet","fleets", "lang"],
     template: `
-        <div class="row m-auto">
-            <div class="flex-col m-auto">
-                <ship-container
-                    v-for="back_ship in fleet.back_ship"
-                    v-bind:key="back_ship.id"
-                    v-bind:ship="back_ship"
-                    v-bind:name="back_ship.id"
-                    v-bind:lang="lang"
-                ></ship-container>
-            </div>
-            <div class="flex-col m-auto">
-                <ship-container
-                    v-for="front_ship in fleet.front_ship"
-                    v-bind:key="front_ship.id"
-                    v-bind:ship="front_ship"
-                    v-bind:name="front_ship.id"
-                    v-bind:lang="lang"
-                ></ship-container>
-            </div>
+        <div>
+          <div>
+            <h3>Fleet {{fleet.name}}</h3>
+          </div>
+          <img class="imgbtn" v-bind:name="fleet.name" src="ui/130826-arrow-set/png/cancel-2.png" width="32" height="32" onclick="removeFleet(this);" />
+          <img class="imgbtn" v-bind:name="fleet.name" src="ui/130826-arrow-set/png/up-arrow.png" width="32" height="32" onclick="moveFleetUp(this);" v-if="fleet.name != 1" />
+          <img class="imgbtn" v-bind:name="fleet.name" src="ui/130826-arrow-set/png/download-1.png" width="32" height="32" onclick="moveFleetDown(this);" v-if="fleet.name != fleets.length" />
+          <div class="row m-auto">
+              <div v-if="fleet.surface" class="flex-col m-auto">
+                  <ship-container
+                      v-for="back_ship in fleet.back_ship"
+                      v-bind:key="back_ship.id"
+                      v-bind:ship="back_ship"
+                      v-bind:name="back_ship.id"
+                      v-bind:lang="lang"
+                  ></ship-container>
+              </div>
+              <div v-if="fleet.surface" class="flex-col m-auto">
+                  <ship-container
+                      v-for="front_ship in fleet.front_ship"
+                      v-bind:key="front_ship.id"
+                      v-bind:ship="front_ship"
+                      v-bind:name="front_ship.id"
+                      v-bind:lang="lang"
+                  ></ship-container>
+              </div>
+              <div v-if="!fleet.surface" class="flex-col m-auto">
+                  <ship-container
+                      v-for="sub in fleet.submarine"
+                      v-bind:key="sub.id"
+                      v-bind:ship="sub"
+                      v-bind:name="sub.id"
+                      v-bind:lang="lang"
+                  ></ship-container>
+              </div>
+          </div>
         </div>
     `
 });
@@ -99,6 +116,8 @@ Vue.component("ship-rarity-button", {
     `
 });
 
+
+
 let [ship_nation, ship_type, ship_rarity] = buildShipSelectOption();
 let c_fleet = "";
 let c_side = "";
@@ -108,7 +127,18 @@ let nation_list = [];
 let type_list = [];
 let rarity_list = [];
 let retrofit = true;
-let fleet_data = buildFleet();
+//Empty ship data variable for fleet creation
+// var ship_data = [];
+var default_fleet = [];
+var fleet_data = [];
+fleet_data = buildFleet();
+
+let c_side_dict = {
+  0: "front_ship",
+  1: "back_ship",
+  2: "submarine",
+}
+
 let sorted_ship_data = [];
 let lan = "en";
 let sorted_equip_data = [];
@@ -116,24 +146,31 @@ let shipsetting = {
     nation: [],
     front: [],
     back: [],
+    submarine: [],
     rarity: [],
 };
-let front = [1, 2, 3, 8, 17, 18, 19]; // put ss back & new type 19
+let front = [1, 2, 3, 18, 19]; // put ss back & new type 19
 let back = [4, 5, 6, 7, 10, 12, 13];
+let submarine = [8,17]
 let c_ships = [];
 let version = 0.03;
 let eqck = false;
 let search = "";
 
+
 initial();
 //---------------------------------------------
+// let fleet_number = "1";
+// console.log(fleet_number)
 let ALF = new Vue({
     el: "#AzurLaneFleetApp",
     data: {
         fleets: fleet_data,
-        lang: lan
+        lang: lan,
     },
 });
+
+console.log(ALF)
 
 let shipSelect = new Vue({
     el: "#shipselect",
@@ -156,16 +193,118 @@ let equipSelect = new Vue({
 //---------------------------------------------
 uiAdjust();
 
+// Load the fleet when the webpage is opened. Need a better way to wait for the page to load.
+setTimeout(async ()=>{
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const fleetArg = urlParams.get('fleet')
+  console.log(fleetArg)
+  console.log(loadData(atob(fleetArg)))
+},100)
+
+
+// var string = "This is my compression test.";
+// alert("Size of sample is: " + string.length);
+// var compressed = LZString.compress(string);
+// alert("Size of compressed sample is: " + compressed.length);
+// string = LZString.decompress(compressed);
+// alert("Sample is: " + string);
+
+
 function uiAdjust() {
     // insert space between fleet
     let fleet = document.getElementsByName("fleet_0");
-    let br = document.createElement("br");
-    fleet[0].insertAdjacentElement("afterend", br);
+    // let br = document.createElement("br");
+    // fleet[0].insertAdjacentElement("afterend", br);
+}
+
+function createNewFleet(number,surface){
+    let new_ship_data = [];
+    let front = [];
+    let back = [];
+    let submarine = [];
+    let i = number;
+    let max = surface? 6 : 3;
+    for (let x = 0; x < max; x++) {
+        let new_data = [];
+        if (!surface){
+            for (let index in default_fleet) {
+                let new_value = `_${i}2${x}${index}`;
+                let new_prop = Object.assign({}, default_fleet[index].property);
+                new_data.push({ id: new_value, property: new_prop, });
+                new_prop.pos = "submarine";
+            }
+            new_ship_data = { id: `fleet_${i}_submarine${x}`, item: new_data, };
+            submarine.push(new_ship_data);
+        }else if (x < 3) {
+            for (let index in default_fleet) {
+                let new_value = `_${i}0${x}${index}`;
+                let new_prop = Object.assign({}, default_fleet[index].property);
+                new_data.push({ id: new_value, property: new_prop, });
+                new_prop.pos = "front";
+            }
+            new_ship_data = { id: `fleet_${i}_front_ship${x}`, item: new_data, };
+            front.push(new_ship_data);
+        } else {
+            for (let index in default_fleet) {
+                let new_value = `_${i}1${x - 3}${index}`;
+                let new_prop = Object.assign({}, default_fleet[index].property);
+                new_data.push({ id: new_value, property: new_prop, });
+                new_prop.pos = "back";
+            }
+            new_ship_data = { id: `fleet_${i}_back_ship${x - 3}`, item: new_data, };
+            back.push(new_ship_data);
+        }
+    }
+    // document.getElementById()
+    return { id: `fleet_${i}`, name: fleet_data.length+1, surface: surface, front_ship: front, back_ship: back, submarine: submarine};
+}
+
+function addFleet(surface){
+  fleet_data.push(createNewFleet(fleet_data.length,surface));
+  dumpDataID()
+}
+
+function removeFleet(item){
+  let name = item.name;
+  fleet_data.splice(name-1,1);
+  fixFleetOrder();
+  dumpDataID();
+}
+function moveFleetUp(item){
+  let name = item.name-1;
+  if (name != 0){
+    [fleet_data[name],fleet_data[name-1]] = [fleet_data[name-1],fleet_data[name]]
+    fixFleetOrder();
+    dumpDataID();
+  }
+}
+function moveFleetDown(item){
+  let name = item.name-1;
+  if (name != fleet_data.length-1){
+    [fleet_data[name],fleet_data[name+1]] = [fleet_data[name+1],fleet_data[name]]
+    fixFleetOrder();
+    dumpDataID();
+  }
 }
 
 function emptyfleet() {
-    let data = '[[[["","","","","",""],["","","","","",""],["","","","","",""]],[["","","","","",""],["","","","","",""],["","","","","",""]]],[[["","","","","",""],["","","","","",""],["","","","","",""]],[["","","","","",""],["","","","","",""],["","","","","",""]]]]';
-    parseIdData(data);
+  let data = [];
+  for (i in fleet_data){
+    data.push([[[""],[""],[""]],[[""],[""],[""]],[[""],[""],[""]]]);
+  }
+  data = JSON.stringify(data);
+  parseIdData(data);
+}
+
+function deleteFleet(){
+  fleet_data.splice(0,fleet_data.length);
+  dumpDataID();
+}
+
+function resetFleet() {
+  deleteFleet();
+  addFleet(true);
 }
 
 // dump id only
@@ -175,7 +314,7 @@ function dumpDataID() {
         let fleetdata = [];
         for (let side in fleet) {
             let sidedata = [];
-            if (side != "id") {
+            if (side != "id" && side != "surface" && side != "name") {
                 fleet[side].forEach(ship => {
                     let shipdata = [];
                     ship.item.forEach(item => {
@@ -192,26 +331,36 @@ function dumpDataID() {
     let hash = CryptoJS.SHA3(data, { outputLength: 256 }).toString();
     data = `${data}!${version}!${hash}`;
     let textbox = document.getElementById("fleetdata");
-    textbox.value = data;
+    textbox.value = "drakomire.github.io/AzurLaneFleet?fleet="+btoa(data);
     return data;
 }
 
 function loadDataByID() {
-    let data = document.getElementById("fleetdata").value;
+    let data = atob(document.getElementById("fleetdata").value);
+
     let textbox = document.getElementById("fleetdata");
     textbox.value = "";
-    data = data.split("!");
-    [main_data, ver, hash] = data;
 
-    let ck = CryptoJS.SHA3(main_data, { outputLength: 256 }).toString();
-    if (ck != hash) {
-        message = "Error: Corrupted data";
-        textbox.value = message;
-        console.log(message);
-        console.log(main_data);
-        return;
+    if (!loadData(data)){
+      message = "Error: Corrupted data";
+      textbox.value = message;
+      console.log(message);
+      console.log(main_data);
+      return;
     }
-    parseIdData(main_data);
+
+}
+function loadData(data){
+  data = data.split("!");
+  [main_data, ver, hash] = data;
+
+  let ck = CryptoJS.SHA3(main_data, { outputLength: 256 }).toString();
+  if (ck != hash) {
+    return false;
+  }
+  parseIdData(main_data);
+  console.log(main_data)
+  return true;
 }
 
 function saveCookie(ckey, cvalue, expday = 365) {
@@ -252,7 +401,19 @@ function loadCookie() {
 }
 
 function parseIdData(data) {
+    deleteFleet();
     data = JSON.parse(data);
+    //Add required fleets
+    for (i of data){
+      console.log(i);
+      //Check if surface fleet
+      if (i[0].length == 3){
+        addFleet(true);
+      }else{
+        addFleet(false);
+      }
+    }
+
     data.forEach((fleet, fleet_index) => {
         fleet.forEach((side, side_index) => {
             side.forEach((ship, ship_index) => {
@@ -319,6 +480,8 @@ function updateSetting(item) {
             checksetting("front", value);
         } else if (c_side === "1") {
             checksetting("back", value);
+        } else if (c_side === "2") {
+            checksetting("submarine", value);
         }
     } else if (type === "rarity") {
         checksetting("rarity", value);
@@ -437,13 +600,17 @@ function isShipSelect(nation, type, rarity, retro, name) {
     //   return false;
     // }
 
-
+    //Sort ship list by hull class
     if (c_side === "0" && front.indexOf(type) === -1) {
         return false;
     }
     if (c_side === "1" && back.indexOf(type) === -1) {
         return false;
     }
+    if (c_side === "2" && submarine.indexOf(type) === -1) {
+        return false;
+    }
+
     if (c_side === "0") {
         if (shipsetting.front.indexOf(type) != -1 || shipsetting.front.length === 0) {
             indicator_type = true;
@@ -458,6 +625,17 @@ function isShipSelect(nation, type, rarity, retro, name) {
             indicator_type = true;
         }
     }
+    if (c_side === "2") {
+        if (shipsetting.submarine.indexOf(type) != -1 || shipsetting.submarine.length === 0) {
+            indicator_type = true;
+        } else if (shipsetting.submarine.indexOf(0) != -1 && other_back.indexOf(type) != -1) {
+            indicator_type = true;
+        }
+    }
+
+
+
+
     if (shipsetting.nation.indexOf(nation) != -1 || shipsetting.nation.length === 0) {
         indicator_nation = true;
     }
@@ -482,7 +660,6 @@ function setCurrent(item) {
     //Clear the search bar
     document.getElementById("ship search bar").value = "";
     updateSearch();
-
     let pos = item.name;
     [c_fleet, c_side, c_pos, c_item] = [pos[1], pos[2], pos[3], pos[4]];
     if (c_item === "0") {
@@ -506,6 +683,19 @@ function setCurrent(item) {
             // show back type
             ship_type.forEach((item) => {
                 if (back.indexOf(item.id) === -1) {
+                    if (item.id === 0) {
+                        item.display = true;
+                    } else {
+                        item.display = false;
+                    }
+                } else {
+                    item.display = true;
+                }
+            });
+        } else if (c_side === "2") {
+            // show submarine type
+            ship_type.forEach((item) => {
+                if (submarine.indexOf(item.id) === -1) {
                     if (item.id === 0) {
                         item.display = true;
                     } else {
@@ -588,7 +778,7 @@ function equipCheck(ckid) {
 }
 
 function equipDisplay() {
-    let side = (c_side === "0") ? "front_ship" : "back_ship";
+    let side = c_side_dict[c_side];
     let itemInApp = fleet_data[c_fleet][side][c_pos].item[c_item].property;
     let typelist = itemInApp.type;
     let equips = document.getElementById("equiplist");
@@ -621,7 +811,7 @@ function equipDisplay() {
 
 function limitEquip(display_list) {
     let equipOnShip = [];
-    let side = (c_side === "0") ? "front_ship" : "back_ship";
+    let side = c_side_dict[c_side];
     let ship = fleet_data[c_fleet][side][c_pos];
     ship.item.forEach((item, index) => {
         if (index != 0) {
@@ -662,7 +852,7 @@ function sorting(arr, key, descen) {
 function setlang(item) {
     let key = item.id;
     //Lang is removed from cookies for now
-    // lan = ALF.lang = shipSelect.lang = equipSelect.lang = key;
+    lan = ALF.lang = shipSelect.lang = equipSelect.lang = key;
     let names = document.querySelectorAll("[name=name]");
     names.forEach((name) => {
         name.textContent = name.getAttribute(key);
@@ -672,7 +862,7 @@ function setlang(item) {
 
 function setEquip(item) {
     let id = parseInt(item.id, 10);
-    let side = (c_side === "0") ? "front_ship" : "back_ship";
+    let side = c_side_dict[c_side];
     let itemInApp = fleet_data[c_fleet][side][c_pos].item[c_item].property;
     if (id === 666666) {
         // reset
@@ -696,14 +886,21 @@ function setEquip(item) {
 }
 
 function setShipAndEquip(item) {
-    let side = (c_side === "0") ? "front_ship" : "back_ship";
+    let side = c_side_dict[c_side];
     let shipInApp = fleet_data[c_fleet][side][c_pos];
+
     let shipInList = sorted_ship_data.find((ele) => {
         if (ele.id === item.id) {
             return Object.assign({}, ele);
         }
     });
-    let app_item = shipInApp.item;
+
+    //Some fleets may not exist so ignore if they don't
+    try{
+      var app_item = shipInApp.item;
+    }catch{
+      return;
+    }
     let shipCopyList = ["cn", "en", "jp", "icon", "frame", "bg", "id", "type", "rarity", "star", "base"];
     let addquantitylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13,]; // add bb main gun
     let parsetype = {
@@ -1042,9 +1239,34 @@ function creatAllEquip() {
     });
 }
 
+function fixFleetOrder(){
+    fleet_data.forEach((item, i) => {
+    let n = item.id.split("_")[1];
+    item.id = `fleet_${i}`
+    item.name = `${i+1}`;
+    for (key in item){
+      if (key == "front_ship" || key == "back_ship" || key == "submarine"){
+        item[key].forEach((j, loc) => {
+          //Set the id
+          j.id = j.id.split("_");
+          j.id[1] = `${i}`;
+          j.id = j.id.join("_");
+          //Fix the ships
+          j.item.forEach((gear, gearLoc) => {
+              gear.id = gear.id.split("");
+              gear.id[1] = `${i}`;
+              gear.id = gear.id.join("");
+          });
+      });
+
+      }
+
+    }
+  });
+}
+
 function buildFleet() {
     console.time("buildFleet");
-    let ship_data = [];
     for (let i = 0; i < 6; i++) {
         let item = [];
         if (i === 0) {
@@ -1082,39 +1304,13 @@ function buildFleet() {
             };
             item = eq;
         }
-        ship_data.push({ id: i, property: [], });
-        ship_data[i].property = Object.assign({}, item);
+        default_fleet.push({ id: i, property: [], });
+        default_fleet[i].property = Object.assign({}, item);
     }
 
     let newfleet = [];
-    for (let i = 0; i < 2; i++) {
-        let new_ship_data = [];
-        let front = [];
-        let back = [];
-        for (let x = 0; x < 6; x++) {
-            let new_data = [];
-            if (x < 3) {
-                for (let index in ship_data) {
-                    let new_value = `_${i}0${x}${index}`;
-                    let new_prop = Object.assign({}, ship_data[index].property);
-                    new_prop.pos = "front";
-                    new_data.push({ id: new_value, property: new_prop, });
-                }
-                new_ship_data = { id: `fleet_${i}_front_ship${x}`, item: new_data, };
-                front.push(new_ship_data);
-            } else {
-                for (let index in ship_data) {
-                    let new_value = `_${i}1${x - 3}${index}`;
-                    let new_prop = Object.assign({}, ship_data[index].property);
-                    new_data.push({ id: new_value, property: new_prop, });
-                    new_prop.pos = "back";
-                }
-                new_ship_data = { id: `fleet_${i}_back_ship${x - 3}`, item: new_data, };
-                back.push(new_ship_data);
-            }
-        }
-        newfleet.push({ id: `fleet_${i}`, front_ship: front, back_ship: back, });
-    }
+    newfleet.push(createNewFleet(0,true));
+    // newfleet.push(createNewFleet(1,true));
     console.timeEnd("buildFleet");
     return newfleet;
 }

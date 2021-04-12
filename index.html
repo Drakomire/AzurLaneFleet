@@ -20,7 +20,7 @@
     <link rel="prefetch" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" as="script" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/vue" as="script" crossorigin="anonymous">
     <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" as="script" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous">
-    <link rel="prefetch" href="js/lz-string.min.js" as="script">
+    <link rel="prefetch" href="js/lz-string.js" as="script">
     <link rel="prefetch" href="js/ship_data.js" as="script">
     <link rel="prefetch" href="js/equip_data.js" as="script">
     <link rel="prefetch" href="js/main-v2.js" as="script">
@@ -32,6 +32,9 @@
 
         .fleet_container {
             background-color: rgb(58, 58, 58);
+        }
+        .imgbtn{
+          cursor: pointer;
         }
 
         .ship_container {
@@ -182,22 +185,26 @@
     <br>
 
     <div id="AzurLaneFleetApp" class="container app">
-        <fleet-container v-for="fleet in fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang">
+        <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang">
         </fleet-container>
+        <button type="button" class="btn" onclick="addFleet(true)">Add Surface Fleet</button>
+        <button type="button" class="btn" onclick="addFleet(false)">Add Submarine Fleet</button>
+
     </div>
     <br>
     <div class="container" align="center">
-        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="emptyfleet()">Remove All</button>
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="emptyfleet()">Remove All Ships</button>
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="resetFleet()">Reset Fleets</button>
     </div>
     <br>
     <div class="container" align="center">
-        <h4 class="text-light text-monospace">Fleet data</h4>
+        <!-- <h4 class="text-light text-monospace">Fleet data</h4> -->
         <textarea class="databox text-light" id="fleetdata"></textarea>
         <div class="container">
-            <button type="button" class="btn" id="dumpdata" onclick="dumpDataID()">Dump</button>
-            <button type="button" class="btn" id="copyData" onclick="copyData()">Copy</button>
-            <button type="button" class="btn" id="emptyData" onclick="emptyData()">Clear</button>
-            <button type="button" class="btn btn-danger" id="loadDataByID" onclick="loadDataByID()">Load</button>
+            <!-- <button type="button" class="btn" id="dumpdata" onclick="dumpDataID()">Dump</button> -->
+            <button type="button" class="btn" id="copyData" onclick="copyData()">Copy Shareable URL</button>
+            <!-- <button type="button" class="btn" id="emptyData" onclick="emptyData()">Clear</button> -->
+            <!-- <button type="button" class="btn btn-danger" id="loadDataByID" onclick="loadDataByID()">Load</button> -->
         </div>
     </div>
     <br>
@@ -273,7 +280,10 @@
         </div>
     </div>
     <footer id="footer" align="center">
+      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
         The copyright of the data used on this site is owned by the following companies<br> © Manjuu Co.,Ltd. & YongShi Co.,Ltd.<br> © Yostar, Inc.
+        <br>
     </footer>
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -173,7 +173,7 @@ setTimeout(async ()=>{
         if (slots[j].type.includes("CL")) slot[j].push(2);
         if (slots[j].type.includes("CA")) slot[j].push(3);
         if (slots[j].type.includes("BB")) slot[j].push(4);
-        if (slots[j].type.includes("Torpedoes")) slot[j].push(5);
+        if (slots[j].type.includes("Torpedoes") && !slots[j].type.includes("Submarine Torpedoes")) slot[j].push(5);
         if (slots[j].type.includes("Anti-Air")) slot[j].push(6);
         if (slots[j].type.includes("Fighters")) slot[j].push(7);
         if (slots[j].type.includes("Torpedo Bombers")) slot[j].push(8);

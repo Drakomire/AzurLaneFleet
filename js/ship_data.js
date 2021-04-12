@@ -14183,11 +14183,9 @@ var ship_data = {
 			"huntingRange": "  5 5  \n 3*3*3 \n ***** \n **S** \n 2***2 \n 42*24 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14239,11 +14237,9 @@ var ship_data = {
 			"huntingRange": "       \n  *3*  \n42***24\n53*S*35\n 2***2 \n  ***  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14295,11 +14291,9 @@ var ship_data = {
 			"huntingRange": "   3   \n  2*2  \n 2***2 \n4**S**5\n4*****5\n  3*3  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14351,11 +14345,9 @@ var ship_data = {
 			"huntingRange": "       \n 2***2 \n ***** \n **S** \n 2***2 \n 3***3 \n 54345 "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14407,11 +14399,9 @@ var ship_data = {
 			"huntingRange": "       \n 3344  \n 2***2 \n **S** \n 2***2 \n 55433 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14463,11 +14453,9 @@ var ship_data = {
 			"huntingRange": "       \n 32*** \n 2**** \n5**S**5\n ****2 \n ***23 \n  434  "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14519,11 +14507,9 @@ var ship_data = {
 			"huntingRange": "       \n   *255\n *****4\n3**S**3\n4***** \n522*3  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -14840,11 +14826,9 @@ var ship_data = {
 			"huntingRange": "       \n 53224 \n 4***3 \n 4*S*4 \n 4***3 \n 53244 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [],
@@ -15258,11 +15242,9 @@ var ship_data = {
 			"huntingRange": "   4   \n  323  \n ****25\n4**S** \n 2****5\n  323  \n   4   "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -16475,11 +16457,9 @@ var ship_data = {
 			"huntingRange": "  5 5  \n *4*44 \n ***** \n 2*S** \n 3***2 \n 3*3*3 \n  2 2  "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -16738,11 +16718,9 @@ var ship_data = {
 			"huntingRange": "       \n522*   \n4***** \n3**S**3\n *****4\n  3*225\n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -16794,11 +16772,9 @@ var ship_data = {
 			"huntingRange": "  2 2  \n 5*3*5 \n ***** \n2**S**2\n ***** \n 43 34 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17275,11 +17251,9 @@ var ship_data = {
 			"huntingRange": "       \n  *3*  \n42***24\n53*S*35\n 2***2 \n  ***  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17331,11 +17305,9 @@ var ship_data = {
 			"huntingRange": "   3   \n  2*2  \n 2***2 \n4**S**5\n4*****5\n  3*3  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17387,11 +17359,9 @@ var ship_data = {
 			"huntingRange": "       \n  3*3  \n 2***2 \n5**S**5\n ***** \n 2*3*2 \n  4 4  "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17443,11 +17413,9 @@ var ship_data = {
 			"huntingRange": "  232  \n 2***2 \n4*****4\n5**S**5\n 3***3 \n  ***  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17499,11 +17467,9 @@ var ship_data = {
 			"huntingRange": "    54 \n 3***2 \n 3**** \n 2*S*2 \n5****3 \n42***  \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -17606,11 +17572,9 @@ var ship_data = {
 			"huntingRange": "   4 3 \n  3233 \n ****25\n4**S** \n 2****5\n  4  2 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -18344,11 +18308,9 @@ var ship_data = {
 			"huntingRange": "       \n 5* *5 \n 4***4 \n 2*S*2 \n2*****3\n32****3\n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -19767,11 +19729,9 @@ var ship_data = {
 			"huntingRange": "       \n 3344  \n 2***2 \n **S** \n 2***2 \n 55433 \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -20875,11 +20835,9 @@ var ship_data = {
 			"huntingRange": " 53 *  \n 42 *  \n 3*****\n 2*S*  \n ****23\n***2345\n*      "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -21407,11 +21365,9 @@ var ship_data = {
 			"huntingRange": ""
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -21772,11 +21728,9 @@ var ship_data = {
 			"huntingRange": " *3*4* \n *3*3* \n ***** \n **S** \n 42*25 \n  2*25 \n   *   "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -22199,11 +22153,9 @@ var ship_data = {
 			"huntingRange": "  454  \n * 2 * \n* *3* *\n***S***\n* *** *\n 2 2 2 \n  353  "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
@@ -23878,11 +23830,9 @@ var ship_data = {
 			"huntingRange": " *44 2 \n **33* \n **2** \n **S** \n *23** \n 2 55* \n       "
 		},
 		"equip_1": [
-			5,
 			13
 		],
 		"equip_2": [
-			5,
 			13
 		],
 		"equip_3": [
