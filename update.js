@@ -1,7 +1,7 @@
-const { checkForNewUpdate } = require("@azurapi/azurapi") //es5
-checkForNewUpdate()
-const azurlane = require('@azurapi/azurapi') //ES5
-
+console.log("script start")
+const { AzurAPI } = require("@azurapi/azurapi");
+const client = new AzurAPI();
+console.log("updated")
 
 //Equipment IDs
 //1 - DD guns
@@ -53,7 +53,7 @@ ship_data_json = JSON.parse(json);
 
 
 setTimeout(async ()=>{
-  let ships = azurlane.getAllShips;
+  let ships = client.ships.raw;
 
   let out = {};
   for (i in ships){
@@ -205,9 +205,9 @@ setTimeout(async ()=>{
         "nationality": faction,
         "type": hullClass,
         "base_list": [      //This can't be fully working until Azur API changes that
-            0,
-            0,
-            0
+            slots[0].max || 0,
+            slots[1].max || 0,
+            slots[2].max || 0
         ],
         "id": i,
         "skin_id": i,
@@ -256,4 +256,4 @@ setTimeout(async ()=>{
   output = {};
 
 
-}, 1000);
+}, 100);

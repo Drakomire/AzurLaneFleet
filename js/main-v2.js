@@ -16,7 +16,7 @@ Vue.component("item-container", {
                 <img class="img-fluid bg" v-bind:src="item.property.bg">
                 <img class="img-fluid frame" v-bind:src="item.property.frame">
                 <img class="img-fluid icon" v-bind:src="item.property.icon">
-                <!--span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity"-->
+                <span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity">
               </div>
               <span class="justify-content-center item_name"
                 v-text="item.property[lang]"
@@ -156,7 +156,6 @@ let c_ships = [];
 let version = 0.03;
 let eqck = false;
 let search = "";
-
 
 initial();
 //---------------------------------------------
@@ -318,10 +317,10 @@ function dumpDataID() {
         data.push(fleetdata);
     });
     data = JSON.stringify(data);
-    let hash = CryptoJS.SHA3(data, { outputLength: 256 }).toString();
-    data = `${data}!${version}!${hash}`;
-    let textbox = document.getElementById("fleetdata");
-    textbox.value = "drakomire.github.io/AzurLaneFleet?fleet="+btoa(data);
+    // let hash = CryptoJS.SHA3(data, { outputLength: 256 }).toString();
+    // data = `${data}!${version}!${hash}`;
+    // let textbox = document.getElementById("fleetdata");
+    // textbox.value = "drakomire.github.io/AzurLaneFleet?fleet="+btoa(data);
     return data;
 }
 
@@ -329,26 +328,23 @@ function loadDataByID() {
     let data = atob(document.getElementById("fleetdata").value);
 
     let textbox = document.getElementById("fleetdata");
-    textbox.value = "";
+    // textbox.value = "";
 
     if (!loadData(data)){
       message = "Error: Corrupted data";
-      textbox.value = message;
+      // textbox.value = message;
       console.log(message);
       // console.log(main_data);
       return;
     }
 
 }
-function loadData(data){
-  data = data.split("!");
-  [main_data, ver, hash] = data;
 
-  let ck = CryptoJS.SHA3(main_data, { outputLength: 256 }).toString();
-  if (ck != hash) {
-    return false;
-  }
-  parseIdData(main_data);
+function loadData(data){
+    client.send(JSON.stringify({
+      type: "Fleet URL Load",
+      payload: data
+    }));
   return true;
 }
 
@@ -390,9 +386,8 @@ function loadCookie() {
 }
 
 function parseIdData(data) {
-    deleteFleet();
+    deleteFleet();    //Add required fleets
     data = JSON.parse(data);
-    //Add required fleets
     for (i of data){
       //Check if surface fleet
       if (i[0].length == 3){
@@ -401,7 +396,6 @@ function parseIdData(data) {
         addFleet(false);
       }
     }
-
     data.forEach((fleet, fleet_index) => {
         fleet.forEach((side, side_index) => {
             side.forEach((ship, ship_index) => {
@@ -555,38 +549,39 @@ function isShipSelect(nation, type, rarity, retro, name) {
     let s = search
     //Check if the ship is in the search
     //Handle certain non-english cahracters for ease of use
-    getMatch = (name) => {
-      if (s.length > name.length){
-        return false;
-      }
-      for (i in s){
-        if (name[i] != s[i]){
-          if (lang == 'en'){
-            if (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122){
-              return false;
-            }
-          }else{
-            return false;
-          }
-        }
-      }
-      return true;
-    }
-
-    if (lang == 'en'){
-      name = name.toLowerCase();
-      s = s.toLowerCase();
-    }
-
-    if (!getMatch(name)){
-      return false;
-    }
-
-
-    // let regex = new RegExp(`${search}[\x00-\x7F]`,'i');
-    // if (!regex.test(name)){
+    // getMatch = (name) => {
+    //   if (s.length > name.length){
+    //     return false;
+    //   }
+    //   for (i in s){
+    //     if (name[i] != s[i]){
+    //       if (lang == 'en'){
+    //         if (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122){
+    //           return false;
+    //         }
+    //       }else{
+    //         return false;
+    //       }
+    //     }
+    //   }
+    //   return true;
+    // }
+    //
+    // if (lang == 'en'){
+    //   name = name.toLowerCase();
+    //   s = s.toLowerCase();
+    // }
+    //
+    // if (!getMatch(name)){
     //   return false;
     // }
+
+
+    search = search.replace(/[^A-Za-z]/gi, '.')
+    let regex = new RegExp(`${search}`,'i');
+    if (!regex.test(name)){
+      return false;
+    }
 
     //Sort ship list by hull class
     if (c_side === "0" && front.indexOf(type) === -1) {
@@ -978,10 +973,10 @@ function setShipAndEquip(item) {
 }
 
 function copyData() {
-    let text = document.getElementById("fleetdata");
-    text.select();
-    text.setSelectionRange(0, 99999);
-    document.execCommand("copy");
+    client.send(JSON.stringify({
+      type: "Fleet URL Request",
+      payload: dumpDataID()
+    }));
 }
 
 function emptyData() {
@@ -1227,7 +1222,8 @@ function creatAllEquip() {
                 const fleetArg = urlParams.get('fleet')
                 if (fleetArg != null){
                   console.log("Fleet Loaded URL");
-                  loadData(atob(fleetArg))
+                  while (connected === false){}
+                    loadData(fleetArg)
                 }else{
                   console.log("Fleet Loaded from Cookies")
                   loadCookie();
