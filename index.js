@@ -16,6 +16,8 @@ app.get('/', function(request, response){
     response.sendFile(__dirname+'/index.html');
 });
 
+console.log("Server is up");
+
 // `server` is a vanilla Node.js HTTP server, so use
 // the same ws upgrade process described here:
 // https://www.npmjs.com/package/ws#multiple-servers-sharing-a-single-https-server
