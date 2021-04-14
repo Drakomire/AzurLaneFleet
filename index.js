@@ -3,7 +3,7 @@ const express = require('express');
 const ws = require('ws');
 
 const {Database} = require('./database/database.js');
-const {packetHandler} = require('./packetHandler/server.js');
+const {packetHandler} = require('./PacketHandler/server.js');
 
 async function a(){
   global.database = await Database.build();
