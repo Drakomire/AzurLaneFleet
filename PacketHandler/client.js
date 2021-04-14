@@ -1,6 +1,6 @@
 //Start websocket
 var connected = false;
-const client = new WebSocket('ws://localhost:3000');
+const client = new WebSocket('ws://'+location.host);
 client.onmessage = function (event) {
   let data = JSON.parse(event.data);
   let result = {
