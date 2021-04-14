@@ -1,5 +1,6 @@
 //Start websocket
 var connected = false;
+var siteLoaded = false;
 const client = new ReconnectingWebSocket('ws://'+location.host+'/socketserver');
 var TOKEN = ''
 client.onmessage = function (event) {
@@ -7,8 +8,11 @@ client.onmessage = function (event) {
   let result = {
     'TOKEN' : ()=>{
         TOKEN = data.payload;
-        console.log("token recieved")
-        initial();
+        console.log("Reconnected")
+        if (!siteLoaded){
+          initial();
+          siteLoaded = true;
+        }
     },
     'Fleet Data' : ()=>{
       parseIdData(JSON.parse(data.payload));
