@@ -38,7 +38,8 @@ module.exports ={
             type: "Fleet URL",
             payload: key
           }));
-        }
+        },
+        "ping" : () => {console.log("ping")}
       }[type];
 
       result();

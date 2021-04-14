@@ -18,7 +18,16 @@ client.onmessage = function (event) {
 
 }
 
-client.onopen = () => {
+client.onopen = async () => {
   connected = true;
   console.log('WebSocket Client Connected');
+
+  async function ping(){
+    //Ping packet
+    client.send(JSON.stringify({
+      type: "ping",
+      payload: ""
+    }));
+    setTimeout(ping, 10000);
+  }ping();
 }

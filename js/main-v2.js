@@ -1222,8 +1222,8 @@ function creatAllEquip() {
                 const fleetArg = urlParams.get('fleet')
                 if (fleetArg != null){
                   console.log("Fleet Loaded URL");
-                  while (connected === false){}
-                    loadData(fleetArg)
+                  // while (connected === false){}
+                  loadData(fleetArg)
                 }else{
                   console.log("Fleet Loaded from Cookies")
                   loadCookie();
