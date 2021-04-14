@@ -11,7 +11,7 @@ client.onmessage = function (event) {
       let fleetJson = JSON.parse(event.data);
       let url = fleetJson.payload;
       let textbox = document.getElementById("fleetdata");
-      textbox.value = "http:/drakomire.github.io/?fleet="+data.payload;
+      textbox.value = "http://azur-fleet-maker.herokuapp.com/?fleet="+data.payload;
     }
   }[data.type];
   result();
