@@ -4,6 +4,7 @@ const ws = require('ws');
 
 const {Database} = require('./database/database.js');
 const {packetHandler} = require('./PacketHandler/server.js');
+const {TOKEN} = require('./PacketHandler/server.js');
 
 async function a(){
   global.database = await Database.build();
@@ -33,9 +34,12 @@ server.on('upgrade', (request, socket, head) => {
 // events that come in.
 const wsServer = new ws.Server({ server: app });
 wsServer.on('connection', socket => {
+    socket.send(JSON.stringify({
+      type: "TOKEN",
+      payload: TOKEN
+    }));
   socket.on('message', async message => {
     packetHandler(socket,message);
-
 
 
   });

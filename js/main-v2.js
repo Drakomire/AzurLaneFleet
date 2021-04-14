@@ -157,7 +157,6 @@ let version = 0.03;
 let eqck = false;
 let search = "";
 
-initial();
 //---------------------------------------------
 // let fleet_number = "1";
 // console.log(fleet_number)
@@ -343,7 +342,8 @@ function loadDataByID() {
 function loadData(data){
     client.send(JSON.stringify({
       type: "Fleet URL Load",
-      payload: data
+      payload: data,
+      token: TOKEN
     }));
   return true;
 }
@@ -975,7 +975,8 @@ function setShipAndEquip(item) {
 function copyData() {
     client.send(JSON.stringify({
       type: "Fleet URL Request",
-      payload: dumpDataID()
+      payload: dumpDataID(),
+      token: TOKEN
     }));
 }
 

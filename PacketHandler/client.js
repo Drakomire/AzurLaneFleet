@@ -1,9 +1,15 @@
 //Start websocket
 var connected = false;
-const client = new WebSocket('ws://'+location.host);
+const client = new ReconnectingWebSocket('ws://'+location.host+'/socketserver');
+var TOKEN = ''
 client.onmessage = function (event) {
   let data = JSON.parse(event.data);
   let result = {
+    'TOKEN' : ()=>{
+        TOKEN = data.payload;
+        console.log("token recieved")
+        initial();
+    },
     'Fleet Data' : ()=>{
       parseIdData(JSON.parse(data.payload));
     },
@@ -21,13 +27,4 @@ client.onmessage = function (event) {
 client.onopen = async () => {
   connected = true;
   console.log('WebSocket Client Connected');
-
-  async function ping(){
-    //Ping packet
-    client.send(JSON.stringify({
-      type: "ping",
-      payload: ""
-    }));
-    setTimeout(ping, 10000);
-  }ping();
 }
