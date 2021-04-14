@@ -9,11 +9,16 @@ module.exports ={
 
       let result = {
         "Fleet URL Load" : async () => {
-          let data = await global.database.get(message.payload);
-          socket.send(JSON.stringify({
-            type: "Fleet Data",
-            payload: data.data
-          }));
+          try{
+            let data = await global.database.get(message.payload);
+            socket.send(JSON.stringify({
+              type: "Fleet Data",
+              payload: data.data
+            }));
+          }catch{
+
+          }
+
         },
 
         "Fleet URL Request" : async () => {
