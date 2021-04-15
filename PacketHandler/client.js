@@ -20,7 +20,7 @@ client.onmessage = function (event) {
       let fleetJson = JSON.parse(event.data);
       let url = fleetJson.payload;
       let textbox = document.getElementById("fleetdata");
-      textbox.value = "https://www.azurfleetmaker.com/?fleet="+data.payload;
+      textbox.value = "https://azurfleetmaker.com/?fleet="+data.payload;
     }
   }[data.type];
   result();
