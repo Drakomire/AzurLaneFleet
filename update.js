@@ -204,7 +204,7 @@ setTimeout(async ()=>{
     out[`${i}`] = {
         "nationality": faction,
         "type": hullClass,
-        "base_list": [      //This can't be fully working until Azur API changes that
+        "base_list": [
             slots[0].max || 0,
             slots[1].max || 0,
             slots[2].max || 0

@@ -132,6 +132,7 @@ let retrofit = true;
 var default_fleet = [];
 var fleet_data = [];
 fleet_data = buildFleet();
+last_saved_fleet = [];
 
 let c_side_dict = {
   0: "front_ship",
@@ -973,11 +974,19 @@ function setShipAndEquip(item) {
 }
 
 function copyData() {
+  if (JSON.stringify(fleet_data) != last_saved_fleet){
     client.send(JSON.stringify({
       type: "Fleet URL Request",
       payload: dumpDataID(),
       token: TOKEN
     }));
+    // let textbox = document.getElementById("fleetdata");
+    // textbox.value = "set=";
+    last_saved_fleet = JSON.stringify(fleet_data);
+  }else{
+      let textbox = document.getElementById("fleetdata");
+      textbox.value = "Please change your fleet before requesting an URL!";
+  }
 }
 
 function emptyData() {
