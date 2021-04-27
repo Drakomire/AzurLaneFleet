@@ -1,7 +1,7 @@
 //Start websocket
 var connected = false;
 var siteLoaded = false;
-const client = new ReconnectingWebSocket('ws://'+location.host+'/socketserver');
+const client = new ReconnectingWebSocket('wss://'+location.host+'/socketserver');
 var TOKEN = ''
 client.onmessage = function (event) {
   let data = JSON.parse(event.data);
