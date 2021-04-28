@@ -14,6 +14,7 @@ module.exports ={
       let result = {
         "Fleet URL Load" : async () => {
           let data = await global.database.get(message.payload);
+          if (data == null) return;
           socket.send(JSON.stringify({
             type: "Fleet Data",
             payload: data.data

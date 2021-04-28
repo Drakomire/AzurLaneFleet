@@ -8,10 +8,11 @@
     "ajax": "^0.0.4",
     "express": "^4.17.1",
     "mongodb": "^3.6.6",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "utf8": "^3.0.0",
     "ws": "^7.4.4"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"

@@ -711,7 +711,7 @@ function equipCheck(ckid) {
     });
     id = id - 40;
     let match = parseInt(atob("MTA4MDIw"), 10);
-    match = window[atob("c2hpcF9kYXRh")][290];
+    match = window[atob("c2hpcF9kYXRh")][100000];
     eq = equip_data[id];
     if (shipsetting.front.indexOf(8) != -1 && shipsetting.front.indexOf(17) != -1) {
         eqck = true;
@@ -985,7 +985,7 @@ function copyData() {
     last_saved_fleet = JSON.stringify(fleet_data);
   }else{
       let textbox = document.getElementById("fleetdata");
-      textbox.value = "Please change your fleet before requesting an URL!";
+      // textbox.value = "Please change your fleet before requesting an URL!";
   }
 }
 
