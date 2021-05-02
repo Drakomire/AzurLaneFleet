@@ -1,7 +1,18 @@
 //Start websocket
 var connected = false;
 var siteLoaded = false;
-const client = new ReconnectingWebSocket('wss://'+location.host+'/socketserver');
+
+console.log(location.host)
+
+var client = null;
+if (location.host ==  'localhost:3000'){
+  client = new ReconnectingWebSocket('ws://'+location.host+'/socketserver');
+}else{
+  client = new ReconnectingWebSocket('wss://'+location.host+'/socketserver');
+}
+
+
+
 var TOKEN = ''
 client.onmessage = function (event) {
   let data = JSON.parse(event.data);
