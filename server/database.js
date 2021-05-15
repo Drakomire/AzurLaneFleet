@@ -1,5 +1,6 @@
 const {MongoClient} = require('mongodb');
 const uri = process.env.URL_DB;
+console.log(uri);
 
 module.exports = {
     Database: class Database{

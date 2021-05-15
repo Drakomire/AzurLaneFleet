@@ -2,9 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const ws = require('ws');
 
-const {Database} = require('./database/database.js');
-const {packetHandler} = require('./PacketHandler/server.js');
-const {TOKEN} = require('./PacketHandler/server.js');
+const {Database} = require('./server/database.js');
+const {packetHandler} = require('./server/packet_handler.js');
+const {TOKEN} = require('./server/packet_handler.js');
 
 async function a(){
   global.database = await Database.build();
@@ -12,9 +12,9 @@ async function a(){
 
 
 const app = express();
-app.use(express.static(__dirname));
+app.use(express.static(__dirname+'/client'));
 app.get('/', function(request, response){
-    response.sendFile(__dirname+'/index.html');
+    response.sendFile(__dirname+'/client/index.html');
 });
 
 console.log("Server is up");
