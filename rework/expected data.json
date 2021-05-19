@@ -1,0 +1,62 @@
+{
+    "_id": {
+      "$oid": "607638c3031743538410d208"
+    },
+    "url": "Secret",
+    "data":
+    [ //fleets level
+        { // fleet level
+            "backline":{ //fleet group level
+                "flagship":{ //ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "rightflank":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "leftflank":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                }
+            },
+            "vanguard":{//fleet group level
+                "vanguardLead":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "vanguardMid":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "vanguardAft":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                }
+            },
+            "subs":{//fleet group level
+                "subFlagship":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "subLeftFlank":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "subRightFlank":{//ship level
+                    "name":{},
+                    "stats":{},
+                    "items":[{},{},{},{},{}]
+                }
+            }
+        }
+    ]
+}
