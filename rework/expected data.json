@@ -6,54 +6,61 @@
     "data":
     [ //fleets level
         { // fleet level
-            "backline":{ //fleet group level
+            "surface":{
                 "flagship":{ //ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
                 "rightflank":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
                 "leftflank":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
-                }
-            },
-            "vanguard":{//fleet group level
+                },
                 "vanguardLead":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
                 "vanguardMid":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
-                "vanguardAft":{//ship level
+                "vanguardBack":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 }
             },
-            "subs":{//fleet group level
-                "subFlagship":{//ship level
+            "sub":{
+                "flagSub":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
-                "subLeftFlank":{//ship level
+                "leftsub":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 },
-                "subRightFlank":{//ship level
+                "rightSub":{//ship level
                     "name":{},
                     "stats":{},
+                    "extraData":{},
                     "items":[{},{},{},{},{}]
                 }
             }
