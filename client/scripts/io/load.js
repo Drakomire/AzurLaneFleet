@@ -1,3 +1,4 @@
+//Deprecated function to load from the text box
 function loadDataByID() {
     let data = atob(document.getElementById("fleetdata").value);
 
@@ -14,6 +15,8 @@ function loadDataByID() {
 
 }
 
+//Sends a requst to the server to get the data to load
+//Client.js handles the rest
 function loadData(data){
     client.send(JSON.stringify({
       type: "Fleet URL Load",
@@ -23,6 +26,7 @@ function loadData(data){
   return true;
 }
 
+//Loads a string created from dumpIdData()
 function parseIdData(data) {
     deleteFleet();    //Add required fleets
     data = JSON.parse(data);

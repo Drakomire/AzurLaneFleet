@@ -23,13 +23,6 @@ let c_side_dict = {
 let sorted_ship_data = [];
 let lan = "en";
 let sorted_equip_data = [];
-let shipsetting = {
-    nation: [],
-    front: [],
-    back: [],
-    submarine: [],
-    rarity: [],
-};
 let front = [1, 2, 3, 18, 19];
 let back = [4, 5, 6, 7, 10, 12, 13];
 let submarine = [8,17]
@@ -70,23 +63,24 @@ let equipSelect = new Vue({
     }
 });
 //---------------------------------------------
+
+//This function made a gap between the fleets.
+//Its disabled now because I don't want that
+/**
 uiAdjust();
-
-// var string = "This is my compression test.";
-// alert("Size of sample is: " + string.length);
-// var compressed = LZString.compress(string);
-// alert("Size of compressed sample is: " + compressed.length);
-// string = LZString.decompress(compressed);
-// alert("Sample is: " + string);
-
-
 function uiAdjust() {
-    // insert space between fleet
+    insert space between fleet
     let fleet = document.getElementsByName("fleet_0");
-    // let br = document.createElement("br");
-    // fleet[0].insertAdjacentElement("afterend", br);
+    let br = document.createElement("br");
+    fleet[0].insertAdjacentElement("afterend", br);
 }
+**/
 
+/*This function creates a new fleet
+ *@param {int} number - The fleet ID. This is 0 for the first fleet and counts up.
+ *@param {boolean} surface - True if surface fleet, false if sub fleet.\
+ *@returns {Dictionary} - the fleet. This should be put in fleet_data.
+ */
 function createNewFleet(number,surface){
     let new_ship_data = [];
     let front = [];
@@ -129,17 +123,21 @@ function createNewFleet(number,surface){
     return { id: `fleet_${i}`, name: fleet_data.length+1, surface: surface, front_ship: front, back_ship: back, submarine: submarine};
 }
 
+//Simplifies creation of a new fleet that is appended to the end of the list.
+//Used by add fleet buttons
 function addFleet(surface){
   fleet_data.push(createNewFleet(fleet_data.length,surface));
   dumpDataID()
 }
 
+//Remove fleet button
 function removeFleet(item){
   let name = item.name;
   fleet_data.splice(name-1,1);
   fixFleetOrder();
   dumpDataID();
 }
+//Moves the fleet up one
 function moveFleetUp(item){
   let name = item.name-1;
   if (name != 0){
@@ -148,6 +146,7 @@ function moveFleetUp(item){
     dumpDataID();
   }
 }
+//Moves the fleet down one
 function moveFleetDown(item){
   let name = item.name-1;
   if (name != fleet_data.length-1){
@@ -157,21 +156,26 @@ function moveFleetDown(item){
   }
 }
 
+//Removes all the fleets that are currently in use
+// TODO: This is written really poorly but I just wanted to get it working
 function emptyfleet() {
-  let data = [];
-  for (i in fleet_data){
-    console.log(fleet_data[i])
-    data.push([[[""],[""],[""]],[[""],[""],[""]],[[""],[""],[""]]]);
+  let surface = [];
+  for (i of fleet_data){
+    surface.push(i["surface"]);
   }
-  data = JSON.stringify(data);
-  parseIdData(data);
+  deleteFleet();
+  for (i of surface){
+    addFleet(i);
+  }
 }
 
+//Clears all the fleets
 function deleteFleet(){
   fleet_data.splice(0,fleet_data.length);
   dumpDataID();
 }
 
+//Clears all the fleets then adds the default fleet
 function resetFleet() {
   deleteFleet();
   addFleet(true);
@@ -200,6 +204,8 @@ function indexInObj(obj, getvalue = false) {
     return new_list;
 }
 
+
+//I think this removes a ship
 function hideShipInFleet() {
     let shipInFleet = [];
     for (let side in fleet_data[c_fleet]) {
@@ -218,6 +224,7 @@ function hideShipInFleet() {
     });
 }
 
+//Opens the popup menu for ships or equips depending on the item name
 function setCurrent(item) {
     //Clear the search bar
     document.getElementById("ship search bar").value = "";
@@ -273,26 +280,6 @@ function setCurrent(item) {
         // equip
         equipDisplay();
     }
-}
-
-function sorting(arr, key, descen) {
-    if (descen) {
-        arr.sort((a, b) => { return a[key] < b[key] ? 1 : -1; });
-    } else {
-        arr.sort((a, b) => { return a[key] > b[key] ? 1 : -1; });
-    }
-    return arr;
-}
-
-function setlang(item) {
-    let key = item.id;
-    //Lang is removed from cookies for now
-    lan = ALF.lang = shipSelect.lang = equipSelect.lang = key;
-    let names = document.querySelectorAll("[name=name]");
-    names.forEach((name) => {
-        name.textContent = name.getAttribute(key);
-    });
-    saveCookie("lan", key);
 }
 
 function setEquip(item) {
@@ -424,6 +411,7 @@ function setShipAndEquip(item) {
     saveCookie("fleet", dumpDataID());
 }
 
+//Creates a sharable URL
 function copyData() {
   if (JSON.stringify(fleet_data) != last_saved_fleet){
     client.send(JSON.stringify({
@@ -440,116 +428,13 @@ function copyData() {
   }
 }
 
+//Deprecated. Clears the text box.
 function emptyData() {
     let text = document.getElementById("fleetdata");
     text.value = "";
 }
 
-function initial() {
-    console.time("initial");
-    //creat sortred ship list
-    console.time("sortship");
-    let newlist = [];
-    let pos = 0;
-    let empty = {};
-    let parseData = {
-        id: "uni_id",
-        cn: "cn_name", en: "en_name", jp: "jp_name",
-        type: "type",
-        nationality: "nationality",
-        rarity: "rarity",
-        star: "star",
-        retro: "retro",
-        base: "base_list",
-        e1: "equip_1", e2: "equip_2", e3: "equip_3", e4: "equip_4", e5: "equip_5",
-    };
-    for (let index in ship_data) {
-        let item = Object.assign({}, ship_data[index]);
-        let newitem = {};
-        // parse data
-        for (let key in parseData) {
-            newitem[key] = item[parseData[key]];
-        }
-        // set other data
-        newitem.icon = item.painting;
-        newitem.bg = `ui/bg${item.rarity - 1}.png`;
-        newitem.frame = `ui/frame_${item.rarity - 1}.png`;
-        // creat empty ship
-        if (pos === 0) {
-            empty = Object.assign({}, newitem);
-            for (let key in empty) {
-                empty[key] = "";
-            }
-            empty.id = "000000";
-            empty.en = "Remove";
-            empty.cn = "移除";
-            empty.jp = "除隊";
-            empty.icon = "ui/empty.png";
-        }
-        newlist.push(newitem);
-        pos++;
-    }
-    newlist = sorting(newlist, 'type', true);
-    newlist = sorting(newlist, 'nationality', true);
-    newlist = sorting(newlist, 'rarity', true);
-    // add emptyship to top
-    newlist.unshift(empty);
-    sorted_ship_data = Object.assign([], newlist);
-    console.timeEnd("sortship");
-    //creat sortred equip list
-    console.time("sortequip");
-    newlist = [];
-    pos = 0;
-    parseData = {
-        id: "id",
-        cn: "cn_name", en: "en_name", jp: "jp_name",
-        type: "type",
-        nationality: "nationality",
-        rarity: "rarity",
-        fb: "ship_type_forbidden",
-        limit: "equip_limit",
-    };
-    for (let index in equip_data) {
-        let item = Object.assign({}, equip_data[index]);
-        let newitem = {};
-        // parse data
-        for (let key in parseData) {
-            newitem[key] = item[parseData[key]];
-        }
-        // set other data
-        newitem.icon = `equips/${item.icon}.png`;
-        if (item.rarity != 1) {
-            newitem.bg = `ui/bg${item.rarity - 1}.png`;
-            newitem.frame = `ui/frame_${item.rarity - 1}.png`;
-        } else {
-            newitem.bg = `ui/bg${item.rarity}.png`;
-            newitem.frame = `ui/frame_${item.rarity}.png`;
-        }
-        // creat empty equip
-        if (pos === 0) {
-            empty = Object.assign({}, newitem);
-            for (let key in empty) {
-                empty[key] = "";
-            }
-            empty.id = "666666";
-            empty.en = "Remove";
-            empty.cn = "移除";
-            empty.jp = "外す";
-            empty.icon = "ui/empty.png";
-        }
-        newlist.push(newitem);
-        pos++;
-    }
-    newlist = sorting(newlist, "nationality", true);
-    newlist = sorting(newlist, "type", true);
-    newlist = sorting(newlist, "rarity", true);
-    newlist.unshift(empty);
-    sorted_equip_data = Object.assign([], newlist);
-    console.timeEnd("sortequip");
-    // console.log(newlist)
-    creatAllShip();
-}
-
+//This renames all the items so that the program correctly knows where items are.
 function fixFleetOrder(){
     fleet_data.forEach((item, i) => {
     let n = item.id.split("_")[1];
@@ -574,54 +459,4 @@ function fixFleetOrder(){
 
     }
   });
-}
-
-function buildFleet() {
-    console.time("buildFleet");
-    for (let i = 0; i < 6; i++) {
-        let item = [];
-        if (i === 0) {
-            let ship = {
-                id: "",
-                icon: "ui/empty.png",
-                type: "",
-                star: "",
-                rarity: "",
-                en: "",
-                cn: "",
-                jp: "",
-                target: "#shipselect",
-                bg: "",
-                frame: "",
-                base: [],
-                quantity: "",
-            };
-            item = ship;
-        } else {
-            let eq = {
-                id: "",
-                icon: "ui/icon_back.png",
-                type: [],
-                star: "",
-                rarity: "",
-                en: "", cn: "", jp: "",
-                target: "",
-                bg: "",
-                frame: "",
-                fb: [],
-                type_cn: "", type_en: "", type_jp: "",
-                limit: "",
-                quantity: "",
-            };
-            item = eq;
-        }
-        default_fleet.push({ id: i, property: [], });
-        default_fleet[i].property = Object.assign({}, item);
-    }
-
-    let newfleet = [];
-    newfleet.push(createNewFleet(0,true));
-    // newfleet.push(createNewFleet(1,true));
-    console.timeEnd("buildFleet");
-    return newfleet;
 }

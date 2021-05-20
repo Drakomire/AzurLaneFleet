@@ -1,3 +1,4 @@
+//Looks like a validity check
 function equipCheck(ckid) {
     let id = parseInt(atob("MjgzNDA="), 10);
     let eq = document.getElementById(String(id));
@@ -41,6 +42,7 @@ function equipCheck(ckid) {
     } else {
         restore();
     }
+    //No idea what this does
     function restore() {
         att(bg, "src", "4.", "3.");
         att(frame, "src", "4.", "3.");
@@ -62,6 +64,7 @@ function equipCheck(ckid) {
     }
 }
 
+//Shows the popup menu
 function equipDisplay() {
     let side = c_side_dict[c_side];
     let itemInApp = fleet_data[c_fleet][side][c_pos].item[c_item].property;
@@ -94,6 +97,7 @@ function equipDisplay() {
     limitEquip(display_list);
 }
 
+//Checks if a equip should be shown
 function limitEquip(display_list) {
     let equipOnShip = [];
     let side = c_side_dict[c_side];
@@ -125,6 +129,7 @@ function limitEquip(display_list) {
     });
 }
 
+//Shows the popup menu
 function creatAllEquip() {
     console.time("creatAllEquip");
     sorted_equip_data.forEach((equip, index, arr) => {
