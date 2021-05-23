@@ -1,4 +1,5 @@
-// dump id only
+// Turns the selected items into a string
+// This string can later be loaded with parseIdData()
 function dumpDataID() {
     let data = [];
     fleet_data.forEach(fleet => {

@@ -1,8 +1,11 @@
+//refreshes the popup menu when a letter changes in the search bar
+//I wrote this one so I hope its good
 function updateSearch(query){
   search = document.getElementById("ship search bar").value;
   shipDisplay();
 }
 
+//Updated when you press a selection button
 function updateSetting(item) {
     $(item).button("toggle");
     let strlist = item.name.split("_");
@@ -24,6 +27,19 @@ function updateSetting(item) {
     shipDisplay();
 }
 
+//I think this one checks if the ship is in the "fleet section"
+//ie checks if when you click on a main fleet box it shows main fleet ships
+//etc
+
+let shipsetting = {
+    nation: [],
+    front: [],
+    back: [],
+    submarine: [],
+    rarity: [],
+};
+
+//Updates shipsetting when a setting that is NOT the search bar is changed.
 function checksetting(key, value) {
     let index = shipsetting[key].indexOf(value);
     if (value > -1) {
@@ -45,6 +61,7 @@ function checksetting(key, value) {
     }
 }
 
+//Checks if a ship is selected
 function isShipSelect(nation, type, rarity, retro, name) {
     let indicator_nation = false;
     let indicator_type = false;
@@ -56,6 +73,7 @@ function isShipSelect(nation, type, rarity, retro, name) {
     let lang = shipSelect.lang;
     let s = search;
 
+    //Regex search to find the characters
     search = search.replace(/[^A-Za-z]/gi, '.')
     let regex = new RegExp(`${search}`,'i');
     if (!regex.test(name)){
@@ -73,6 +91,7 @@ function isShipSelect(nation, type, rarity, retro, name) {
         return false;
     }
 
+    //Not sure what this one is
     if (c_side === "0") {
         if (shipsetting.front.indexOf(type) != -1 || shipsetting.front.length === 0) {
             indicator_type = true;
@@ -95,9 +114,6 @@ function isShipSelect(nation, type, rarity, retro, name) {
         }
     }
 
-
-
-
     if (shipsetting.nation.indexOf(nation) != -1 || shipsetting.nation.length === 0) {
         indicator_nation = true;
     }
@@ -118,6 +134,7 @@ function isShipSelect(nation, type, rarity, retro, name) {
     }
 }
 
+//This adds the ships to the popup menu
 function shipDisplay() {
     let shiplist = document.getElementById("shiplist");
     shiplist = shiplist.querySelectorAll("button");
@@ -129,6 +146,7 @@ function shipDisplay() {
             let rarity = ship_data[id].rarity;
             let retro = ship_data[id].retro;
             let name = ship_data[id][shipSelect.lang+"_name"];
+            //Turns the display on if the ship is valid
             if (isShipSelect(nation, type, rarity, retro, name)) {
                 item.style.display = "";
             } else {
@@ -140,6 +158,7 @@ function shipDisplay() {
     // hideShipInFleet();
 }
 
+//Adds the ships from data/ship_data.js to the pop up menu.
 function creatAllShip() {
     console.time("creatAllShip");
     sorted_ship_data.forEach((ship, index, arr) => {
@@ -206,6 +225,7 @@ function creatAllShip() {
     });
 }
 
+//Adds the header options to the pop up menu. The search bar is NOT included here.
 function buildShipSelectOption() {
     console.time("buildShipSelectOption");
     let nation = [
