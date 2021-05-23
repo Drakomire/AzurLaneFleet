@@ -7,6 +7,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			100,
+			100
+		],
+		"efficiency_list": [
+			100,
+			100,
+			100
+		],
 		"id": 100000,
 		"skin_id": 100000,
 		"star": 4,
@@ -59,6 +69,16 @@ var ship_data = {
 			1,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			100,
+			100
+		],
+		"efficiency_list": [
+			100,
+			100,
+			100
 		],
 		"id": 100010,
 		"skin_id": 100010,
@@ -113,6 +133,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			100,
+			100
+		],
+		"efficiency_list": [
+			100,
+			100,
+			100
+		],
 		"id": 100020,
 		"skin_id": 100020,
 		"star": 6,
@@ -165,6 +195,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101020,
 		"skin_id": 101020,
@@ -219,13 +259,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101030,
 		"skin_id": 101030,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "101030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kaxin_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kaxin_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "カッシン",
@@ -272,13 +322,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101040,
 		"skin_id": 101040,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "101040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/tangsi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/tangsi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ダウンズ",
@@ -324,6 +384,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			115,
+			120
+		],
+		"efficiency_list": [
+			115,
+			135,
+			125
 		],
 		"id": 101050,
 		"skin_id": 101050,
@@ -378,6 +448,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			115,
+			120
+		],
+		"efficiency_list": [
+			115,
+			135,
+			125
+		],
 		"id": 101060,
 		"skin_id": 101060,
 		"star": 4,
@@ -430,6 +510,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			115,
+			120
+		],
+		"efficiency_list": [
+			115,
+			135,
+			125
 		],
 		"id": 101070,
 		"skin_id": 101070,
@@ -484,6 +574,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			115,
+			140,
+			125
+		],
 		"id": 101080,
 		"skin_id": 101080,
 		"star": 5,
@@ -536,6 +636,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101090,
 		"skin_id": 101090,
@@ -590,6 +700,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			120,
+			120
+		],
+		"efficiency_list": [
+			125,
+			130,
+			130
+		],
 		"id": 101110,
 		"skin_id": 101110,
 		"star": 5,
@@ -642,6 +762,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101120,
 		"skin_id": 101120,
@@ -696,6 +826,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101130,
 		"skin_id": 101130,
 		"star": 4,
@@ -748,6 +888,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101140,
 		"skin_id": 101140,
@@ -802,6 +952,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101150,
 		"skin_id": 101150,
 		"star": 4,
@@ -854,6 +1014,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			125,
+			120
+		],
+		"efficiency_list": [
+			130,
+			130,
+			125
 		],
 		"id": 101160,
 		"skin_id": 101160,
@@ -908,13 +1078,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			120,
+			120
+		],
+		"efficiency_list": [
+			140,
+			125,
+			125
+		],
 		"id": 101170,
 		"skin_id": 101170,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "101170",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lafei_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lafei_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ラフィー",
@@ -961,13 +1141,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101240,
 		"skin_id": 101240,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "101240",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ximusi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ximusi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "シムス",
@@ -1014,13 +1204,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101250,
 		"skin_id": 101250,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "101250",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/haman_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/haman_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ハムマン",
@@ -1066,6 +1266,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			115,
+			130,
+			125
 		],
 		"id": 101260,
 		"skin_id": 101260,
@@ -1120,13 +1330,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			125,
+			120
+		],
+		"efficiency_list": [
+			130,
+			130,
+			125
+		],
 		"id": 101270,
 		"skin_id": 101270,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "101270",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/beili_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/beili_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ベイリー",
@@ -1172,6 +1392,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101290,
 		"skin_id": 101290,
@@ -1226,6 +1456,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101300,
 		"skin_id": 101300,
 		"star": 4,
@@ -1279,13 +1519,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			120,
+			120
+		],
+		"efficiency_list": [
+			125,
+			130,
+			130
+		],
 		"id": 101310,
 		"skin_id": 101310,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "101310",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/nigulasi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/nigulasi_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ニコラス",
@@ -1331,6 +1581,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			135
 		],
 		"id": 101330,
 		"skin_id": 101330,
@@ -1385,6 +1645,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101340,
 		"skin_id": 101340,
 		"star": 4,
@@ -1437,6 +1707,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 101350,
 		"skin_id": 101350,
@@ -1491,6 +1771,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			125,
+			120
+		],
+		"efficiency_list": [
+			130,
+			130,
+			125
+		],
 		"id": 101360,
 		"skin_id": 101360,
 		"star": 4,
@@ -1543,6 +1833,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			125,
+			120
+		],
+		"efficiency_list": [
+			130,
+			130,
+			125
 		],
 		"id": 101370,
 		"skin_id": 101370,
@@ -1597,6 +1897,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101380,
 		"skin_id": 101380,
 		"star": 4,
@@ -1649,6 +1959,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			120,
+			120
+		],
+		"efficiency_list": [
+			125,
+			130,
+			130
 		],
 		"id": 101390,
 		"skin_id": 101390,
@@ -1703,6 +2023,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101400,
 		"skin_id": 101400,
 		"star": 4,
@@ -1755,6 +2085,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			135
 		],
 		"id": 101410,
 		"skin_id": 101410,
@@ -1809,6 +2149,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			135
+		],
 		"id": 101420,
 		"skin_id": 101420,
 		"star": 4,
@@ -1861,6 +2211,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			135
 		],
 		"id": 101430,
 		"skin_id": 101430,
@@ -1915,6 +2275,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			125,
+			120
+		],
+		"efficiency_list": [
+			125,
+			135,
+			130
+		],
 		"id": 101440,
 		"skin_id": 101440,
 		"star": 5,
@@ -1967,6 +2337,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			125,
+			150
+		],
+		"efficiency_list": [
+			135,
+			135,
+			160
 		],
 		"id": 101450,
 		"skin_id": 101450,
@@ -2021,6 +2401,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 101460,
 		"skin_id": 101460,
 		"star": 5,
@@ -2073,6 +2463,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
 		],
 		"id": 102010,
 		"skin_id": 102010,
@@ -2127,6 +2527,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
+		],
 		"id": 102020,
 		"skin_id": 102020,
 		"star": 4,
@@ -2179,6 +2589,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
 		],
 		"id": 102030,
 		"skin_id": 102030,
@@ -2233,6 +2653,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
+		],
 		"id": 102040,
 		"skin_id": 102040,
 		"star": 4,
@@ -2286,13 +2716,23 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
+		],
 		"id": 102050,
 		"skin_id": 102050,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "102050",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/hailunna_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/hailunna_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ヘレナ",
@@ -2338,6 +2778,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			130,
+			140
+		],
+		"efficiency_list": [
+			105,
+			135,
+			160
 		],
 		"id": 102060,
 		"skin_id": 102060,
@@ -2393,6 +2843,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			140
+		],
+		"efficiency_list": [
+			105,
+			135,
+			160
+		],
 		"id": 102070,
 		"skin_id": 102070,
 		"star": 4,
@@ -2447,13 +2907,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			150
+		],
+		"efficiency_list": [
+			105,
+			135,
+			170
+		],
 		"id": 102080,
 		"skin_id": 102080,
 		"star": 6,
 		"rarity": 6,
 		"retro": 0,
 		"uni_id": "102080",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shengdiyage_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shengdiyage_g.png.png",
 		"star_string": "★★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "サンディエゴ",
@@ -2500,6 +2970,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			70,
+			120
+		],
+		"efficiency_list": [
+			130,
+			70,
+			120
 		],
 		"id": 102090,
 		"skin_id": 102090,
@@ -2554,6 +3034,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			70,
+			120
+		],
+		"efficiency_list": [
+			130,
+			70,
+			120
+		],
 		"id": 102100,
 		"skin_id": 102100,
 		"star": 5,
@@ -2606,6 +3096,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
 		],
 		"id": 102110,
 		"skin_id": 102110,
@@ -2660,6 +3160,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
+		],
 		"id": 102120,
 		"skin_id": 102120,
 		"star": 4,
@@ -2712,6 +3222,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
 		],
 		"id": 102130,
 		"skin_id": 102130,
@@ -2766,6 +3286,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			75,
+			120
+		],
+		"efficiency_list": [
+			130,
+			75,
+			120
+		],
 		"id": 102140,
 		"skin_id": 102140,
 		"star": 6,
@@ -2818,6 +3348,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			95,
+			70,
+			120
+		],
+		"efficiency_list": [
+			125,
+			70,
+			120
 		],
 		"id": 102150,
 		"skin_id": 102150,
@@ -2872,6 +3412,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			145,
+			115
+		],
+		"efficiency_list": [
+			125,
+			155,
+			125
+		],
 		"id": 102160,
 		"skin_id": 102160,
 		"star": 4,
@@ -2924,6 +3474,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			140,
+			120
+		],
+		"efficiency_list": [
+			125,
+			150,
+			130
 		],
 		"id": 102180,
 		"skin_id": 102180,
@@ -2978,6 +3538,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			100
+		],
+		"efficiency_list": [
+			135,
+			65,
+			100
+		],
 		"id": 102190,
 		"skin_id": 102190,
 		"star": 5,
@@ -3031,6 +3601,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			65,
+			120
+		],
+		"efficiency_list": [
+			120,
+			65,
+			120
+		],
 		"id": 102200,
 		"skin_id": 102200,
 		"star": 5,
@@ -3083,6 +3663,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			95,
+			110,
+			145
+		],
+		"efficiency_list": [
+			100,
+			115,
+			165
 		],
 		"id": 102210,
 		"skin_id": 102210,
@@ -3138,6 +3728,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			140
+		],
+		"efficiency_list": [
+			105,
+			135,
+			160
+		],
 		"id": 102220,
 		"skin_id": 102220,
 		"star": 4,
@@ -3192,6 +3792,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			65,
+			130
+		],
+		"efficiency_list": [
+			130,
+			65,
+			130
+		],
 		"id": 102230,
 		"skin_id": 102230,
 		"star": 5,
@@ -3244,6 +3854,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			70,
+			120
+		],
+		"efficiency_list": [
+			130,
+			70,
+			120
 		],
 		"id": 102240,
 		"skin_id": 102240,
@@ -3298,6 +3918,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			70,
+			120
+		],
+		"efficiency_list": [
+			130,
+			70,
+			120
+		],
 		"id": 102250,
 		"skin_id": 102250,
 		"star": 5,
@@ -3350,6 +3980,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			135,
+			150
+		],
+		"efficiency_list": [
+			130,
+			140,
+			170
 		],
 		"id": 102260,
 		"skin_id": 102260,
@@ -3405,6 +4045,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			140,
+			120
+		],
+		"efficiency_list": [
+			125,
+			150,
+			130
+		],
 		"id": 102270,
 		"skin_id": 102270,
 		"star": 4,
@@ -3458,6 +4108,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			40,
+			100
+		],
+		"efficiency_list": [
+			120,
+			45,
+			105
+		],
 		"id": 103010,
 		"skin_id": 103010,
 		"star": 4,
@@ -3508,6 +4168,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			40,
+			100
+		],
+		"efficiency_list": [
+			120,
+			45,
+			105
 		],
 		"id": 103020,
 		"skin_id": 103020,
@@ -3560,6 +4230,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			50,
+			100
+		],
+		"efficiency_list": [
+			120,
+			55,
+			105
+		],
 		"id": 103030,
 		"skin_id": 103030,
 		"star": 4,
@@ -3610,6 +4290,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			50,
+			100
+		],
+		"efficiency_list": [
+			120,
+			55,
+			105
 		],
 		"id": 103040,
 		"skin_id": 103040,
@@ -3662,6 +4352,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			50,
+			100
+		],
+		"efficiency_list": [
+			120,
+			55,
+			105
+		],
 		"id": 103050,
 		"skin_id": 103050,
 		"star": 5,
@@ -3713,13 +4413,23 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			50,
+			120
+		],
+		"efficiency_list": [
+			110,
+			60,
+			130
+		],
 		"id": 103060,
 		"skin_id": 103060,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "103060",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/botelan_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/botelan_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ポートランド",
@@ -3763,6 +4473,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			50,
+			120
+		],
+		"efficiency_list": [
+			110,
+			60,
+			130
 		],
 		"id": 103070,
 		"skin_id": 103070,
@@ -3815,6 +4535,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			50,
+			120
+		],
+		"efficiency_list": [
+			115,
+			60,
+			130
+		],
 		"id": 103080,
 		"skin_id": 103080,
 		"star": 5,
@@ -3865,6 +4595,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			55,
+			120
+		],
+		"efficiency_list": [
+			115,
+			65,
+			130
 		],
 		"id": 103090,
 		"skin_id": 103090,
@@ -3917,6 +4657,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			55,
+			120
+		],
+		"efficiency_list": [
+			115,
+			65,
+			130
+		],
 		"id": 103100,
 		"skin_id": 103100,
 		"star": 5,
@@ -3967,6 +4717,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			50,
+			100
+		],
+		"efficiency_list": [
+			130,
+			55,
+			105
 		],
 		"id": 103110,
 		"skin_id": 103110,
@@ -4019,6 +4779,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			120
+		],
+		"efficiency_list": [
+			125,
+			70,
+			125
+		],
 		"id": 103130,
 		"skin_id": 103130,
 		"star": 6,
@@ -4069,6 +4839,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			70,
+			130
+		],
+		"efficiency_list": [
+			130,
+			75,
+			135
 		],
 		"id": 103160,
 		"skin_id": 103160,
@@ -4121,6 +4901,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			65,
+			135
+		],
+		"efficiency_list": [
+			125,
+			70,
+			140
+		],
 		"id": 103240,
 		"skin_id": 103240,
 		"star": 6,
@@ -4171,6 +4961,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			50,
+			130
+		],
+		"efficiency_list": [
+			125,
+			55,
+			135
 		],
 		"id": 103250,
 		"skin_id": 103250,
@@ -4223,13 +5023,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105010,
 		"skin_id": 105010,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "105010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/neihuada_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/neihuada_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ネバダ",
@@ -4274,13 +5084,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105020,
 		"skin_id": 105020,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "105020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ekelahema_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ekelahema_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "オクラホマ",
@@ -4324,6 +5144,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105030,
 		"skin_id": 105030,
@@ -4376,6 +5206,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105040,
 		"skin_id": 105040,
 		"star": 5,
@@ -4426,6 +5266,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105070,
 		"skin_id": 105070,
@@ -4478,6 +5328,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105080,
 		"skin_id": 105080,
 		"star": 4,
@@ -4528,6 +5388,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105090,
 		"skin_id": 105090,
@@ -4580,6 +5450,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			95,
+			200,
+			100
+		],
+		"efficiency_list": [
+			125,
+			200,
+			100
+		],
 		"id": 105100,
 		"skin_id": 105100,
 		"star": 5,
@@ -4630,6 +5510,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105110,
 		"skin_id": 105110,
@@ -4682,6 +5572,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105120,
 		"skin_id": 105120,
 		"star": 6,
@@ -4732,6 +5632,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105130,
 		"skin_id": 105130,
@@ -4784,6 +5694,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105140,
 		"skin_id": 105140,
 		"star": 6,
@@ -4834,6 +5754,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 105190,
 		"skin_id": 105190,
@@ -4886,6 +5816,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 105200,
 		"skin_id": 105200,
 		"star": 6,
@@ -4937,13 +5877,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
+		],
 		"id": 106010,
 		"skin_id": 106010,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "106010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/changdao_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/changdao_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ロング・アイランド",
@@ -4990,13 +5940,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
+		],
 		"id": 106020,
 		"skin_id": 106020,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "106020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/boge_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/boge_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ボーグ",
@@ -5042,6 +6002,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			100
+		],
+		"efficiency_list": [
+			135,
+			135,
+			100
 		],
 		"id": 106550,
 		"skin_id": 106550,
@@ -5096,13 +6066,23 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			115,
+			100,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
+		],
 		"id": 107010,
 		"skin_id": 107010,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "107010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lanli_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lanli_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ラングレー",
@@ -5149,6 +6129,16 @@ var ship_data = {
 			2,
 			3,
 			3
+		],
+		"min_efficiency_list": [
+			120,
+			115,
+			115
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
 		],
 		"id": 107020,
 		"skin_id": 107020,
@@ -5201,13 +6191,23 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			120,
+			115,
+			115
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 107030,
 		"skin_id": 107030,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "107030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/salatuojia_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/salatuojia_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "サラトガ",
@@ -5252,13 +6252,23 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			100,
+			115,
+			115
+		],
+		"efficiency_list": [
+			100,
+			130,
+			130
+		],
 		"id": 107040,
 		"skin_id": 107040,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "107040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/tujizhe_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/tujizhe_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "レンジャー",
@@ -5304,6 +6314,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
 		],
 		"id": 107050,
 		"skin_id": 107050,
@@ -5356,6 +6376,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
+		],
 		"id": 107060,
 		"skin_id": 107060,
 		"star": 6,
@@ -5406,6 +6436,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
 		],
 		"id": 107070,
 		"skin_id": 107070,
@@ -5458,6 +6498,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
+		],
 		"id": 107080,
 		"skin_id": 107080,
 		"star": 4,
@@ -5508,6 +6558,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			125,
+			115,
+			105
+		],
+		"efficiency_list": [
+			140,
+			130,
+			120
 		],
 		"id": 107090,
 		"skin_id": 107090,
@@ -5560,6 +6620,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			125,
+			115,
+			105
+		],
+		"efficiency_list": [
+			140,
+			130,
+			120
+		],
 		"id": 107110,
 		"skin_id": 107110,
 		"star": 6,
@@ -5611,6 +6681,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			125,
+			115,
+			100
+		],
+		"efficiency_list": [
+			140,
+			130,
+			115
+		],
 		"id": 107170,
 		"skin_id": 107170,
 		"star": 6,
@@ -5661,6 +6741,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			130,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
 		],
 		"id": 107220,
 		"skin_id": 107220,
@@ -5715,6 +6805,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			140,
+			80
+		],
+		"efficiency_list": [
+			125,
+			155,
+			80
+		],
 		"id": 107230,
 		"skin_id": 107230,
 		"star": 5,
@@ -5767,6 +6867,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			140,
+			80
+		],
+		"efficiency_list": [
+			125,
+			155,
+			80
 		],
 		"id": 107290,
 		"skin_id": 107290,
@@ -5821,6 +6931,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			125,
+			115,
+			100
+		],
+		"efficiency_list": [
+			140,
+			130,
+			115
+		],
 		"id": 107380,
 		"skin_id": 107380,
 		"star": 6,
@@ -5871,6 +6991,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			90
+		],
+		"efficiency_list": [
+			125,
+			120,
+			90
 		],
 		"id": 108010,
 		"skin_id": 108010,
@@ -5926,6 +7056,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			105,
+			90
+		],
+		"efficiency_list": [
+			130,
+			120,
+			90
+		],
 		"id": 108020,
 		"skin_id": 108020,
 		"star": 6,
@@ -5979,6 +7119,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			85
+		],
+		"efficiency_list": [
+			125,
+			125,
+			85
 		],
 		"id": 108030,
 		"skin_id": 108030,
@@ -6034,6 +7184,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			105,
+			90
+		],
+		"efficiency_list": [
+			125,
+			120,
+			90
+		],
 		"id": 108040,
 		"skin_id": 108040,
 		"star": 5,
@@ -6087,6 +7247,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			90
+		],
+		"efficiency_list": [
+			125,
+			120,
+			90
 		],
 		"id": 108050,
 		"skin_id": 108050,
@@ -6142,6 +7312,16 @@ var ship_data = {
 			2,
 			2
 		],
+		"min_efficiency_list": [
+			0,
+			85,
+			85
+		],
+		"efficiency_list": [
+			0,
+			100,
+			100
+		],
 		"id": 112010,
 		"skin_id": 112010,
 		"star": 5,
@@ -6192,6 +7372,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			65,
+			130
+		],
+		"efficiency_list": [
+			145,
+			65,
+			130
 		],
 		"id": 199010,
 		"skin_id": 199010,
@@ -6247,6 +7437,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			200,
+			100
+		],
+		"efficiency_list": [
+			165,
+			200,
+			110
+		],
 		"id": 199020,
 		"skin_id": 199020,
 		"star": 6,
@@ -6298,13 +7498,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201010,
 		"skin_id": 201010,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "201010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/nvjiang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/nvjiang_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "アマゾン",
@@ -6351,13 +7561,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			130,
+			100
+		],
+		"efficiency_list": [
+			115,
+			145,
+			105
+		],
 		"id": 201020,
 		"skin_id": 201020,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "201020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/akasita_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/akasita_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "アカスタ",
@@ -6404,13 +7624,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			140,
+			105
+		],
 		"id": 201030,
 		"skin_id": 201030,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "201030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/rexin_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/rexin_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "アーデント",
@@ -6456,6 +7686,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
 		],
 		"id": 201060,
 		"skin_id": 201060,
@@ -6510,6 +7750,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201070,
 		"skin_id": 201070,
 		"star": 4,
@@ -6563,13 +7813,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201080,
 		"skin_id": 201080,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "201080",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/huixing_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/huixing_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "コメット",
@@ -6616,13 +7876,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201090,
 		"skin_id": 201090,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "201090",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xinyue_jp.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/295/thumbnail.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "クレセント",
@@ -6669,13 +7939,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201100,
 		"skin_id": 201100,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "201100",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xiaotiane_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xiaotiane_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "シグニット",
@@ -6722,13 +8002,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201110,
 		"skin_id": 201110,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "201110",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/huti_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/huti_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "フォックスハウンド",
@@ -6775,13 +8065,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			130,
+			100
+		],
+		"efficiency_list": [
+			120,
+			135,
+			105
+		],
 		"id": 201120,
 		"skin_id": 201120,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "201120",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/mingyunnvshen_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/mingyunnvshen_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "フォーチュン",
@@ -6827,6 +8127,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			125,
+			100
+		],
+		"efficiency_list": [
+			135,
+			130,
+			105
 		],
 		"id": 201130,
 		"skin_id": 201130,
@@ -6881,6 +8191,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			130,
+			100
+		],
+		"efficiency_list": [
+			130,
+			135,
+			105
+		],
 		"id": 201140,
 		"skin_id": 201140,
 		"star": 5,
@@ -6933,6 +8253,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			130,
+			100
+		],
+		"efficiency_list": [
+			130,
+			135,
+			105
 		],
 		"id": 201160,
 		"skin_id": 201160,
@@ -6987,6 +8317,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			125,
+			100
+		],
+		"efficiency_list": [
+			125,
+			130,
+			105
+		],
 		"id": 201200,
 		"skin_id": 201200,
 		"star": 4,
@@ -7040,13 +8380,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			145,
+			100
+		],
+		"efficiency_list": [
+			120,
+			150,
+			105
+		],
 		"id": 201210,
 		"skin_id": 201210,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "201210",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/biaoqiang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/biaoqiang_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ジャベリン",
@@ -7092,6 +8442,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			135,
+			100
+		],
+		"efficiency_list": [
+			120,
+			140,
+			105
 		],
 		"id": 201220,
 		"skin_id": 201220,
@@ -7146,6 +8506,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			135,
+			100
+		],
+		"efficiency_list": [
+			115,
+			145,
+			105
+		],
 		"id": 201230,
 		"skin_id": 201230,
 		"star": 5,
@@ -7198,6 +8568,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			135,
+			100
+		],
+		"efficiency_list": [
+			120,
+			140,
+			105
 		],
 		"id": 201240,
 		"skin_id": 201240,
@@ -7252,6 +8632,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			135,
+			100
+		],
+		"efficiency_list": [
+			120,
+			140,
+			105
+		],
 		"id": 201250,
 		"skin_id": 201250,
 		"star": 4,
@@ -7304,6 +8694,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			140,
+			95
+		],
+		"efficiency_list": [
+			120,
+			145,
+			100
 		],
 		"id": 201260,
 		"skin_id": 201260,
@@ -7358,6 +8758,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			140,
+			95
+		],
+		"efficiency_list": [
+			120,
+			145,
+			100
+		],
 		"id": 201270,
 		"skin_id": 201270,
 		"star": 5,
@@ -7410,6 +8820,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			135,
+			100
+		],
+		"efficiency_list": [
+			120,
+			140,
+			105
 		],
 		"id": 201290,
 		"skin_id": 201290,
@@ -7464,6 +8884,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			120,
+			95
+		],
+		"efficiency_list": [
+			100,
+			135,
+			100
+		],
 		"id": 201320,
 		"skin_id": 201320,
 		"star": 5,
@@ -7516,6 +8946,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			140,
+			95
+		],
+		"efficiency_list": [
+			120,
+			145,
+			100
 		],
 		"id": 201330,
 		"skin_id": 201330,
@@ -7570,13 +9010,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			150,
+			120
+		],
+		"efficiency_list": [
+			120,
+			160,
+			130
+		],
 		"id": 202010,
 		"skin_id": 202010,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "202010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/liande_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/liande_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "リアンダー",
@@ -7623,13 +9073,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			140,
+			100
+		],
+		"efficiency_list": [
+			145,
+			155,
+			100
+		],
 		"id": 202020,
 		"skin_id": 202020,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "202020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ajilisi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ajilisi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "アキリーズ",
@@ -7676,13 +9136,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			140,
+			100
+		],
+		"efficiency_list": [
+			145,
+			155,
+			100
+		],
 		"id": 202030,
 		"skin_id": 202030,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "202030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ajiakesi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ajiakesi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "エイジャックス",
@@ -7728,6 +9198,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			135
+		],
+		"efficiency_list": [
+			140,
+			130,
+			135
 		],
 		"id": 202040,
 		"skin_id": 202040,
@@ -7783,6 +9263,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			120,
+			110
+		],
+		"efficiency_list": [
+			135,
+			130,
+			110
+		],
 		"id": 202070,
 		"skin_id": 202070,
 		"star": 4,
@@ -7835,6 +9325,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			140,
+			110
+		],
+		"efficiency_list": [
+			150,
+			150,
+			110
 		],
 		"id": 202080,
 		"skin_id": 202080,
@@ -7889,6 +9389,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			140,
+			110
+		],
+		"efficiency_list": [
+			150,
+			150,
+			110
+		],
 		"id": 202100,
 		"skin_id": 202100,
 		"star": 5,
@@ -7941,6 +9451,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			150,
+			155,
+			100
 		],
 		"id": 202110,
 		"skin_id": 202110,
@@ -7995,6 +9515,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			150,
+			155,
+			100
+		],
 		"id": 202120,
 		"skin_id": 202120,
 		"star": 6,
@@ -8047,6 +9577,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			145,
+			120
+		],
+		"efficiency_list": [
+			130,
+			155,
+			130
 		],
 		"id": 202130,
 		"skin_id": 202130,
@@ -8101,6 +9641,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			120
+		],
+		"efficiency_list": [
+			130,
+			155,
+			130
+		],
 		"id": 202140,
 		"skin_id": 202140,
 		"star": 4,
@@ -8153,6 +9703,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			145,
+			120
+		],
+		"efficiency_list": [
+			135,
+			155,
+			130
 		],
 		"id": 202150,
 		"skin_id": 202150,
@@ -8207,6 +9767,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			110
+		],
+		"efficiency_list": [
+			140,
+			155,
+			110
+		],
 		"id": 202160,
 		"skin_id": 202160,
 		"star": 4,
@@ -8259,6 +9829,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			145,
+			110
+		],
+		"efficiency_list": [
+			140,
+			155,
+			110
 		],
 		"id": 202170,
 		"skin_id": 202170,
@@ -8313,6 +9893,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			140,
+			100
+		],
+		"efficiency_list": [
+			140,
+			150,
+			100
+		],
 		"id": 202180,
 		"skin_id": 202180,
 		"star": 5,
@@ -8366,13 +9956,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			115,
+			140
+		],
+		"efficiency_list": [
+			140,
+			125,
+			140
+		],
 		"id": 202190,
 		"skin_id": 202190,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "202190",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/niukasier_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/niukasier_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ニューカッスル",
@@ -8418,6 +10018,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			120,
+			130
+		],
+		"efficiency_list": [
+			135,
+			130,
+			130
 		],
 		"id": 202200,
 		"skin_id": 202200,
@@ -8473,13 +10083,23 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			70,
+			70
+		],
+		"efficiency_list": [
+			115,
+			80,
+			80
+		],
 		"id": 202210,
 		"skin_id": 202210,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "202210",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kulasuo_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kulasuo_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "キュラソー",
@@ -8527,13 +10147,23 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			70,
+			70
+		],
+		"efficiency_list": [
+			110,
+			80,
+			80
+		],
 		"id": 202220,
 		"skin_id": 202220,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "202220",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/biaoyu_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/biaoyu_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "カーリュー",
@@ -8580,6 +10210,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			135,
+			145,
+			110
+		],
+		"efficiency_list": [
+			155,
+			155,
+			110
 		],
 		"id": 202230,
 		"skin_id": 202230,
@@ -8633,6 +10273,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			120,
+			135
+		],
+		"efficiency_list": [
+			135,
+			130,
+			135
 		],
 		"id": 202240,
 		"skin_id": 202240,
@@ -8688,6 +10338,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			140,
+			110
+		],
+		"efficiency_list": [
+			150,
+			150,
+			110
+		],
 		"id": 202250,
 		"skin_id": 202250,
 		"star": 5,
@@ -8741,6 +10401,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			120,
+			110
+		],
+		"efficiency_list": [
+			135,
+			130,
+			135
+		],
 		"id": 202260,
 		"skin_id": 202260,
 		"star": 4,
@@ -8793,6 +10463,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			130
+		],
+		"efficiency_list": [
+			140,
+			130,
+			130
 		],
 		"id": 202270,
 		"skin_id": 202270,
@@ -8848,6 +10528,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			114,
+			120,
+			140
+		],
+		"efficiency_list": [
+			135,
+			130,
+			140
+		],
 		"id": 202280,
 		"skin_id": 202280,
 		"star": 6,
@@ -8902,6 +10592,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			145,
+			120
+		],
+		"efficiency_list": [
+			135,
+			155,
+			130
+		],
 		"id": 202290,
 		"skin_id": 202290,
 		"star": 5,
@@ -8955,13 +10655,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			145,
+			160,
+			100
+		],
 		"id": 203010,
 		"skin_id": 203010,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "203010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lundun_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lundun_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ロンドン",
@@ -9006,6 +10716,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			145,
+			160,
+			100
 		],
 		"id": 203020,
 		"skin_id": 203020,
@@ -9058,6 +10778,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			145,
+			160,
+			100
+		],
 		"id": 203030,
 		"skin_id": 203030,
 		"star": 4,
@@ -9109,13 +10839,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			145,
+			160,
+			100
+		],
 		"id": 203040,
 		"skin_id": 203040,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "203040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/safuke_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/safuke_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "サフォーク",
@@ -9159,6 +10899,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			125,
+			160,
+			120
 		],
 		"id": 203050,
 		"skin_id": 203050,
@@ -9211,6 +10961,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			135,
+			120
+		],
+		"efficiency_list": [
+			125,
+			150,
+			120
+		],
 		"id": 203060,
 		"skin_id": 203060,
 		"star": 5,
@@ -9262,13 +11022,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			150,
+			100
+		],
+		"efficiency_list": [
+			140,
+			165,
+			100
+		],
 		"id": 203070,
 		"skin_id": 203070,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "203070",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yueke_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yueke_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ヨーク",
@@ -9313,13 +11083,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			155,
+			100
+		],
+		"efficiency_list": [
+			145,
+			170,
+			100
+		],
 		"id": 203080,
 		"skin_id": 203080,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "203080",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/aikesaite_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/aikesaite_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "エクセター",
@@ -9363,6 +11143,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			145,
+			160,
+			100
 		],
 		"id": 203090,
 		"skin_id": 203090,
@@ -9415,6 +11205,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			150,
+			70
+		],
+		"efficiency_list": [
+			135,
+			150,
+			70
+		],
 		"id": 204010,
 		"skin_id": 204010,
 		"star": 5,
@@ -9465,6 +11265,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			150,
+			70
+		],
+		"efficiency_list": [
+			135,
+			150,
+			70
 		],
 		"id": 204020,
 		"skin_id": 204020,
@@ -9517,6 +11327,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			150,
+			100
+		],
+		"efficiency_list": [
+			140,
+			150,
+			100
+		],
 		"id": 204030,
 		"skin_id": 204030,
 		"star": 6,
@@ -9568,6 +11388,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			150,
+			70
+		],
+		"efficiency_list": [
+			135,
+			150,
+			70
+		],
 		"id": 204040,
 		"skin_id": 204040,
 		"star": 5,
@@ -9618,6 +11448,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 205010,
 		"skin_id": 205010,
@@ -9671,13 +11511,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 205020,
 		"skin_id": 205020,
 		"star": 6,
 		"rarity": 6,
 		"retro": 0,
 		"uni_id": "205020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yanzhan_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yanzhan_g.png.png",
 		"star_string": "★★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ウォースパイト",
@@ -9724,6 +11574,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 205030,
 		"skin_id": 205030,
@@ -9777,6 +11637,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 205040,
 		"skin_id": 205040,
 		"star": 5,
@@ -9828,6 +11698,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
 		],
 		"id": 205050,
 		"skin_id": 205050,
@@ -9881,6 +11761,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
+		],
 		"id": 205060,
 		"skin_id": 205060,
 		"star": 6,
@@ -9932,6 +11822,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
 		],
 		"id": 205070,
 		"skin_id": 205070,
@@ -9985,6 +11885,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			200,
+			100
+		],
+		"efficiency_list": [
+			140,
+			200,
+			100
+		],
 		"id": 205090,
 		"skin_id": 205090,
 		"star": 6,
@@ -10036,6 +11946,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 205100,
 		"skin_id": 205100,
@@ -10089,13 +12009,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
+		],
 		"id": 206010,
 		"skin_id": 206010,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "206010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/jingjishen_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/jingjishen_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ハーミーズ",
@@ -10141,6 +12071,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
 		],
 		"id": 206030,
 		"skin_id": 206030,
@@ -10195,6 +12135,16 @@ var ship_data = {
 			2,
 			4
 		],
+		"min_efficiency_list": [
+			115,
+			110,
+			120
+		],
+		"efficiency_list": [
+			125,
+			120,
+			140
+		],
 		"id": 206040,
 		"skin_id": 206040,
 		"star": 6,
@@ -10247,6 +12197,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			130,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
 		],
 		"id": 206050,
 		"skin_id": 206050,
@@ -10301,6 +12261,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			85,
+			85,
+			110
+		],
+		"efficiency_list": [
+			100,
+			100,
+			110
+		],
 		"id": 206060,
 		"skin_id": 206060,
 		"star": 6,
@@ -10354,6 +12324,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			120,
+			125,
+			55
+		],
+		"efficiency_list": [
+			135,
+			140,
+			55
+		],
 		"id": 207010,
 		"skin_id": 207010,
 		"star": 5,
@@ -10406,6 +12386,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			125,
+			125,
+			80
+		],
+		"efficiency_list": [
+			140,
+			140,
+			80
+		],
 		"id": 207020,
 		"skin_id": 207020,
 		"star": 5,
@@ -10456,6 +12446,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			110
+		],
+		"efficiency_list": [
+			135,
+			135,
+			110
 		],
 		"id": 207030,
 		"skin_id": 207030,
@@ -10508,6 +12508,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			120
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 207040,
 		"skin_id": 207040,
 		"star": 6,
@@ -10558,6 +12568,16 @@ var ship_data = {
 			2,
 			3,
 			3
+		],
+		"min_efficiency_list": [
+			110,
+			125,
+			115
+		],
+		"efficiency_list": [
+			120,
+			135,
+			125
 		],
 		"id": 207050,
 		"skin_id": 207050,
@@ -10611,6 +12631,16 @@ var ship_data = {
 			2,
 			2
 		],
+		"min_efficiency_list": [
+			120,
+			110,
+			110
+		],
+		"efficiency_list": [
+			140,
+			115,
+			115
+		],
 		"id": 207060,
 		"skin_id": 207060,
 		"star": 5,
@@ -10661,6 +12691,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			125,
+			125,
+			120
 		],
 		"id": 207090,
 		"skin_id": 207090,
@@ -10713,6 +12753,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			135
+		],
+		"efficiency_list": [
+			125,
+			125,
+			135
+		],
 		"id": 207110,
 		"skin_id": 207110,
 		"star": 6,
@@ -10763,6 +12813,16 @@ var ship_data = {
 			2,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			90,
+			200,
+			100
+		],
+		"efficiency_list": [
+			120,
+			200,
+			100
 		],
 		"id": 213010,
 		"skin_id": 213010,
@@ -10815,6 +12875,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			200,
+			100
+		],
+		"efficiency_list": [
+			120,
+			200,
+			100
+		],
 		"id": 213020,
 		"skin_id": 213020,
 		"star": 5,
@@ -10866,6 +12936,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			205,
+			100
+		],
+		"efficiency_list": [
+			120,
+			205,
+			100
+		],
 		"id": 213040,
 		"skin_id": 213040,
 		"star": 5,
@@ -10916,6 +12996,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			150,
+			100
+		],
+		"efficiency_list": [
+			150,
+			160,
+			100
 		],
 		"id": 299010,
 		"skin_id": 299010,
@@ -10970,6 +13060,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			210,
+			100
+		],
+		"efficiency_list": [
+			145,
+			210,
+			110
+		],
 		"id": 299020,
 		"skin_id": 299020,
 		"star": 6,
@@ -11022,6 +13122,16 @@ var ship_data = {
 			1,
 			2
 		],
+		"min_efficiency_list": [
+			120,
+			150,
+			150
+		],
+		"efficiency_list": [
+			140,
+			155,
+			165
+		],
 		"id": 299030,
 		"skin_id": 299030,
 		"star": 6,
@@ -11073,6 +13183,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			110,
+			125
+		],
+		"efficiency_list": [
+			130,
+			120,
+			125
+		],
 		"id": 299040,
 		"skin_id": 299040,
 		"star": 6,
@@ -11123,6 +13243,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			140,
+			70
+		],
+		"efficiency_list": [
+			75,
+			160,
+			75
 		],
 		"id": 301010,
 		"skin_id": 301010,
@@ -11177,13 +13307,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			75,
+			140,
+			70
+		],
+		"efficiency_list": [
+			80,
+			160,
+			75
+		],
 		"id": 301050,
 		"skin_id": 301050,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "301050",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lingbo_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lingbo_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "綾波",
@@ -11229,6 +13369,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301090,
 		"skin_id": 301090,
@@ -11283,6 +13433,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			135,
+			70
+		],
+		"efficiency_list": [
+			75,
+			155,
+			75
+		],
 		"id": 301100,
 		"skin_id": 301100,
 		"star": 5,
@@ -11335,6 +13495,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301110,
 		"skin_id": 301110,
@@ -11389,6 +13559,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301120,
 		"skin_id": 301120,
 		"star": 4,
@@ -11441,6 +13621,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301130,
 		"skin_id": 301130,
@@ -11495,6 +13685,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			80,
+			130,
+			80
+		],
+		"efficiency_list": [
+			85,
+			150,
+			85
+		],
 		"id": 301140,
 		"skin_id": 301140,
 		"star": 6,
@@ -11548,13 +13748,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301150,
 		"skin_id": 301150,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "301150",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shiyu_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shiyu_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "時雨",
@@ -11600,6 +13810,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301160,
 		"skin_id": 301160,
@@ -11654,13 +13874,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301170,
 		"skin_id": 301170,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301170",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yangyan_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yangyan_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "陽炎",
@@ -11707,13 +13937,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301180,
 		"skin_id": 301180,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "301180",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/buzhihuo_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/buzhihuo_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "不知火",
@@ -11759,6 +13999,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			75,
+			135,
+			70
+		],
+		"efficiency_list": [
+			80,
+			155,
+			75
 		],
 		"id": 301200,
 		"skin_id": 301200,
@@ -11813,13 +14063,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301210,
 		"skin_id": 301210,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301210",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chuchun_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chuchun_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "初春",
@@ -11865,6 +14125,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301230,
 		"skin_id": 301230,
@@ -11919,13 +14189,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301240,
 		"skin_id": 301240,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301240",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chushuang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chushuang_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "初霜",
@@ -11972,13 +14252,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301250,
 		"skin_id": 301250,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301250",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/youming_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/youming_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "有明",
@@ -12025,13 +14315,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301260,
 		"skin_id": 301260,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301260",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ximu_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ximu_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "夕暮",
@@ -12077,6 +14377,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301270,
 		"skin_id": 301270,
@@ -12131,6 +14441,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301280,
 		"skin_id": 301280,
 		"star": 4,
@@ -12184,13 +14504,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			120,
+			70
+		],
+		"efficiency_list": [
+			75,
+			140,
+			75
+		],
 		"id": 301300,
 		"skin_id": 301300,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301300",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shenfeng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shenfeng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "神風",
@@ -12237,13 +14567,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			120,
+			70
+		],
+		"efficiency_list": [
+			75,
+			140,
+			75
+		],
 		"id": 301310,
 		"skin_id": 301310,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301310",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/songfeng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/songfeng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "松風",
@@ -12290,13 +14630,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
+		],
 		"id": 301320,
 		"skin_id": 301320,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "301320",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/muyue_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/muyue_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "睦月",
@@ -12343,13 +14693,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
+		],
 		"id": 301330,
 		"skin_id": 301330,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "301330",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ruyue_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ruyue_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "如月",
@@ -12395,6 +14755,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
 		],
 		"id": 301350,
 		"skin_id": 301350,
@@ -12449,6 +14819,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
+		],
 		"id": 301370,
 		"skin_id": 301370,
 		"star": 4,
@@ -12501,6 +14881,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
 		],
 		"id": 301380,
 		"skin_id": 301380,
@@ -12555,6 +14945,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
+		],
 		"id": 301390,
 		"skin_id": 301390,
 		"star": 4,
@@ -12607,6 +15007,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			125,
+			70
+		],
+		"efficiency_list": [
+			75,
+			145,
+			75
 		],
 		"id": 301410,
 		"skin_id": 301410,
@@ -12661,6 +15071,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			80,
+			130,
+			80
+		],
+		"efficiency_list": [
+			85,
+			150,
+			85
+		],
 		"id": 301490,
 		"skin_id": 301490,
 		"star": 6,
@@ -12713,6 +15133,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301540,
 		"skin_id": 301540,
@@ -12767,6 +15197,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			130,
+			120
+		],
+		"efficiency_list": [
+			100,
+			135,
+			135
+		],
 		"id": 301560,
 		"skin_id": 301560,
 		"star": 5,
@@ -12819,6 +15259,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			90,
+			130,
+			120
+		],
+		"efficiency_list": [
+			100,
+			135,
+			135
 		],
 		"id": 301570,
 		"skin_id": 301570,
@@ -12873,6 +15323,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			130,
+			120
+		],
+		"efficiency_list": [
+			100,
+			135,
+			135
+		],
 		"id": 301580,
 		"skin_id": 301580,
 		"star": 5,
@@ -12925,6 +15385,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301590,
 		"skin_id": 301590,
@@ -12979,6 +15449,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301600,
 		"skin_id": 301600,
 		"star": 4,
@@ -13032,13 +15512,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301610,
 		"skin_id": 301610,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301610",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/bangfeng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/bangfeng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "浜風",
@@ -13085,13 +15575,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301620,
 		"skin_id": 301620,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "301620",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/gufeng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/gufeng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "谷風",
@@ -13137,6 +15637,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301630,
 		"skin_id": 301630,
@@ -13191,6 +15701,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301640,
 		"skin_id": 301640,
 		"star": 4,
@@ -13243,6 +15763,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 301650,
 		"skin_id": 301650,
@@ -13297,6 +15827,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
+		],
 		"id": 301660,
 		"skin_id": 301660,
 		"star": 4,
@@ -13349,6 +15889,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			140,
+			70
+		],
+		"efficiency_list": [
+			75,
+			160,
+			75
 		],
 		"id": 301720,
 		"skin_id": 301720,
@@ -13403,6 +15953,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			120,
+			70
+		],
+		"efficiency_list": [
+			75,
+			140,
+			75
+		],
 		"id": 301790,
 		"skin_id": 301790,
 		"star": 4,
@@ -13455,6 +16015,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			75,
+			135,
+			70
+		],
+		"efficiency_list": [
+			80,
+			155,
+			75
 		],
 		"id": 301800,
 		"skin_id": 301800,
@@ -13509,6 +16079,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			75,
+			130,
+			70
+		],
+		"efficiency_list": [
+			80,
+			150,
+			75
+		],
 		"id": 301810,
 		"skin_id": 301810,
 		"star": 5,
@@ -13561,6 +16141,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			95,
+			130,
+			120
+		],
+		"efficiency_list": [
+			105,
+			135,
+			135
 		],
 		"id": 301820,
 		"skin_id": 301820,
@@ -13615,6 +16205,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			75,
+			135,
+			70
+		],
+		"efficiency_list": [
+			80,
+			155,
+			75
+		],
 		"id": 301830,
 		"skin_id": 301830,
 		"star": 5,
@@ -13667,6 +16267,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			130,
+			130
+		],
+		"efficiency_list": [
+			110,
+			135,
+			145
 		],
 		"id": 301840,
 		"skin_id": 301840,
@@ -13721,6 +16331,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			120,
+			70
+		],
+		"efficiency_list": [
+			75,
+			140,
+			75
+		],
 		"id": 301850,
 		"skin_id": 301850,
 		"star": 4,
@@ -13774,13 +16394,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			135,
+			120
+		],
+		"efficiency_list": [
+			110,
+			160,
+			125
+		],
 		"id": 302010,
 		"skin_id": 302010,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "302010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xizhang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xizhang_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "夕張",
@@ -13826,6 +16456,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			135,
+			120
+		],
+		"efficiency_list": [
+			110,
+			160,
+			125
 		],
 		"id": 302040,
 		"skin_id": 302040,
@@ -13880,13 +16520,23 @@ var ship_data = {
 			1,
 			2
 		],
+		"min_efficiency_list": [
+			100,
+			135,
+			140
+		],
+		"efficiency_list": [
+			105,
+			140,
+			160
+		],
 		"id": 302050,
 		"skin_id": 302050,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "302050",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/wushiling_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/wushiling_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "五十鈴",
@@ -13934,13 +16584,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			140,
+			120
+		],
+		"efficiency_list": [
+			120,
+			165,
+			125
+		],
 		"id": 302080,
 		"skin_id": 302080,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "302080",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/guinu_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/guinu_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "鬼怒",
@@ -13987,13 +16647,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			135,
+			120
+		],
+		"efficiency_list": [
+			110,
+			160,
+			125
+		],
 		"id": 302090,
 		"skin_id": 302090,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "302090",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/awuwei_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/awuwei_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "阿武隈",
@@ -14040,13 +16710,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			140,
+			100
+		],
+		"efficiency_list": [
+			110,
+			160,
+			100
+		],
 		"id": 302100,
 		"skin_id": 302100,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "302100",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/zuishang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/zuishang_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "最上",
@@ -14093,6 +16773,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			140,
+			100
+		],
+		"efficiency_list": [
+			110,
+			160,
+			100
 		],
 		"id": 302110,
 		"skin_id": 302110,
@@ -14147,13 +16837,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			140,
+			115
+		],
+		"efficiency_list": [
+			120,
+			165,
+			115
+		],
 		"id": 302120,
 		"skin_id": 302120,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "302120",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chuannei_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/chuannei_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "川内",
@@ -14200,13 +16900,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			140,
+			115
+		],
+		"efficiency_list": [
+			120,
+			165,
+			115
+		],
 		"id": 302130,
 		"skin_id": 302130,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "302130",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shentong_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shentong_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "神通",
@@ -14252,6 +16962,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			140,
+			115
+		],
+		"efficiency_list": [
+			120,
+			165,
+			115
 		],
 		"id": 302140,
 		"skin_id": 302140,
@@ -14306,6 +17026,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			95,
+			145,
+			100
+		],
+		"efficiency_list": [
+			100,
+			170,
+			100
+		],
 		"id": 302200,
 		"skin_id": 302200,
 		"star": 5,
@@ -14358,6 +17088,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			150,
+			110
+		],
+		"efficiency_list": [
+			125,
+			175,
+			110
 		],
 		"id": 302210,
 		"skin_id": 302210,
@@ -14412,13 +17152,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			100
+		],
+		"efficiency_list": [
+			125,
+			170,
+			100
+		],
 		"id": 303010,
 		"skin_id": 303010,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "303010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/guying_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/guying_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "古鷹",
@@ -14463,13 +17213,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			100
+		],
+		"efficiency_list": [
+			125,
+			170,
+			100
+		],
 		"id": 303020,
 		"skin_id": 303020,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "303020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/jiagu_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/jiagu_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "加古",
@@ -14513,6 +17273,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
 		],
 		"id": 303030,
 		"skin_id": 303030,
@@ -14565,6 +17335,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
+		],
 		"id": 303040,
 		"skin_id": 303040,
 		"star": 4,
@@ -14615,6 +17395,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
 		],
 		"id": 303070,
 		"skin_id": 303070,
@@ -14667,6 +17457,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
+		],
 		"id": 303080,
 		"skin_id": 303080,
 		"star": 4,
@@ -14717,6 +17517,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
 		],
 		"id": 303090,
 		"skin_id": 303090,
@@ -14769,6 +17579,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			150,
+			100
+		],
+		"efficiency_list": [
+			125,
+			175,
+			100
+		],
 		"id": 303110,
 		"skin_id": 303110,
 		"star": 6,
@@ -14819,6 +17639,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			145,
+			100
+		],
+		"efficiency_list": [
+			135,
+			170,
+			100
 		],
 		"id": 303120,
 		"skin_id": 303120,
@@ -14871,6 +17701,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			150,
+			110
+		],
+		"efficiency_list": [
+			125,
+			170,
+			120
+		],
 		"id": 303130,
 		"skin_id": 303130,
 		"star": 6,
@@ -14922,6 +17762,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			125,
+			95
+		],
+		"efficiency_list": [
+			125,
+			130,
+			110
+		],
 		"id": 303140,
 		"skin_id": 303140,
 		"star": 6,
@@ -14972,6 +17822,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			95
+		],
+		"efficiency_list": [
+			135,
+			145,
+			110
 		],
 		"id": 303170,
 		"skin_id": 303170,
@@ -15025,6 +17885,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			140,
+			95
+		],
+		"efficiency_list": [
+			135,
+			145,
+			110
+		],
 		"id": 303180,
 		"skin_id": 303180,
 		"star": 5,
@@ -15076,6 +17946,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			150,
+			90
+		],
+		"efficiency_list": [
+			135,
+			150,
+			90
 		],
 		"id": 304010,
 		"skin_id": 304010,
@@ -15129,6 +18009,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			150,
+			90
+		],
+		"efficiency_list": [
+			135,
+			150,
+			90
+		],
 		"id": 304020,
 		"skin_id": 304020,
 		"star": 5,
@@ -15180,6 +18070,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			150,
+			90
+		],
+		"efficiency_list": [
+			135,
+			150,
+			90
 		],
 		"id": 304030,
 		"skin_id": 304030,
@@ -15233,6 +18133,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			150,
+			90
+		],
+		"efficiency_list": [
+			135,
+			150,
+			90
+		],
 		"id": 304040,
 		"skin_id": 304040,
 		"star": 5,
@@ -15284,6 +18194,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			180,
+			90
+		],
+		"efficiency_list": [
+			135,
+			180,
+			90
 		],
 		"id": 304050,
 		"skin_id": 304050,
@@ -15337,6 +18257,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			150,
+			85
+		],
+		"efficiency_list": [
+			130,
+			150,
+			85
+		],
 		"id": 304060,
 		"skin_id": 304060,
 		"star": 5,
@@ -15388,6 +18318,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			150,
+			85
+		],
+		"efficiency_list": [
+			130,
+			150,
+			85
 		],
 		"id": 304070,
 		"skin_id": 304070,
@@ -15441,13 +18381,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			80
+		],
+		"efficiency_list": [
+			130,
+			200,
+			80
+		],
 		"id": 305010,
 		"skin_id": 305010,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "305010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/fusang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/fusang_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "扶桑",
@@ -15494,13 +18444,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			80
+		],
+		"efficiency_list": [
+			130,
+			200,
+			80
+		],
 		"id": 305020,
 		"skin_id": 305020,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "305020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shancheng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shancheng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "山城",
@@ -15547,13 +18507,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			200,
+			80
+		],
+		"efficiency_list": [
+			140,
+			200,
+			80
+		],
 		"id": 305030,
 		"skin_id": 305030,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "305030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yishi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/yishi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "伊勢",
@@ -15600,13 +18570,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			180,
+			80
+		],
+		"efficiency_list": [
+			135,
+			180,
+			80
+		],
 		"id": 305040,
 		"skin_id": 305040,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "305040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/rixiang_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/rixiang_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "日向",
@@ -15652,6 +18632,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			210,
+			100
+		],
+		"efficiency_list": [
+			135,
+			210,
+			100
 		],
 		"id": 305050,
 		"skin_id": 305050,
@@ -15705,6 +18695,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			210,
+			100
+		],
+		"efficiency_list": [
+			130,
+			210,
+			100
+		],
 		"id": 305060,
 		"skin_id": 305060,
 		"star": 5,
@@ -15756,6 +18756,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			200,
+			90
+		],
+		"efficiency_list": [
+			135,
+			200,
+			90
 		],
 		"id": 305070,
 		"skin_id": 305070,
@@ -15809,6 +18819,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			90
+		],
+		"efficiency_list": [
+			135,
+			200,
+			90
+		],
 		"id": 305080,
 		"skin_id": 305080,
 		"star": 6,
@@ -15860,6 +18880,16 @@ var ship_data = {
 			3,
 			2,
 			2
+		],
+		"min_efficiency_list": [
+			100,
+			150,
+			150
+		],
+		"efficiency_list": [
+			130,
+			150,
+			150
 		],
 		"id": 305110,
 		"skin_id": 305110,
@@ -15913,6 +18943,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
+		],
 		"id": 305120,
 		"skin_id": 305120,
 		"star": 6,
@@ -15965,6 +19005,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
+		],
 		"id": 305140,
 		"skin_id": 305140,
 		"star": 6,
@@ -16016,6 +19066,16 @@ var ship_data = {
 			2,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			85,
+			105,
+			95
+		],
+		"efficiency_list": [
+			100,
+			120,
+			110
 		],
 		"id": 306010,
 		"skin_id": 306010,
@@ -16070,6 +19130,16 @@ var ship_data = {
 			2,
 			3
 		],
+		"min_efficiency_list": [
+			85,
+			95,
+			105
+		],
+		"efficiency_list": [
+			100,
+			110,
+			120
+		],
 		"id": 306020,
 		"skin_id": 306020,
 		"star": 4,
@@ -16122,6 +19192,16 @@ var ship_data = {
 			1,
 			3,
 			3
+		],
+		"min_efficiency_list": [
+			100,
+			115,
+			115
+		],
+		"efficiency_list": [
+			100,
+			130,
+			130
 		],
 		"id": 306030,
 		"skin_id": 306030,
@@ -16176,13 +19256,23 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			130,
+			80
+		],
 		"id": 306050,
 		"skin_id": 306050,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "306050",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xiangfeng_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/xiangfeng_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "祥鳳",
@@ -16228,6 +19318,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			135,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
 		],
 		"id": 306060,
 		"skin_id": 306060,
@@ -16282,6 +19382,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			135,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
+		],
 		"id": 306070,
 		"skin_id": 306070,
 		"star": 6,
@@ -16334,6 +19444,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			135,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
 		],
 		"id": 306080,
 		"skin_id": 306080,
@@ -16388,6 +19508,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			135,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
+		],
 		"id": 306090,
 		"skin_id": 306090,
 		"star": 5,
@@ -16441,6 +19571,16 @@ var ship_data = {
 			2,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
+		],
 		"id": 307010,
 		"skin_id": 307010,
 		"star": 6,
@@ -16491,6 +19631,16 @@ var ship_data = {
 			3,
 			2,
 			3
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			110,
+			110,
+			150
 		],
 		"id": 307020,
 		"skin_id": 307020,
@@ -16543,13 +19693,23 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			110
+		],
+		"efficiency_list": [
+			110,
+			150,
+			110
+		],
 		"id": 307030,
 		"skin_id": 307030,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "307030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/canglong_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/canglong_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "蒼龍",
@@ -16594,13 +19754,23 @@ var ship_data = {
 			2,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			110,
+			110,
+			150
+		],
 		"id": 307040,
 		"skin_id": 307040,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "307040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/feilong_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/feilong_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "飛龍",
@@ -16644,6 +19814,16 @@ var ship_data = {
 			2,
 			2,
 			4
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			110,
+			110,
+			150
 		],
 		"id": 307050,
 		"skin_id": 307050,
@@ -16696,6 +19876,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			115,
+			110,
+			110
+		],
+		"efficiency_list": [
+			130,
+			125,
+			125
+		],
 		"id": 307060,
 		"skin_id": 307060,
 		"star": 6,
@@ -16747,6 +19937,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			125,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			140
+		],
 		"id": 307070,
 		"skin_id": 307070,
 		"star": 6,
@@ -16797,6 +19997,16 @@ var ship_data = {
 			2,
 			3,
 			4
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			125
+		],
+		"efficiency_list": [
+			125,
+			130,
+			140
 		],
 		"id": 307080,
 		"skin_id": 307080,
@@ -16851,6 +20061,16 @@ var ship_data = {
 			2,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			100,
+			110
+		],
+		"efficiency_list": [
+			125,
+			115,
+			125
+		],
 		"id": 307090,
 		"skin_id": 307090,
 		"star": 5,
@@ -16901,6 +20121,16 @@ var ship_data = {
 			3,
 			2,
 			3
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			125,
+			125,
+			125
 		],
 		"id": 307100,
 		"skin_id": 307100,
@@ -16953,6 +20183,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			125,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			140
+		],
 		"id": 307110,
 		"skin_id": 307110,
 		"star": 6,
@@ -17003,6 +20243,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			100,
+			80
+		],
+		"efficiency_list": [
+			135,
+			115,
+			80
 		],
 		"id": 308010,
 		"skin_id": 308010,
@@ -17058,6 +20308,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			100,
+			85
+		],
+		"efficiency_list": [
+			130,
+			115,
+			85
+		],
 		"id": 308020,
 		"skin_id": 308020,
 		"star": 5,
@@ -17111,6 +20371,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			100,
+			85
+		],
+		"efficiency_list": [
+			120,
+			115,
+			85
 		],
 		"id": 308030,
 		"skin_id": 308030,
@@ -17166,6 +20436,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			100,
+			85
+		],
+		"efficiency_list": [
+			130,
+			115,
+			85
+		],
 		"id": 308040,
 		"skin_id": 308040,
 		"star": 5,
@@ -17219,6 +20499,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			100,
+			85
+		],
+		"efficiency_list": [
+			115,
+			115,
+			85
 		],
 		"id": 308050,
 		"skin_id": 308050,
@@ -17274,6 +20564,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			100,
+			80
+		],
+		"efficiency_list": [
+			130,
+			115,
+			80
+		],
 		"id": 308060,
 		"skin_id": 308060,
 		"star": 6,
@@ -17328,6 +20628,16 @@ var ship_data = {
 			2,
 			2
 		],
+		"min_efficiency_list": [
+			0,
+			85,
+			85
+		],
+		"efficiency_list": [
+			0,
+			100,
+			100
+		],
 		"id": 312010,
 		"skin_id": 312010,
 		"star": 6,
@@ -17378,6 +20688,16 @@ var ship_data = {
 			2,
 			2,
 			2
+		],
+		"min_efficiency_list": [
+			120,
+			100,
+			150
+		],
+		"efficiency_list": [
+			135,
+			115,
+			150
 		],
 		"id": 317010,
 		"skin_id": 317010,
@@ -17433,6 +20753,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			70,
+			100
+		],
+		"efficiency_list": [
+			110,
+			80,
+			100
+		],
 		"id": 319010,
 		"skin_id": 319010,
 		"star": 5,
@@ -17487,6 +20817,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			160,
+			110
+		],
+		"efficiency_list": [
+			140,
+			185,
+			110
+		],
 		"id": 399010,
 		"skin_id": 399010,
 		"star": 6,
@@ -17537,6 +20877,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			210,
+			80
+		],
+		"efficiency_list": [
+			140,
+			210,
+			90
 		],
 		"id": 399020,
 		"skin_id": 399020,
@@ -17589,6 +20939,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			85,
+			130,
+			120
+		],
+		"efficiency_list": [
+			105,
+			135,
+			135
 		],
 		"id": 399030,
 		"skin_id": 399030,
@@ -17643,6 +21003,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			50,
+			100
+		],
+		"efficiency_list": [
+			100,
+			60,
+			110
+		],
 		"id": 399040,
 		"skin_id": 399040,
 		"star": 6,
@@ -17695,13 +21065,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			120,
+			70
+		],
+		"efficiency_list": [
+			125,
+			140,
+			75
+		],
 		"id": 401010,
 		"skin_id": 401010,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "401010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/z1_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/z1_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "Z1",
@@ -17747,6 +21127,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			70
+		],
+		"efficiency_list": [
+			125,
+			140,
+			75
 		],
 		"id": 401020,
 		"skin_id": 401020,
@@ -17801,6 +21191,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
+		],
 		"id": 401180,
 		"skin_id": 401180,
 		"star": 4,
@@ -17853,6 +21253,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
 		],
 		"id": 401190,
 		"skin_id": 401190,
@@ -17907,6 +21317,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
+		],
 		"id": 401200,
 		"skin_id": 401200,
 		"star": 4,
@@ -17959,6 +21379,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
 		],
 		"id": 401210,
 		"skin_id": 401210,
@@ -18013,13 +21443,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			115,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
+		],
 		"id": 401230,
 		"skin_id": 401230,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "401230",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/z23_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/z23_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "Z23",
@@ -18066,6 +21506,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			114,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
 		],
 		"id": 401240,
 		"skin_id": 401240,
@@ -18121,6 +21571,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			115,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
+		],
 		"id": 401250,
 		"skin_id": 401250,
 		"star": 5,
@@ -18174,6 +21634,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			115,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
 		],
 		"id": 401260,
 		"skin_id": 401260,
@@ -18229,6 +21699,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			114,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
+		],
 		"id": 401280,
 		"skin_id": 401280,
 		"star": 5,
@@ -18283,6 +21763,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			135,
+			115,
+			115
+		],
+		"efficiency_list": [
+			150,
+			120,
+			125
+		],
 		"id": 401350,
 		"skin_id": 401350,
 		"star": 5,
@@ -18335,6 +21825,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			120,
+			115
+		],
+		"efficiency_list": [
+			145,
+			125,
+			125
 		],
 		"id": 401360,
 		"skin_id": 401360,
@@ -18389,6 +21889,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			150,
+			120,
+			120
+		],
+		"efficiency_list": [
+			160,
+			120,
+			140
+		],
 		"id": 401460,
 		"skin_id": 401460,
 		"star": 6,
@@ -18441,6 +21951,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
 		],
 		"id": 402010,
 		"skin_id": 402010,
@@ -18495,13 +22015,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
+		],
 		"id": 402020,
 		"skin_id": 402020,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "402020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kaersilue_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kaersilue_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "カールスルーエ",
@@ -18548,13 +22078,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
+		],
 		"id": 402030,
 		"skin_id": 402030,
 		"star": 4,
 		"rarity": 3,
 		"retro": 0,
 		"uni_id": "402030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kelong_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/kelong_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ケルン",
@@ -18601,13 +22141,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			150,
+			120
+		],
+		"efficiency_list": [
+			125,
+			160,
+			130
+		],
 		"id": 402040,
 		"skin_id": 402040,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "402040",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/laibixi_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/laibixi_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ライプツィヒ",
@@ -18653,6 +22203,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			114,
+			160,
+			130
+		],
+		"efficiency_list": [
+			125,
+			170,
+			140
 		],
 		"id": 402050,
 		"skin_id": 402050,
@@ -18707,6 +22267,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			145,
+			100
+		],
+		"efficiency_list": [
+			130,
+			160,
+			100
+		],
 		"id": 403010,
 		"skin_id": 403010,
 		"star": 5,
@@ -18757,6 +22327,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			150,
+			110
+		],
+		"efficiency_list": [
+			125,
+			160,
+			120
 		],
 		"id": 403030,
 		"skin_id": 403030,
@@ -18809,6 +22389,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			130,
+			100
+		],
+		"efficiency_list": [
+			140,
+			130,
+			100
+		],
 		"id": 403040,
 		"skin_id": 403040,
 		"star": 5,
@@ -18859,6 +22449,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			130,
+			100
+		],
+		"efficiency_list": [
+			140,
+			130,
+			100
 		],
 		"id": 403050,
 		"skin_id": 403050,
@@ -18911,6 +22511,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			145,
+			100
+		],
+		"efficiency_list": [
+			130,
+			160,
+			100
+		],
 		"id": 403070,
 		"skin_id": 403070,
 		"star": 5,
@@ -18962,6 +22572,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			100,
+			100
+		],
+		"efficiency_list": [
+			130,
+			110,
+			110
+		],
 		"id": 403080,
 		"skin_id": 403080,
 		"star": 6,
@@ -19012,6 +22632,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			130,
+			100
+		],
+		"efficiency_list": [
+			160,
+			130,
+			100
 		],
 		"id": 403090,
 		"skin_id": 403090,
@@ -19065,6 +22695,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			150,
+			70
+		],
+		"efficiency_list": [
+			135,
+			150,
+			70
+		],
 		"id": 404010,
 		"skin_id": 404010,
 		"star": 5,
@@ -19116,6 +22756,16 @@ var ship_data = {
 			3,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			105,
+			150,
+			70
+		],
+		"efficiency_list": [
+			135,
+			150,
+			70
 		],
 		"id": 404020,
 		"skin_id": 404020,
@@ -19169,6 +22819,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			180,
+			90
+		],
+		"efficiency_list": [
+			130,
+			180,
+			90
+		],
 		"id": 405010,
 		"skin_id": 405010,
 		"star": 6,
@@ -19221,6 +22881,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			90
+		],
+		"efficiency_list": [
+			130,
+			200,
+			90
+		],
 		"id": 405020,
 		"skin_id": 405020,
 		"star": 6,
@@ -19272,6 +22942,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			114,
+			135,
+			80
+		],
+		"efficiency_list": [
+			130,
+			145,
+			80
 		],
 		"id": 406010,
 		"skin_id": 406010,
@@ -19326,6 +23006,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			120,
+			115,
+			115
+		],
+		"efficiency_list": [
+			120,
+			130,
+			130
+		],
 		"id": 407010,
 		"skin_id": 407010,
 		"star": 6,
@@ -19377,6 +23067,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			100,
+			115,
+			100
+		],
+		"efficiency_list": [
+			115,
+			130,
+			100
 		],
 		"id": 407020,
 		"skin_id": 407020,
@@ -19430,6 +23130,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			125,
+			125
+		],
+		"efficiency_list": [
+			120,
+			130,
+			140
+		],
 		"id": 407030,
 		"skin_id": 407030,
 		"star": 6,
@@ -19480,6 +23190,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			110,
+			85
+		],
+		"efficiency_list": [
+			130,
+			125,
+			85
 		],
 		"id": 408010,
 		"skin_id": 408010,
@@ -19535,6 +23255,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			85
+		],
+		"efficiency_list": [
+			125,
+			125,
+			85
+		],
 		"id": 408020,
 		"skin_id": 408020,
 		"star": 6,
@@ -19588,6 +23318,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
 		],
 		"id": 408030,
 		"skin_id": 408030,
@@ -19643,6 +23383,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
+		],
 		"id": 408040,
 		"skin_id": 408040,
 		"star": 5,
@@ -19696,6 +23446,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
 		],
 		"id": 408050,
 		"skin_id": 408050,
@@ -19751,6 +23511,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			85
+		],
+		"efficiency_list": [
+			125,
+			125,
+			85
+		],
 		"id": 408060,
 		"skin_id": 408060,
 		"star": 6,
@@ -19804,6 +23574,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
 		],
 		"id": 408070,
 		"skin_id": 408070,
@@ -19859,6 +23639,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
+		],
 		"id": 408080,
 		"skin_id": 408080,
 		"star": 5,
@@ -19912,6 +23702,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			85
+		],
+		"efficiency_list": [
+			125,
+			125,
+			85
 		],
 		"id": 408090,
 		"skin_id": 408090,
@@ -19967,6 +23767,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			85
+		],
+		"efficiency_list": [
+			125,
+			125,
+			85
+		],
 		"id": 408100,
 		"skin_id": 408100,
 		"star": 6,
@@ -20020,6 +23830,16 @@ var ship_data = {
 			2,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
 		],
 		"id": 408110,
 		"skin_id": 408110,
@@ -20075,6 +23895,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			100,
+			100
+		],
+		"efficiency_list": [
+			130,
+			110,
+			110
+		],
 		"id": 499010,
 		"skin_id": 499010,
 		"star": 6,
@@ -20125,6 +23955,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			220,
+			90
+		],
+		"efficiency_list": [
+			160,
+			220,
+			100
 		],
 		"id": 499020,
 		"skin_id": 499020,
@@ -20177,6 +24017,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			100,
+			110
+		],
+		"efficiency_list": [
+			130,
+			110,
+			110
 		],
 		"id": 499030,
 		"skin_id": 499030,
@@ -20231,6 +24081,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			140,
+			200,
+			110
+		],
 		"id": 499040,
 		"skin_id": 499040,
 		"star": 6,
@@ -20281,6 +24141,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			90,
+			95
+		],
+		"efficiency_list": [
+			155,
+			100,
+			105
 		],
 		"id": 501010,
 		"skin_id": 501010,
@@ -20335,6 +24205,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			90,
+			95
+		],
+		"efficiency_list": [
+			155,
+			100,
+			105
+		],
 		"id": 501020,
 		"skin_id": 501020,
 		"star": 5,
@@ -20387,6 +24267,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			90,
+			95
+		],
+		"efficiency_list": [
+			155,
+			100,
+			105
 		],
 		"id": 501030,
 		"skin_id": 501030,
@@ -20441,6 +24331,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			90,
+			95
+		],
+		"efficiency_list": [
+			155,
+			100,
+			105
+		],
 		"id": 501040,
 		"skin_id": 501040,
 		"star": 5,
@@ -20493,6 +24393,16 @@ var ship_data = {
 			1,
 			1,
 			2
+		],
+		"min_efficiency_list": [
+			120,
+			110,
+			70
+		],
+		"efficiency_list": [
+			130,
+			120,
+			80
 		],
 		"id": 502010,
 		"skin_id": 502010,
@@ -20547,13 +24457,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			120
+		],
+		"efficiency_list": [
+			130,
+			155,
+			130
+		],
 		"id": 502020,
 		"skin_id": 502020,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "502020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ninghai_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/ninghai_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "寧海",
@@ -20600,13 +24520,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			145,
+			120
+		],
+		"efficiency_list": [
+			130,
+			155,
+			130
+		],
 		"id": 502030,
 		"skin_id": 502030,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "502030",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/pinghai_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/pinghai_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "平海",
@@ -20652,6 +24582,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			90,
+			80
+		],
+		"efficiency_list": [
+			100,
+			90,
+			80
 		],
 		"id": 502040,
 		"skin_id": 502040,
@@ -20706,6 +24646,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			70,
+			90,
+			80
+		],
+		"efficiency_list": [
+			100,
+			90,
+			80
+		],
 		"id": 502050,
 		"skin_id": 502050,
 		"star": 5,
@@ -20758,6 +24708,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			115,
+			70
+		],
+		"efficiency_list": [
+			160,
+			120,
+			75
 		],
 		"id": 601020,
 		"skin_id": 601020,
@@ -20812,6 +24772,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			125,
+			100
+		],
+		"efficiency_list": [
+			125,
+			130,
+			105
+		],
 		"id": 601030,
 		"skin_id": 601030,
 		"star": 5,
@@ -20864,6 +24834,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			125,
+			105
+		],
+		"efficiency_list": [
+			140,
+			130,
+			110
 		],
 		"id": 601040,
 		"skin_id": 601040,
@@ -20918,6 +24898,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			125,
+			105
+		],
+		"efficiency_list": [
+			140,
+			130,
+			110
+		],
 		"id": 601050,
 		"skin_id": 601050,
 		"star": 5,
@@ -20970,6 +24960,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			115,
+			80
+		],
+		"efficiency_list": [
+			150,
+			120,
+			85
 		],
 		"id": 601060,
 		"skin_id": 601060,
@@ -21024,6 +25024,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			135,
+			110
+		],
+		"efficiency_list": [
+			125,
+			160,
+			110
+		],
 		"id": 602010,
 		"skin_id": 602010,
 		"star": 6,
@@ -21077,6 +25087,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			130,
+			165,
+			100
+		],
 		"id": 603010,
 		"skin_id": 603010,
 		"star": 4,
@@ -21127,6 +25147,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			50,
+			95
+		],
+		"efficiency_list": [
+			120,
+			55,
+			100
 		],
 		"id": 603020,
 		"skin_id": 603020,
@@ -21179,6 +25209,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			55,
+			95
+		],
+		"efficiency_list": [
+			125,
+			60,
+			100
+		],
 		"id": 603030,
 		"skin_id": 603030,
 		"star": 6,
@@ -21229,6 +25269,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
 		],
 		"id": 605010,
 		"skin_id": 605010,
@@ -21282,6 +25332,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 605020,
 		"skin_id": 605020,
 		"star": 6,
@@ -21334,6 +25394,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			95,
+			150,
+			70
+		],
+		"efficiency_list": [
+			125,
+			150,
+			70
+		],
 		"id": 605050,
 		"skin_id": 605050,
 		"star": 4,
@@ -21385,6 +25455,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			95,
+			150,
+			70
+		],
+		"efficiency_list": [
+			125,
+			150,
+			70
+		],
 		"id": 605060,
 		"skin_id": 605060,
 		"star": 5,
@@ -21435,6 +25515,16 @@ var ship_data = {
 			2,
 			2,
 			4
+		],
+		"min_efficiency_list": [
+			110,
+			110,
+			110
+		],
+		"efficiency_list": [
+			120,
+			120,
+			130
 		],
 		"id": 607010,
 		"skin_id": 607010,
@@ -21488,6 +25578,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			105,
+			85
+		],
+		"efficiency_list": [
+			125,
+			120,
+			85
+		],
 		"id": 608010,
 		"skin_id": 608010,
 		"star": 5,
@@ -21516,7 +25616,7 @@ var ship_data = {
 			"antisubmarineWarfare": "0",
 			"oxygen": "208",
 			"ammunition": "",
-			"huntingRange": ""
+			"huntingRange": "542 245\n32*3*23\n ***** \n  *S*  \n ***** \n   *   \n       "
 		},
 		"equip_1": [
 			13
@@ -21541,6 +25641,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			135,
+			95,
+			105
+		],
+		"efficiency_list": [
+			155,
+			100,
+			110
 		],
 		"id": 701020,
 		"skin_id": 701020,
@@ -21595,6 +25705,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			135,
+			105,
+			95
+		],
+		"efficiency_list": [
+			155,
+			110,
+			100
+		],
 		"id": 701030,
 		"skin_id": 701030,
 		"star": 5,
@@ -21647,6 +25767,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			145,
+			120,
+			100
+		],
+		"efficiency_list": [
+			165,
+			125,
+			105
 		],
 		"id": 701040,
 		"skin_id": 701040,
@@ -21701,6 +25831,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			145,
+			120,
+			100
+		],
+		"efficiency_list": [
+			165,
+			125,
+			105
+		],
 		"id": 701050,
 		"skin_id": 701050,
 		"star": 6,
@@ -21753,6 +25893,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			135,
+			95,
+			105
+		],
+		"efficiency_list": [
+			155,
+			100,
+			110
 		],
 		"id": 701060,
 		"skin_id": 701060,
@@ -21807,6 +25957,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			105,
+			105
+		],
+		"efficiency_list": [
+			160,
+			110,
+			110
+		],
 		"id": 701070,
 		"skin_id": 701070,
 		"star": 5,
@@ -21859,6 +26019,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			135,
+			95,
+			105
+		],
+		"efficiency_list": [
+			155,
+			100,
+			110
 		],
 		"id": 701080,
 		"skin_id": 701080,
@@ -21913,6 +26083,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			125,
+			80
+		],
+		"efficiency_list": [
+			130,
+			125,
+			80
+		],
 		"id": 702010,
 		"skin_id": 702010,
 		"star": 6,
@@ -21966,13 +26146,23 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			120,
+			80
+		],
+		"efficiency_list": [
+			120,
+			120,
+			80
+		],
 		"id": 702020,
 		"skin_id": 702020,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "702020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shuixingjinian.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/shuixingjinian.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "パーミャチ・メルクーリヤ",
@@ -22019,6 +26209,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			75,
+			120
+		],
+		"efficiency_list": [
+			130,
+			75,
+			120
 		],
 		"id": 702030,
 		"skin_id": 702030,
@@ -22073,6 +26273,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			135,
+			110
+		],
+		"efficiency_list": [
+			150,
+			135,
+			110
+		],
 		"id": 702040,
 		"skin_id": 702040,
 		"star": 6,
@@ -22125,6 +26335,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			110,
+			145,
+			120
+		],
+		"efficiency_list": [
+			120,
+			155,
+			130
 		],
 		"id": 702060,
 		"skin_id": 702060,
@@ -22179,6 +26399,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			135,
+			120,
+			110
+		],
+		"efficiency_list": [
+			155,
+			125,
+			115
+		],
 		"id": 703010,
 		"skin_id": 703010,
 		"star": 6,
@@ -22230,6 +26460,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			80,
+			200,
+			100
+		],
+		"efficiency_list": [
+			110,
+			200,
+			100
 		],
 		"id": 705010,
 		"skin_id": 705010,
@@ -22283,6 +26523,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			110
+		],
+		"efficiency_list": [
+			135,
+			200,
+			110
+		],
 		"id": 705040,
 		"skin_id": 705040,
 		"star": 6,
@@ -22335,6 +26585,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
+		],
 		"id": 705050,
 		"skin_id": 705050,
 		"star": 6,
@@ -22386,6 +26646,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			140
+		],
+		"efficiency_list": [
+			140,
+			125,
+			145
 		],
 		"id": 801010,
 		"skin_id": 801010,
@@ -22440,13 +26710,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
+		],
 		"id": 801020,
 		"skin_id": 801020,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "801020",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/fuerban_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/fuerban_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "フォルバン",
@@ -22492,6 +26772,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			100,
+			70
+		],
+		"efficiency_list": [
+			130,
+			115,
+			75
 		],
 		"id": 801030,
 		"skin_id": 801030,
@@ -22546,6 +26836,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			120,
+			70
+		],
+		"efficiency_list": [
+			130,
+			135,
+			75
+		],
 		"id": 801040,
 		"skin_id": 801040,
 		"star": 5,
@@ -22599,13 +26899,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			145,
+			90
+		],
+		"efficiency_list": [
+			140,
+			155,
+			100
+		],
 		"id": 802010,
 		"skin_id": 802010,
 		"star": 5,
 		"rarity": 5,
 		"retro": 0,
 		"uni_id": "802010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/aimierbeierding_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/aimierbeierding_g.png.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "エミール・ベルタン",
@@ -22651,6 +26961,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			135,
+			90
+		],
+		"efficiency_list": [
+			135,
+			145,
+			100
 		],
 		"id": 802020,
 		"skin_id": 802020,
@@ -22705,6 +27025,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			200,
+			100
+		],
+		"efficiency_list": [
+			160,
+			200,
+			100
+		],
 		"id": 805010,
 		"skin_id": 805010,
 		"star": 6,
@@ -22756,6 +27086,16 @@ var ship_data = {
 			3,
 			3,
 			2
+		],
+		"min_efficiency_list": [
+			120,
+			125,
+			55
+		],
+		"efficiency_list": [
+			135,
+			140,
+			55
 		],
 		"id": 807010,
 		"skin_id": 807010,
@@ -22809,6 +27149,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			105,
+			115
+		],
+		"efficiency_list": [
+			115,
+			115,
+			120
+		],
 		"id": 808010,
 		"skin_id": 808010,
 		"star": 5,
@@ -22861,6 +27211,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			110,
+			125
+		],
+		"efficiency_list": [
+			130,
+			120,
+			125
+		],
 		"id": 899010,
 		"skin_id": 899010,
 		"star": 6,
@@ -22911,6 +27271,16 @@ var ship_data = {
 			1,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			200,
+			70
+		],
+		"efficiency_list": [
+			180,
+			200,
+			80
 		],
 		"id": 899020,
 		"skin_id": 899020,
@@ -22964,6 +27334,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			120,
+			110,
+			110
+		],
+		"efficiency_list": [
+			140,
+			115,
+			115
+		],
 		"id": 900800,
 		"skin_id": 900800,
 		"star": 5,
@@ -23015,13 +27395,23 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			120,
+			70
+		],
+		"efficiency_list": [
+			115,
+			140,
+			75
+		],
 		"id": 901010,
 		"skin_id": 901010,
 		"star": 4,
 		"rarity": 4,
 		"retro": 0,
 		"uni_id": "901010",
-		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lemaer_g.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/lemaer_g.png.png",
 		"star_string": "★★★★",
 		"rarity_string": "SR",
 		"jp_name": "ル・マルス",
@@ -23067,6 +27457,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			135,
+			70
+		],
+		"efficiency_list": [
+			140,
+			140,
+			75
 		],
 		"id": 901020,
 		"skin_id": 901020,
@@ -23121,6 +27521,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			135,
+			70
+		],
+		"efficiency_list": [
+			140,
+			140,
+			75
+		],
 		"id": 901030,
 		"skin_id": 901030,
 		"star": 5,
@@ -23173,6 +27583,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			120,
+			115
+		],
+		"efficiency_list": [
+			150,
+			125,
+			120
 		],
 		"id": 901110,
 		"skin_id": 901110,
@@ -23227,6 +27647,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			120,
+			114
+		],
+		"efficiency_list": [
+			150,
+			125,
+			120
+		],
 		"id": 901120,
 		"skin_id": 901120,
 		"star": 6,
@@ -23279,6 +27709,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			90
+		],
+		"efficiency_list": [
+			135,
+			150,
+			100
 		],
 		"id": 902010,
 		"skin_id": 902010,
@@ -23333,6 +27773,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			150,
+			100
+		],
+		"efficiency_list": [
+			125,
+			175,
+			100
+		],
 		"id": 903020,
 		"skin_id": 903020,
 		"star": 6,
@@ -23384,6 +27834,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			150,
+			70
+		],
+		"efficiency_list": [
+			170,
+			150,
+			70
+		],
 		"id": 904010,
 		"skin_id": 904010,
 		"star": 5,
@@ -23434,6 +27894,16 @@ var ship_data = {
 			2,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			130,
+			200,
+			70
+		],
+		"efficiency_list": [
+			160,
+			200,
+			70
 		],
 		"id": 905010,
 		"skin_id": 905010,
@@ -23487,6 +27957,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			140,
+			200,
+			70
+		],
+		"efficiency_list": [
+			170,
+			200,
+			70
+		],
 		"id": 905030,
 		"skin_id": 905030,
 		"star": 6,
@@ -23538,6 +28018,16 @@ var ship_data = {
 			2,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			140,
+			200,
+			70
+		],
+		"efficiency_list": [
+			180,
+			200,
+			80
 		],
 		"id": 999010,
 		"skin_id": 999010,
@@ -23591,6 +28081,16 @@ var ship_data = {
 			2,
 			3
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			120
+		],
+		"efficiency_list": [
+			110,
+			110,
+			150
+		],
 		"id": 9707010,
 		"skin_id": 9707010,
 		"star": 6,
@@ -23642,6 +28142,16 @@ var ship_data = {
 			3,
 			2
 		],
+		"min_efficiency_list": [
+			130,
+			125,
+			80
+		],
+		"efficiency_list": [
+			145,
+			140,
+			80
+		],
 		"id": 9707020,
 		"skin_id": 9707020,
 		"star": 6,
@@ -23692,6 +28202,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			140,
+			100
+		],
+		"efficiency_list": [
+			140,
+			150,
+			100
 		],
 		"id": 10100010,
 		"skin_id": 10100010,
@@ -23746,6 +28266,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			120,
+			140,
+			110
+		],
+		"efficiency_list": [
+			125,
+			165,
+			110
+		],
 		"id": 10100020,
 		"skin_id": 10100020,
 		"star": 5,
@@ -23796,6 +28326,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			130,
+			70
+		],
+		"efficiency_list": [
+			75,
+			150,
+			75
 		],
 		"id": 10100030,
 		"skin_id": 10100030,
@@ -23850,6 +28390,16 @@ var ship_data = {
 			2,
 			2
 		],
+		"min_efficiency_list": [
+			120,
+			110,
+			110
+		],
+		"efficiency_list": [
+			120,
+			125,
+			125
+		],
 		"id": 10100040,
 		"skin_id": 10100040,
 		"star": 5,
@@ -23900,6 +28450,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			125,
+			140,
+			100
+		],
+		"efficiency_list": [
+			145,
+			150,
+			100
 		],
 		"id": 10100050,
 		"skin_id": 10100050,
@@ -23954,6 +28514,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			125,
+			140,
+			110
+		],
+		"efficiency_list": [
+			130,
+			165,
+			110
+		],
 		"id": 10100060,
 		"skin_id": 10100060,
 		"star": 6,
@@ -24004,6 +28574,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			75,
+			130,
+			70
+		],
+		"efficiency_list": [
+			80,
+			150,
+			75
 		],
 		"id": 10100070,
 		"skin_id": 10100070,
@@ -24058,6 +28638,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			120,
+			110,
+			110
+		],
+		"efficiency_list": [
+			120,
+			125,
+			125
+		],
 		"id": 10100080,
 		"skin_id": 10100080,
 		"star": 6,
@@ -24108,6 +28698,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			110,
+			90
+		],
+		"efficiency_list": [
+			135,
+			115,
+			95
 		],
 		"id": 10200010,
 		"skin_id": 10200010,
@@ -24162,6 +28762,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			110,
+			110,
+			90
+		],
+		"efficiency_list": [
+			115,
+			130,
+			95
+		],
 		"id": 10200020,
 		"skin_id": 10200020,
 		"star": 5,
@@ -24215,6 +28825,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			85,
+			75
+		],
+		"efficiency_list": [
+			110,
+			105,
+			75
+		],
 		"id": 10300010,
 		"skin_id": 10300010,
 		"star": 6,
@@ -24265,6 +28885,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			75,
+			100,
+			65
+		],
+		"efficiency_list": [
+			85,
+			120,
+			65
 		],
 		"id": 10300020,
 		"skin_id": 10300020,
@@ -24319,6 +28949,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			120,
+			60
+		],
+		"efficiency_list": [
+			110,
+			140,
+			60
+		],
 		"id": 10300030,
 		"skin_id": 10300030,
 		"star": 6,
@@ -24371,6 +29011,16 @@ var ship_data = {
 			3,
 			3,
 			1
+		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			125,
+			80
 		],
 		"id": 10300040,
 		"skin_id": 10300040,
@@ -24425,6 +29075,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			115,
+			115,
+			80
+		],
+		"efficiency_list": [
+			130,
+			125,
+			80
+		],
 		"id": 10300050,
 		"skin_id": 10300050,
 		"star": 5,
@@ -24478,6 +29138,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			90,
+			90,
+			90
+		],
+		"efficiency_list": [
+			105,
+			105,
+			105
+		],
 		"id": 10300060,
 		"skin_id": 10300060,
 		"star": 5,
@@ -24528,6 +29198,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			70,
+			140,
+			100
+		],
+		"efficiency_list": [
+			75,
+			160,
+			105
 		],
 		"id": 10400010,
 		"skin_id": 10400010,
@@ -24582,6 +29262,16 @@ var ship_data = {
 			1,
 			1
 		],
+		"min_efficiency_list": [
+			90,
+			50,
+			120
+		],
+		"efficiency_list": [
+			110,
+			55,
+			125
+		],
 		"id": 10400020,
 		"skin_id": 10400020,
 		"star": 6,
@@ -24632,6 +29322,16 @@ var ship_data = {
 			2,
 			3,
 			3
+		],
+		"min_efficiency_list": [
+			105,
+			120,
+			125
+		],
+		"efficiency_list": [
+			110,
+			135,
+			135
 		],
 		"id": 10400030,
 		"skin_id": 10400030,
@@ -24684,6 +29384,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 10400040,
 		"skin_id": 10400040,
 		"star": 6,
@@ -24735,6 +29445,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			120,
+			120,
+			110
+		],
+		"efficiency_list": [
+			125,
+			140,
+			115
 		],
 		"id": 10600010,
 		"skin_id": 10600010,
@@ -24789,6 +29509,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			105,
+			200,
+			100
+		],
+		"efficiency_list": [
+			135,
+			200,
+			100
+		],
 		"id": 10600020,
 		"skin_id": 10600020,
 		"star": 6,
@@ -24841,6 +29571,16 @@ var ship_data = {
 			2,
 			1
 		],
+		"min_efficiency_list": [
+			130,
+			140,
+			105
+		],
+		"efficiency_list": [
+			135,
+			165,
+			105
+		],
 		"id": 10600030,
 		"skin_id": 10600030,
 		"star": 6,
@@ -24891,6 +29631,16 @@ var ship_data = {
 			2,
 			1,
 			1
+		],
+		"min_efficiency_list": [
+			100,
+			70,
+			110
+		],
+		"efficiency_list": [
+			130,
+			70,
+			110
 		],
 		"id": 10600040,
 		"skin_id": 10600040,
@@ -24945,6 +29695,16 @@ var ship_data = {
 			3,
 			1
 		],
+		"min_efficiency_list": [
+			100,
+			200,
+			100
+		],
+		"efficiency_list": [
+			130,
+			200,
+			100
+		],
 		"id": 10600050,
 		"skin_id": 10600050,
 		"star": 5,
@@ -24997,6 +29757,16 @@ var ship_data = {
 			3,
 			3
 		],
+		"min_efficiency_list": [
+			114,
+			110,
+			125
+		],
+		"efficiency_list": [
+			120,
+			125,
+			135
+		],
 		"id": 10600060,
 		"skin_id": 10600060,
 		"star": 5,
@@ -25047,6 +29817,16 @@ var ship_data = {
 			1,
 			2,
 			1
+		],
+		"min_efficiency_list": [
+			114,
+			150,
+			110
+		],
+		"efficiency_list": [
+			135,
+			160,
+			110
 		],
 		"id": 10600070,
 		"skin_id": 10600070,

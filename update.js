@@ -169,6 +169,16 @@ rp(url)
               slots[1].max || 0,
               slots[2].max || 0
           ],
+          "min_efficiency_list" :[
+              slots[0].minEfficiency || 0,
+              slots[1].minEfficiency || 0,
+              slots[2].minEfficiency || 0
+          ],
+          "efficiency_list" :[
+              slots[0].maxEfficiency || 0,
+              slots[1].maxEfficiency || 0,
+              slots[2].maxEfficiency || 0
+          ],
           "id": id,
           "skin_id": id,
           "star": s.stars.value,
@@ -205,7 +215,7 @@ rp(url)
     }
 
 
-    fs.writeFile('js/ship_data.js', 'var ship_data = '+JSON.stringify(out, null, '\t'), err => {
+    fs.writeFile('client/data/ship_data.js', 'var ship_data = '+JSON.stringify(out, null, '\t'), err => {
     if (err) {
       console.error(err)
       return
@@ -270,5 +280,5 @@ console.log("updated");
 var fs = require('fs');
 
 //Prase the JSON
-let json = fs.readFileSync('js/ship_data_old.json');
+let json = fs.readFileSync('client/data/ship_data.json');
 let ship_data_json = JSON.parse(json);
