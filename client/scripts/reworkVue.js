@@ -12,7 +12,7 @@ Vue.component("fleet-container", {
     template: `
         <div class="fleetWrap">
 
-            <input class="DetailToggle" type="checkbox" name="details" id="{{fleet.name}}">
+            <input class="DetailToggle" type="checkbox" name="details" v-bind:id="fleet.id">
 
             <div class="fleetHeader">
 
@@ -83,7 +83,7 @@ Vue.component("fleet-header-buttons",{
         <div
         class="btn more" >
             <label 
-            for="Fleet-{{fleet.name}}-Details"
+            v-bind:for="fleet.name"
             >
             ☰</label>
         </div>
@@ -105,9 +105,9 @@ Vue.component("fleet-shipWrap",{
         ></shipwrap-ship>
         <div class="equipWrap">
             <shipwrap-equip
-                v-for="(item, key) in ship.item"
+                v-for="(item, index) in ship.item"
                 v-bind:item="item"
-                v.bind:extraData="ship.extraData.slots[item.key]"
+                v.bind:extraData="ship.extraData.slots[item.index]"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -141,7 +141,7 @@ Vue.component("shipwrap-ship",{
 Vue.component("shipwrap-equip",{
     props:{
         item:Object,
-        extraData:Object||null,
+        extraData:Object||undefined,
         lang:String
     },
     template:`
