@@ -107,7 +107,7 @@ Vue.component("fleet-shipWrap",{
             <shipwrap-equip
                 v-for="(item, key) in ship.item"
                 v-bind:item="item"
-                v.bind:extraData="ship.extraData.slots[item.key] ? ship.extraData.slots[item.key] : null ;"
+                v.bind:extraData="ship.extraData.slots[item.key]"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -116,8 +116,8 @@ Vue.component("fleet-shipWrap",{
                 v-for="(value, key) in ship.stats"
                 v-bind:statName="key"
                 v-bind:statValue="value"
-                v-bind:statEquip="ship.extraData.equipBonus[key] ? ship.extraData.equipBonus[key] : null ;"
-                v.bind:statRetro="ship.extraData.retroBonus[key] ? ship.extraData.retroBonus[key] : null ;"
+                v-bind:statEquip="ship.extraData.equipBonus[key]"
+                v.bind:statRetro="ship.extraData.retroBonus[key]"
                 v-bind:lang="lang"
             ></shipwrap-stat>
         </div>
@@ -161,8 +161,8 @@ Vue.component("shipwrap-stat",{
     props:{
         statName:String,
         statValue:Number||String,
-        statEquip:Number||String||null,
-        statRetro:Number||String||null,
+        statEquip:Number||String||undefined,
+        statRetro:Number||String||undefined,
         lang:String
     },
     template:`
