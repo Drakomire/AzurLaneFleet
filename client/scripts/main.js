@@ -10,8 +10,73 @@ let retrofit = true;
 //Empty ship data variable for fleet creation
 // var ship_data = [];
 var default_fleet = [];
-var fleet_data = [];
-fleet_data = buildFleet();
+var fleet_data = [ 
+    {
+        "id":1,
+        "name":1,
+        "surface":{
+            "flagship":{ 
+                "name":{"en":"flag"},
+                "stats":{
+                    "health": 232,
+                    "armor": "Light",
+                    "reload": 116,
+                    "luck": 100,
+                    "firepower": 23,
+                    "torpedo": 23,
+                    "evasion": 116,
+                    "speed": 35,
+                    "antiair": 23,
+                    "aviation": 23,
+                    "oilConsumption": 3,
+                    "accuracy": 116,
+                    "antisubmarineWarfare": 33
+                },
+                "extraData":{
+                    "equipBonus":{
+                        "health": 20,
+                        "firepower": 45,
+                        "torpedo": 45,
+                        "evasion": 25,
+                        "antiair": 45,
+                    }
+                },
+                "items":[{},{},{},{},{}]
+            },
+            "rightFlank":{
+                "name":{},
+                "stats":{},
+                "extraData":{},
+                "items":[{},{},{},{},{}]
+            },
+            "leftFlank":{
+                "name":{},
+                "stats":{},
+                "extraData":{},
+                "items":[{},{},{},{},{}]
+            },
+            "vanguardLead":{
+                "name":{},
+                "stats":{},
+                "extraData":{},
+                "items":[{},{},{},{},{}]
+            },
+            "vanguardMid":{
+                "name":{},
+                "stats":{},
+                "extraData":{},
+                "items":[{},{},{},{},{}]
+            },
+            "vanguardBack":{
+                "name":{},
+                "stats":{},
+                "extraData":{},
+                "items":[{},{},{},{},{}]
+            }
+        }
+    }
+];
+// fleet_data = buildFleet();
 last_saved_fleet = [];
 
 let c_side_dict = {
@@ -49,7 +114,7 @@ let ALF = new Vue({
     },
 });
 
-console.log(ALF)
+console.log(fleet_data)
 
 let shipSelect = new Vue({
     el: "#shipselect",

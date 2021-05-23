@@ -6,6 +6,7 @@ VUE componets. This is the stuff thats displayed to the screen.
 Vue.component("fleet-container", {
     props: {
         fleet:Object,
+        fleets:Array,
         lang:String
     },
     template: `
@@ -18,26 +19,27 @@ Vue.component("fleet-container", {
                 <h3 class="fleet title">{{fleet.name}}</h3>
 
                 <fleet-header-buttons
-                v-bind:fleetKey="fleetKey"
-                v-bind:lang="lang"
+                    v-bind:fleet="fleet"
+                    v-bind:fleets="fleets"
+                    v-bind:lang="lang"
                 ></fleet-header-buttons>
 
             </div>
             <div class="shipGroup surface" v-if="fleet.surface">
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.surface"
-                    v.bind:ship="ship"
-                    v.bind:shipPos="shipPos"
-                    v.bind:lang="lang"
+                    v-bind:ship="ship"
+                    v-bind:shipPos="shipPos"
+                    v-bind:lang="lang"
                 ></fleet-shipWrap>
             </div>
             
             <div class="shipGroup sub" v-if="fleet.sub"> 
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.sub"
-                    v.bind:ship="ship"
-                    v.bind:shipPos="shipPos"
-                    v.bind:lang="lang"
+                    v-bind:ship="ship"
+                    v-bind:shipPos="shipPos"
+                    v-bind:lang="lang"
                 ></fleet-shipWrap>
             </div>
 
@@ -46,8 +48,12 @@ Vue.component("fleet-container", {
 });
 
 //fleet container sub components
-Vue.component("fleet-Header-Buttons",{
-    props: ["fleet", "lang"],
+Vue.component("fleet-header-buttons",{
+    props: {
+        fleet:Object,
+        fleets:Array,
+        lang:String
+    },
     template:`
     <div class="btnWrap">
 
@@ -92,16 +98,16 @@ Vue.component("fleet-shipWrap",{
         lang:String
     },
     template:`
-    <div class="shipWrap {{shipPos}}">
+    <div class="shipWrap"v-bind:class="shipPos">
         <shipwrap-ship
             v-bind:ship="ship"
             v-bind:lang="lang"
         ></shipwrap-ship>
         <div class="equipWrap">
             <shipwrap-equip
-                v-for="item in ship.item"
+                v-for="(item, key) in ship.item"
                 v-bind:item="item"
-                v.bind:extraData="ship.extraData.slots[item.key] ? ship.extraData.slots[item.key] : null"
+                v.bind:extraData="ship.extraData.slots[item.key] ? ship.extraData.slots[item.key] : null ;"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -110,8 +116,8 @@ Vue.component("fleet-shipWrap",{
                 v-for="(value, key) in ship.stats"
                 v-bind:statName="key"
                 v-bind:statValue="value"
-                v-bind:statEquip="ship.extraData.equipBonus[key] ? ship.extraData.equipBonus[key] : null"
-                v.bind:statRetro="ship.extraData.retroBonus[key] ? ship.extraData.retroBonus[key] : null"
+                v-bind:statEquip="ship.extraData.equipBonus[key] ? ship.extraData.equipBonus[key] : null ;"
+                v.bind:statRetro="ship.extraData.retroBonus[key] ? ship.extraData.retroBonus[key] : null ;"
                 v-bind:lang="lang"
             ></shipwrap-stat>
         </div>
@@ -128,7 +134,7 @@ Vue.component("shipwrap-ship",{
     <img class="icon" v-bind:src="ship.extraData.iconSRC"/>
     <img class="border" v-bind:src="ship.extraData.BorderSRC"/>
     <img class="background" v-bind:src="ship.extraData.backgroundSRC"/>
-    <div class="lable" >{{ship.name}}</div>
+    <div class="lable" >{{ship.name[lang]}}</div>
     </div>
     `
 })
@@ -140,9 +146,9 @@ Vue.component("shipwrap-equip",{
     },
     template:`
     <div class="equip">
-        <img class="icon" v-bind:src="item.extraData.iconSRC"/>
-        <img class="border" v-bind:src="item.extraData.BorderSRC"/>
-        <img class="background" v-bind:src="item.extraData.backgroundSRC"/>
+        <img class="icon" v-bind:src="item.extraData.iconSRC ? item.extraData.iconSRC : 'client\\ui\\empty.png'"/>
+        <img class="border" v-bind:src="item.extraData.BorderSRC? item.extraData.BorderSRC : ''"/>
+        <img class="background" v-bind:src="item.extraData.backgroundSRC ? item.extraData.backgroundSRC : ''"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.efficiency}}</div>
             <div class="toplable" >{{item.quantity}}</div>
@@ -161,6 +167,7 @@ Vue.component("shipwrap-stat",{
     },
     template:`
     <div class="stat">
+    {{statRetro}}
         <div class="stat-name">{{statName}}</div>
         <div class="stat-values">
             <div class="hoverStats"
@@ -169,25 +176,29 @@ Vue.component("shipwrap-stat",{
                 <div class="baseStat"
                 v-if="(typeof(statValue)=='number')"
                 >{{statValue}}</div>
+                
                 <p
                 v-if="(typeof(statEquip)=='number')"
                 >+</p>
+                
                 <div class="equipStat"
                 v-if="(typeof(statEquip)=='number')"
                 >{{statEquip}}</div>
+                
                 <p
                 v-if="(typeof(statRetro)=='number')"
                 >+</p>
+                
                 <div class="retroStat"
                 v-if="(typeof(statRetro)=='number')"
                 >{{statRetro}}</div>
             </div>
             <div class="totalStat"
             v-if="(typeof(statValue)=='number')"
-            >{{statValue+statEquip+statRetro}}</div>
+            >{{statValue}}</div>
             <div class="totalStat"
             v-if="(typeof(statValue)=='string')"
-            >{{(statEquip)?statEquip:(statRetro)?statRetro:statValue}}</div>
+            >{{(statEquip!==null)?statEquip:(statRetro!==null)?statRetro:statValue}}</div>
         </div>
     </div>
     `

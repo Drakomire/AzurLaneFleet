@@ -8,62 +8,68 @@
         { // fleet level
             "surface":{
                 "flagship":{ //ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "rightflank":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "leftflank":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "vanguardLead":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "vanguardMid":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "vanguardBack":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 }
             },
-            "sub":{
+            "subs":{
                 "flagSub":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "leftsub":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 },
                 "rightSub":{//ship level
-                    "name":{},
-                    "stats":{},
-                    "extraData":{},
-                    "items":[{},{},{},{},{}]
+                    "name":{},//calculated value see bottom for details
+                    "stats":{},//calculated value see bottom for details
+                    "extraData":{},//calculated value see bottom for details
+                    "items":[{},{},{},{},{}]//calculated value see bottom for details
                 }
             }
         }
     ]
 }
+//ship data stored as
+
+"flagship":{ //ship level
+    "shipID":"shipID",
+    "items":["itemID","itemID","itemID","itemID","itemID"]
+},

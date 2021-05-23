@@ -1,0 +1,97 @@
+{
+    "_id": {
+      "$oid": "607638c3031743538410d208"
+    },
+    "url": "Secret",
+    "data":
+    [ 
+        {
+            "id":1,
+            "surface":{
+                "flagship":{ 
+                    "name":{"en":"flag"},
+                    "stats":{
+                        "health": 232,
+                        "armor": "Light",
+                        "reload": 116,
+                        "luck": 100,
+                        "firepower": 23,
+                        "torpedo": 23,
+                        "evasion": 116,
+                        "speed": 35,
+                        "antiair": 23,
+                        "aviation": 23,
+                        "oilConsumption": 3,
+                        "accuracy": 116,
+                        "antisubmarineWarfare": 33
+                    },
+                    "extraData":{
+                        "equipBonus":{
+                            "health": 20,
+                            "firepower": 45,
+                            "torpedo": 45,
+                            "evasion": 25,
+                            "antiair": 45,
+                        }
+                    },
+                    "items":[{
+                    },{
+                    },{
+                    },{
+                    },{
+                    }]
+                },
+                "rightflank":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "leftflank":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "vanguardLead":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "vanguardMid":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "vanguardBack":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                }
+            },
+            "subs":{
+                "flagSub":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "leftsub":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                },
+                "rightSub":{
+                    "name":{},
+                    "stats":{},
+                    "extraData":{},
+                    "items":[{},{},{},{},{}]
+                }
+            }
+        }
+    ]
+}
