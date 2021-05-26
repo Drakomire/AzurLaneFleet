@@ -12,7 +12,7 @@ let retrofit = true;
 var default_fleet = [];
 var fleet_data = [ 
     {
-        id:"1",
+        id:"0",
         name:"1",
         surface:{
             flagship:{ 
@@ -335,13 +335,15 @@ function hideShipInFleet() {
 }
 
 //Opens the popup menu for ships or equips depending on the item name
-function setCurrent(item:HTMLDivElement) {
+function setCurrent(item) {
     //Clear the search bar
     document.getElementById("ship search bar").value = "";
     updateSearch();
     console.log(item.parentElement.parentElement.parentElement.parentElement.id);
-    let sidecheck = ((item.parentElement.getAttribute("pos").match(/vanguard/g)?"1":(item.parentElement.getAttribute("pos").match(/sub/g))?"2":"0"));
-    [c_fleet, c_side, c_pos, c_item] = [item.parentElement.parentElement.parentElement.parentElement.id, sidecheck, pos[3], (item.classList.includes("equip")?"1":"0")];
+    let itemCheck = (item.classList.contains("equip")?`${item.getAttribute("slot")}`:"0");// checks and sets the expected value for c_item
+    let sidecheck = ((itemCheck!=="0")?(item.parentElement.getAttribute("pos").match(/vanguard/g)?"0":(item.parentElement.getAttribute("pos").match(/sub/g))?"2":"1"):"0");// checks and sets the expected value for c_side
+    let poscheck = ((item.parentElement.getAttribute("pos").match(/lead||flag/))?"0":(item.parentElement.getAttribute("pos").match(/left||mid/))?"1":"2");// checks and sets the expected value for c_pos
+    [c_fleet, c_side, c_pos, c_item] = [item.parentElement.parentElement.parentElement.parentElement.id, sidecheck, poscheck, itemCheck] ;
     if (!c_item) {
         //ship
         let shiplist = document.getElementById("shiplist");

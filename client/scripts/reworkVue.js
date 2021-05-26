@@ -98,7 +98,7 @@ Vue.component("fleet-shipWrap",{
         lang:String
     },
     template:`
-    <div class="shipWrap"v-bind:class="shipPos" v-bind:pos="shipPos>
+    <div class="shipWrap"v-bind:class="shipPos" v-bind:pos="shipPos">
         <shipwrap-ship
             v-bind:ship="ship"
             v-bind:lang="lang"
