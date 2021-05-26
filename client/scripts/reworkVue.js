@@ -10,7 +10,7 @@ Vue.component("fleet-container", {
         lang:String
     },
     template: `
-        <div class="fleetWrap">
+        <div class="fleetWrap" v-bind:id="fleet.id">
 
             <input class="DetailToggle" type="checkbox" name="details" v-bind:id="fleet.id">
 
@@ -98,7 +98,7 @@ Vue.component("fleet-shipWrap",{
         lang:String
     },
     template:`
-    <div class="shipWrap"v-bind:class="shipPos">
+    <div class="shipWrap"v-bind:class="shipPos" v-bind:pos="shipPos>
         <shipwrap-ship
             v-bind:ship="ship"
             v-bind:lang="lang"
@@ -107,6 +107,7 @@ Vue.component("fleet-shipWrap",{
             <shipwrap-equip
                 v-for="(item, key) in ship.items"
                 v-bind:item="item"
+                v-bind:slot="key"
                 v.bind:extraData="ship.extraData.slots[key]"
                 v-bind:lang="lang"
             ></shipwrap-equip>
@@ -141,11 +142,12 @@ Vue.component("shipwrap-ship",{
 Vue.component("shipwrap-equip",{
     props:{
         item:Object,
+        slot:Number,
         extraData:Object||undefined,
         lang:String
     },
     template:`
-    <div class="equip" onclick="setCurrent(this)">
+    <div class="equip" v-bind:slot="slot+1" onclick="setCurrent(this)">
         <img class="icon" src="../ui/empty.png"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.efficiency}}</div>

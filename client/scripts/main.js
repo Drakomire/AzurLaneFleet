@@ -12,7 +12,7 @@ let retrofit = true;
 var default_fleet = [];
 var fleet_data = [ 
     {
-        id:1,
+        id:"1",
         name:"1",
         surface:{
             flagship:{ 
@@ -335,14 +335,14 @@ function hideShipInFleet() {
 }
 
 //Opens the popup menu for ships or equips depending on the item name
-function setCurrent(item) {
+function setCurrent(item:HTMLDivElement) {
     //Clear the search bar
     document.getElementById("ship search bar").value = "";
     updateSearch();
-    console.log(item)
-    let pos = item.name;
-    [c_fleet, c_side, c_pos, c_item] = [pos[1], pos[2], pos[3], pos[4]];
-    if (c_item === "0") {
+    console.log(item.parentElement.parentElement.parentElement.parentElement.id);
+    let sidecheck = ((item.parentElement.getAttribute("pos").match(/vanguard/g)?"1":(item.parentElement.getAttribute("pos").match(/sub/g))?"2":"0"));
+    [c_fleet, c_side, c_pos, c_item] = [item.parentElement.parentElement.parentElement.parentElement.id, sidecheck, pos[3], (item.classList.includes("equip")?"1":"0")];
+    if (!c_item) {
         //ship
         let shiplist = document.getElementById("shiplist");
         shiplist = shiplist.querySelectorAll("button");
