@@ -105,9 +105,9 @@ Vue.component("fleet-shipWrap",{
         ></shipwrap-ship>
         <div class="equipWrap">
             <shipwrap-equip
-                v-for="(item, index) in ship.item"
+                v-for="(item, key) in ship.items"
                 v-bind:item="item"
-                v.bind:extraData="ship.extraData.slots[item.index]"
+                v.bind:extraData="ship.extraData.slots[key]"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -146,14 +146,12 @@ Vue.component("shipwrap-equip",{
     },
     template:`
     <div class="equip">
-        <img class="icon" v-bind:src="item.extraData.iconSRC ? item.extraData.iconSRC : 'client\\ui\\empty.png'"/>
-        <img class="border" v-bind:src="item.extraData.BorderSRC? item.extraData.BorderSRC : ''"/>
-        <img class="background" v-bind:src="item.extraData.backgroundSRC ? item.extraData.backgroundSRC : ''"/>
+        <img class="icon" src="../ui/empty.png"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.efficiency}}</div>
             <div class="toplable" >{{item.quantity}}</div>
         </div>
-        <div class="lable">{{item.name}}</div>
+        <div class="lable">{{item.id}}</div>
     </div>
     `
 })
