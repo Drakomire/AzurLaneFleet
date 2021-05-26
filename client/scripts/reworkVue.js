@@ -55,17 +55,17 @@ Vue.component("fleet-header-buttons",{
         lang:String
     },
     template:`
-    <div class="btnWrap">
+    <div class="buttonWrap">
 
         <div 
-        class="btn delete"
+        class="button delete"
         v-bind:name="fleet.name"
         onclick="removeFleet(this);"
         >
         X</div>
 
         <div 
-        class="btn prev"
+        class="button prev"
         v-bind:name="fleet.name"
         v-if="fleet.name != 1"
         onclick="moveFleetUp(this);"
@@ -73,7 +73,7 @@ Vue.component("fleet-header-buttons",{
         ˄</div>
 
         <div 
-        class="btn next"
+        class="button next"
         v-bind:name="fleet.name"
         v-if="fleet.name != fleets.length"
         onclick="moveFleetDown(this);"
@@ -81,7 +81,7 @@ Vue.component("fleet-header-buttons",{
         ˅</div>
 
         <div
-        class="btn more" >
+        class="button more" >
             <label 
             v-bind:for="fleet.name"
             >
@@ -130,7 +130,7 @@ Vue.component("shipwrap-ship",{
         lang:String
     },
     template:`
-    <div class="ship">
+    <div class="ship" onclick="setCurrent(this)">
     <img class="icon" v-bind:src="ship.extraData.iconSRC"/>
     <img class="border" v-bind:src="ship.extraData.BorderSRC"/>
     <img class="background" v-bind:src="ship.extraData.backgroundSRC"/>
@@ -145,7 +145,7 @@ Vue.component("shipwrap-equip",{
         lang:String
     },
     template:`
-    <div class="equip">
+    <div class="equip" onclick="setCurrent(this)">
         <img class="icon" src="../ui/empty.png"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.efficiency}}</div>
