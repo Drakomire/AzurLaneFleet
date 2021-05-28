@@ -12,66 +12,111 @@ let retrofit = true;
 var default_fleet = [];
 var fleet_data = [ 
     {
-        "id":1,
-        "name":1,
-        "surface":{
-            "flagship":{ 
-                "name":{"en":"flag"},
-                "stats":{
-                    "health": 232,
-                    "armor": "Light",
-                    "reload": 116,
-                    "luck": 100,
-                    "firepower": 23,
-                    "torpedo": 23,
-                    "evasion": 116,
-                    "speed": 35,
-                    "antiair": 23,
-                    "aviation": 23,
-                    "oilConsumption": 3,
-                    "accuracy": 116,
-                    "antisubmarineWarfare": 33
+        id:"0",
+        name:"1",
+        surface:{
+            flagship:{ 
+                name:{en:"flag"},
+                stats:{
+                    health: 232,
+                    armor: "Light",
+                    reload: 116,
+                    luck: 100,
+                    firepower: 23,
+                    torpedo: 23,
+                    evasion: 116,
+                    speed: 35,
+                    antiair: 23,
+                    aviation: 23,
+                    oilConsumption: 3,
+                    accuracy: 116,
+                    antisubmarineWarfare: 33
                 },
-                "extraData":{
-                    "equipBonus":{
-                        "health": 20,
-                        "firepower": 45,
-                        "torpedo": 45,
-                        "evasion": 25,
-                        "antiair": 45,
+                extraData:{
+                    equipBonus:{
+                        health: 20,
+                        firepower: 45,
+                        torpedo: 45,
+                        evasion: 25,
+                        antiair: 45,
                     }
                 },
-                "items":[{},{},{},{},{}]
+                items:[{
+                    id:1,
+                    type:1,
+                    efficiency:100,
+                    quantity:1,
+                    preload:0,
+                    bonus:{
+                        firepower:30,
+                    }
+                },{
+                    id:2,
+                    type:5,
+                    efficiency:100,
+                    quantity:2,
+                    preload:1,
+                    bonus:{
+                        torpedo:45,
+                    }
+                },{
+                    id:3,
+                    type:6,
+                    efficiency:100,
+                    quantity:1,
+                    preload:0,
+                    bonus:{
+                        antiair:45,
+                    }
+                },{
+                    id:4,
+                    type:10,
+                    efficiency:null,
+                    quantity:null,
+                    preload:null,
+                    bonus:{
+                        health:500,
+                    }
+                },{
+                    id:5,
+                    type:10,
+                    efficiency:null,
+                    quantity:null,
+                    preload:null,
+                    bonus:{
+                        evasion:30,
+                    }
+                }]
             },
-            "rightFlank":{
-                "name":{},
-                "stats":{},
-                "extraData":{},
-                "items":[{},{},{},{},{}]
+            rightFlank:{
+                name:{},
+                stats:{},
+                extraData:{},
+                items:[{},{},{},{},{}]
             },
-            "leftFlank":{
-                "name":{},
-                "stats":{},
-                "extraData":{},
-                "items":[{},{},{},{},{}]
+            leftFlank:{
+                name:{},
+                stats:{},
+                extraData:{},
+                items:[{},{},{},{},{}]
             },
-            "vanguardLead":{
-                "name":{},
-                "stats":{},
-                "extraData":{},
-                "items":[{},{},{},{},{}]
+            vanguardLead:{
+                name:{},
+                stats:{},
+                extraData:{},
+                items:[{},{},{},{},{}]
             },
-            "vanguardMid":{
-                "name":{},
-                "stats":{},
-                "extraData":{},
-                "items":[{},{},{},{},{}]
+            vanguardMid:{
+                name:{},
+                stats:{},
+                extraData:{},
+                items:[{},{},{},{},{}]
             },
-            "vanguardBack":{
-                "name":{},
-                "stats":{},
-                "extraData":{},
-                "items":[{},{},{},{},{}]
+            vanguardBack:{
+                name:{},
+                stats:{},
+                extraData:{},
+                items:[{},{},{},{},{}]
             }
         }
     }
@@ -294,9 +339,12 @@ function setCurrent(item) {
     //Clear the search bar
     document.getElementById("ship search bar").value = "";
     updateSearch();
-    let pos = item.name;
-    [c_fleet, c_side, c_pos, c_item] = [pos[1], pos[2], pos[3], pos[4]];
-    if (c_item === "0") {
+    console.log(item.parentElement.parentElement.parentElement.parentElement.id);
+    let itemCheck = (item.classList.contains("equip")?`${item.getAttribute("slot")}`:"0");// checks and sets the expected value for c_item
+    let sidecheck = ((itemCheck!=="0")?(item.parentElement.getAttribute("pos").match(/vanguard/g)?"0":(item.parentElement.getAttribute("pos").match(/sub/g))?"2":"1"):"0");// checks and sets the expected value for c_side
+    let poscheck = ((item.parentElement.getAttribute("pos").match(/lead||flag/))?"0":(item.parentElement.getAttribute("pos").match(/left||mid/))?"1":"2");// checks and sets the expected value for c_pos
+    [c_fleet, c_side, c_pos, c_item] = [item.parentElement.parentElement.parentElement.parentElement.id, sidecheck, poscheck, itemCheck] ;
+    if (!c_item) {
         //ship
         let shiplist = document.getElementById("shiplist");
         shiplist = shiplist.querySelectorAll("button");

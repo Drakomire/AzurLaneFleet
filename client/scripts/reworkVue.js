@@ -10,7 +10,7 @@ Vue.component("fleet-container", {
         lang:String
     },
     template: `
-        <div class="fleetWrap">
+        <div class="fleetWrap" v-bind:id="fleet.id">
 
             <input class="DetailToggle" type="checkbox" name="details" v-bind:id="fleet.id">
 
@@ -55,17 +55,17 @@ Vue.component("fleet-header-buttons",{
         lang:String
     },
     template:`
-    <div class="btnWrap">
+    <div class="buttonWrap">
 
         <div 
-        class="btn delete"
+        class="button delete"
         v-bind:name="fleet.name"
         onclick="removeFleet(this);"
         >
         X</div>
 
         <div 
-        class="btn prev"
+        class="button prev"
         v-bind:name="fleet.name"
         v-if="fleet.name != 1"
         onclick="moveFleetUp(this);"
@@ -73,7 +73,7 @@ Vue.component("fleet-header-buttons",{
         ˄</div>
 
         <div 
-        class="btn next"
+        class="button next"
         v-bind:name="fleet.name"
         v-if="fleet.name != fleets.length"
         onclick="moveFleetDown(this);"
@@ -81,7 +81,7 @@ Vue.component("fleet-header-buttons",{
         ˅</div>
 
         <div
-        class="btn more" >
+        class="button more" >
             <label 
             v-bind:for="fleet.name"
             >
@@ -98,16 +98,17 @@ Vue.component("fleet-shipWrap",{
         lang:String
     },
     template:`
-    <div class="shipWrap"v-bind:class="shipPos">
+    <div class="shipWrap"v-bind:class="shipPos" v-bind:pos="shipPos">
         <shipwrap-ship
             v-bind:ship="ship"
             v-bind:lang="lang"
         ></shipwrap-ship>
         <div class="equipWrap">
             <shipwrap-equip
-                v-for="(item, index) in ship.item"
+                v-for="(item, key) in ship.items"
                 v-bind:item="item"
-                v.bind:extraData="ship.extraData.slots[item.index]"
+                v-bind:slot="key"
+                v.bind:extraData="ship.extraData.slots[key]"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -130,7 +131,7 @@ Vue.component("shipwrap-ship",{
         lang:String
     },
     template:`
-    <div class="ship">
+    <div class="ship" onclick="setCurrent(this)">
     <img class="icon" v-bind:src="ship.extraData.iconSRC"/>
     <img class="border" v-bind:src="ship.extraData.BorderSRC"/>
     <img class="background" v-bind:src="ship.extraData.backgroundSRC"/>
@@ -141,19 +142,18 @@ Vue.component("shipwrap-ship",{
 Vue.component("shipwrap-equip",{
     props:{
         item:Object,
+        slot:Number,
         extraData:Object||undefined,
         lang:String
     },
     template:`
-    <div class="equip">
-        <img class="icon" v-bind:src="item.extraData.iconSRC ? item.extraData.iconSRC : 'client\\ui\\empty.png'"/>
-        <img class="border" v-bind:src="item.extraData.BorderSRC? item.extraData.BorderSRC : ''"/>
-        <img class="background" v-bind:src="item.extraData.backgroundSRC ? item.extraData.backgroundSRC : ''"/>
+    <div class="equip" v-bind:slot="slot+1" onclick="setCurrent(this)">
+        <img class="icon" src="../ui/empty.png"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.efficiency}}</div>
             <div class="toplable" >{{item.quantity}}</div>
         </div>
-        <div class="lable">{{item.name}}</div>
+        <div class="lable">{{item.id}}</div>
     </div>
     `
 })
