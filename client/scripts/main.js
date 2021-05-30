@@ -300,6 +300,7 @@ function setRetro(item) {
 }
 
 //I have no idea what this function does
+//etheralda: it seems to return a array holding ither values of an object or keys of an object to then get the numerical index of the value or key in the object
 function indexInObj(obj, getvalue = false) {
     let new_list = [];
     if (getvalue) {
