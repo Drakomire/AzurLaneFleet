@@ -2066,6 +2066,59 @@ var ship_data = {
 			14
 		]
 	},
+	"101470": {
+		"nationality": 1,
+		"type": 1,
+		"base_list": [
+			1,
+			2,
+			1
+		],
+		"id": 101470,
+		"skin_id": 101470,
+		"star": 5,
+		"rarity": 4,
+		"retro": 0,
+		"uni_id": "101470",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/515/thumbnail.png",
+		"star_string": "★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "モリソン",
+		"en_name": "Morrison",
+		"cn_name": "莫里森",
+		"stats": {
+			"health": "2115",
+			"armor": "Light",
+			"reload": "209",
+			"luck": "48",
+			"firepower": "84",
+			"torpedo": "289",
+			"evasion": "160",
+			"speed": "42",
+			"antiair": "178",
+			"aviation": "0",
+			"oilConsumption": "9",
+			"accuracy": "205",
+			"antisubmarineWarfare": "215"
+		},
+		"equip_1": [
+			1
+		],
+		"equip_2": [
+			5
+		],
+		"equip_3": [
+			6
+		],
+		"equip_4": [
+			10,
+			14
+		],
+		"equip_5": [
+			10,
+			14
+		]
+	},
 	"102010": {
 		"nationality": 1,
 		"type": 2,
@@ -3450,6 +3503,59 @@ var ship_data = {
 			14
 		]
 	},
+	"102290": {
+		"nationality": 1,
+		"type": 2,
+		"base_list": [
+			2,
+			1,
+			1
+		],
+		"id": 102290,
+		"skin_id": 102290,
+		"star": 5,
+		"rarity": 4,
+		"retro": 0,
+		"uni_id": "102290",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/514/thumbnail.png",
+		"star_string": "★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "ボイシ",
+		"en_name": "Boise",
+		"cn_name": "博伊西",
+		"stats": {
+			"health": "3561",
+			"armor": "Light",
+			"reload": "189",
+			"luck": "70",
+			"firepower": "165",
+			"torpedo": "0",
+			"evasion": "90",
+			"speed": "32",
+			"antiair": "327",
+			"aviation": "0",
+			"oilConsumption": "10",
+			"accuracy": "163",
+			"antisubmarineWarfare": "100"
+		},
+		"equip_1": [
+			2
+		],
+		"equip_2": [
+			1
+		],
+		"equip_3": [
+			6
+		],
+		"equip_4": [
+			10,
+			14
+		],
+		"equip_5": [
+			10,
+			14
+		]
+	},
 	"103010": {
 		"nationality": 1,
 		"type": 3,
@@ -4044,6 +4150,57 @@ var ship_data = {
 			"aviation": "0",
 			"oilConsumption": "12",
 			"accuracy": "128",
+			"antisubmarineWarfare": "0"
+		},
+		"equip_1": [
+			3
+		],
+		"equip_2": [
+			1
+		],
+		"equip_3": [
+			6
+		],
+		"equip_4": [
+			10
+		],
+		"equip_5": [
+			10
+		]
+	},
+	"103140": {
+		"nationality": 1,
+		"type": 3,
+		"base_list": [
+			2,
+			1,
+			1
+		],
+		"id": 103140,
+		"skin_id": 103140,
+		"star": 6,
+		"rarity": 5,
+		"retro": 0,
+		"uni_id": "103140",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/512/thumbnail.png",
+		"star_string": "★★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "サンフランシスコ",
+		"en_name": "San Francisco",
+		"cn_name": "旧金山",
+		"stats": {
+			"health": "4831",
+			"armor": "Medium",
+			"reload": "179",
+			"luck": "75",
+			"firepower": "255",
+			"torpedo": "0",
+			"evasion": "68",
+			"speed": "26",
+			"antiair": "226",
+			"aviation": "0",
+			"oilConsumption": "12",
+			"accuracy": "136",
 			"antisubmarineWarfare": "0"
 		},
 		"equip_1": [
@@ -4809,6 +4966,57 @@ var ship_data = {
 			"aviation": "0",
 			"oilConsumption": "15",
 			"accuracy": "71",
+			"antisubmarineWarfare": "0"
+		},
+		"equip_1": [
+			4
+		],
+		"equip_2": [
+			1
+		],
+		"equip_3": [
+			6
+		],
+		"equip_4": [
+			10
+		],
+		"equip_5": [
+			10
+		]
+	},
+	"105170": {
+		"nationality": 1,
+		"type": 5,
+		"base_list": [
+			3,
+			3,
+			1
+		],
+		"id": 105170,
+		"skin_id": 105170,
+		"star": 6,
+		"rarity": 6,
+		"retro": 0,
+		"uni_id": "105170",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/068/thumbnail.png",
+		"star_string": "★★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "ニュージャージー",
+		"en_name": "New Jersey",
+		"cn_name": "新泽西",
+		"stats": {
+			"health": "9520",
+			"armor": "Heavy",
+			"reload": "170",
+			"luck": "72",
+			"firepower": "447",
+			"torpedo": "0",
+			"evasion": "39",
+			"speed": "33",
+			"antiair": "427",
+			"aviation": "0",
+			"oilConsumption": "17",
+			"accuracy": "74",
 			"antisubmarineWarfare": "0"
 		},
 		"equip_1": [
@@ -5603,6 +5811,57 @@ var ship_data = {
 			10
 		]
 	},
+	"107140": {
+		"nationality": 1,
+		"type": 7,
+		"base_list": [
+			3,
+			3,
+			2
+		],
+		"id": 107140,
+		"skin_id": 107140,
+		"star": 6,
+		"rarity": 5,
+		"retro": 0,
+		"uni_id": "107140",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/511/thumbnail.png",
+		"star_string": "★★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "タイコンデロガ",
+		"en_name": "Ticonderoga",
+		"cn_name": "提康德罗加",
+		"stats": {
+			"health": "6622",
+			"armor": "Medium",
+			"reload": "131",
+			"luck": "72",
+			"firepower": "0",
+			"torpedo": "0",
+			"evasion": "54",
+			"speed": "33",
+			"antiair": "331",
+			"aviation": "433",
+			"oilConsumption": "13",
+			"accuracy": "87",
+			"antisubmarineWarfare": "0"
+		},
+		"equip_1": [
+			7
+		],
+		"equip_2": [
+			9
+		],
+		"equip_3": [
+			8
+		],
+		"equip_4": [
+			10
+		],
+		"equip_5": [
+			10
+		]
+	},
 	"107170": {
 		"nationality": 1,
 		"type": 7,
@@ -5665,26 +5924,26 @@ var ship_data = {
 		"id": 107220,
 		"skin_id": 107220,
 		"star": 5,
-		"rarity": 4,
+		"rarity": 5,
 		"retro": 0,
 		"uni_id": "107220",
-		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/377/thumbnail.png",
+		"painting": "https://raw.githubusercontent.com/x94fujo6rpg/AzurLaneFleet/master/shipicon/duli.png",
 		"star_string": "★★★★★",
 		"rarity_string": "SR",
 		"jp_name": "インディペンデンス",
 		"en_name": "Independence",
 		"cn_name": "独立",
 		"stats": {
-			"health": "4796",
+			"health": "5006",
 			"armor": "Medium",
-			"reload": "182",
+			"reload": "202",
 			"luck": "78",
 			"firepower": "0",
 			"torpedo": "0",
 			"evasion": "83",
 			"speed": "31",
-			"antiair": "268",
-			"aviation": "310",
+			"antiair": "338",
+			"aviation": "330",
 			"oilConsumption": "11",
 			"accuracy": "89",
 			"antisubmarineWarfare": "109"
@@ -5846,6 +6105,57 @@ var ship_data = {
 			"aviation": "430",
 			"oilConsumption": "13",
 			"accuracy": "91",
+			"antisubmarineWarfare": "0"
+		},
+		"equip_1": [
+			7
+		],
+		"equip_2": [
+			9
+		],
+		"equip_3": [
+			8
+		],
+		"equip_4": [
+			10
+		],
+		"equip_5": [
+			10
+		]
+	},
+	"107990": {
+		"nationality": 1,
+		"type": 7,
+		"base_list": [
+			3,
+			3,
+			2
+		],
+		"id": 107990,
+		"skin_id": 107990,
+		"star": 5,
+		"rarity": 4,
+		"retro": 0,
+		"uni_id": "107990",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/516/thumbnail.png",
+		"star_string": "★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "リトル・エンタープライズ",
+		"en_name": "Little Enterprise",
+		"cn_name": "小企业",
+		"stats": {
+			"health": "5897",
+			"armor": "Medium",
+			"reload": "116",
+			"luck": "93",
+			"firepower": "0",
+			"torpedo": "0",
+			"evasion": "54",
+			"speed": "32",
+			"antiair": "299",
+			"aviation": "405",
+			"oilConsumption": "12",
+			"accuracy": "94",
 			"antisubmarineWarfare": "0"
 		},
 		"equip_1": [
@@ -6117,6 +6427,60 @@ var ship_data = {
 			"oxygen": "243",
 			"ammunition": "",
 			"huntingRange": ""
+		},
+		"equip_1": [
+			13
+		],
+		"equip_2": [
+			13
+		],
+		"equip_3": [
+			1
+		],
+		"equip_4": [
+			10
+		],
+		"equip_5": [
+			10
+		]
+	},
+	"108060": {
+		"nationality": 1,
+		"type": 8,
+		"base_list": [
+			2,
+			2,
+			1
+		],
+		"id": 108060,
+		"skin_id": 108060,
+		"star": 6,
+		"rarity": 5,
+		"retro": 0,
+		"uni_id": "108060",
+		"painting": "https://raw.githubusercontent.com/AzurAPI/azurapi-js-setup/master/images/skins/513/thumbnail.png",
+		"star_string": "★★★★★★",
+		"rarity_string": "SR",
+		"jp_name": "アーチャーフィッシュ",
+		"en_name": "Archerfish",
+		"cn_name": "射水鱼",
+		"stats": {
+			"health": "1924",
+			"armor": "Light",
+			"reload": "95",
+			"luck": "90",
+			"firepower": "65",
+			"torpedo": "530",
+			"evasion": "41",
+			"speed": "16",
+			"antiair": "0",
+			"aviation": "0",
+			"oilConsumption": "7",
+			"accuracy": "192",
+			"antisubmarineWarfare": "0",
+			"oxygen": "243",
+			"ammunition": "2",
+			"huntingRange": "   4   \n  323  \n5****2 \n **S**4\n52**** \n  323  \n   4   "
 		},
 		"equip_1": [
 			13
@@ -21516,7 +21880,7 @@ var ship_data = {
 			"antisubmarineWarfare": "0",
 			"oxygen": "208",
 			"ammunition": "",
-			"huntingRange": ""
+			"huntingRange": "542 245\n32*3*23\n ***** \n  *S*  \n ***** \n   *   \n       "
 		},
 		"equip_1": [
 			13
@@ -23606,7 +23970,7 @@ var ship_data = {
 		"stats": {
 			"health": "5699",
 			"armor": "Medium",
-			"reload": "142",
+			"reload": "138",
 			"luck": "36",
 			"firepower": "0",
 			"torpedo": "0",
