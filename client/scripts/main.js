@@ -47,45 +47,30 @@ var fleet_data = [
                     efficiency:100,
                     quantity:1,
                     preload:0,
-                    bonus:{
-                        firepower:30,
-                    }
                 },{
                     id:2,
                     type:5,
                     efficiency:100,
                     quantity:2,
                     preload:1,
-                    bonus:{
-                        torpedo:45,
-                    }
                 },{
                     id:3,
                     type:6,
                     efficiency:100,
                     quantity:1,
                     preload:0,
-                    bonus:{
-                        antiair:45,
-                    }
                 },{
                     id:4,
                     type:10,
                     efficiency:null,
                     quantity:null,
                     preload:null,
-                    bonus:{
-                        health:500,
-                    }
                 },{
                     id:5,
                     type:10,
                     efficiency:null,
                     quantity:null,
                     preload:null,
-                    bonus:{
-                        evasion:30,
-                    }
                 }]
             },
             rightFlank:{
