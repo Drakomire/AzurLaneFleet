@@ -9,104 +9,54 @@ let rarity_list = [];
 let retrofit = true;
 //Empty ship data variable for fleet creation
 // var ship_data = [];
-var default_fleet = [];
-var fleet_data = [ 
-    {
-        id:"0",
-        name:"1",
-        surface:{
-            flagship:{ 
-                name:{en:"flag"},
-                stats:{
-                    health: 232,
-                    armor: "Light",
-                    reload: 116,
-                    luck: 100,
-                    firepower: 23,
-                    torpedo: 23,
-                    evasion: 116,
-                    speed: 35,
-                    antiair: 23,
-                    aviation: 23,
-                    oilConsumption: 3,
-                    accuracy: 116,
-                    antisubmarineWarfare: 33
-                },
-                extraData:{
-                    equipBonus:{
-                        health: 20,
-                        firepower: 45,
-                        torpedo: 45,
-                        evasion: 25,
-                        antiair: 45,
-                    }
-                },
-                items:[{
-                    id:1,
-                    type:1,
-                    efficiency:100,
-                    quantity:1,
-                    preload:0,
-                },{
-                    id:2,
-                    type:5,
-                    efficiency:100,
-                    quantity:2,
-                    preload:1,
-                },{
-                    id:3,
-                    type:6,
-                    efficiency:100,
-                    quantity:1,
-                    preload:0,
-                },{
-                    id:4,
-                    type:10,
-                    efficiency:null,
-                    quantity:null,
-                    preload:null,
-                },{
-                    id:5,
-                    type:10,
-                    efficiency:null,
-                    quantity:null,
-                    preload:null,
-                }]
-            },
-            rightFlank:{
-                name:{},
-                stats:{},
-                extraData:{},
-                items:[{},{},{},{},{}]
-            },
-            leftFlank:{
-                name:{},
-                stats:{},
-                extraData:{},
-                items:[{},{},{},{},{}]
-            },
-            vanguardLead:{
-                name:{},
-                stats:{},
-                extraData:{},
-                items:[{},{},{},{},{}]
-            },
-            vanguardMid:{
-                name:{},
-                stats:{},
-                extraData:{},
-                items:[{},{},{},{},{}]
-            },
-            vanguardBack:{
-                name:{},
-                stats:{},
-                extraData:{},
-                items:[{},{},{},{},{}]
-            }
+// variables for default ship and equip
+const defaultShip ={
+    "name":{
+        "cn":"",
+        "jp":"",
+        "en":""
+    },
+    "stats":{
+        "health": 0,
+        "armor": "none",
+        "reload": 0,
+        "luck": 0,
+        "firepower": 0,
+        "torpedo": 0,
+        "evasion": 0,
+        "speed": 0,
+        "antiair": 0,
+        "aviation": 0,
+        "oilConsumption": 0,
+        "accuracy": 0,
+        "antisubmarineWarfare": 0
+    },
+    "extraData":{
+        "rarity":"",
+        "icon":"",
+        "type":"",
+        "equipBonus":{
         }
-    }
-];
-// fleet_data = buildFleet();
+    },
+    "items":[{
+    },{
+    },{
+    },{
+    },{
+    }]
+}
+const defaultEquip ={
+    "ID":-1,
+    "Name":{
+        "en":"none",
+    },
+    "Type":-1,
+    "Property":{},
+}
+
+var default_fleet = [];
+var fleet_data = [];
+fleet_data.push(newFleet(true));
 last_saved_fleet = [];
 
 let c_side_dict = {
@@ -221,34 +171,39 @@ function createNewFleet(number,surface){
 //Simplifies creation of a new fleet that is appended to the end of the list.
 //Used by add fleet buttons
 function addFleet(surface){
-  fleet_data.push(createNewFleet(fleet_data.length,surface));
-  dumpDataID()
+    fleet_data.push(newFleet(surface,fleet_data));
+    console.log(fleet_data)
+    dumpDataID()
 }
 
 //Remove fleet button
 function removeFleet(item){
-  let name = item.name;
-  fleet_data.splice(name-1,1);
-  fixFleetOrder();
+    let index = parseInt(item.getAttribute("name"))
+    fleet_data.splice(index,1);
+    //   fixFleetOrder();
   dumpDataID();
 }
 //Moves the fleet up one
 function moveFleetUp(item){
-  let name = item.name-1;
-  if (name != 0){
-    [fleet_data[name],fleet_data[name-1]] = [fleet_data[name-1],fleet_data[name]]
-    fixFleetOrder();
-    dumpDataID();
+  let index = item.getAttribute("name");
+  if (index != 0){
+    let Moved = fleet_data.splice(index,1);
+    fleet_data.splice(index-1,0,Moved[0]);
+    // fixFleetOrder();
+    // dumpDataID();
   }
 }
 //Moves the fleet down one
 function moveFleetDown(item){
-  let name = item.name-1;
-  if (name != fleet_data.length-1){
-    [fleet_data[name],fleet_data[name+1]] = [fleet_data[name+1],fleet_data[name]]
-    fixFleetOrder();
+  let index = item.getAttribute("name");
+  if (index != fleet_data.length-1){
+    let Moved = fleet_data.splice(index,1);
+    fleet_data.splice(index+1,0,Moved[0]);
     dumpDataID();
-  }
+}
+}
+if(false){
+    fixFleetOrder();
 }
 
 //Removes all the fleets that are currently in use
@@ -558,4 +513,38 @@ function fixFleetOrder(){
 
     }
   });
+}
+
+// new fleet creation code for testing
+function newFleet(type,fleets=[]) {
+    let fleet = {
+        "name":`${fleets.length+1}`,
+    }
+    if(type==true){
+        fleet.surface = {
+            flagship:defaultShip,
+            leftFlank:defaultShip,
+            rightFlank:defaultShip,
+            vanguardLead:defaultShip,
+            vanguardMid:defaultShip,
+            vanguardBack:defaultShip,
+        }
+    }else if(type==false){
+        fleet.subs = {
+            flagSub:defaultShip,
+            leftSub:defaultShip,
+            rightSub:defaultShip,
+        }
+    }
+    for(let prop in fleet){
+        if(typeof fleet[prop] =="object"){
+            console.log(prop)
+            for(let ship in fleet[prop]){
+                for(let index=0;index<fleet[prop][ship].items.length;index++){
+                    fleet[prop][ship].items[index]=defaultEquip
+                }
+            }
+        }
+    }
+    return fleet
 }

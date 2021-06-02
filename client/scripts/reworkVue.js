@@ -10,7 +10,7 @@ Vue.component("fleet-container", {
         lang:String
     },
     template: `
-        <div class="fleetWrap" v-bind:id="fleet.id">
+        <div class="fleetWrap" v-bind:id="fleets.indexOf(fleet)">
 
             <input class="DetailToggle" type="checkbox" name="details" v-bind:id="fleet.name">
 
@@ -34,9 +34,9 @@ Vue.component("fleet-container", {
                 ></fleet-shipWrap>
             </div>
             
-            <div class="shipGroup sub" v-if="fleet.sub"> 
+            <div class="shipGroup sub" v-if="fleet.subs"> 
                 <fleet-shipWrap
-                    v-for="(ship, shipPos) in fleet.sub"
+                    v-for="(ship, shipPos) in fleet.subs"
                     v-bind:ship="ship"
                     v-bind:shipPos="shipPos"
                     v-bind:lang="lang"
@@ -59,23 +59,23 @@ Vue.component("fleet-header-buttons",{
 
         <div 
         class="button delete"
-        v-bind:name="fleet.name"
+        v-bind:name="fleets.indexOf(fleet)"
         onclick="removeFleet(this);"
         >
         X</div>
 
         <div 
         class="button prev"
-        v-bind:name="fleet.name"
-        v-if="fleet.name != 1"
+        v-bind:name="fleets.indexOf(fleet)"
+        v-if="fleets.indexOf(fleet)!==0"
         onclick="moveFleetUp(this);"
         >
         ˄</div>
 
         <div 
         class="button next"
-        v-bind:name="fleet.name"
-        v-if="fleet.name != fleets.length"
+        v-bind:name="fleets.indexOf(fleet)"
+        v-if="fleets.indexOf(fleet)!== fleets.length-1"
         onclick="moveFleetDown(this);"
         >
         ˅</div>
