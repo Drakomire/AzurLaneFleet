@@ -98,7 +98,7 @@ function sortEquipData(){
         }
         tempEquip.icon=`client/equips/${equip.id}.png`
         tempEquip.type=equip.type,
-        tempEquip.property=computeProperty(equip)
+        tempEquip.property=computeEquipProp(equip)
     })
 }
 
@@ -106,4 +106,19 @@ function parseCode(shipCode){
     let splitcode = shipCode.split(" ")
     splitcode.shift()
     return splitcode.join(" ")
+}
+
+function computeEquipProp(equip){
+    /* TODO
+        calculate apropriate propertys
+        num of shels per salvo
+        damage per shell
+        volly time 
+        total reload
+        stat bonuses provided
+        skill effects
+        time till damage arival min and max
+        effective dps
+        changes per enhancement level
+    */
 }
