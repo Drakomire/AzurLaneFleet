@@ -37,8 +37,10 @@ const defaultShip ={
         "BorderSRC":"",
         "backgroundSRC":"",
         "type":-1,
-        "equipBonus":{
-        }
+        "equipBonus":{},
+        "retroBonus":{},
+        "level":0,
+        "affection":0.00
     },
     "items":[{
     },{
