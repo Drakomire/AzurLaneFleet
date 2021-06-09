@@ -62,7 +62,7 @@ function checksetting(key, value) {
 }
 
 //Checks if a ship is selected
-function isShipSelect(nation, type, rarity, retro, name) {
+function isShipSelect(nation, type, rarity, retro, name, targetSide) {
     let indicator_nation = false;
     let indicator_type = false;
     let indicator_rarity = false;
@@ -81,21 +81,21 @@ function isShipSelect(nation, type, rarity, retro, name) {
     }
 
     //Sort ship list by hull class
-    if (c_side === "0" && front.indexOf(type) === -1) {
+    if (c_side === "0" && !front.includes(type)) {
         return false;
     }
-    if (c_side === "1" && back.indexOf(type) === -1) {
+    if (c_side === "1" && !back.includes(type)) {
         return false;
     }
-    if (c_side === "2" && submarine.indexOf(type) === -1) {
+    if (c_side === "2" && !submarine.includes(type)) {
         return false;
     }
 
     //Not sure what this one is
     if (c_side === "0") {
-        if (shipsetting.front.indexOf(type) != -1 || shipsetting.front.length === 0) {
+        if (shipsetting.front.includes(type)|| shipsetting.front.length === 0) {
             indicator_type = true;
-        } else if (shipsetting.front.indexOf(0) != -1 && other_front.indexOf(type) != -1) {
+        } else if (shipsetting.front.includes(0)&& other_front.includes(type)) {
             indicator_type = true;
         }
     }
@@ -135,7 +135,7 @@ function isShipSelect(nation, type, rarity, retro, name) {
 }
 
 //This adds the ships to the popup menu
-function shipDisplay() {
+function shipDisplay(targetSide) {
     let shiplist = document.getElementById("shiplist");
     shiplist = shiplist.querySelectorAll("button");
     shiplist.forEach((item) => {
@@ -147,7 +147,7 @@ function shipDisplay() {
             let retro = ship_data[id].retro;
             let name = ship_data[id][shipSelect.lang+"_name"];
             //Turns the display on if the ship is valid
-            if (isShipSelect(nation, type, rarity, retro, name)) {
+            if (isShipSelect(nation, type, rarity, retro, name, targetSide)) {
                 item.style.display = "";
             } else {
                 item.style.display = "none";

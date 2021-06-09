@@ -14,7 +14,7 @@ const defaultShip ={
     "name":{
         "cn":"",
         "jp":"",
-        "en":""
+        "en":"none"
     },
     "stats":{
         "health": 0,
@@ -33,8 +33,10 @@ const defaultShip ={
     },
     "extraData":{
         "rarity":"",
-        "icon":"",
-        "type":"",
+        "iconSRC":"../ui/empty.png",
+        "BorderSRC":"",
+        "backgroundSRC":"",
+        "type":-1,
         "equipBonus":{
         }
     },
@@ -46,12 +48,13 @@ const defaultShip ={
     }]
 }
 const defaultEquip ={
-    "ID":-1,
-    "Name":{
-        "en":"none",
+    "id":-1,
+    "name":{
+        "en":"empty",
     },
-    "Type":-1,
-    "Property":{},
+    "icon":"../ui/icon_back.png",
+    "type":-1,
+    "property":{},
 }
 
 var default_fleet = [];
@@ -180,30 +183,25 @@ function addFleet(surface){
 function removeFleet(item){
     let index = parseInt(item.getAttribute("name"))
     fleet_data.splice(index,1);
-    //   fixFleetOrder();
   dumpDataID();
 }
 //Moves the fleet up one
 function moveFleetUp(item){
-  let index = item.getAttribute("name");
+  let index = parseInt(item.getAttribute("name"));
   if (index != 0){
     let Moved = fleet_data.splice(index,1);
     fleet_data.splice(index-1,0,Moved[0]);
-    // fixFleetOrder();
     // dumpDataID();
   }
 }
 //Moves the fleet down one
 function moveFleetDown(item){
-  let index = item.getAttribute("name");
-  if (index != fleet_data.length-1){
-    let Moved = fleet_data.splice(index,1);
-    fleet_data.splice(index+1,0,Moved[0]);
-    dumpDataID();
-}
-}
-if(false){
-    fixFleetOrder();
+    let index = parseInt(item.getAttribute("name"));
+    if (index != fleet_data.length-1){
+        let Moved = fleet_data.splice(index,1);
+        fleet_data.splice(index+1,0,Moved[0]);
+        dumpDataID();
+    }
 }
 
 //Removes all the fleets that are currently in use
@@ -277,19 +275,18 @@ function hideShipInFleet() {
 
 //Opens the popup menu for ships or equips depending on the item name
 function setCurrent(item) {
-    //Clear the search bar
-    document.getElementById("ship search bar").value = "";
-    updateSearch();
-    console.log(item.parentElement.parentElement.parentElement.parentElement.id);
-    let itemCheck = (item.classList.contains("equip")?`${item.getAttribute("slot")}`:"0");// checks and sets the expected value for c_item
-    let sidecheck = ((itemCheck!=="0")?(item.parentElement.getAttribute("pos").match(/vanguard/g)?"0":(item.parentElement.getAttribute("pos").match(/sub/g))?"2":"1"):"0");// checks and sets the expected value for c_side
-    let poscheck = ((item.parentElement.getAttribute("pos").match(/lead||flag/))?"0":(item.parentElement.getAttribute("pos").match(/left||mid/))?"1":"2");// checks and sets the expected value for c_pos
-    [c_fleet, c_side, c_pos, c_item] = [item.parentElement.parentElement.parentElement.parentElement.id, sidecheck, poscheck, itemCheck] ;
-    if (!c_item) {
-        //ship
-        let shiplist = document.getElementById("shiplist");
-        shiplist = shiplist.querySelectorAll("button");
-        if (c_side === "0") {
+    console.log(item)
+    if(item.classList.contains("ship")){
+        let shipPos = item.parentElement.getAttribute("pos")
+        console.log(shipPos)
+        let sideSeaker = [["vanguardLead","vanguardMid","vanguardBack"], ["flagship","leftFlank","rightFlank"], ["flagSub","leftSub","rightSub"]]
+        let shipSide = -1
+        sideSeaker.forEach(side=>{
+            if(side.includes(shipPos)){
+                shipSide = (sideSeaker.indexOf(side))
+            }
+        })
+        if (shipSide === 0) {
             // show front type
             ship_type.forEach((item) => {
                 if (front.indexOf(item.id) === -1) {
@@ -302,7 +299,7 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
-        } else if (c_side === "1") {
+        } else if (shipSide === 1) {
             // show back type
             ship_type.forEach((item) => {
                 if (back.indexOf(item.id) === -1) {
@@ -315,7 +312,7 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
-        } else if (c_side === "2") {
+        } else if (shipSide === 2) {
             // show submarine type
             ship_type.forEach((item) => {
                 if (submarine.indexOf(item.id) === -1) {
@@ -328,10 +325,15 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
+        }else if(shipSide<0){
+            //if shipSide was not set then dont open ships
+            return
         }
-        shipDisplay();
-    } else {
-        // equip
+        shipDisplay(shipSide,shipPos);
+    }else if(item.classList.contains("equip")){
+        let shipPos = item.parentElement.parentElement.getAttribute("pos")
+        let slotIndex = item.getAttribute("slot")
+        console.log(`${shipPos} ${slotIndex}`)
         equipDisplay();
     }
 }
