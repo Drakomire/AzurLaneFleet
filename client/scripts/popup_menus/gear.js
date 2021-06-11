@@ -130,8 +130,8 @@ function limitEquip(display_list) {
 }
 
 //Shows the popup menu
-function creatAllEquip() {
-    console.time("creatAllEquip");
+function createAllEquip() {
+    console.time("createAllEquip");
     sorted_equip_data.forEach((equip, index, arr) => {
         setTimeout(() => {
             let pos = document.getElementById("equiplist");
@@ -189,7 +189,7 @@ function creatAllEquip() {
             pos.append(newequip);
             //-----------------------------------------------
             if (index === arr.length - 1) {
-                console.timeEnd("creatAllEquip");
+                console.timeEnd("createAllEquip");
                 console.timeEnd("initial");
                 //Try loading cookies if the share URL is empty
                 const queryString = window.location.search;
@@ -203,13 +203,6 @@ function creatAllEquip() {
                   console.log("Fleet Loaded from Cookies")
                   loadCookie();
                 }
-
-
-
-                // Load the fleet when the webpage is opened. Need a better way to wait for the page to load.
-                setTimeout(async ()=>{
-
-                },0)
             }
         });
     });

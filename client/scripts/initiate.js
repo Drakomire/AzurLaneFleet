@@ -100,7 +100,7 @@ function initial() {
     sorted_equip_data = Object.assign([], newlist);
     console.timeEnd("sortequip");
     // console.log(newlist)
-    creatAllShip();
+    createAllShip();
 }
 
 //Adds the first fleet to the website

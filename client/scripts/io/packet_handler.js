@@ -11,8 +11,6 @@ if (location.host ==  'localhost:3000'){
   client = new ReconnectingWebSocket('wss://'+location.host+'/socketserver');
 }
 
-
-
 var TOKEN = ''
 client.onmessage = function (event) {
   let data = JSON.parse(event.data);

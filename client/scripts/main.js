@@ -304,7 +304,7 @@ function setEquip(item) {
         });
         copylist.forEach(key => itemInApp[key] = itemInList[key]);
     }
-    saveCookie("fleet", dumpDataID());
+    // saveCookie("fleet", dumpDataID());
 }
 
 function setShipAndEquip(item) {
@@ -408,7 +408,7 @@ function setShipAndEquip(item) {
             }
         }
     }
-    saveCookie("fleet", dumpDataID());
+    // saveCookie("fleet", dumpDataID());
 }
 
 //Creates a sharable URL

@@ -63,6 +63,7 @@ function parseIdData(data) {
                         if (item === "000000") {
                             empty = true;
                         }
+
                     }
                 });
             });

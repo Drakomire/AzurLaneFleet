@@ -159,8 +159,8 @@ function shipDisplay() {
 }
 
 //Adds the ships from data/ship_data.js to the pop up menu.
-function creatAllShip() {
-    console.time("creatAllShip");
+function createAllShip() {
+    console.time("createAllShip");
     sorted_ship_data.forEach((ship, index, arr) => {
         setTimeout(() => {
             let pos = document.getElementById("shiplist");
@@ -218,8 +218,8 @@ function creatAllShip() {
             pos.append(newship);
             //-----------------------------------------------
             if (index === arr.length - 1) {
-                console.timeEnd("creatAllShip");
-                creatAllEquip();
+                console.timeEnd("createAllShip");
+                createAllEquip();
             }
         });
     });
