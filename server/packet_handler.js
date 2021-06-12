@@ -5,9 +5,9 @@ module.exports ={
       let type = message.type;
       let token = message.token;
       if (token == process.env.WEBSOCKET_TOKEN){
-        console.log("Valid packet")
+        // console.log("Valid packet")
       }else{
-        console.log("invalid packet");
+        // console.log("invalid packet");
         return;
       }
 

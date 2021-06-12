@@ -1,6 +1,5 @@
 const {MongoClient} = require('mongodb');
 const uri = process.env.URL_DB;
-console.log(uri);
 
 module.exports = {
     Database: class Database{
@@ -20,7 +19,6 @@ module.exports = {
         data : data
       },function(err, res) {
       if (err) throw err;
-      console.log("1 record inserted");
       });
     }
     async get(url){
