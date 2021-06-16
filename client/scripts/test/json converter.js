@@ -1,4 +1,4 @@
-const shipJsonIn = Object;
+// const shipJsonIn = Object;
 const equipJsonIn = Object;
 
 var shipJsonOut = {}
@@ -9,65 +9,61 @@ function sortShipData(){
         let tempShip = {}
         //set difrent Ship names values
         tempShip.name={
-            "cn":ship.CNname,
-            "jp":ship.JPname,
+            "cn":JSON.parse(ship.ship.name.cn),
+            "jp":JSON.parse(ship.ship.name.jp),
             "en":ship?.ENname??parseCode(ship.code),
             "code":ship.code,
         }
         //set ship base stats
         tempShip.stats={
-            "health": ship.hp,
-            "armor": ship.armor,
-            "reload": ship.reload,
-            "luck": ship.luck,
-            "firepower": ship.fp,
-            "torpedo": ship.trp,
-            "evasion": ship.eva,
-            "speed": ship.spd,
-            "antiair": ship.aa,
-            "aviation": ship.avi,
-            "oilConsumption": ship.cost,
-            "accuracy": ship.acc,
-            "antisubmarineWarfare": ship.asw
+            "health": ship.ship.data[`${ship.id}1`].stats.hp,
+            "armor": GetFromDict(armorDict,ship.ship.armor,lang??"en"),
+            "reload": ship.ship.data[`${ship.id}1`].stats.rld,
+            "luck": ship.ship.data[`${ship.id}1`].stats.luk,
+            "firepower": ship.ship.data[`${ship.id}1`].stats.fp,
+            "torpedo": ship.ship.data[`${ship.id}1`].stats.trp,
+            "evasion": ship.ship.data[`${ship.id}1`].stats.eva,
+            "speed": ship.ship.data[`${ship.id}1`].stats.spd,
+            "antiair": ship.ship.data[`${ship.id}1`].stats.aa,
+            "aviation": ship.ship.data[`${ship.id}1`].stats.avi,
+            "oilConsumption": `${ship.ship.data[`${ship.id}1`].stats.oil} - ${ship.ship.data[`${ship.id}4`].stats.oil}`,
+            "accuracy": ship.ship.data[`${ship.id}1`].stats.acc,
+            "antisubmarineWarfare": ship.ship.data[`${ship.id}1`].stats.asw
         }
         // set ship extradata values
         tempShip.extraData={
             "shipID":ship.Uid,
             "rarity":{
-                "string":ship.rarity,
-                "numeric":null,
+                "string":"",
+                "numeric":ship.ship.data[`${ship.id}1`].rarity,
             },
-            "type":ship.type,
+            "type":ship.ship.type,
             "growth":{
                 "100":{
-                    "health": ship.hpGrowth100,
-                    "armor": ship.armorGrowth100,
-                    "reload": ship.reloadGrowth100,
-                    "luck": ship.luckGrowth100,
-                    "firepower": ship.fpGrowth100,
-                    "torpedo": ship.trpGrowth100,
-                    "evasion": ship.evaGrowth100,
-                    "speed": ship.spdGrowth100,
-                    "antiair": ship.aaGrowth100,
-                    "aviation": ship.aviGrowth100,
-                    "oilConsumption": ship.costGrowth100,
-                    "accuracy": ship.accGrowth100,
-                    "antisubmarineWarfare": ship.aswGrowth100
+                    "health": ship.ship.data[`${ship.id}1`].stats_growth.hp,
+                    "reload": ship.ship.data[`${ship.id}1`].stats.rld,
+                    "luck": ship.ship.data[`${ship.id}1`].stats_growth.luk,
+                    "firepower": ship.ship.data[`${ship.id}1`].stats_growth.fp,
+                    "torpedo": ship.ship.data[`${ship.id}1`].stats_growth.trp,
+                    "evasion": ship.ship.data[`${ship.id}1`].stats_growth.eva,
+                    "speed": ship.ship.data[`${ship.id}1`].stats_growth.spd,
+                    "antiair": ship.ship.data[`${ship.id}1`].stats_growth.aa,
+                    "aviation": ship.ship.data[`${ship.id}1`].stats_growth.avi,
+                    "accuracy": ship.ship.data[`${ship.id}1`].stats_growth.acc,
+                    "antisubmarineWarfare": ship.ship.data[`${ship.id}1`].stats_growth.asw
                 },
                 "120":{
-                    "health": ship.hpGrowth120,
-                    "armor": ship.armorGrowth120,
-                    "reload": ship.reloadGrowth120,
-                    "luck": ship.luckGrowth120,
-                    "firepower": ship.fpGrowth120,
-                    "torpedo": ship.trpGrowth120,
-                    "evasion": ship.evaGrowth120,
-                    "speed": ship.spdGrowth120,
-                    "antiair": ship.aaGrowth120,
-                    "aviation": ship.aviGrowth120,
-                    "oilConsumption": ship.costGrowth120,
-                    "accuracy": ship.accGrowth120,
-                    "antisubmarineWarfare": ship.aswGrowth120
+                    "health": ship.ship.data[`${ship.id}4`].stats_growth_extra.hp                   ??ship.ship.data[`${ship.id}1`].stats_growth_extra.hp,
+                    "reload": ship.ship.data[`${ship.id}4`].stats_growth_extra.rld                  ??ship.ship.data[`${ship.id}1`].stats_growth_extra.rld,
+                    "luck": ship.ship.data[`${ship.id}4`].stats_growth_extra.luk                    ??ship.ship.data[`${ship.id}1`].stats_growth_extra.luk,
+                    "firepower": ship.ship.data[`${ship.id}4`].stats_growth_extra.fp                ??ship.ship.data[`${ship.id}1`].stats_growth_extra.fp,
+                    "torpedo": ship.ship.data[`${ship.id}4`].stats_growth_extra.trp                 ??ship.ship.data[`${ship.id}1`].stats_growth_extra.trp,
+                    "evasion": ship.ship.data[`${ship.id}4`].stats_growth_extra.eva                 ??ship.ship.data[`${ship.id}1`].stats_growth_extra.eva,
+                    "speed": ship.ship.data[`${ship.id}4`].stats_growth_extra.spd                   ??ship.ship.data[`${ship.id}1`].stats_growth_extra.spd,
+                    "antiair": ship.ship.data[`${ship.id}4`].stats_growth_extra.aa                  ??ship.ship.data[`${ship.id}1`].stats_growth_extra.aa,
+                    "aviation": ship.ship.data[`${ship.id}4`].stats_growth_extra.avi                ??ship.ship.data[`${ship.id}1`].stats_growth_extra.avi,
+                    "accuracy": ship.ship.data[`${ship.id}4`].stats_growth_extra.acc                ??ship.ship.data[`${ship.id}1`].stats_growth_extra.acc,
+                    "antisubmarineWarfare": ship.ship.data[`${ship.id}4`].stats_growth_extra.asw    ??ship.ship.data[`${ship.id}1`].stats_growth_extra.asw
                 },
                 "kai":{
                     //retroTileData
@@ -75,6 +71,7 @@ function sortShipData(){
             }
         },
         //set empty equip slots
+        tempShip.slots=ship.ship.slots,
         tempShip.items=[{},{},{},{},{}]
         //set icon bacground and border img source
         ship.extraData.icon=`client/shipicon/${ship.icon}`,// TODO need file extention?
@@ -85,6 +82,8 @@ function sortShipData(){
         shipJsonOut[ship.Uid]=tempShip
     })
 }
+
+base+lvl100bonus*99+lvl120*19
 
 function sortEquipData(){
     equipJsonIn.forEach(equip=>{
