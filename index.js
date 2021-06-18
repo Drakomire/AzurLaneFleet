@@ -15,18 +15,23 @@ const { req } = require('express')
 })();
 
 const app = express();
+const Vue = require('vue')
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+'/client'));
 app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
 
-app.get('/', function(req, res){
+app.get('/', (req, res) => {
     fleet_id = req.query.fleet
     if (fleet_id === undefined){
-      fleet_id = "none"
+      fleet_id = "None"
     }
     //Image file location is set in the HTML for dynamic images to work.
-    res.render(__dirname+'/index.html',{fleet_id:fleet_id});
+    res.render(__dirname+'/index.html',{
+      fleet_id:fleet_id,
+      fleet_container:"TEST"
+    
+    });
 });
 
 //Render a request for an image

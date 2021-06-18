@@ -186,8 +186,7 @@
     <br>
 
     <div id="AzurLaneFleetApp" class="container app">
-        <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang">
-        </fleet-container>
+        <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang"></fleet-container>
         <br>
         <button type="button" class="btn" onclick="addFleet(true)">Add Surface Fleet</button>
         <button type="button" class="btn" onclick="addFleet(false)">Add Submarine Fleet</button>
@@ -214,7 +213,7 @@
         <div>
           This website was forked from x94fujo6rpg
           <br>
-          Modified by Drako
+          Modified by Etheralda and Drako
         </div>
         <a href="https://github.com/x94fujo6rpg/AzurLaneFleet">Original Github</a>
         <a href="https://github.com/Drakomire/AzurLaneFleet">Forked Github</a>

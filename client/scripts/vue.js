@@ -2,6 +2,15 @@
 VUE componets. This is the stuff thats displayed to the screen.
 */
 
+// Define a new component called button-counter
+Vue.component('test-data-display', {
+    data: {
+        data : "Test string"
+    },
+    template: '{{ data }}'
+  })
+  new Vue({ el: '#test-data-display' })
+
 Vue.component("item-container", {
     props: ["item", "lang"],
     template: `
