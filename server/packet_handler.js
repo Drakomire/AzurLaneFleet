@@ -35,11 +35,11 @@ module.exports ={
             key+=letter;
           }
 
-          await global.database.send(key, JSON.stringify(data));
-          socket.send(JSON.stringify({
-            type: "Fleet URL",
-            payload: key
-          }));
+          // await global.database.send(key, JSON.stringify(data));
+          // socket.send(JSON.stringify({
+          //   type: "Fleet URL",
+          //   payload: key
+          // }));
         },
         "ping" : () => {console.log("ping")}
       }[type];

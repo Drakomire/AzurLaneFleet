@@ -1,0 +1,36 @@
+{
+    "name":{
+        "cn":"",
+        "jp":"",
+        "en":""
+    },
+    "stats":{
+        "health": 0,
+        "armor": "none",
+        "reload": 0,
+        "luck": 0,
+        "firepower": 0,
+        "torpedo": 0,
+        "evasion": 0,
+        "speed": 0,
+        "antiair": 0,
+        "aviation": 0,
+        "oilConsumption": 0,
+        "accuracy": 0,
+        "antisubmarineWarfare": 0
+    },
+    "extraData":{
+        "rarity":"",
+        "icon":"",
+        "type":"",
+        "equipBonus":{
+        }
+    },
+    "items":[{
+    },{
+    },{
+    },{
+    },{
+    }]
+    
+}

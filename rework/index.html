@@ -1,0 +1,348 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="google-site-verification" content="S5x2K1hv1hI8UD5KVUhN7CidFneOpC4Y2xTAa44CC9c" />
+
+    <title>Azur Lane Fleet</title>
+    <meta name="description" content="Easily share your AzurLane fleet configuration">
+    <meta name="og:title" content="Azur Lane Fleet Maker">
+    <meta name="og:url" content="https://azurfleetmaker.com/" />
+<!--     <meta name="og:image" content="https://i.imgur.com/TEtzDAS.png" /> -->
+    <meta name="og:description" content="Easily share your AzurLane fleet configuration" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" as="style" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="prefetch" href="js/jquery-3.3.1.slim.min.js" as="script">
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" as="script" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    <link rel="prefetch" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" as="script" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/vue" as="script" crossorigin="anonymous">
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" as="script" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous">
+    <!-- <link rel="prefetch" href="lz-string.js" as="script">
+    <link rel="prefetch" href="ship_data.js" as="script">
+    <link rel="prefetch" href="equip_data.js" as="script">
+    <link rel="prefetch" href="main-v2.js" as="script">
+    <link rel="prefetch" href="PacketHandler/client.js?rev=3" as="script"> -->
+    <link rel="stylesheet" href="css/original.css">
+</head>
+
+<body>
+    <div class="container text-center text-light font-weight-bold text-monospace">
+        <h1>Azur Lane Fleet Maker</h1>
+    </div>
+    <!-- <div align="center">
+        <h4 class="text-light text-monospace">Select language</h4>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active" id="cn" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off" checked>CN
+            </label>
+            <label class="btn btn-secondary" id="jp" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off">JP
+            </label>
+            <label class="btn btn-secondary" id="en" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off">EN
+            </label>
+        </div>
+    </div> -->
+    <br>
+    <div id="AzurLaneFleetApp" class="container app">
+        <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang">
+        </fleet-container>
+        <br>
+        <button type="button" class="btn" onclick="addFleet(true)">Add Surface Fleet</button>
+        <button type="button" class="btn" onclick="addFleet(false)">Add Submarine Fleet</button>
+
+    </div>
+    <br>
+    <div class="container" align="center">
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="emptyfleet()">Remove All Ships</button>
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="resetFleet()">Reset Fleets</button>
+    </div>
+    <br>
+    <div class="container" align="center">
+        <!-- <h4 class="text-light text-monospace">Fleet data</h4> -->
+        <textarea class="databox text-light" id="fleetdata" readonly></textarea>
+        <div class="container">
+            <!-- <button type="button" class="btn" id="dumpdata" onclick="dumpDataID()">Dump</button> -->
+            <button type="button" class="btn" id="copyData" onclick="copyData()">Generate Shareable URL</button>
+            <!-- <button type="button" class="btn" id="emptyData" onclick="emptyData()">Clear</button> -->
+            <!-- <button type="button" class="btn btn-danger" id="loadDataByID" onclick="loadDataByID()">Load</button> -->
+        </div>
+    </div>
+    <br>
+    <div class="container" align="center">
+        <div>
+          This website was forked from x94fujo6rpg
+          <br>
+          Modified by Drako
+        </div>
+        <a href="https://github.com/x94fujo6rpg/AzurLaneFleet">Original Github</a>
+        <a href="https://github.com/Drakomire/AzurLaneFleet">Forked Github</a>
+    </div>
+    <br>
+    <br>
+    <div class="modal fade" id="shipselect">
+        <div class="modal-dialog">
+            <div class="modal-content text-light bg-dark">
+                <div class="modal-header">
+                    <h4 class="modal-title">Select Ship</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="container">Faction</div>
+                        <div class="container" id='shipnation'>
+                            <ship-nation-button v-for="item in nation" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-nation-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="container">Hull Class</div>
+                        <div class="container" id="shiptype">
+                            <ship-type-button v-for="item in type" v-bind:key="item.id" v-bind:name="item.name" v-show="item.display" v-text="item[lang]" v-bind:value="item.id"></ship-type-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="container">Rarity</div>
+                        <div class="container" id='shiprarity'>
+                            <ship-rarity-button v-for="item in rarity" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-rarity-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!-- <div class="container">只顯示改造後的船 / 改造完了のみ / Retrofitted Ship Only</div> -->
+                        <!-- <div class="container">
+                            <button id='shipretro' name="shipretro" type="button" class="btn btn-outline-light btn-sm active" aria-pressed="true" value="1" onclick="setRetro(this)">Yes</button>
+                        </div> -->
+                                            <div class="container">
+                        <div>Name</div>
+                        <input type="text" placeholder="Enter ship name..." id="ship search bar" onkeyup="updateSearch(this)">
+                      </div>
+                    </div>
+                    <spacer type="horizontal" width="100" height="8">⠀</spacer>
+                    <div class="container-fluid">
+                        <div class="container">　　　</div>
+                    </div>
+                    <div class="container-fluid row m-0 p-0" id="shiplist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="equipselect">
+        <div class="modal-dialog">
+            <div class="modal-content text-light bg-dark">
+                <div class="modal-header">
+                    <h4 class="modal-title">Equip Select</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="container">Equips</div>
+                        <div class="container-fluid row m-0 p-0" id="equiplist" style="width: 101%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" align="center">
+      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+        The copyright of the data used on this site is owned by the following companies<br> © Manjuu Co.,Ltd. & YongShi Co.,Ltd.<br> © Yostar, Inc.
+        <br>
+    </footer>
+    <script src="scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+    <script src="scripts/lz-string.min.js"></script>
+    <script src='data/ship_data.js'></script>
+    <script src='data/equip_data.js'></script>
+    <script type="text/javascript" src="scripts/vue.js"></script>
+    <script type="text/javascript" src="scripts/reconnecting-websocket.js"></script>
+    <script type="text/javascript" src="scripts/io/packet_handler.js?rev=3"></script>
+    <script type="text/javascript" src="scripts/io/load.js"></script>
+    <script type="text/javascript" src="scripts/io/save.js"></script>
+    <script type="text/javascript" src="scripts/popup_menus/ships.js"></script>
+    <script type="text/javascript" src="scripts/popup_menus/gear.js"></script>
+    <script type="text/javascript" src="scripts/main.js?rev=2"></script>
+
+
+</body>
+
+</html>
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="google-site-verification" content="S5x2K1hv1hI8UD5KVUhN7CidFneOpC4Y2xTAa44CC9c" />
+
+    <title>Azur Lane Fleet</title>
+    <meta name="description" content="Easily share your AzurLane fleet configuration">
+    <meta name="og:title" content="Azur Lane Fleet Maker">
+    <meta name="og:url" content="https://azurfleetmaker.com/" />
+<!--     <meta name="og:image" content="https://i.imgur.com/TEtzDAS.png" /> -->
+    <meta name="og:description" content="Easily share your AzurLane fleet configuration" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" as="style" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="prefetch" href="js/jquery-3.3.1.slim.min.js" as="script">
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" as="script" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    <link rel="prefetch" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" as="script" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/vue" as="script" crossorigin="anonymous">
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" as="script" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous">
+    <!-- <link rel="prefetch" href="lz-string.js" as="script">
+    <link rel="prefetch" href="ship_data.js" as="script">
+    <link rel="prefetch" href="equip_data.js" as="script">
+    <link rel="prefetch" href="main-v2.js" as="script">
+    <link rel="prefetch" href="PacketHandler/client.js?rev=3" as="script"> -->
+    <link rel="stylesheet" href="css/original.css">
+</head>
+
+<body>
+    <div class="container text-center text-light font-weight-bold text-monospace">
+        <h1>Azur Lane Fleet Maker</h1>
+    </div>
+    <!-- <div align="center">
+        <h4 class="text-light text-monospace">Select language</h4>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active" id="cn" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off" checked>CN
+            </label>
+            <label class="btn btn-secondary" id="jp" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off">JP
+            </label>
+            <label class="btn btn-secondary" id="en" onclick="setlang(this)">
+                <input type="radio" name="lang" autocomplete="off">EN
+            </label>
+        </div>
+    </div> -->
+    <br>
+    <div id="AzurLaneFleetApp" class="container app">
+        <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang">
+        </fleet-container>
+        <br>
+        <button type="button" class="btn" onclick="addFleet(true)">Add Surface Fleet</button>
+        <button type="button" class="btn" onclick="addFleet(false)">Add Submarine Fleet</button>
+
+    </div>
+    <br>
+    <div class="container" align="center">
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="emptyfleet()">Remove All Ships</button>
+        <button type="button" class="btn btn-danger" id="emptyfleet" onclick="resetFleet()">Reset Fleets</button>
+    </div>
+    <br>
+    <div class="container" align="center">
+        <!-- <h4 class="text-light text-monospace">Fleet data</h4> -->
+        <textarea class="databox text-light" id="fleetdata" readonly></textarea>
+        <div class="container">
+            <!-- <button type="button" class="btn" id="dumpdata" onclick="dumpDataID()">Dump</button> -->
+            <button type="button" class="btn" id="copyData" onclick="copyData()">Generate Shareable URL</button>
+            <!-- <button type="button" class="btn" id="emptyData" onclick="emptyData()">Clear</button> -->
+            <!-- <button type="button" class="btn btn-danger" id="loadDataByID" onclick="loadDataByID()">Load</button> -->
+        </div>
+    </div>
+    <br>
+    <div class="container" align="center">
+        <div>
+          This website was forked from x94fujo6rpg
+          <br>
+          Modified by Drako
+        </div>
+        <a href="https://github.com/x94fujo6rpg/AzurLaneFleet">Original Github</a>
+        <a href="https://github.com/Drakomire/AzurLaneFleet">Forked Github</a>
+    </div>
+    <br>
+    <br>
+    <div class="modal fade" id="shipselect">
+        <div class="modal-dialog">
+            <div class="modal-content text-light bg-dark">
+                <div class="modal-header">
+                    <h4 class="modal-title">Select Ship</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="container">Faction</div>
+                        <div class="container" id='shipnation'>
+                            <ship-nation-button v-for="item in nation" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-nation-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="container">Hull Class</div>
+                        <div class="container" id="shiptype">
+                            <ship-type-button v-for="item in type" v-bind:key="item.id" v-bind:name="item.name" v-show="item.display" v-text="item[lang]" v-bind:value="item.id"></ship-type-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="container">Rarity</div>
+                        <div class="container" id='shiprarity'>
+                            <ship-rarity-button v-for="item in rarity" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-rarity-button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <!-- <div class="container">只顯示改造後的船 / 改造完了のみ / Retrofitted Ship Only</div> -->
+                        <!-- <div class="container">
+                            <button id='shipretro' name="shipretro" type="button" class="btn btn-outline-light btn-sm active" aria-pressed="true" value="1" onclick="setRetro(this)">Yes</button>
+                        </div> -->
+                                            <div class="container">
+                        <div>Name</div>
+                        <input type="text" placeholder="Enter ship name..." id="ship search bar" onkeyup="updateSearch(this)">
+                      </div>
+                    </div>
+                    <spacer type="horizontal" width="100" height="8">⠀</spacer>
+                    <div class="container-fluid">
+                        <div class="container">　　　</div>
+                    </div>
+                    <div class="container-fluid row m-0 p-0" id="shiplist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="equipselect">
+        <div class="modal-dialog">
+            <div class="modal-content text-light bg-dark">
+                <div class="modal-header">
+                    <h4 class="modal-title">Equip Select</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="container">Equips</div>
+                        <div class="container-fluid row m-0 p-0" id="equiplist" style="width: 101%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" align="center">
+      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+        The copyright of the data used on this site is owned by the following companies<br> © Manjuu Co.,Ltd. & YongShi Co.,Ltd.<br> © Yostar, Inc.
+        <br>
+    </footer>
+    <script src="scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+    <script src="scripts/lz-string.min.js"></script>
+    <script src='data/ship_data.js'></script>
+    <script src='data/equip_data.js'></script>
+    <script type="text/javascript" src="scripts/vue.js"></script>
+    <script type="text/javascript" src="scripts/reconnecting-websocket.js"></script>
+    <script type="text/javascript" src="scripts/io/packet_handler.js?rev=3"></script>
+    <script type="text/javascript" src="scripts/io/load.js"></script>
+    <script type="text/javascript" src="scripts/io/save.js"></script>
+    <script type="text/javascript" src="scripts/popup_menus/ships.js"></script>
+    <script type="text/javascript" src="scripts/popup_menus/gear.js"></script>
+    <script type="text/javascript" src="scripts/main.js?rev=2"></script>
+
+
+</body>
+
+</html>

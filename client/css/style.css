@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.hoverStats>p{
+    margin: 0;
+}
+:root{
+    --background_color : 0, 0%, 23% ; /* #3b3b3b */
+    --text_color : 0, 0%, 100%
+}
+
+body, html{
+    background-color: hsl(var(--background_color)) ;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 50px;
+}
+
+.title{
+    color: hsl(var(--text_color));
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.fleetWrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+.fleetHeader{
+    justify-self: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonWrap{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap:5px;
+}
+
+.button{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    display: grid;
+    place-items: center;
+    color: hsl(var(--text_color));
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 2px hsl(var(--text_color));
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+@supports(aspect-ratio: 1/1){
+    .button{
+        height: 100%;
+        width: unset;
+        aspect-ratio: 1/1;
+    }
+}
+.button:hover{
+    transform: translate(2%,2%);
+}
+.button>*{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.shipGroup.surface{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    place-items:center;
+    gap: 30px 15px;
+    grid-template-areas: 
+    "leftFlank vanguardBack"
+    "flagship vanguardMid"
+    "rightFlank vanguardLead";
+}
+.shipGroup.subs{
+    grid-row: 2;
+    display: grid;
+    
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    place-items:center;
+    gap: 15px;
+    grid-template-areas: 
+    "leftSub"
+    "flagSub"
+    "rightSub";
+}
+.shipWrap{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    place-items: center;
+    flex-shrink: 0;
+}
+ 
+.ship{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background-image: url(../../client/ui/empty.png);
+    background-size: contain;
+    position: relative;
+}
+@supports(aspect-ratio: 1/1){
+    .ship{
+        width: 100px;
+        height: unset;
+        aspect-ratio: 1/1;
+    }
+}
+.ship img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.ship:hover{
+    transform: translateY(5%);
+}
+
+.equipWrap{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    place-items: center;
+    width: 83.3%;
+    gap: 5px;
+}
+
+.equip{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background-image: url(../../client/ui/icon_back.png);
+    background-size: contain;
+    position: relative;
+}
+@supports(aspect-ratio: 1/1){
+    .equip{
+        width: 100px;
+        height: unset;
+        aspect-ratio: 1/1;
+    }
+}
+.equip img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.equip:hover{
+    transform: translateY(5%);
+}
+
+/* eqiop internal styles */
+.toplablesWrap{
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7em 1.4em;
+    font-size: 1vh;
+}
+.toplable{
+    font-size: 1.5em;
+}
+
+
+.lable{
+    color: hsl(var(--text_color));
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+.statWrap{
+    display: none;
+    flex-direction: column;
+    place-items: center;
+}
+.stat{
+    color: hsl(var(--text_color));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* details styles*/
+.fleetWrap>.DetailToggle{
+    display:  none;
+}
+
+
+.fleetWrap>.DetailToggle:checked~.shipGroup.surface{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    place-items:center;
+    gap: 50px;
+    grid-template-areas: 
+    "flagship leftFlank rightFlank vanguardLead vanguardMid vanguardBack";
+}
+.fleetWrap>.DetailToggle:checked~.shipGroup.subs{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items:center;
+    gap: 80px;
+    grid-template-areas: 
+    "flagSub leftSub rightSub";
+}
+.fleetWrap>.DetailToggle:checked~* .shipWrap{
+    flex-direction: column;
+}
+.fleetWrap>.DetailToggle:checked~* .ship{
+    width: 135px;
+    height: 135px;
+}
+.fleetWrap>.DetailToggle:checked~* .equipWrap{
+    margin-top: 15px;
+    width: 150px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.fleetWrap>.DetailToggle:checked~* .equip{
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.fleetWrap>.DetailToggle:checked~* .equip .toplablesWrap{
+    display: none;
+}
+
+.fleetWrap>.DetailToggle:checked~* .statWrap{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+}
+/* stat display styles */
+.stat{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.stat-values{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+}
+.hoverStats{
+    display: none;
+}
+.stat:hover .hoverStats{
+    display: inline-flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-90%);
+    background-color: hsl(var(--background_color));
+    border: solid 1px hsl(var(--text_color));
+}
+.baseStat{
+    color: hsl(0, 0%, 67%);
+}
+.equipStat{
+    color: hsl(120, 100%, 60%);
+}
+.retroStat{
+    color: hsl(190, 100%, 60%);
+}
+.totalStat{
+    color: hsl(var(--text_color));
+}
+
+/* ship positioning styles */
+.flagship{
+    outline: solid 5px red;
+    outline-offset: -1px;
+    grid-area: flagship;
+}.leftFlank{
+    outline: solid 5px blue;
+    outline-offset: -1px;
+    grid-area: leftFlank;
+}.rightFlank{
+    outline: solid 5px green;
+    outline-offset: -1px;
+    grid-area: rightFlank;
+}.vanguardLead{
+    outline: solid 5px red;
+    outline-offset: -1px;
+    grid-area: vanguardLead;
+}.vanguardMid{
+    outline: solid 5px blue;
+    outline-offset: -1px;
+    grid-area: vanguardMid;
+}.vanguardBack{
+    outline: solid 5px green;
+    outline-offset: -1px;
+    grid-area: vanguardBack;
+}.flagSub{
+    outline: solid 5px red;
+    outline-offset: -1px;
+    grid-area: flagSub;
+}.leftSub{
+    outline: solid 5px blue;
+    outline-offset: -1px;
+    grid-area: leftSub;
+}.rightSub{
+    outline: solid 5px green;
+    outline-offset: -1px;
+    grid-area: rightSub;
+}
+
+/* extra detail styles*/

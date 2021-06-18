@@ -18,151 +18,16 @@
     <link rel="prefetch" href="js/jquery-3.3.1.slim.min.js" as="script">
     <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" as="script" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     <link rel="prefetch" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" as="script" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-    <link rel="prefetch" href="lib/vue.min.js" as="script" crossorigin="anonymous">
+    <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/vue" as="script" crossorigin="anonymous">
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" as="script" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous">
     <!-- <link rel="prefetch" href="lz-string.js" as="script">
     <link rel="prefetch" href="ship_data.js" as="script">
     <link rel="prefetch" href="equip_data.js" as="script">
     <link rel="prefetch" href="main-v2.js" as="script">
     <link rel="prefetch" href="PacketHandler/client.js?rev=3" as="script"> -->
-    <style>
-        body {
-            color: white;
-            background-color: rgb(58, 58, 58);
-        }
-
-        .fleet_container {
-            background-color: rgb(58, 58, 58);
-        }
-        .imgbtn{
-          cursor: pointer;
-        }
-
-        .ship_container {
-            background-color: blue;
-        }
-
-        .item_container {
-            background-color: transparent;
-            border-style: none;
-            width: 5.8rem;
-            height: 6.8rem;
-            position: initial;
-        }
-
-        .modal-dialog {
-            max-width: 71%;
-        }
-
-        .modal-body {
-            max-width: 100%;
-        }
-
-        .bg {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 100;
-            width: 100%;
-        }
-
-        .icon {
-            position: relative;
-            height: 5.3rem;
-            padding: 2px;
-            z-index: 101;
-            object-fit: scale-down;
-        }
-
-        .frame {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 102;
-            width: 100%;
-        }
-
-        .icon_box {
-            position: relative;
-            width: 100%;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .box {
-            overflow: hidden;
-            color: white;
-            position: relative;
-        }
-
-        .box:hover {
-            overflow: visible;
-            z-index: 105;
-            background-color: black;
-        }
-
-        .box:hover>span {
-            color: Tomato;
-            background-color: black;
-            border-width: 0.2rem 0.2rem 0.2rem 0.2rem;
-            border-color: black;
-            border-style: solid;
-        }
-
-        .item_name {
-            font-family: monospace;
-            white-space: nowrap;
-            font-size: 1.1rem;
-            color: white;
-            display: inline;
-            position: relative;
-            top: -0.05rem;
-            text-shadow: 0 0 0.2rem black;
-        }
-
-        .app {
-            max-width: 70%;
-        }
-
-        .itemq {
-            font-family: monospace;
-            position: absolute;
-            top: 0.1rem;
-            right: 0.5rem;
-            z-index: 103;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-shadow: 0 0 0.2rem black, 0 0 0.3rem black;
-        }
-
-        .databox {
-            width: 30rem;
-            height: 5rem;
-            background-color: rgb(58, 58, 58);
-        }
-
-        a:link,
-        a:visited {
-            background-color: rgba(60, 60, 60, 0.7);
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border: 2px;
-            font-weight: bold;
-            border-color: rgba(255, 255, 255, 0.5);
-            border-style: ridge;
-            border-radius: 2px;
-        }
-
-        a:hover,
-        a:active {
-            color: black;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-    </style>
+    <link rel="stylesheet" href="css/original.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -184,7 +49,6 @@
         </div>
     </div> -->
     <br>
-
     <div id="AzurLaneFleetApp" class="container app">
         <fleet-container v-for="fleet in fleets" v-bind:fleets="fleets" v-bind:key="fleet.id" v-bind:fleet="fleet" v-bind:name="fleet.id" v-bind:lang="lang"></fleet-container>
         <br>
@@ -296,7 +160,8 @@
     <script src="scripts/lz-string.min.js"></script>
     <script src='data/ship_data.js'></script>
     <script src='data/equip_data.js'></script>
-    <script type="text/javascript" src="scripts/vue.js"></script>
+    <script type="text/javascript" src="scripts/reworkVue.js"></script>
+    <!-- <script type="text/javascript" src="scripts/vue.js"></script> -->
     <script type="text/javascript" src="scripts/initiate.js"></script>
     <script type="text/javascript" src="scripts/utility.js"></script>
     <script type="text/javascript" src="scripts/reconnecting-websocket.js"></script>

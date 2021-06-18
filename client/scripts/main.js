@@ -9,9 +9,59 @@ let rarity_list = [];
 let retrofit = true;
 //Empty ship data variable for fleet creation
 // var ship_data = [];
+// variables for default ship and equip
+const defaultShip ={
+    "name":{
+        "cn":"",
+        "jp":"",
+        "en":"none"
+    },
+    "stats":{
+        "health": 0,
+        "armor": "none",
+        "reload": 0,
+        "luck": 0,
+        "firepower": 0,
+        "torpedo": 0,
+        "evasion": 0,
+        "speed": 0,
+        "antiair": 0,
+        "aviation": 0,
+        "oilConsumption": 0,
+        "accuracy": 0,
+        "antisubmarineWarfare": 0
+    },
+    "extraData":{
+        "rarity":"",
+        "iconSRC":"../ui/empty.png",
+        "BorderSRC":"",
+        "backgroundSRC":"",
+        "type":-1,
+        "equipBonus":{},
+        "retroBonus":{},
+        "level":0,
+        "affection":0.00
+    },
+    "items":[{
+    },{
+    },{
+    },{
+    },{
+    }]
+}
+const defaultEquip ={
+    "id":-1,
+    "name":{
+        "en":"empty",
+    },
+    "icon":"../ui/icon_back.png",
+    "type":-1,
+    "property":{},
+}
+
 var default_fleet = [];
 var fleet_data = [];
-fleet_data = buildFleet();
+fleet_data.push(newFleet(true));
 last_saved_fleet = [];
 
 let c_side_dict = {
@@ -42,7 +92,7 @@ let ALF = new Vue({
     },
 });
 
-console.log(ALF)
+console.log(fleet_data)
 
 let shipSelect = new Vue({
     el: "#shipselect",
@@ -126,34 +176,34 @@ function createNewFleet(number,surface){
 //Simplifies creation of a new fleet that is appended to the end of the list.
 //Used by add fleet buttons
 function addFleet(surface){
-  fleet_data.push(createNewFleet(fleet_data.length,surface));
-  dumpDataID()
+    fleet_data.push(newFleet(surface,fleet_data));
+    console.log(fleet_data)
+    dumpDataID()
 }
 
 //Remove fleet button
 function removeFleet(item){
-  let name = item.name;
-  fleet_data.splice(name-1,1);
-  fixFleetOrder();
+    let index = parseInt(item.getAttribute("name"))
+    fleet_data.splice(index,1);
   dumpDataID();
 }
 //Moves the fleet up one
 function moveFleetUp(item){
-  let name = item.name-1;
-  if (name != 0){
-    [fleet_data[name],fleet_data[name-1]] = [fleet_data[name-1],fleet_data[name]]
-    fixFleetOrder();
-    dumpDataID();
+  let index = parseInt(item.getAttribute("name"));
+  if (index != 0){
+    let Moved = fleet_data.splice(index,1);
+    fleet_data.splice(index-1,0,Moved[0]);
+    // dumpDataID();
   }
 }
 //Moves the fleet down one
 function moveFleetDown(item){
-  let name = item.name-1;
-  if (name != fleet_data.length-1){
-    [fleet_data[name],fleet_data[name+1]] = [fleet_data[name+1],fleet_data[name]]
-    fixFleetOrder();
-    dumpDataID();
-  }
+    let index = parseInt(item.getAttribute("name"));
+    if (index != fleet_data.length-1){
+        let Moved = fleet_data.splice(index,1);
+        fleet_data.splice(index+1,0,Moved[0]);
+        dumpDataID();
+    }
 }
 
 //Removes all the fleets that are currently in use
@@ -190,6 +240,7 @@ function setRetro(item) {
 }
 
 //I have no idea what this function does
+//etheralda: it seems to return a array holding ither values of an object or keys of an object to then get the numerical index of the value or key in the object
 function indexInObj(obj, getvalue = false) {
     let new_list = [];
     if (getvalue) {
@@ -226,16 +277,18 @@ function hideShipInFleet() {
 
 //Opens the popup menu for ships or equips depending on the item name
 function setCurrent(item) {
-    //Clear the search bar
-    document.getElementById("ship search bar").value = "";
-    updateSearch();
-    let pos = item.name;
-    [c_fleet, c_side, c_pos, c_item] = [pos[1], pos[2], pos[3], pos[4]];
-    if (c_item === "0") {
-        //ship
-        let shiplist = document.getElementById("shiplist");
-        shiplist = shiplist.querySelectorAll("button");
-        if (c_side === "0") {
+    console.log(item)
+    if(item.classList.contains("ship")){
+        let shipPos = item.parentElement.getAttribute("pos")
+        console.log(shipPos)
+        let sideSeaker = [["vanguardLead","vanguardMid","vanguardBack"], ["flagship","leftFlank","rightFlank"], ["flagSub","leftSub","rightSub"]]
+        let shipSide = -1
+        sideSeaker.forEach(side=>{
+            if(side.includes(shipPos)){
+                shipSide = (sideSeaker.indexOf(side))
+            }
+        })
+        if (shipSide === 0) {
             // show front type
             ship_type.forEach((item) => {
                 if (front.indexOf(item.id) === -1) {
@@ -248,7 +301,7 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
-        } else if (c_side === "1") {
+        } else if (shipSide === 1) {
             // show back type
             ship_type.forEach((item) => {
                 if (back.indexOf(item.id) === -1) {
@@ -261,7 +314,7 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
-        } else if (c_side === "2") {
+        } else if (shipSide === 2) {
             // show submarine type
             ship_type.forEach((item) => {
                 if (submarine.indexOf(item.id) === -1) {
@@ -274,10 +327,15 @@ function setCurrent(item) {
                     item.display = true;
                 }
             });
+        }else if(shipSide<0){
+            //if shipSide was not set then dont open ships
+            return
         }
-        shipDisplay();
-    } else {
-        // equip
+        shipDisplay(shipSide,shipPos);
+    }else if(item.classList.contains("equip")){
+        let shipPos = item.parentElement.parentElement.getAttribute("pos")
+        let slotIndex = item.getAttribute("slot")
+        console.log(`${shipPos} ${slotIndex}`)
         equipDisplay();
     }
 }
@@ -459,4 +517,38 @@ function fixFleetOrder(){
 
     }
   });
+}
+
+// new fleet creation code for testing
+function newFleet(type,fleets=[]) {
+    let fleet = {
+        "name":`${fleets.length+1}`,
+    }
+    if(type==true){
+        fleet.surface = {
+            flagship:defaultShip,
+            leftFlank:defaultShip,
+            rightFlank:defaultShip,
+            vanguardLead:defaultShip,
+            vanguardMid:defaultShip,
+            vanguardBack:defaultShip,
+        }
+    }else if(type==false){
+        fleet.subs = {
+            flagSub:defaultShip,
+            leftSub:defaultShip,
+            rightSub:defaultShip,
+        }
+    }
+    for(let prop in fleet){
+        if(typeof fleet[prop] =="object"){
+            console.log(prop)
+            for(let ship in fleet[prop]){
+                for(let index=0;index<fleet[prop][ship].items.length;index++){
+                    fleet[prop][ship].items[index]=defaultEquip
+                }
+            }
+        }
+    }
+    return fleet
 }
