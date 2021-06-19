@@ -12,14 +12,14 @@ const ship_popup = new Vue({
       ships: ship_json
     },
     template: `
-    <div id="shiplist" class="container-fluid row m-0 p-0">
+    <div id="shiplist" class="container-fluid row m-0 p-0" type="" nat="" rarity="" NS="">
         <button class="p-1 item_container" id="000000" onclick="setShipAndEquip(this)" data-dismiss="modal">
             <div class="container-fluid p-0 box">
             <div class="icon_box row"><img class="img-fluid icon" loading="lazy" src="ui/empty.png"><img class="img-fluid bg" src=""><img class="img-fluid frame" src=""></div>
             <span name="name" cn="移除" en="Remove" jp="除隊" class="justify-content-center item_name">Remove</span>
         </div>
     </button>
-      <button v-for="ship in ships" class="p-1 item_container" :id="ship.id" onclick="setShipAndEquip(this)" data-dismiss="modal" style="">
+      <button v-for="ship in ships" class="p-1 item_container tosort" :type="ship.type" :nat="ship.nationality" :rarity="ship.rarity" :id="ship.id" onclick="setShipAndEquip(this)" data-dismiss="modal">
         <div class="container-fluid p-0 box">
           <div class="icon_box row"><img class="img-fluid icon" loading="lazy" :src="ship.thumbnail" onError="this.onerror=null;this.src='https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/unknown.png';">
             <img class="img-fluid bg" :src="'ui/bg'+ship.rarity+'.png'"><img class="img-fluid frame" :src="'ui/frame_'+ship.rarity+'.png'">
