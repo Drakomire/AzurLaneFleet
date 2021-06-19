@@ -1,0 +1,156 @@
+/* sort for type
+1 = dd
+2 = cl
+3 = ca
+18 = cb
+
+8 = ss
+17 = ssv
+
+4 = bc
+5 = bb
+6 = cvl
+7 = cv
+13 = bm
+12 = ar
+
+0 = none
+
+sorting for nation
+1= eagle union
+2= royal navy
+3= sakura empire
+4= iron blood
+5= dragon empery
+6= sardegna empire
+7= northen parlement
+8= iris libre
+9= vichya dominion
+0= other
+
+sorting for rarity
+1= normal
+2= rare
+3= elite
+4= super rare
+5= ultra rare
+*/
+#shiplist:not([NS=""]){
+    @for $type from 1 through 18 {
+        &[type*="-#{$type}-"]{
+            @for $nat from 0 through 9{
+                &[nat*="#{$nat}"]{
+                    @for $rarity from 1 through 5{
+                        &[rarity*="#{$rarity}"]{
+                            .NS[type="#{$type}"][nat="#{$nat}"][rarity="#{$rarity}"]{
+                                display: block;
+                            }
+                        }
+                    }
+                    &[rarity=""]{
+                        .NS[type="#{$type}"][nat="#{$nat}"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][nat=""]{
+                    .NS[type="#{$type}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[nat=""][rarity=""]{
+                .NS[type="#{$type}"]{
+                    display: block;
+                }
+            }
+        }
+    }
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type=""]{
+                    .NS[nat="#{$nat}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[type=""][rarity=""]{
+                .NS[nat="#{$nat}"]{
+                    display: block;
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type=""][nat=""]{
+                .NS[rarity="#{$rarity}"]{
+                    display: block;
+                }
+            }
+    }
+}
+#shiplist[NS=""]{
+    @for $type from 1 through 18 {
+        &[type*="-#{$type}-"]{
+            @for $nat from 0 through 9{
+                &[nat*="#{$nat}"]{
+                    @for $rarity from 1 through 5{
+                        &[rarity*="#{$rarity}"]{
+                            [type="#{$type}"][nat="#{$nat}"][rarity="#{$rarity}"]{
+                                display: block;
+                            }
+                        }
+                    }
+                    &[rarity=""]{
+                        [type="#{$type}"][nat="#{$nat}"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][nat=""]{
+                    [type="#{$type}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[nat=""][rarity=""]{
+                [type="#{$type}"]{
+                    display: block;
+                }
+            }
+        }
+    }
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type=""]{
+                    [nat="#{$nat}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[type=""][rarity=""]{
+                [nat="#{$nat}"]{
+                    display: block;
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type=""][nat=""]{
+                [rarity="#{$rarity}"]{
+                    display: block;
+                }
+            }
+    }
+}
+
+
+.tosort{
+    display: none;
+}
