@@ -63,6 +63,7 @@ function checksetting(key, value) {
 
 //Checks if a ship is selected
 function isShipSelect(nation, type, rarity, retro, name, targetSide) {
+
     let indicator_nation = false;
     let indicator_type = false;
     let indicator_rarity = false;
@@ -134,7 +135,7 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
     }
 }
 
-//This adds the ships to the popup menu
+//turns on and off the display for a cetain ship
 function shipDisplay(targetSide) {
     let shiplist = document.getElementById("shiplist");
     shiplist = shiplist.querySelectorAll("button");
@@ -160,69 +161,69 @@ function shipDisplay(targetSide) {
 
 //Adds the ships from data/ship_data.js to the pop up menu.
 function createAllShip() {
-    console.time("createAllShip");
-    sorted_ship_data.forEach((ship, index, arr) => {
-        setTimeout(() => {
-            let pos = document.getElementById("shiplist");
-            let icon_box = document.createElement("div");
-            $(icon_box).attr({
-                class: "icon_box row",
-            });
+    // console.time("createAllShip");
+    // sorted_ship_data.forEach((ship, index, arr) => {
+    //     setTimeout(() => {
+    //         let pos = document.getElementById("shiplist");
+    //         let icon_box = document.createElement("div");
+    //         $(icon_box).attr({
+    //             class: "icon_box row",
+    //         });
 
-            let icon = document.createElement("img");
-            $(icon).attr({
-                class: "img-fluid icon",
-                loading: "lazy",
-                src: ship.icon,
-            });
+    //         let icon = document.createElement("img");
+    //         $(icon).attr({
+    //             class: "img-fluid icon",
+    //             loading: "lazy",
+    //             src: ship.icon,
+    //         });
 
-            let bg = document.createElement("img");
-            $(bg).attr({
-                class: "img-fluid bg",
-                src: ship.bg,
-            });
+    //         let bg = document.createElement("img");
+    //         $(bg).attr({
+    //             class: "img-fluid bg",
+    //             src: ship.bg,
+    //         });
 
-            let frame = document.createElement("img");
-            $(frame).attr({
-                class: "img-fluid frame",
-                src: ship.frame,
-            });
+    //         let frame = document.createElement("img");
+    //         $(frame).attr({
+    //             class: "img-fluid frame",
+    //             src: ship.frame,
+    //         });
 
-            icon_box.append(icon, bg, frame);
-            //-----------------------------------------------
-            let box = document.createElement("div");
-            $(box).attr({
-                class: "container-fluid p-0 box",
-            });
+    //         icon_box.append(icon, bg, frame);
+    //         //-----------------------------------------------
+    //         let box = document.createElement("div");
+    //         $(box).attr({
+    //             class: "container-fluid p-0 box",
+    //         });
 
-            let name = document.createElement("span");
-            $(name).attr({
-                name: "name",
-                cn: ship.cn,
-                en: ship.en,
-                jp: ship.jp,
-                class: "justify-content-center item_name",
-            });
-            name.textContent = ship[lan];
+    //         let name = document.createElement("span");
+    //         $(name).attr({
+    //             name: "name",
+    //             cn: ship.cn,
+    //             en: ship.en,
+    //             jp: ship.jp,
+    //             class: "justify-content-center item_name",
+    //         });
+    //         name.textContent = ship[lan];
 
-            box.append(icon_box, name);
-            //-----------------------------------------------
-            let newship = document.createElement("button");
-            $(newship).attr({
-                class: "p-1 item_container",
-                id: ship.id,
-                onclick: "setShipAndEquip(this)",
-                "data-dismiss": "modal",
-            });
-            newship.append(box);
-            pos.append(newship);
-            //-----------------------------------------------
-            if (index === arr.length - 1) {
-                console.timeEnd("createAllShip");
-                createAllEquip();
-            }
-        });
-    });
+    //         box.append(icon_box, name);
+    //         //-----------------------------------------------
+    //         let newship = document.createElement("button");
+    //         $(newship).attr({
+    //             class: "p-1 item_container",
+    //             id: ship.id,
+    //             onclick: "setShipAndEquip(this)",
+    //             "data-dismiss": "modal",
+    //         });
+    //         newship.append(box);
+    //         pos.append(newship);
+    //         //-----------------------------------------------
+    //         if (index === arr.length - 1) {
+    //             console.timeEnd("createAllShip");
+    //             createAllEquip();
+    //         }
+    //     });
+    // });
 }
 
 //Adds the header options to the pop up menu. The search bar is NOT included here.
@@ -265,11 +266,11 @@ function buildShipSelectOption() {
     });
 
     let rarity = [
-        { id: 2, cn: "普通", en: "Normal", jp: "N" },
-        { id: 3, cn: "稀有", en: "Rare", jp: "R" },
-        { id: 4, cn: "精銳", en: "Elite", jp: "SR" },
-        { id: 5, cn: "超稀有", en: "Super Rare", jp: "SSR" },
-        { id: 6, cn: "海上傳奇", en: "Rainbow", jp: "UR" },
+        { id: 1, cn: "普通", en: "Normal", jp: "N" },
+        { id: 2, cn: "稀有", en: "Rare", jp: "R" },
+        { id: 3, cn: "精銳", en: "Elite", jp: "SR" },
+        { id: 4, cn: "超稀有", en: "Super Rare", jp: "SSR" },
+        { id: 5, cn: "海上傳奇", en: "Rainbow", jp: "UR" },
     ];
     rarity.forEach((item) => {
         item.name = `ship_rarity_${item.id}`;

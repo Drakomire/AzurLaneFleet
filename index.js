@@ -8,14 +8,17 @@ const {Database} = require('./server/database.js')
 const {packetHandler} = require('./server/packet_handler.js')
 const {imageGenerator} = require('./server/image_generator.js')
 const {TOKEN} = require('./server/packet_handler.js')
+const html = require('./server/vue_objects.js')
 const { req } = require('express')
 
 ;(async () => {
   global.database = await Database.build();
 })();
 
+//Open the ship data json
+ship_json = JSON.parse(fs.readFileSync('./data/ships.json').toString())
+
 const app = express();
-const Vue = require('vue')
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+'/client'));
 app.set('views', __dirname + '/public/views');
@@ -29,8 +32,8 @@ app.get('/', (req, res) => {
     //Image file location is set in the HTML for dynamic images to work.
     res.render(__dirname+'/index.html',{
       fleet_id:fleet_id,
-      fleet_container:"TEST"
-    
+      fleet_popup_menu:html.ship_popup_html,
+      equip_popup_menu:html.equip_popup_html
     });
 });
 

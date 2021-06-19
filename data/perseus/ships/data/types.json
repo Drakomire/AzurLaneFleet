@@ -1,0 +1,18 @@
+{
+  "1": {"en": "Destroyer", "cn": "驱逐", "jp": "駆逐"},
+  "2": {"en": "Light Cruiser", "cn": "轻巡", "jp": "軽巡"},
+  "3": {"en": "Heavy Cruiser", "cn": "重巡", "jp": "重巡"},
+  "4": {"en": "Battlecruiser", "cn": "战巡", "jp": "巡戦"},
+  "5": {"en": "Battleship", "cn": "战列", "jp": "戦艦"},
+  "6": {"en": "Light Carrier", "cn": "轻航", "jp": "軽母"},
+  "7": {"en": "Aircraft Carrier", "cn": "正航", "jp": "空母"},
+  "8": {"en": "Submarine", "cn": "潜艇", "jp": "潜水"},
+  "9": {"en": "Aviation Cruiser", "cn": "航巡", "jp": "航巡"},
+  "10": {"en": "Aviation Battleship", "cn": "航战", "jp": "航戦"},
+  "11": {"en": "Torpedo Cruiser", "cn": "雷巡", "jp": "雷巡"},
+  "12": {"en": "Repair", "cn": "维修", "jp": "工作"},
+  "13": {"en": "Monitor", "cn": "重炮", "jp": "砲艦"},
+  "17": {"en": "Aviation Submarine", "cn": "潜母", "jp": "潜母"},
+  "18": {"en": "Large Cruiser", "cn": "超巡", "jp": "超巡"},
+  "19": {"en": "Munition Ship", "cn": "运输", "jp": "運送"}
+}
