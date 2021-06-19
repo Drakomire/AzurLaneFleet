@@ -51,26 +51,26 @@ class UnknownShipError(Exception):
 #Files
 script_dir = os.path.dirname(__file__)
 
-f = open(os.path.join(script_dir,"data/skills.json"), "r")
+f = open(os.path.join(script_dir,"data/skills.json"), "r", encoding='utf-8')
 skills = json.loads(f.read());
 
-f = open(os.path.join(script_dir,"data/ships.json"), "r")
+f = open(os.path.join(script_dir,"data/ships.json"), "r", encoding='utf-8')
 ships = json.loads(f.read());
 
-f = open(os.path.join(script_dir,"data/types.json"), "r")
+f = open(os.path.join(script_dir,"data/types.json"), "r", encoding='utf-8')
 types = json.loads(f.read());
 
-f = open(os.path.join(script_dir,"data/lookup_table.json"), "r")
+f = open(os.path.join(script_dir,"data/lookup_table.json"), "r", encoding='utf-8')
 lookup_table = json.loads(f.read());
 
-f = open(os.path.join(script_dir,"data/retrofit_id_lookup_table.json"), "r")
+f = open(os.path.join(script_dir,"data/retrofit_id_lookup_table.json"), "r", encoding='utf-8')
 retrofit_id_lookup_table = json.loads(f.read());
 f.close()
 
-f = open(os.path.join(script_dir,"data/retrofit.json"), "r")
+f = open(os.path.join(script_dir,"data/retrofit.json"), "r", encoding='utf-8')
 retrofit = json.loads(f.read());
 f.close()
 
-f = open(os.path.join(script_dir,"data/nicknames.json"), "r")
+f = open(os.path.join(script_dir,"data/nicknames.json"), "r", encoding='utf-8')
 nicknames = json.loads(f.read());
 f.close()

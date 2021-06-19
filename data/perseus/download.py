@@ -47,7 +47,7 @@ def init(force: bool=False):
                 kept += 1
             else:
                 j = requests.get('https://raw.githubusercontent.com/Drakomire/perseus-data/master/dist/'+key).content
-                f = open(filepath, "w")
+                f = open(filepath, "w", encoding='utf-8')
                 f.write(j.decode("utf-8"))
                 changed+=1
             f.close()
@@ -55,7 +55,7 @@ def init(force: bool=False):
             #Download the file
             downloaded += 1
             j = requests.get('https://raw.githubusercontent.com/Drakomire/perseus-data/master/dist/'+key).content
-            f = open(filepath, "w")
+            f = open(filepath, "w", encoding='utf-8')
             f.write(j.decode("utf-8"))
             f.close()
         if filepath in downloaded_files:
@@ -64,7 +64,7 @@ def init(force: bool=False):
     #Remove all the depecated files
     for i in downloaded_files:
         deleted += 1
-        os.remove(i)
+        # os.remove(i)
 
     if (not force):
         print("Perseus:",downloaded+changed,"files downloaded.",deleted,"files deleted.",kept,"files did not require an update.")
