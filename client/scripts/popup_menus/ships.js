@@ -148,11 +148,13 @@ function shipDisplay(targetSide) {
             let retro = ship_data[id].retro;
             let name = ship_data[id][shipSelect.lang+"_name"];
             //Turns the display on if the ship is valid
-            if (isShipSelect(nation, type, rarity, retro, name, targetSide)) {
-                item.style.display = "";
-            } else {
-                item.style.display = "none";
-            }
+
+            //disababled due to using css classes for sorting
+            // if (isShipSelect(nation, type, rarity, retro, name, targetSide)) {
+            //     item.style.display = "";
+            // } else {
+            //     item.style.display = "none";
+            // }
         }
     });
     //I prefer to allow duplicate ships
