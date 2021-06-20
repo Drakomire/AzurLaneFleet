@@ -96,19 +96,19 @@
                     <div class="container">
                         <div class="container">Faction</div>
                         <div class="container" id='shipnation'>
-                            <ship-nation-button v-for="item in nation" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-nation-button>
+                            <ship-nation-button v-for="item in nation" v-bind:key="item.id" v-text="item[lang]" v-bind:value="item.id"></ship-nation-button>
                         </div>
                     </div>
                     <div class="container">
                         <div class="container">Hull Class</div>
                         <div class="container" id="shiptype">
-                            <ship-type-button v-for="item in type" v-bind:key="item.id" v-bind:name="item.name" v-show="item.display" v-text="item[lang]" v-bind:value="item.id"></ship-type-button>
+                            <ship-type-button v-for="item in type" v-bind:key="item.id" v-show="item.display" v-text="item[lang]" v-bind:value="item.id"></ship-type-button>
                         </div>
                     </div>
                     <div class="container">
                         <div class="container">Rarity</div>
                         <div class="container" id='shiprarity'>
-                            <ship-rarity-button v-for="item in rarity" v-bind:key="item.id" v-bind:name="item.name" v-text="item[lang]" v-bind:value="item.id"></ship-rarity-button>
+                            <ship-rarity-button v-for="item in rarity" v-bind:key="item.id" v-text="item[lang]" v-bind:value="item.id"></ship-rarity-button>
                         </div>
                     </div>
                     <div class="container">
