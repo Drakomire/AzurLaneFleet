@@ -1,8 +1,21 @@
 //refreshes the popup menu when a letter changes in the search bar
 //I wrote this one so I hope its good
-function updateSearch(query){
+function updateSearch(){
   search = document.getElementById("ship search bar").value;
-  shipDisplay();
+  let regx = new RegExp(`${search}`,'gi')
+  console.log("hello")
+  document.getElementById("shiplist").setAttribute("NS",search)
+  Array.from(document.getElementById("shiplist").children).forEach(ship=>{
+    if(search ===""){
+        ship.classList.remove("NS")
+    }
+    else if((ship.children[0].children[1].getAttribute("en")).match(regx)){
+        ship.classList.add("NS")
+        console.log(ship.children[0].children[1].getAttribute("en"))
+    }else{
+        ship.classList.remove("NS")
+    }
+  })
 }
 
 //Updated when you press a selection button
