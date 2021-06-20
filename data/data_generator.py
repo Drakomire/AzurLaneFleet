@@ -2,9 +2,8 @@
 This generates the JSON files used by the fleetmaker with Perseus
 """
 
-from perseus import Perseus
 import json
-
+from perseus import Perseus
 api = Perseus()
 
 ship_vue = []
@@ -23,6 +22,8 @@ for ship in api.getAllShips():
             "name_en" : ship.name_en or ship.name_cn,
             "name_jp" : ship.name_jp,
             "name_cn" : ship.name_cn,
+            "nationality" : ship.ship["nationality"],
+            "type" : ship.hull_type,
             "rarity" : ship_retrofit_rarity
         }]
 
@@ -74,11 +75,9 @@ f = open("ships.json","w")
 f.write(json.dumps(ship_vue,ensure_ascii=False))
 f.close()
 
-f = open("../client/data/ship_data.js","w")
-f.write("var ship_data = "+json.dumps(ship_json,ensure_ascii=False,indent=' '))
+f = open("ship_data.json","w")
+f.write(json.dumps(ship_json,ensure_ascii=False))
 f.close()
-
-
 
 gear_vue = []
 gear_json = {}
