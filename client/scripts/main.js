@@ -280,7 +280,8 @@ function setCurrent(item) {
     console.log(item)
     if(item.classList.contains("ship")){
         let shipPos = item.parentElement.getAttribute("pos")
-        console.log(shipPos)
+        let fleetpos = item.parentElement.parentElement.parentElement.id
+        console.log(`${fleetpos}-${shipPos}`)
         let sideSeaker = [["vanguardLead","vanguardMid","vanguardBack"], ["flagship","leftFlank","rightFlank"], ["flagSub","leftSub","rightSub"]]
         let shipSide = -1
         sideSeaker.forEach(side=>{
@@ -331,11 +332,12 @@ function setCurrent(item) {
             //if shipSide was not set then dont open ships
             return
         }
-        shipDisplay(shipSide,shipPos);
+        shipDisplay(shipSide,shipPos,fleetpos);
     }else if(item.classList.contains("equip")){
         let shipPos = item.parentElement.parentElement.getAttribute("pos")
+        let fleetpos = item.parentElement.parentElement.parentElement.parentElement.id
         let slotIndex = item.getAttribute("slot")
-        console.log(`${shipPos} ${slotIndex}`)
+        console.log(`${fleetpos}-${shipPos}-${slotIndex}`)
         equipDisplay();
     }
 }
