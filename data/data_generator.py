@@ -2,9 +2,12 @@
 This generates the JSON files used by the fleetmaker with Perseus
 """
 
+import perseus
 import json
-from perseus import Perseus
-api = Perseus()
+
+# from data import perseus
+
+api = perseus.Perseus()
 
 ship_vue = []
 ship_json = {}
@@ -23,8 +26,9 @@ for ship in api.getAllShips():
             "name_jp" : ship.name_jp,
             "name_cn" : ship.name_cn,
             "nationality" : ship.ship["nationality"],
-            "type" : ship.hull_type,
+            "type" : ship.hull_id,
             "rarity" : ship_retrofit_rarity
+
         }]
 
         ship_json[ship.id] = {
@@ -71,12 +75,12 @@ for ship in api.getAllShips():
 ship_vue.sort(key=lambda x: x["name_en"])
 ship_vue.sort(key=lambda x: x["rarity"], reverse=True)
 
-f = open("ships.json","w")
+f = open("ships.json","w", encoding='utf-8')
 f.write(json.dumps(ship_vue,ensure_ascii=False))
 f.close()
 
-f = open("ship_data.json","w")
-f.write(json.dumps(ship_json,ensure_ascii=False))
+f = open("../client/data/ship_data.js","w", encoding='utf-8')
+f.write("var ship_data = "+json.dumps(ship_json,ensure_ascii=False,indent=' '))
 f.close()
 
 gear_vue = []
@@ -115,6 +119,6 @@ for gear in api.getAllGear():
 
 gear_vue.sort(key=lambda x: x["rarity"], reverse=True)
 
-f = open("gear.json","w")
+f = open("gear.json","w", encoding='utf-8')
 f.write(json.dumps(gear_vue,ensure_ascii=False))
 f.close()

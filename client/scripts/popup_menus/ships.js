@@ -1,8 +1,21 @@
 //refreshes the popup menu when a letter changes in the search bar
 //I wrote this one so I hope its good
-function updateSearch(query){
+function updateSearch(){
   search = document.getElementById("ship search bar").value;
-  shipDisplay();
+  let regx = new RegExp(`${search}`,'gi')
+  console.log("hello")
+  document.getElementById("shiplist").setAttribute("NS",search)
+  Array.from(document.getElementById("shiplist").children).forEach(ship=>{
+    if(search ===""){
+        ship.classList.remove("NS")
+    }
+    else if((ship.children[0].children[1].getAttribute("en")).match(regx)){
+        ship.classList.add("NS")
+        console.log(ship.children[0].children[1].getAttribute("en"))
+    }else{
+        ship.classList.remove("NS")
+    }
+  })
 }
 
 //Updated when you press a selection button
@@ -109,25 +122,40 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
 }
 
 //turns on and off the display for a cetain ship
-function shipDisplay(targetSide) {
+function shipDisplay(targetSide,shipPos,fleetPos) {
     let shiplist = document.getElementById("shiplist");
-    shiplist = shiplist.querySelectorAll("button");
-    shiplist.forEach((item) => {
-        if (item.id != "000000") {
-            let id = parseInt(item.id, 10);
-            let nation = ship_data[id].nationality;
-            let type = ship_data[id].type;
-            let rarity = ship_data[id].rarity;
-            let retro = ship_data[id].retro;
-            let name = ship_data[id][shipSelect.lang+"_name"];
-            //Turns the display on if the ship is valid
-            if (isShipSelect(nation, type, rarity, retro, name, targetSide)) {
-                item.style.display = "";
-            } else {
-                item.style.display = "none";
-            }
-        }
-    });
+    let placementData = document.getElementById("shipPlacementData");
+    shiplist.setAttribute("type","-")
+    placementData.setAttribute("targetpos",shipPos)
+    placementData.setAttribute("targetfleet",fleetPos)
+    placementData.setAttribute("targetside",targetSide)
+    let ship_type_select = document.querySelectorAll("#shiptype.container")
+    Array.from(ship_type_select[0].children).forEach(selector=>{
+        selector.classList.remove("active")
+        console.log(selector)
+    })
+
+
+
+    //disababled due to using css classes for sorting
+    // shiplist = shiplist.querySelectorAll("button");
+    // shiplist.forEach((item) => {
+    //     if (item.id != "000000") {
+    //         let id = parseInt(item.id, 10);
+    //         let nation = ship_data[id].nationality;
+    //         let type = ship_data[id].type;
+    //         let rarity = ship_data[id].rarity;
+    //         let retro = ship_data[id].retro;
+    //         let name = ship_data[id][shipSelect.lang+"_name"];
+    //         //Turns the display on if the ship is valid
+
+    //         if (isShipSelect(nation, type, rarity, retro, name, targetSide)) {
+    //             item.style.display = "";
+    //         } else {
+    //             item.style.display = "none";
+    //         }
+    //     }
+    // });
     //I prefer to allow duplicate ships
     // hideShipInFleet();
 }
@@ -147,7 +175,6 @@ function buildShipSelectOption() {
         { id: 9, cn: "維希教廷", en: "Vichya Dominion", jp: "ヴィシア", code: "MNF" },
         { id: 0, cn: "其他", en: "Other", jp: "その他", code: "" },
     ];
-    nation.forEach((item) => { item.name = `ship_nation_${item.id}`; });
 
     let type = [
         { id: 1, cn: "驅逐", en: "Destroyer", jp: "駆逐", code: "DD", pos: "front" },
@@ -167,7 +194,6 @@ function buildShipSelectOption() {
         { id: 0, cn: "其他", en: "Other", jp: "その他", code: "" },
     ];
     type.forEach((item) => {
-        item.name = `ship_type_${item.id}`;
         item.display = "false";
     });
 
@@ -178,9 +204,44 @@ function buildShipSelectOption() {
         { id: 4, cn: "超稀有", en: "Super Rare", jp: "SSR" },
         { id: 5, cn: "海上傳奇", en: "Rainbow", jp: "UR" },
     ];
-    rarity.forEach((item) => {
-        item.name = `ship_rarity_${item.id}`;
-    });
     console.timeEnd("buildShipSelectOption");
     return [nation, type, rarity];
+}
+
+function sortNationality(item){
+    let shipselect = document.getElementById("shiplist")
+    let nat = shipselect.getAttribute("nat")
+    let regex = new RegExp(`-${item.value}-`,'g')
+    if(regex.test(nat)){
+        shipselect.setAttribute("nat",nat.replace(`-${item.value}-`,'-'))
+        item.classList.remove("active")
+    }else{
+        shipselect.setAttribute("nat",(nat+`${item.value}-`))
+        item.classList.add("active")
+    }
+}
+function sortType(item){
+    let shipselect = document.getElementById("shiplist")
+    let type = shipselect.getAttribute("type")
+    let regex = new RegExp(`-${item.value}-`,'g')
+    console.log(`-${item.value}-`)
+    if(regex.test(type)){
+        shipselect.setAttribute("type",(type.replace(`-${item.value}-`,'-')))
+        item.classList.remove("active")
+    }else{
+        shipselect.setAttribute("type",(`${type}${item.value}-`))
+        item.classList.add("active")
+    }
+}
+function sortRarity(item){
+    let shipselect = document.getElementById("shiplist")
+    let rarity = shipselect.getAttribute("rarity")
+    let regex = new RegExp(`-${item.value}-`,'g')
+    if(regex.test(rarity)){
+        shipselect.setAttribute("rarity",rarity.replace(`-${item.value}-`,'-'))
+        item.classList.remove("active")
+    }else{
+        shipselect.setAttribute("rarity",(rarity+`${item.value}-`))
+        item.classList.add("active")
+    }
 }

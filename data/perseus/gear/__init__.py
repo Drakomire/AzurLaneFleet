@@ -3,5 +3,5 @@ import os
 
 script_dir = os.path.dirname(__file__)
 
-f = open(os.path.join(script_dir,"data/gear.json"), "r")
+f = open(os.path.join(script_dir,"data/gear.json"), "r", encoding='utf-8')
 gear = json.loads(f.read())

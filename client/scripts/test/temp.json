@@ -1,0 +1,1457 @@
+[
+    {
+        "name": "1",
+        "surface": {
+            "flagship": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "leftFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "rightFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardLead": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardMid": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardBack": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "name": "3",
+        "surface": {
+            "flagship": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "leftFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "rightFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardLead": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardMid": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardBack": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "name": "2",
+        "surface": {
+            "flagship": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "leftFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "rightFlank": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardLead": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardMid": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            },
+            "vanguardBack": {
+                "name": {
+                    "cn": "",
+                    "jp": "",
+                    "en": "none"
+                },
+                "stats": {
+                    "health": 0,
+                    "armor": "none",
+                    "reload": 0,
+                    "luck": 0,
+                    "firepower": 0,
+                    "torpedo": 0,
+                    "evasion": 0,
+                    "speed": 0,
+                    "antiair": 0,
+                    "aviation": 0,
+                    "oilConsumption": 0,
+                    "accuracy": 0,
+                    "antisubmarineWarfare": 0
+                },
+                "extraData": {
+                    "rarity": "",
+                    "iconSRC": "../ui/empty.png",
+                    "BorderSRC": "",
+                    "backgroundSRC": "",
+                    "type": -1,
+                    "equipBonus": {},
+                    "retroBonus": {},
+                    "level": 0,
+                    "affection": 0
+                },
+                "items": [
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    },
+                    {
+                        "id": -1,
+                        "name": {
+                            "en": "empty"
+                        },
+                        "icon": "../ui/icon_back.png",
+                        "type": -1,
+                        "property": {}
+                    }
+                ]
+            }
+        }
+    }
+]

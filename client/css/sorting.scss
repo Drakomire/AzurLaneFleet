@@ -1,0 +1,376 @@
+/* sort for type
+1 = dd
+2 = cl
+3 = ca
+18 = cb
+
+8 = ss
+17 = ssv
+
+4 = bc
+5 = bb
+6 = cvl
+7 = cv
+13 = bm
+12 = ar
+
+0 = none
+unused = 9,19,11,14,15,16
+
+
+sorting for nation
+1= eagle union
+2= royal navy
+3= sakura empire
+4= iron blood
+5= dragon empery
+6= sardegna empire
+7= northen parlement
+8= iris libre
+9= vichya dominion
+0= other
+
+sorting for rarity
+1= normal
+2= rare
+3= elite
+4= super rare
+5= ultra rare
+*/
+#shiplist:not([NS=""]){
+    @for $type from 1 through 18 {
+        @if $type == 9{}
+        @else if $type == 10{}
+        @else if $type == 11{}
+        @else if $type == 14{}
+        @else if $type == 15{}
+        @else if $type == 16{}
+        @else{
+        &[type*="-#{$type}-"]{
+            @for $nat from 0 through 9{
+                &[nat*="#{$nat}"]{
+                    @for $rarity from 1 through 5{
+                        &[rarity*="#{$rarity}"]{
+                            .NS[type="#{$type}"][nat="#{$nat}"][rarity="#{$rarity}"]{
+                                display: block;
+                            }
+                        }
+                    }
+                    &[rarity="-"]{
+                        .NS[type="#{$type}"][nat="#{$nat}"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][nat="-"]{
+                    .NS[type="#{$type}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[nat="-"][rarity="-"]{
+                .NS[type="#{$type}"]{
+                    display: block;
+                }
+            }
+        }
+    }
+    }
+}
+#shiplist[NS=""]{
+    @for $type from 1 through 18 {
+        @if $type == 9{}
+        @else if $type == 10{}
+        @else if $type == 11{}
+        @else if $type == 14{}
+        @else if $type == 15{}
+        @else if $type == 16{}
+        @else{
+        &[type*="-#{$type}-"]{
+            @for $nat from 0 through 9{
+                &[nat*="#{$nat}"]{
+                    @for $rarity from 1 through 5{
+                        &[rarity*="#{$rarity}"]{
+                            [type="#{$type}"][nat="#{$nat}"][rarity="#{$rarity}"]{
+                                display: block;
+                            }
+                        }
+                    }
+                    &[rarity="-"]{
+                        [type="#{$type}"][nat="#{$nat}"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][nat="-"]{
+                    [type="#{$type}"][rarity="#{$rarity}"]{
+                        display: block;
+                    }
+                }
+            }
+            &[nat="-"][rarity="-"]{
+                [type="#{$type}"]{
+                    display: block;
+                }
+            }
+        }
+        }
+    }
+}
+
+//vanguard initial
+#shipPlacementData[targetside="0"]~#shiplist:not([NS=""]){
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    .NS[nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                .NS[nat="#{$nat}"]{
+                    &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                .NS[rarity="#{$rarity}"]{
+                    &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        .NS{
+            &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                display: block;
+            }
+        }
+    }
+}
+#shipPlacementData[targetside="0"]~#shiplist[NS=""]{
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    [nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                [nat="#{$nat}"]{
+                    &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                [rarity="#{$rarity}"]{
+                    &[type="1"],&[type="2"],&[type="3"],&[type="18"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        [type="1"],[type="2"],[type="3"],[type="18"]{
+            display: block;
+        }
+    }
+}
+
+//backline initial
+#shipPlacementData[targetside="1"]~#shiplist:not([NS=""]){
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    .NS[nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                .NS[nat="#{$nat}"]{
+                    &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                .NS[rarity="#{$rarity}"]{
+                    &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        .NS{
+            &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                display: block;
+            }
+        }
+    }
+}
+#shipPlacementData[targetside="1"]~#shiplist[NS=""]{
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    [nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                [nat="#{$nat}"]{
+                    &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                [rarity="#{$rarity}"]{
+                    &[type="4"],&[type="5"],&[type="6"],&[type="7"],&[type="13"],&[type="12"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        [type="4"],[type="5"],[type="6"],[type="7"],[type="13"],[type="12"]{
+            display: block;
+        }
+    }
+}
+
+//submarines initial
+#shipPlacementData[targetside="2"]~#shiplist:not([NS=""]){
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    .NS[nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="8"],&[type="17"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                .NS[nat="#{$nat}"]{
+                    &[type="8"],&[type="17"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                .NS[rarity="#{$rarity}"]{
+                    &[type="8"],&[type="17"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        .NS{
+            &[type="8"],&[type="17"]{
+                display: block;
+            }
+        }
+    }
+}
+#shipPlacementData[targetside="2"]~#shiplist[NS=""]{
+    @for $nat from 0 through 9 {
+        &[nat*="-#{$nat}-"]{
+            @for $rarity from 1 through 5{
+                &[rarity*="#{$rarity}"][type="-"]{
+                    [nat="#{$nat}"][rarity="#{$rarity}"]{
+                        &[type="8"],&[type="17"]{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &[type="-"][rarity="-"]{
+                [nat="#{$nat}"]{
+                    &[type="8"],&[type="17"]{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @for $rarity from 1 through 5 {
+        &[rarity*="-#{$rarity}-"][type="-"][nat="-"]{
+                [rarity="#{$rarity}"]{
+                    &[type="8"],&[type="17"]{
+                        display: block;
+                    }
+                }
+            }
+    }
+    &[type="-"][nat="-"][rarity="-"]{
+        [type="8"],[type="17"]{
+            display: block;
+        }
+    }
+}
+.tosort{
+    display: none;
+}
+
+#shipPlacementData[targetside="0"]~.container>#shiptype{
+    [value="1"],[value="2"],[value="3"],[value="18"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData[targetside="1"]~.container>#shiptype{
+    [value="4"],[value="5"],[value="6"],[value="7"],[value="13"],[value="12"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData[targetside="2"]~.container>#shiptype{
+    [value="8"],[value="17"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData~.container>#shiptype>*{
+    display: none;
+}
+#shipPlacmentData{
+    display: none;
+}
