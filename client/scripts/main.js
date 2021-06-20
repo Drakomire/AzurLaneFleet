@@ -370,9 +370,14 @@ function setEquip(item) {
     }
     // saveCookie("fleet", dumpDataID());
 }
-
+function echoData(data){
+    console.log(JSON.parse(data))
+    let dataTarget = document.getElementById("shipPlacementData")
+    console.log(`fleet : ${dataTarget.getAttribute("targetFleet")}\n side : ${dataTarget.getAttribute("targetSide")}\n ship Position : ${dataTarget.getAttribute("targetPos")}\n ship chosen : ${JSON.parse(data)[`${lan}_name`]}`)
+}
 function setShipAndEquip(item) {
-    console.log(sorted_ship_data)
+    console.log(item.id)
+    requestShipData(item.id,echoData)
 
 
     // disabled for rewriting
