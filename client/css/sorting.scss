@@ -123,7 +123,7 @@ sorting for rarity
 }
 
 //vanguard initial
-#shiplist[targetSide="0"]:not([NS=""]){
+#shipPlacementData[targetside="0"]~#shiplist:not([NS=""]){
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -161,7 +161,7 @@ sorting for rarity
         }
     }
 }
-#shiplist[targetside="0"][NS=""]{
+#shipPlacementData[targetside="0"]~#shiplist[NS=""]{
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -199,7 +199,7 @@ sorting for rarity
 }
 
 //backline initial
-#shiplist[targetSide="1"]:not([NS=""]){
+#shipPlacementData[targetside="1"]~#shiplist:not([NS=""]){
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -237,7 +237,7 @@ sorting for rarity
         }
     }
 }
-#shiplist[targetside="1"][NS=""]{
+#shipPlacementData[targetside="1"]~#shiplist[NS=""]{
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -275,7 +275,7 @@ sorting for rarity
 }
 
 //submarines initial
-#shiplist[targetSide="2"]:not([NS=""]){
+#shipPlacementData[targetside="2"]~#shiplist:not([NS=""]){
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -313,7 +313,7 @@ sorting for rarity
         }
     }
 }
-#shiplist[targetside="2"][NS=""]{
+#shipPlacementData[targetside="2"]~#shiplist[NS=""]{
     @for $nat from 0 through 9 {
         &[nat*="-#{$nat}-"]{
             @for $rarity from 1 through 5{
@@ -350,5 +350,27 @@ sorting for rarity
     }
 }
 .tosort{
+    display: none;
+}
+
+#shipPlacementData[targetside="0"]~.container>#shiptype{
+    [value="1"],[value="2"],[value="3"],[value="18"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData[targetside="1"]~.container>#shiptype{
+    [value="4"],[value="5"],[value="6"],[value="7"],[value="13"],[value="12"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData[targetside="2"]~.container>#shiptype{
+    [value="8"],[value="17"]{
+        display: inline-block;
+    }
+}
+#shipPlacementData~.container>#shiptype>*{
+    display: none;
+}
+#shipPlacmentData{
     display: none;
 }

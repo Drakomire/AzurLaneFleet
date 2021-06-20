@@ -111,10 +111,11 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
 //turns on and off the display for a cetain ship
 function shipDisplay(targetSide,shipPos,fleetPos) {
     let shiplist = document.getElementById("shiplist");
+    let placementData = document.getElementById("shipPlacementData");
     shiplist.setAttribute("type","-")
-    shiplist.setAttribute("targetpos",shipPos)
-    shiplist.setAttribute("targetfleet",fleetPos)
-    shiplist.setAttribute("targetside",targetSide)
+    placementData.setAttribute("targetpos",shipPos)
+    placementData.setAttribute("targetfleet",fleetPos)
+    placementData.setAttribute("targetside",targetSide)
     let ship_type_select = document.querySelectorAll("#shiptype.container")
     Array.from(ship_type_select[0].children).forEach(selector=>{
         selector.classList.remove("active")

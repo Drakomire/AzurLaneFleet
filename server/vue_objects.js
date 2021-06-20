@@ -12,7 +12,7 @@ const ship_popup = new Vue({
       ships: ship_json
     },
     template: `
-    <div id="shiplist" class="container-fluid row m-0 p-0" type="-" nat="-" rarity="-" NS="" targetSide="" targetPos="" targetFleet="">
+    <div id="shiplist" class="container-fluid row m-0 p-0" type="-" nat="-" rarity="-" NS="" >
         <button class="p-1 item_container" id="000000" onclick="setShipAndEquip(this)" data-dismiss="modal">
             <div class="container-fluid p-0 box">
             <div class="icon_box row"><img class="img-fluid icon" loading="lazy" src="ui/empty.png"><img class="img-fluid bg" src=""><img class="img-fluid frame" src=""></div>

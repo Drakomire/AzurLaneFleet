@@ -1,8 +1,8 @@
 let [ship_nation, ship_type, ship_rarity] = buildShipSelectOption();
-let c_fleet = "";
-let c_side = "";
-let c_pos = "";
-let c_item = "";
+// let c_fleet = "";
+// let c_side = "";
+// let c_pos = "";
+// let c_item = "";
 let nation_list = [];
 let type_list = [];
 let rarity_list = [];
@@ -73,10 +73,10 @@ let c_side_dict = {
 let sorted_ship_data = [];
 let lan = "en";
 let sorted_equip_data = [];
-let front = [1, 2, 3, 18, 19];
-let back = [4, 5, 6, 7, 10, 12, 13];
-let submarine = [8,17]
-let c_ships = [];
+// let front = [1, 2, 3, 18, 19];
+// let back = [4, 5, 6, 7, 10, 12, 13];
+// let submarine = [8,17]
+// let c_ships = [];
 let version = 0.03;
 let eqck = false;
 let search = "";
@@ -289,49 +289,53 @@ function setCurrent(item) {
                 shipSide = (sideSeaker.indexOf(side))
             }
         })
-        if (shipSide === 0) {
-            // show front type
-            ship_type.forEach((item) => {
-                if (front.indexOf(item.id) === -1) {
-                    if (item.id === 0) {
-                        item.display = true;
-                    } else {
-                        item.display = false;
-                    }
-                } else {
-                    item.display = true;
-                }
-            });
-        } else if (shipSide === 1) {
-            // show back type
-            ship_type.forEach((item) => {
-                if (back.indexOf(item.id) === -1) {
-                    if (item.id === 0) {
-                        item.display = true;
-                    } else {
-                        item.display = false;
-                    }
-                } else {
-                    item.display = true;
-                }
-            });
-        } else if (shipSide === 2) {
-            // show submarine type
-            ship_type.forEach((item) => {
-                if (submarine.indexOf(item.id) === -1) {
-                    if (item.id === 0) {
-                        item.display = true;
-                    } else {
-                        item.display = false;
-                    }
-                } else {
-                    item.display = true;
-                }
-            });
-        }else if(shipSide<0){
-            //if shipSide was not set then dont open ships
-            return
-        }
+
+        //replaced with css 
+        //code saved in case of need
+        // if (shipSide === 0) {
+        //     // show front type
+        //     ship_type.forEach((item) => {
+        //         if (front.indexOf(item.id) === -1) {
+        //             if (item.id === 0) {
+        //                 item.display = true;
+        //             } else {
+        //                 item.display = false;
+        //             }
+        //         } else {
+        //             item.display = true;
+        //         }
+        //     });
+        // } else if (shipSide === 1) {
+        //     // show back type
+        //     ship_type.forEach((item) => {
+        //         if (back.indexOf(item.id) === -1) {
+        //             if (item.id === 0) {
+        //                 item.display = true;
+        //             } else {
+        //                 item.display = false;
+        //             }
+        //         } else {
+        //             item.display = true;
+        //         }
+        //     });
+        // } else if (shipSide === 2) {
+        //     // show submarine type
+        //     ship_type.forEach((item) => {
+        //         if (submarine.indexOf(item.id) === -1) {
+        //             if (item.id === 0) {
+        //                 item.display = true;
+        //             } else {
+        //                 item.display = false;
+        //             }
+        //         } else {
+        //             item.display = true;
+        //         }
+        //     });
+        // }else if(shipSide<0){
+        //     //if shipSide was not set then dont open ships
+        //     return
+        // }
+
         shipDisplay(shipSide,shipPos,fleetpos);
     }else if(item.classList.contains("equip")){
         let shipPos = item.parentElement.parentElement.getAttribute("pos")
@@ -368,107 +372,112 @@ function setEquip(item) {
 }
 
 function setShipAndEquip(item) {
+    console.log(sorted_ship_data)
 
-    let side = c_side_dict[c_side];
-    let shipInApp = fleet_data[c_fleet][side][c_pos];
 
-    let shipInList = sorted_ship_data.find((ele) => {
-        if (ele.id === item.id) {
-            return Object.assign({}, ele);
-        }
-    });
+    // disabled for rewriting
+    // let side = c_side_dict[c_side];
+    // let shipInApp = fleet_data[c_fleet][side][c_pos];
 
-    //Some fleets may not exist so ignore if they don't
-    try{
-      var app_item = shipInApp.item;
-    }catch{
-      return;
-    }
-    let shipCopyList = ["cn", "en", "jp", "icon", "frame", "bg", "id", "type", "rarity", "star", "base"];
-    let addquantitylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13,]; // add bb main gun
-    let parsetype = {
-        1: { cn: "驅逐砲", en: "DD Gun", jp: "駆逐砲" },
-        2: { cn: "輕巡砲", en: "CL Gun", jp: "軽巡砲" },
-        3: { cn: "重巡砲", en: "CA Gun", jp: "重巡砲" },
-        4: { cn: "戰艦砲", en: "BB Gun", jp: "戦艦砲" },
-        5: { cn: "魚雷", en: "Torpedo", jp: "魚雷" },
-        6: { cn: "防空砲", en: "Anti-Air Gun", jp: "対空砲" },
-        7: { cn: "戰鬥機", en: "Fighter", jp: "戦闘機" },
-        8: { cn: "攻擊機", en: "Torpedo Bomber", jp: "攻撃機" },
-        9: { cn: "爆擊機", en: "Dive Bomber", jp: "爆撃機" },
-        10: { cn: "設備", en: "Auxiliary", jp: "設備" },
-        11: { cn: "超巡砲", en: "CB Gun", jp: "超巡砲" },
-        12: { cn: "水上機", en: "Seaplane", jp: "水上機" },
-        13: { cn: "潛艇魚雷", en: "Submarine Torpedo", jp: "潜水艦魚雷" },
-        14: { cn: "爆雷", en: "Depth Charge", jp: "爆雷" }, //Sonar is not a unique type
-        15: { cn: "反潛機", en: "ASW Bomber", jp: "対潜機" },
-        17: { cn: "直升機", en: "ASW Helicopter", jp: "ヘリ" },
-        18: { cn: "貨物", en: "Cargo", jp: "積載" }
-    };
-    for (let index in app_item) {
-        app_item = shipInApp.item[index].property;
-        if (item.id === "000000") {
-            // empty ship/equip
-            if (index === "0") {
-                //ship
-                shipCopyList.forEach(key => app_item[key] = "");
-                app_item.icon = shipInList.icon;
-                app_item.base = [];
-            } else {
-                //equip
-                for (let key in app_item) {
-                    app_item[key] = "";
-                }
-                app_item.icon = "ui/icon_back.png";
-                app_item.fb = [];
-                app_item.type = [];
-                app_item.target = "";
-                app_item.quantity = "";
-            }
-        } else {
-            //copy ship data & equip setting
-            if (index === "0") {
-                //ship
-                shipCopyList.forEach(key => app_item[key] = shipInList[key]);
-            } else {
-                //equip
-                for (let key in app_item) {
-                    app_item[key] = "";
-                }
-                let typelist = shipInList[`e${index}`];
-                app_item.type = typelist;
-                app_item.icon = "ui/empty.png";
-                let typestr_cn = "";
-                let typestr_en = "";
-                let typestr_jp = "";
-                let itemindex = parseInt(index, 10) - 1;
-                let quantity = shipInApp.item[0].property.base[itemindex];
+    // let shipInList = sorted_ship_data.find((ele) => {
+    //     if (ele.id === item.id) {
+    //         return Object.assign({}, ele);
+    //     }
+    // });
 
-                if (typelist.some(eqtype => addquantitylist.indexOf(eqtype) != -1)) {
-                    if (quantity != undefined) {
-                        app_item.quantity = quantity;
-                    }
-                }
+    // //Some fleets may not exist so ignore if they don't
+    // try{
+    //   var app_item = shipInApp.item;
+    // }catch{
+    //   return;
+    // }
+    // let shipCopyList = ["cn", "en", "jp", "icon", "frame", "bg", "id", "type", "rarity", "star", "base"];
+    // let addquantitylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13,]; // add bb main gun
+    // let parsetype = {
+    //     1: { cn: "驅逐砲", en: "DD Gun", jp: "駆逐砲" },
+    //     2: { cn: "輕巡砲", en: "CL Gun", jp: "軽巡砲" },
+    //     3: { cn: "重巡砲", en: "CA Gun", jp: "重巡砲" },
+    //     4: { cn: "戰艦砲", en: "BB Gun", jp: "戦艦砲" },
+    //     5: { cn: "魚雷", en: "Torpedo", jp: "魚雷" },
+    //     6: { cn: "防空砲", en: "Anti-Air Gun", jp: "対空砲" },
+    //     7: { cn: "戰鬥機", en: "Fighter", jp: "戦闘機" },
+    //     8: { cn: "攻擊機", en: "Torpedo Bomber", jp: "攻撃機" },
+    //     9: { cn: "爆擊機", en: "Dive Bomber", jp: "爆撃機" },
+    //     10: { cn: "設備", en: "Auxiliary", jp: "設備" },
+    //     11: { cn: "超巡砲", en: "CB Gun", jp: "超巡砲" },
+    //     12: { cn: "水上機", en: "Seaplane", jp: "水上機" },
+    //     13: { cn: "潛艇魚雷", en: "Submarine Torpedo", jp: "潜水艦魚雷" },
+    //     14: { cn: "爆雷", en: "Depth Charge", jp: "爆雷" }, //Sonar is not a unique type
+    //     15: { cn: "反潛機", en: "ASW Bomber", jp: "対潜機" },
+    //     17: { cn: "直升機", en: "ASW Helicopter", jp: "ヘリ" },
+    //     18: { cn: "貨物", en: "Cargo", jp: "積載" }
+    // };
+    // for (let index in app_item) {
+    //     app_item = shipInApp.item[index].property;
+    //     if (item.id === "000000") {
+    //         // empty ship/equip
+    //         if (index === "0") {
+    //             //ship
+    //             shipCopyList.forEach(key => app_item[key] = "");
+    //             app_item.icon = shipInList.icon;
+    //             app_item.base = [];
+    //         } else {
+    //             //equip
+    //             for (let key in app_item) {
+    //                 app_item[key] = "";
+    //             }
+    //             app_item.icon = "ui/icon_back.png";
+    //             app_item.fb = [];
+    //             app_item.type = [];
+    //             app_item.target = "";
+    //             app_item.quantity = "";
+    //         }
+    //     } else {
+    //         //copy ship data & equip setting
+    //         if (index === "0") {
+    //             //ship
+    //             shipCopyList.forEach(key => app_item[key] = shipInList[key]);
+    //         } else {
+    //             //equip
+    //             for (let key in app_item) {
+    //                 app_item[key] = "";
+    //             }
+    //             let typelist = shipInList[`e${index}`];
+    //             app_item.type = typelist;
+    //             app_item.icon = "ui/empty.png";
+    //             let typestr_cn = "";
+    //             let typestr_en = "";
+    //             let typestr_jp = "";
+    //             let itemindex = parseInt(index, 10) - 1;
+    //             let quantity = shipInApp.item[0].property.base[itemindex];
 
-                // go through all type in ship's equip type list
-                typelist.forEach((type, index) => {
-                    typestr_cn += parsetype[type].cn;
-                    typestr_en += parsetype[type].en;
-                    typestr_jp += parsetype[type].jp;
-                    if (typelist.length > 1 && index < typelist.length - 1) {
-                        typestr_cn += "/";
-                        typestr_en += "/";
-                        typestr_jp += "/";
-                    }
-                });
+    //             if (typelist.some(eqtype => addquantitylist.indexOf(eqtype) != -1)) {
+    //                 if (quantity != undefined) {
+    //                     app_item.quantity = quantity;
+    //                 }
+    //             }
 
-                app_item.cn = app_item.type_cn = typestr_cn;
-                app_item.en = app_item.type_en = typestr_en;
-                app_item.jp = app_item.type_jp = typestr_jp;
-                app_item.target = "#equipselect";
-            }
-        }
-    }
+    //             // go through all type in ship's equip type list
+    //             typelist.forEach((type, index) => {
+    //                 typestr_cn += parsetype[type].cn;
+    //                 typestr_en += parsetype[type].en;
+    //                 typestr_jp += parsetype[type].jp;
+    //                 if (typelist.length > 1 && index < typelist.length - 1) {
+    //                     typestr_cn += "/";
+    //                     typestr_en += "/";
+    //                     typestr_jp += "/";
+    //                 }
+    //             });
+
+    //             app_item.cn = app_item.type_cn = typestr_cn;
+    //             app_item.en = app_item.type_en = typestr_en;
+    //             app_item.jp = app_item.type_jp = typestr_jp;
+    //             app_item.target = "#equipselect";
+    //         }
+    //     }
+    // }
+
+
     // saveCookie("fleet", dumpDataID());
 }
 
