@@ -21,8 +21,9 @@ module.exports = (app) => {
         res.send(key)
       
     });
-    app.post('/fleet_url_load',async (req,res) => {
-        url = req.body
+    app.get('/fleet_url_load',async (req,res) => {
+        url = req.query.url
+        console.log(url)
         let data = await global.database.get(url);
         res.send(JSON.stringify(data))
     });

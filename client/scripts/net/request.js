@@ -30,3 +30,15 @@ function requestFleetUrl(callback){
         fleet : "FLEET EMPTY FOR NOW"
     }));
 }
+
+function requestFleetData(urlData,callback){
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+      if (request.readyState == 4 && request.status == 200)
+      {
+          callback(request.responseText);
+      }
+  }; 
+  request.open( "GET", url + "/fleet_url_load?url="+urlData, true );
+  request.send(null);
+}
