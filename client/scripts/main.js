@@ -368,6 +368,7 @@ function setEquip(item) {
 }
 
 function setShipAndEquip(item) {
+
     let side = c_side_dict[c_side];
     let shipInApp = fleet_data[c_fleet][side][c_pos];
 
@@ -474,13 +475,11 @@ function setShipAndEquip(item) {
 //Creates a sharable URL
 function copyData() {
   if (JSON.stringify(fleet_data) != last_saved_fleet){
-    client.send(JSON.stringify({
-      type: "Fleet URL Request",
-      payload: dumpDataID(),
-      token: TOKEN
-    }));
-    // let textbox = document.getElementById("fleetdata");
-    // textbox.value = "set=";
+    let textbox = document.getElementById("fleetdata");
+    requestFleetUrl((res) => {
+        textbox.value = "https://azurfleetmaker.com/?fleet="+res
+    });
+
     last_saved_fleet = JSON.stringify(fleet_data);
   }else{
       let textbox = document.getElementById("fleetdata");

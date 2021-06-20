@@ -2,14 +2,11 @@ const fs = require('fs');
 const express = require('express');
 const ws = require('ws')
 let ejs = require('ejs')
-const path = require('path')
-
 const {Database} = require('./server/database.js')
-const {packetHandler} = require('./server/packet_handler.js')
+const {packetHandler} = require('./server/packet_handler.deprecated.js')
 const {imageGenerator} = require('./server/image_generator.js')
-const {TOKEN} = require('./server/packet_handler.js')
+const {TOKEN} = require('./server/packet_handler.deprecated.js')
 const html = require('./server/vue_objects.js')
-const { req } = require('express')
 
 ;(async () => {
   global.database = await Database.build();
@@ -21,6 +18,12 @@ ship_json = JSON.parse(fs.readFileSync('./data/ships.json').toString())
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+'/client'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+require('./server/request/index.js')(app)
+
+//Here we are configuring express to use body-parser as middle-ware.
 app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
 
@@ -63,24 +66,3 @@ console.log("Server is up");
 // https://www.npmjs.com/package/ws#multiple-servers-sharing-a-single-https-server
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT);
-server.on('upgrade', (req, socket, head) => {
-  wsServer.handleUpgrade(req, socket, head, socket => {
-    wsServer.emit('connection', socket, req);
-  });
-});
-
-// Set up a headless websocket server that prints any
-// events that come in.
-const wsServer = new ws.Server({ server: app });
-wsServer.on('connection', socket => {
-    socket.send(JSON.stringify({
-      type: "TOKEN",
-      payload: TOKEN
-    }));
-  socket.on('message', async message => {
-    packetHandler(socket,message);
-
-
-
-  });
-});

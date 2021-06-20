@@ -64,15 +64,38 @@ function checksetting(key, value) {
 //Checks if a ship is selected
 function isShipSelect(nation, type, rarity, retro, name, targetSide) {
 
-    let indicator_nation = false;
-    let indicator_type = false;
-    let indicator_rarity = false;
     let other_nation = [98, 101, 103, 104, 105, 106, 107, 108, 109, 110];
     let other_front = [19];
     let other_back = [10];
 
     let lang = shipSelect.lang;
     let s = search;
+
+    //Sort ships by rarity
+    if (!shipsetting.rarity.includes(rarity) && shipsetting.rarity.length != 0){
+        return false;
+    }
+
+    // //Sort ships by hull class
+    // if (shipsetting.front.includes(type) && shipsetting.front.length != 0){
+    //     return false;
+    // }
+
+    //Sort ships by nation
+    if (shipsetting.nation.includes(nation) && shipsetting.nation.length != 0){
+        return false;
+    }
+
+    //Sort ship list by hull class
+    if (targetSide === 0 && !front.includes(type)) {
+        return false;
+    }
+    if (targetSide === 1 && !back.includes(type)) {
+        return false;
+    }
+    if (targetSide === 2 && !submarine.includes(type)) {
+        return false;
+    }
 
     //Regex search to find the characters
     search = search.replace(/[^A-Za-z]/gi, '.')
@@ -81,58 +104,8 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
       return false;
     }
 
-    //Sort ship list by hull class
-    if (c_side === "0" && !front.includes(type)) {
-        return false;
-    }
-    if (c_side === "1" && !back.includes(type)) {
-        return false;
-    }
-    if (c_side === "2" && !submarine.includes(type)) {
-        return false;
-    }
 
-    //Not sure what this one is
-    if (c_side === "0") {
-        if (shipsetting.front.includes(type)|| shipsetting.front.length === 0) {
-            indicator_type = true;
-        } else if (shipsetting.front.includes(0)&& other_front.includes(type)) {
-            indicator_type = true;
-        }
-    }
-    if (c_side === "1") {
-        if (shipsetting.back.indexOf(type) != -1 || shipsetting.back.length === 0) {
-            indicator_type = true;
-        } else if (shipsetting.back.indexOf(0) != -1 && other_back.indexOf(type) != -1) {
-            indicator_type = true;
-        }
-    }
-    if (c_side === "2") {
-        if (shipsetting.submarine.indexOf(type) != -1 || shipsetting.submarine.length === 0) {
-            indicator_type = true;
-        } else if (shipsetting.submarine.indexOf(0) != -1 && other_back.indexOf(type) != -1) {
-            indicator_type = true;
-        }
-    }
-
-    if (shipsetting.nation.indexOf(nation) != -1 || shipsetting.nation.length === 0) {
-        indicator_nation = true;
-    }
-    if (shipsetting.nation.indexOf(0) != -1 && other_nation.indexOf(nation) != -1) {
-        indicator_nation = true;
-    }
-    if (shipsetting.rarity.indexOf(rarity) != -1 || shipsetting.rarity.length === 0) {
-        indicator_rarity = true;
-    }
-    if (indicator_nation && indicator_type && indicator_rarity) {
-        if (retrofit && retro === 1) {
-            return false;
-        } else {
-            return true;
-        }
-    } else {
-        return false;
-    }
+    return true
 }
 
 //turns on and off the display for a cetain ship
@@ -171,73 +144,6 @@ function shipDisplay(targetSide,shipPos,fleetPos) {
     // });
     //I prefer to allow duplicate ships
     // hideShipInFleet();
-}
-
-//Adds the ships from data/ship_data.js to the pop up menu.
-function createAllShip() {
-    // console.time("createAllShip");
-    // sorted_ship_data.forEach((ship, index, arr) => {
-    //     setTimeout(() => {
-    //         let pos = document.getElementById("shiplist");
-    //         let icon_box = document.createElement("div");
-    //         $(icon_box).attr({
-    //             class: "icon_box row",
-    //         });
-
-    //         let icon = document.createElement("img");
-    //         $(icon).attr({
-    //             class: "img-fluid icon",
-    //             loading: "lazy",
-    //             src: ship.icon,
-    //         });
-
-    //         let bg = document.createElement("img");
-    //         $(bg).attr({
-    //             class: "img-fluid bg",
-    //             src: ship.bg,
-    //         });
-
-    //         let frame = document.createElement("img");
-    //         $(frame).attr({
-    //             class: "img-fluid frame",
-    //             src: ship.frame,
-    //         });
-
-    //         icon_box.append(icon, bg, frame);
-    //         //-----------------------------------------------
-    //         let box = document.createElement("div");
-    //         $(box).attr({
-    //             class: "container-fluid p-0 box",
-    //         });
-
-    //         let name = document.createElement("span");
-    //         $(name).attr({
-    //             name: "name",
-    //             cn: ship.cn,
-    //             en: ship.en,
-    //             jp: ship.jp,
-    //             class: "justify-content-center item_name",
-    //         });
-    //         name.textContent = ship[lan];
-
-    //         box.append(icon_box, name);
-    //         //-----------------------------------------------
-    //         let newship = document.createElement("button");
-    //         $(newship).attr({
-    //             class: "p-1 item_container",
-    //             id: ship.id,
-    //             onclick: "setShipAndEquip(this)",
-    //             "data-dismiss": "modal",
-    //         });
-    //         newship.append(box);
-    //         pos.append(newship);
-    //         //-----------------------------------------------
-    //         if (index === arr.length - 1) {
-    //             console.timeEnd("createAllShip");
-    //             createAllEquip();
-    //         }
-    //     });
-    // });
 }
 
 //Adds the header options to the pop up menu. The search bar is NOT included here.

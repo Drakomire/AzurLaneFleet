@@ -83,8 +83,6 @@ f = open("../client/data/ship_data.js","w", encoding='utf-8')
 f.write("var ship_data = "+json.dumps(ship_json,ensure_ascii=False,indent=' '))
 f.close()
 
-
-
 gear_vue = []
 gear_json = {}
 
