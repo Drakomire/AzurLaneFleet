@@ -214,7 +214,7 @@ Vue.component("ship-nation-button", {
         <button
             type="button"
             class="btn btn-outline-light btn-sm"
-            onclick="updateSetting(this)"
+            onclick="sortNationality(this)"
         ></button>
     `
 });
@@ -224,7 +224,7 @@ Vue.component("ship-type-button", {
         <button
             type="button"
             class="btn btn-outline-light btn-sm"
-            onclick="updateSetting(this)"
+            onclick="sortType(this)"
         ></button>
     `
 });
@@ -234,7 +234,7 @@ Vue.component("ship-rarity-button", {
         <button
             type="button"
             class="btn btn-outline-light btn-sm"
-            onclick="updateSetting(this)"
+            onclick="sortRarity(this)"
         ></button>
     `
 });
