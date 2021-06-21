@@ -376,7 +376,7 @@ function setShipAndEquip(item) {
 
     //Example of how to use the Ship Class
     Ship.build(item.id,{},ship => { //"ship" is the class
-        //Returns the stats
+        //Checks if the ship has a retrofit
         if (ship.has_retrofit)
             ship.retrofit_nodes_completed = ship.retrofit_node_letters
         //Returns the image
