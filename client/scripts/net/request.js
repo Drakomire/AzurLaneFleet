@@ -9,7 +9,7 @@ function requestShipData(id,callback){
     request.onreadystatechange = () => {
         if (request.readyState == 4 && request.status == 200)
         {
-            callback(request.responseText);
+            callback(JSON.parse(request.responseText));
         }
     }; 
     request.open( "GET", url + "/ship_data?id="+id, true );

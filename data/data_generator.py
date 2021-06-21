@@ -9,6 +9,23 @@ import json
 
 api = perseus.Perseus()
 
+STAT_KEYWORDS = {
+  "durability": "hp",
+  "cannon" : "fp",
+  "antiaircraft" : "aa",
+  "torpedo" : "trp",
+  "air" : "avi",
+  "reload" : "rld",
+  "dodge" : "eva",
+  "hit" : "acc"
+}
+
+
+#Open the retrofit file
+f = open("perseus/ships/data/retrofit.json", "r", encoding='utf-8')
+retrofit = json.loads(f.read())
+f.close()
+
 ship_vue = []
 ship_json = {}
 for ship in api.getAllShips():
@@ -31,45 +48,34 @@ for ship in api.getAllShips():
 
         }]
 
-        ship_json[ship.id] = {
-		"nationality": ship.ship["nationality"],
-		"type": ship.hull_id,
-		"base_list": [
-			1,
-			1,
-			1
-		],
-		"min_efficiency_list": [
-			100,
-			100,
-			100
-		],
-		"efficiency_list": [
-			100,
-			100,
-			100
-		],
-		"id": int(ship.id),
-		"skin_id": int(ship.id),
-		"star": ship.ship["data"][str(int(ship.getRetrofitShipID())*10+1)]["stars"],
-		"rarity": ship_retrofit_rarity,
-		"retro": 0,
-		"uni_id": ship.id,
-		"painting": ship_retrofit_image,
-		"star_string": "★★★★",
-		"rarity_string": "SR",
-		"jp_name": ship.name_jp,
-		"en_name": ship.name_en,
-		"cn_name": ship.name_cn,
-		"stats": ship.stats,
-		"equip_1": ship.slots[0],
-		"equip_2": ship.slots[1],
-		"equip_3": ship.slots[2],
-		"equip_4": ship.slots[3],
-		"equip_5": ship.slots[4]
-        }
+        ship_json[ship.id] = ship.ship
+        ship_json[ship.id]["data"] = {(int(k)%10-1 if count < 4 else "retrofit"):v for count,(k,v) in enumerate(ship.ship["data"].items())}
+
+        if ("retrofit" in ship_json[ship.id]):
+            for node in ship_json[ship.id]["retrofit"]:
+                node["max_level"] = retrofit[str(node["node"])]["max_level"]
+                node["use_ship"] = retrofit[str(node["node"])]["use_ship"]
+                node["gear_score"] = retrofit[str(node["node"])]["gear_score"]
+                node["skin_id"] = retrofit[str(node["node"])]["skin_id"]
+                node["effect"] = retrofit[str(node["node"])]["effect"]
+
+                for effect in node["effect"]:
+                    key = list(effect.keys())
+                    key = key[0]
+                    stat_key = key
+                    if key in STAT_KEYWORDS:
+                        stat_key = STAT_KEYWORDS[key]
+                    effect[stat_key] = effect[key]
+                    if (stat_key != key): del effect[key]
+
+                node["ship_id"] = retrofit[str(node["node"])]["ship_id"]
+                node["name"] = retrofit[str(node["node"])]["name"]
+                node["condition_id"] = retrofit[str(node["node"])]["condition_id"]
+                node["star_limit"] = retrofit[str(node["node"])]["star_limit"]
+                node["level_limit"] = retrofit[str(node["node"])]["level_limit"]
 
     except IndexError:
+        print(ship.name)
         continue
 
 ship_vue.sort(key=lambda x: x["name_en"])
@@ -79,8 +85,8 @@ f = open("ships.json","w", encoding='utf-8')
 f.write(json.dumps(ship_vue,ensure_ascii=False))
 f.close()
 
-f = open("../client/data/ship_data.js","w", encoding='utf-8')
-f.write("var ship_data = "+json.dumps(ship_json,ensure_ascii=False,indent=' '))
+f = open("ship_data.json","w", encoding='utf-8')
+f.write(json.dumps(ship_json,ensure_ascii=False))
 f.close()
 
 gear_vue = []

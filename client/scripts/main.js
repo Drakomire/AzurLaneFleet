@@ -374,6 +374,14 @@ function setEquip(item) {
 function setShipAndEquip(item) {
     console.log(sorted_ship_data)
 
+    //Example of how to use the Ship Class
+    Ship.build(item.id,{},ship => { //"ship" is the class
+        //Returns the stats
+        if (ship.has_retrofit)
+            ship.retrofit_nodes_completed = ship.retrofit_node_letters
+        //Returns the image
+        console.log(ship.thumbnail)
+    })
 
     // disabled for rewriting
     // let side = c_side_dict[c_side];
