@@ -1,5 +1,4 @@
 //refreshes the popup menu when a letter changes in the search bar
-//I wrote this one so I hope its good
 function updateSearch(){
   search = document.getElementById("ship search bar").value;
   let regx = new RegExp(`${search}`,'gi')
@@ -123,6 +122,9 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
 function shipDisplay(targetSide,shipPos,fleetPos) {
     let shiplist = document.getElementById("shiplist");
     let placementData = document.getElementById("shipPlacementData");
+    //The searchbar shouldn't stay when you search for a new ship
+    document.getElementById("ship search bar").value = ""
+    updateSearch()
     shiplist.setAttribute("type","-")
     placementData.setAttribute("targetpos",shipPos)
     placementData.setAttribute("targetfleet",fleetPos)

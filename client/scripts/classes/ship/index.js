@@ -22,6 +22,7 @@ class Ship{
         this.oathed = params.oathed || false
         this.retrofit_nodes_completed = params.retrofit_nodes_completed || []
         this.equips = params.equips || [defaultEquip,defaultEquip,defaultEquip,defaultEquip,defaultEquip]
+        this.empty = id == 0
     }
 
     static build(id,params,callback){
@@ -139,9 +140,11 @@ class Ship{
         }
     }
     get background(){
+        if (!this.empty)
         return 'ui/bg'+this.rarity+'.png'
     }
     get border(){
+        if (!this.empty)
         return 'ui/frame_'+this.rarity+'.png'
     }
 }

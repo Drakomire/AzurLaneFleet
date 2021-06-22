@@ -25,7 +25,7 @@ Vue.component("fleet-container", {
                 ></fleet-header-buttons>
 
             </div>
-            <div class="shipGroup surface" v-if="fleet.surface">
+            <div class="shipGroup surface" type="surface" v-if="fleet.surface">
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.surface"
                     v-bind:ship="ship"
@@ -34,7 +34,7 @@ Vue.component("fleet-container", {
                 ></fleet-shipWrap>
             </div>
             
-            <div class="shipGroup sub" v-if="fleet.subs"> 
+            <div class="shipGroup sub" type="subs" v-if="fleet.subs"> 
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.subs"
                     v-bind:ship="ship"

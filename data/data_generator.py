@@ -84,6 +84,11 @@ for ship in api.getAllShips():
         print(ship.name)
         continue
 
+#Empty ship is used when no ship is in use
+f = open("empty_ship.json", "r", encoding='utf-8')
+ship_json["0"] = json.loads(f.read())
+f.close()
+
 ship_vue.sort(key=lambda x: x["name_en"])
 ship_vue.sort(key=lambda x: x["rarity"], reverse=True)
 

@@ -10,53 +10,11 @@ let retrofit = true;
 
 //Global variables to track where the user clicked. Best way I could think of doing this because there isn't a way to change setShipAndEquip()'s parameters
 var fleet_pos = 0
-var ship_pos = 0
-
-//Empty ship data variable for fleet creation
-// var ship_data = [];
-// variables for default ship and equip
-// const defaultShip ={
-//     "name":{
-//         "cn":"",
-//         "jp":"",
-//         "en":"none"
-//     },
-//     "stats":{
-//         "health": 0,
-//         "armor": "none",
-//         "reload": 0,
-//         "luck": 0,
-//         "firepower": 0,
-//         "torpedo": 0,
-//         "evasion": 0,
-//         "speed": 0,
-//         "antiair": 0,
-//         "aviation": 0,
-//         "oilConsumption": 0,
-//         "accuracy": 0,
-//         "antisubmarineWarfare": 0
-//     },
-//     "extraData":{
-//         "rarity":"",
-//         "iconSRC":"../ui/empty.png",
-//         "BorderSRC":"",
-//         "backgroundSRC":"",
-//         "type":-1,
-//         "equipBonus":{},
-//         "retroBonus":{},
-//         "level":0,
-//         "affection":0.00
-//     },
-//     "items":[{
-//     },{
-//     },{
-//     },{
-//     },{
-//     }]
-// }
+var ship_pos = ""
+var group = ""
 
 var defaultShip = null
-Ship.build(10000,{limit_break:0},ship => { //"ship" is the class
+Ship.build(0,{},ship => { //"ship" is the class
     //Checks if the ship has a retrofit?
     defaultShip = ship
     fleet_data.push(newFleet(true));
@@ -315,6 +273,7 @@ function hideShipInFleet() {
 function setCurrent(item) {
     if(item.classList.contains("ship")){
         ship_pos = item.parentElement.getAttribute("pos")
+        group = item.parentElement.parentElement.getAttribute("type")
         fleet_pos = item.parentElement.parentElement.parentElement.id
         let sideSeaker = [["vanguardLead","vanguardMid","vanguardBack"], ["flagship","leftFlank","rightFlank"], ["flagSub","leftSub","rightSub"]]
         let shipSide = -1
@@ -409,6 +368,7 @@ function setShipAndEquip(item) {
     //Stuff runs asynchronously so it needs to use seperate variables. If the original changes while stuff is running, thigs will break.
     let ship_pos_temp = ship_pos
     let fleet_pos_temp = fleet_pos
+    let group_temp = group
 
     //Example of how to use the Ship Class
     Ship.build(parseInt(item.id),{},ship => { //"ship" is the class
@@ -417,7 +377,7 @@ function setShipAndEquip(item) {
             ship.retrofit_nodes_completed = ship.retrofit_node_letters
 
         //Assign the ship to a fleet
-        fleet_data[fleet_pos_temp]["surface"][ship_pos_temp] = ship
+        fleet_data[fleet_pos_temp][group_temp][ship_pos_temp] = ship
     })
 
     // disabled for rewriting
