@@ -74,6 +74,12 @@ for ship in api.getAllShips():
                 node["star_limit"] = retrofit[str(node["node"])]["star_limit"]
                 node["level_limit"] = retrofit[str(node["node"])]["level_limit"]
 
+        for count,skin in enumerate(ship_json[ship.id]["skin_thumbnails"]):
+            skin_url_split = skin.split("/")
+            skin_url_split[len(skin_url_split)-1] = skin_url_split[len(skin_url_split)-1].lower()
+            skin = '/'.join(skin_url_split)
+            ship_json[ship.id]["skin_thumbnails"][count] = skin
+
     except IndexError:
         print(ship.name)
         continue

@@ -3,7 +3,6 @@
 function updateSearch(){
   search = document.getElementById("ship search bar").value;
   let regx = new RegExp(`${search}`,'gi')
-  console.log("hello")
   document.getElementById("shiplist").setAttribute("NS",search)
   Array.from(document.getElementById("shiplist").children).forEach(ship=>{
     if(search ===""){
@@ -11,7 +10,6 @@ function updateSearch(){
     }
     else if((ship.children[0].children[1].getAttribute("en")).match(regx)){
         ship.classList.add("NS")
-        console.log(ship.children[0].children[1].getAttribute("en"))
     }else{
         ship.classList.remove("NS")
     }
@@ -132,7 +130,6 @@ function shipDisplay(targetSide,shipPos,fleetPos) {
     let ship_type_select = document.querySelectorAll("#shiptype.container")
     Array.from(ship_type_select[0].children).forEach(selector=>{
         selector.classList.remove("active")
-        console.log(selector)
     })
 
 
@@ -224,7 +221,6 @@ function sortType(item){
     let shipselect = document.getElementById("shiplist")
     let type = shipselect.getAttribute("type")
     let regex = new RegExp(`-${item.value}-`,'g')
-    console.log(`-${item.value}-`)
     if(regex.test(type)){
         shipselect.setAttribute("type",(type.replace(`-${item.value}-`,'-')))
         item.classList.remove("active")

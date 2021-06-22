@@ -36,7 +36,7 @@ function calculateSingleStat(ship,stat){
 
     value = Math.floor(value*affinity_multiplier)
 
-    retro_stats = getRetrofitStatBoost(ship)
+    retro_stats = ship.retrofit_stats
     if (retro_stats[stat] !== undefined){
         value += retro_stats[stat]
     }
@@ -72,29 +72,5 @@ function calculateStats(ship){
     if ([8,17].includes(ship.hull_id)){
         out.oxy = ship_data[ship.id]["data"][ship.index]["stats"]["oxy"]
     }
-    return out
-}
-
-
-function getRetrofitStatBoost(ship){
-    out = {}
-    for (node of ship.retrofit_nodes){
-        if (ship.retrofit_nodes_completed.includes(node.letter)){
-            for (effect of node.effect){
-                key = Object.keys(effect)[0]
-                if (out[key] === undefined){
-                    out[key] = effect[key]
-                }else{
-                    out[key] += effect[key]
-                }
-            }
-        }
-    }
-
-    //Round to place before floating point error is an issue to make sure everything displays cleanly
-    for (key in out){
-        out[key] = Math.round(out[key] * 10000) / 10000
-    }
-
     return out
 }

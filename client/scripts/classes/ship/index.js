@@ -1,16 +1,27 @@
 //Ship data is not stored in the class to save space
 var ship_data={}
 
+const defaultEquip ={
+    "id":-1,
+    "name":{
+        "en":"empty",
+    },
+    "icon":"../ui/icon_back.png",
+    "type":-1,
+    "property":{},
+}
+
 class Ship{
     constructor(id,params){
         //Constructor does not require any stats to avoid async problems
         this.id = id
-        this.limit_break = params.limit_break || 3
+        //Adding and subtracting one allows for 0 as a valid value
+        this.limit_break = (params.limit_break+1 || 3+1)-1
         this.level = params.level || 120
-        this.affinity = params.affinity || 100
+        this.affinity = (params.affinity+1 || 100+1) -1
         this.oathed = params.oathed || false
         this.retrofit_nodes_completed = params.retrofit_nodes_completed || []
-        this.equips = params.equips || [undefined,undefined,undefined,undefined,undefined]
+        this.equips = params.equips || [defaultEquip,defaultEquip,defaultEquip,defaultEquip,defaultEquip]
     }
 
     static build(id,params,callback){
@@ -28,11 +39,14 @@ class Ship{
         }
     }
 
-    get names(){
+    get name(){
         return ship_data[this.id].name
     }
     get slots(){
         return ship_data[this.id].slots
+    }
+    get rarity(){
+        return ship_data[this.id]["data"][this.index].rarity-1+this.is_retrofit
     }
     get base_list(){
         return ship_data[this.id]["data"][this.index].base_list
@@ -52,10 +66,35 @@ class Ship{
     get stats(){
         return calculateStats(this)
     }
+    get retrofit_stats(){
+        let out = {}
+        for (let node of this.retrofit_nodes){
+            if (this.retrofit_nodes_completed.includes(node.letter)){
+                for (let effect of node.effect){
+                    let key = Object.keys(effect)[0]
+                    if (out[key] === undefined){
+                        out[key] = effect[key]
+                    }else{
+                        out[key] += effect[key]
+                    }
+                }
+            }
+        }
+    
+        //Round to place before floating point error is an issue to make sure everything displays cleanly
+        for (let key in out){
+            out[key] = Math.round(out[key] * 10000) / 10000
+        }
+    
+        return out
+    }
+    get equip_stats(){
+        return {}
+    }
     get has_retrofit(){
         return ship_data[this.id].retrofit !== undefined
     }
-    get retrofit(){
+    get is_retrofit(){
         if (!this.has_retrofit) return false
         for (let node of ship_data[this.id].retrofit) {
             //Modernization nodes have a skin ID
@@ -66,8 +105,9 @@ class Ship{
         return false
     }
     get index(){
-        if (this.retrofit){
-            return "retrofit"
+        if (this.is_retrofit){
+            //Only some retrofitted ships have the "retrofit" section
+            return ship_data[this.id]["data"]["retrofit"]? "retrofit":`${this.limit_break}`
         }else{
             return `${this.limit_break}`
         }
@@ -89,11 +129,19 @@ class Ship{
         });
         return out
     }
+
+    //Ship images
     get thumbnail(){
-        if (this.retrofit){
+        if (this.is_retrofit){
             return ship_data[this.id].skin_thumbnails[ship_data[this.id].skin_thumbnails.length-1]
         }else{
             return ship_data[this.id].skin_thumbnails[0]
         }
+    }
+    get background(){
+        return 'ui/bg'+this.rarity+'.png'
+    }
+    get border(){
+        return 'ui/frame_'+this.rarity+'.png'
     }
 }

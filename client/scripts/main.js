@@ -7,61 +7,101 @@ let nation_list = [];
 let type_list = [];
 let rarity_list = [];
 let retrofit = true;
+
+//Global variables to track where the user clicked. Best way I could think of doing this because there isn't a way to change setShipAndEquip()'s parameters
+var fleet_pos = 0
+var ship_pos = 0
+
 //Empty ship data variable for fleet creation
 // var ship_data = [];
 // variables for default ship and equip
-const defaultShip ={
-    "name":{
-        "cn":"",
-        "jp":"",
-        "en":"none"
-    },
-    "stats":{
-        "health": 0,
-        "armor": "none",
-        "reload": 0,
-        "luck": 0,
-        "firepower": 0,
-        "torpedo": 0,
-        "evasion": 0,
-        "speed": 0,
-        "antiair": 0,
-        "aviation": 0,
-        "oilConsumption": 0,
-        "accuracy": 0,
-        "antisubmarineWarfare": 0
-    },
-    "extraData":{
-        "rarity":"",
-        "iconSRC":"../ui/empty.png",
-        "BorderSRC":"",
-        "backgroundSRC":"",
-        "type":-1,
-        "equipBonus":{},
-        "retroBonus":{},
-        "level":0,
-        "affection":0.00
-    },
-    "items":[{
-    },{
-    },{
-    },{
-    },{
-    }]
-}
-const defaultEquip ={
-    "id":-1,
-    "name":{
-        "en":"empty",
-    },
-    "icon":"../ui/icon_back.png",
-    "type":-1,
-    "property":{},
+// const defaultShip ={
+//     "name":{
+//         "cn":"",
+//         "jp":"",
+//         "en":"none"
+//     },
+//     "stats":{
+//         "health": 0,
+//         "armor": "none",
+//         "reload": 0,
+//         "luck": 0,
+//         "firepower": 0,
+//         "torpedo": 0,
+//         "evasion": 0,
+//         "speed": 0,
+//         "antiair": 0,
+//         "aviation": 0,
+//         "oilConsumption": 0,
+//         "accuracy": 0,
+//         "antisubmarineWarfare": 0
+//     },
+//     "extraData":{
+//         "rarity":"",
+//         "iconSRC":"../ui/empty.png",
+//         "BorderSRC":"",
+//         "backgroundSRC":"",
+//         "type":-1,
+//         "equipBonus":{},
+//         "retroBonus":{},
+//         "level":0,
+//         "affection":0.00
+//     },
+//     "items":[{
+//     },{
+//     },{
+//     },{
+//     },{
+//     }]
+// }
+
+var defaultShip = null
+Ship.build(10000,{limit_break:0},ship => { //"ship" is the class
+    //Checks if the ship has a retrofit?
+    defaultShip = ship
+    fleet_data.push(newFleet(true));
+})
+
+// new fleet creation code for testing
+function newFleet(type,fleets=[]) {
+    let fleet = {
+        "name":`${fleets.length+1}`,
+    }
+    if(type==true){
+        fleet.surface = {
+            flagship:defaultShip,
+            leftFlank:defaultShip,
+            rightFlank:defaultShip,
+            vanguardLead:defaultShip,
+            vanguardMid:defaultShip,
+            vanguardBack:defaultShip,
+        }
+    }else if(type==false){
+        fleet.subs = {
+            flagSub:defaultShip,
+            leftSub:defaultShip,
+            rightSub:defaultShip,
+        }
+    }
+
+    // for(let prop in fleet){
+    //     if(typeof fleet[prop] =="object"){
+    //         console.log(prop)
+    //         for(let ship in fleet[prop]){
+    //             for(let index=0;index<fleet[prop][ship].items.length;index++){
+    //                 fleet[prop][ship].items[index]=defaultEquip
+    //             }
+    //         }
+    //     }
+    // }
+
+    // console.log(JSON.stringify(fleet))
+    return fleet
 }
 
 var default_fleet = [];
 var fleet_data = [];
-fleet_data.push(newFleet(true));
+
 last_saved_fleet = [];
 
 let c_side_dict = {
@@ -83,7 +123,6 @@ let search = "";
 
 //---------------------------------------------
 // let fleet_number = "1";
-// console.log(fleet_number)
 let ALF = new Vue({
     el: "#AzurLaneFleetApp",
     data: {
@@ -91,8 +130,6 @@ let ALF = new Vue({
         lang: lan,
     },
 });
-
-console.log(fleet_data)
 
 let shipSelect = new Vue({
     el: "#shipselect",
@@ -177,7 +214,6 @@ function createNewFleet(number,surface){
 //Used by add fleet buttons
 function addFleet(surface){
     fleet_data.push(newFleet(surface,fleet_data));
-    console.log(fleet_data)
     dumpDataID()
 }
 
@@ -277,15 +313,13 @@ function hideShipInFleet() {
 
 //Opens the popup menu for ships or equips depending on the item name
 function setCurrent(item) {
-    console.log(item)
     if(item.classList.contains("ship")){
-        let shipPos = item.parentElement.getAttribute("pos")
-        let fleetpos = item.parentElement.parentElement.parentElement.id
-        console.log(`${fleetpos}-${shipPos}`)
+        ship_pos = item.parentElement.getAttribute("pos")
+        fleet_pos = item.parentElement.parentElement.parentElement.id
         let sideSeaker = [["vanguardLead","vanguardMid","vanguardBack"], ["flagship","leftFlank","rightFlank"], ["flagSub","leftSub","rightSub"]]
         let shipSide = -1
         sideSeaker.forEach(side=>{
-            if(side.includes(shipPos)){
+            if(side.includes(ship_pos)){
                 shipSide = (sideSeaker.indexOf(side))
             }
         })
@@ -336,12 +370,11 @@ function setCurrent(item) {
         //     return
         // }
 
-        shipDisplay(shipSide,shipPos,fleetpos);
+        shipDisplay(shipSide,ship_pos,fleet_pos);
     }else if(item.classList.contains("equip")){
-        let shipPos = item.parentElement.parentElement.getAttribute("pos")
-        let fleetpos = item.parentElement.parentElement.parentElement.parentElement.id
+        let ship_pos = item.parentElement.parentElement.getAttribute("pos")
+        let fleet_pos = item.parentElement.parentElement.parentElement.parentElement.id
         let slotIndex = item.getAttribute("slot")
-        console.log(`${fleetpos}-${shipPos}-${slotIndex}`)
         equipDisplay();
     }
 }
@@ -372,15 +405,19 @@ function setEquip(item) {
 }
 
 function setShipAndEquip(item) {
-    console.log(sorted_ship_data)
+
+    //Stuff runs asynchronously so it needs to use seperate variables. If the original changes while stuff is running, thigs will break.
+    let ship_pos_temp = ship_pos
+    let fleet_pos_temp = fleet_pos
 
     //Example of how to use the Ship Class
-    Ship.build(item.id,{},ship => { //"ship" is the class
-        //Checks if the ship has a retrofit
+    Ship.build(parseInt(item.id),{},ship => { //"ship" is the class
+        //Force all retrofit nodes to be complete if the ship has one
         if (ship.has_retrofit)
             ship.retrofit_nodes_completed = ship.retrofit_node_letters
-        //Returns the image
-        console.log(ship.thumbnail)
+
+        //Assign the ship to a fleet
+        fleet_data[fleet_pos_temp]["surface"][ship_pos_temp] = ship
     })
 
     // disabled for rewriting
@@ -535,38 +572,4 @@ function fixFleetOrder(){
 
     }
   });
-}
-
-// new fleet creation code for testing
-function newFleet(type,fleets=[]) {
-    let fleet = {
-        "name":`${fleets.length+1}`,
-    }
-    if(type==true){
-        fleet.surface = {
-            flagship:defaultShip,
-            leftFlank:defaultShip,
-            rightFlank:defaultShip,
-            vanguardLead:defaultShip,
-            vanguardMid:defaultShip,
-            vanguardBack:defaultShip,
-        }
-    }else if(type==false){
-        fleet.subs = {
-            flagSub:defaultShip,
-            leftSub:defaultShip,
-            rightSub:defaultShip,
-        }
-    }
-    for(let prop in fleet){
-        if(typeof fleet[prop] =="object"){
-            console.log(prop)
-            for(let ship in fleet[prop]){
-                for(let index=0;index<fleet[prop][ship].items.length;index++){
-                    fleet[prop][ship].items[index]=defaultEquip
-                }
-            }
-        }
-    }
-    return fleet
 }
