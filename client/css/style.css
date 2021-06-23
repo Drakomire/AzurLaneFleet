@@ -340,4 +340,18 @@ img[src="hide"]{
     grid-area: rightSub;
 }
 
+/* lable styles */
+
+.ship:hover,.equip:hover{
+    z-index: 999;
+}
+.ship:hover .lable,.equip:hover .lable{
+    white-space: nowrap;
+    overflow-x: visible;
+    max-width: none;
+    z-index: 999;
+    background: #000;
+    border: solid 1px #000;
+    width: max-content;
+}
 /* extra detail styles*/
