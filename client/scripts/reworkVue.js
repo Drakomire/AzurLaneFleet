@@ -25,7 +25,7 @@ Vue.component("fleet-container", {
                 ></fleet-header-buttons>
 
             </div>
-            <div class="shipGroup surface" v-if="fleet.surface">
+            <div class="shipGroup surface" type="surface" v-if="fleet.surface">
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.surface"
                     v-bind:ship="ship"
@@ -34,7 +34,7 @@ Vue.component("fleet-container", {
                 ></fleet-shipWrap>
             </div>
             
-            <div class="shipGroup sub" v-if="fleet.subs"> 
+            <div class="shipGroup sub" type="subs" v-if="fleet.subs"> 
                 <fleet-shipWrap
                     v-for="(ship, shipPos) in fleet.subs"
                     v-bind:ship="ship"
@@ -105,10 +105,10 @@ Vue.component("fleet-shipWrap",{
         ></shipwrap-ship>
         <div class="equipWrap">
             <shipwrap-equip
-                v-for="(item, key) in ship.items"
+                v-for="(item, key) in ship.equips"
                 v-bind:item="item"
                 v-bind:equip_slot="key"
-                v.bind:extraData="ship.extraData.slots[key]"
+                v-bind:equip_types="JSON.stringify(ship.slots[key])"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -117,8 +117,8 @@ Vue.component("fleet-shipWrap",{
                 v-for="(value, key) in ship.stats"
                 v-bind:statName="key"
                 v-bind:statValue="value"
-                v-bind:statEquip="ship.extraData.equipBonus[key]"
-                v.bind:statRetro="ship.extraData.retroBonus[key]"
+                v-bind:statEquip="ship.equip_stats[key]"
+                v.bind:statRetro="ship.retrofit_stats[key]"
                 v-bind:lang="lang"
             ></shipwrap-stat>
         </div>
@@ -132,9 +132,9 @@ Vue.component("shipwrap-ship",{
     },
     template:`
     <div class="ship" onclick="setCurrent(this)" data-target="#shipselect" data-toggle="modal">
-    <img class="icon" v-bind:src="ship.extraData.iconSRC"/>
-    <img class="border" v-bind:src="ship.extraData.BorderSRC"/>
-    <img class="background" v-bind:src="ship.extraData.backgroundSRC"/>
+    <img class="icon" v-bind:src="ship.thumbnail" onError="this.src='https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/unknown.png';"/>
+    <img class="border" v-bind:src="ship.border"/>
+    <img class="background" v-bind:src="ship.background"/>
     <div class="lable" >{{ship.name[lang]}}</div>
     </div>
     `
@@ -149,6 +149,8 @@ Vue.component("shipwrap-equip",{
     template:`
     <div class="equip" v-bind:equip_slot="equip_slot" onclick="setCurrent(this)" data-target="#equipselect" data-toggle="modal">
         <img class="icon" v-bind:src="item.icon"/>
+        <img class="background" v-bind:src="item.background"/>
+        <img class="border" v-bind:src="item.border"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.property.efficiency}}</div>
             <div class="toplable" >{{item.property.quantity}}</div>

@@ -1,9 +1,7 @@
 //refreshes the popup menu when a letter changes in the search bar
-//I wrote this one so I hope its good
 function updateSearch(){
   search = document.getElementById("ship search bar").value;
   let regx = new RegExp(`${search}`,'gi')
-  console.log("hello")
   document.getElementById("shiplist").setAttribute("NS",search)
   Array.from(document.getElementById("shiplist").children).forEach(ship=>{
     if(search ===""){
@@ -11,7 +9,6 @@ function updateSearch(){
     }
     else if((ship.children[0].children[1].getAttribute("en")).match(regx)){
         ship.classList.add("NS")
-        console.log(ship.children[0].children[1].getAttribute("en"))
     }else{
         ship.classList.remove("NS")
     }
@@ -125,16 +122,18 @@ function isShipSelect(nation, type, rarity, retro, name, targetSide) {
 function shipDisplay(targetSide,shipPos,fleetPos) {
     let shiplist = document.getElementById("shiplist");
     let placementData = document.getElementById("shipPlacementData");
+    //The searchbar shouldn't stay when you search for a new ship
+    document.getElementById("ship search bar").value = ""
+    updateSearch()
     shiplist.setAttribute("type","-")
     placementData.setAttribute("targetpos",shipPos)
     placementData.setAttribute("targetfleet",fleetPos)
     placementData.setAttribute("targetside",targetSide)
     let ship_type_select = document.querySelectorAll("#shiptype.container")
+
     Array.from(ship_type_select[0].children).forEach(selector=>{
         selector.classList.remove("active")
-        console.log(selector)
     })
-
 
 
     //disababled due to using css classes for sorting
@@ -224,7 +223,6 @@ function sortType(item){
     let shipselect = document.getElementById("shiplist")
     let type = shipselect.getAttribute("type")
     let regex = new RegExp(`-${item.value}-`,'g')
-    console.log(`-${item.value}-`)
     if(regex.test(type)){
         shipselect.setAttribute("type",(type.replace(`-${item.value}-`,'-')))
         item.classList.remove("active")

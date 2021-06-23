@@ -1,0 +1,310 @@
+{
+    "id": "0",
+    "code": "0",
+    "name": {
+        "en": "",
+        "code": "",
+        "cn": "",
+        "jp": ""
+    },
+    "property_hexagon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "type": 18,
+    "armor": 2,
+    "slots": [
+        [
+            3,
+            11
+        ],
+        [
+            1
+        ],
+        [
+            6
+        ],
+        [
+            10
+        ],
+        [
+            10
+        ]
+    ],
+    "nationality": 3,
+    "data": {
+        "0": {
+            "id": "0",
+            "tags": [
+            ],
+            "type": 18,
+            "rarity": 6,
+            "stars": 6,
+            "oil": 16,
+            "max_level": 100,
+            "stats": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0,
+                "oxy": 0
+            },
+            "efficiency": [
+                1,
+                1,
+                1
+            ],
+            "preloads": [
+                0,
+                0,
+                0
+            ],
+            "base_list": [
+                1,
+                1,
+                1
+            ],
+            "stats_growth": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            },
+            "stats_growth_extra": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            }
+        },
+        "1": {
+            "id": "0",
+            "tags": [
+            ],
+            "type": 18,
+            "rarity": 6,
+            "stars": 6,
+            "oil": 16,
+            "max_level": 100,
+            "stats": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0,
+                "oxy": 0
+            },
+            "efficiency": [
+                1,
+                1,
+                1
+            ],
+            "preloads": [
+                0,
+                0,
+                0
+            ],
+            "base_list": [
+                1,
+                1,
+                1
+            ],
+            "stats_growth": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            },
+            "stats_growth_extra": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            }
+        },
+        "2": {
+            "id": "0",
+            "tags": [
+            ],
+            "type": 18,
+            "rarity": 6,
+            "stars": 6,
+            "oil": 16,
+            "max_level": 100,
+            "stats": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0,
+                "oxy": 0
+            },
+            "efficiency": [
+                1,
+                1,
+                1
+            ],
+            "preloads": [
+                0,
+                0,
+                0
+            ],
+            "base_list": [
+                1,
+                1,
+                1
+            ],
+            "stats_growth": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            },
+            "stats_growth_extra": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            }
+        },
+        "3": {
+            "id": "0",
+            "tags": [
+            ],
+            "type": 18,
+            "rarity": 6,
+            "stars": 6,
+            "oil": 16,
+            "max_level": 100,
+            "stats": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0,
+                "oxy": 0
+            },
+            "efficiency": [
+                1,
+                1,
+                1
+            ],
+            "preloads": [
+                0,
+                0,
+                0
+            ],
+            "base_list": [
+                1,
+                1,
+                1
+            ],
+            "stats_growth": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            },
+            "stats_growth_extra": {
+                "hp": 0,
+                "fp": 0,
+                "trp": 0,
+                "aa": 0,
+                "avi": 0,
+                "rld": 0,
+                "acc": 0,
+                "eva": 0,
+                "spd": 0,
+                "luk": 0,
+                "asw": 0
+            }
+        }
+    },
+    "stars": 1,
+    "skills": [
+    ],
+    "hunting_range": null,
+    "enhancement": {
+    },
+    "skin_thumbnails": [
+        "../ui/empty.png"
+    ]
+}

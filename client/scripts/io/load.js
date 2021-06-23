@@ -1,30 +1,12 @@
-//Deprecated function to load from the text box
-function loadDataByID() {
-    let data = atob(document.getElementById("fleetdata").value);
-
-    let textbox = document.getElementById("fleetdata");
-    // textbox.value = "";
-
-    if (!loadData(data)){
-      message = "Error: Corrupted data";
-      // textbox.value = message;
-      console.log(message);
-      // console.log(main_data);
-      return;
-    }
-
-}
-
 //Sends a requst to the server to get the data to load
 //Client.js handles the rest
 function loadData(data){
-    client.send(JSON.stringify({
-      type: "Fleet URL Load",
-      payload: data,
-      token: TOKEN
-    }));
-  return true;
+    requestFleetData(data,(res) => {
+        console.log(res)
+    })
 }
+//Load function example use. Put this after the initial fleet is made.
+// loadData(new URLSearchParams(window.location.search).get('fleet'))
 
 //Loads a string created from dumpIdData()
 function parseIdData(data) {

@@ -13,7 +13,7 @@ const ship_popup = new Vue({
     },
     template: `
     <div id="shiplist" class="container-fluid row m-0 p-0" type="-" nat="-" rarity="-" NS="" >
-        <button class="p-1 item_container" id="000000" onclick="setShipAndEquip(this)" data-dismiss="modal">
+        <button class="p-1 item_container" id="0" onclick="setShipAndEquip(this)" data-dismiss="modal">
             <div class="container-fluid p-0 box">
             <div class="icon_box row"><img class="img-fluid icon" loading="lazy" src="ui/empty.png"><img class="img-fluid bg" src=""><img class="img-fluid frame" src=""></div>
             <span name="name" cn="移除" en="Remove" jp="除隊" class="justify-content-center item_name">Remove</span>
@@ -41,7 +41,7 @@ const equip_popup = new Vue({
     },
     template:`
         <div id="equiplist" class="container-fluid row m-0 p-0" style="width: 101%">
-            <button class="p-1 item_container" id="666666" onclick="setEquip(this)" data-dismiss="modal">
+            <button class="p-1 item_container" id="0" onclick="setEquip(this)" data-dismiss="modal">
                 <div class="container-fluid p-0 box">
                     <div class="container-fluid icon_box"><img class="img-fluid bg" src=""><img class="img-fluid frame" src=""><img class="img-fluid icon" loading="lazy" src="ui/empty.png"></div>
                     <span name="name" cn="移除" en="Remove" jp="外す" class="justify-content-center item_name">Remove</span>
