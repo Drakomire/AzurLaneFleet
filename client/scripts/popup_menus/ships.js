@@ -130,10 +130,10 @@ function shipDisplay(targetSide,shipPos,fleetPos) {
     placementData.setAttribute("targetfleet",fleetPos)
     placementData.setAttribute("targetside",targetSide)
     let ship_type_select = document.querySelectorAll("#shiptype.container")
+
     Array.from(ship_type_select[0].children).forEach(selector=>{
         selector.classList.remove("active")
     })
-
 
 
     //disababled due to using css classes for sorting

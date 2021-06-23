@@ -26,9 +26,7 @@ function requestFleetUrl(callback){
       }
     }; 
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    request.send(JSON.stringify({
-        fleet : "FLEET EMPTY FOR NOW"
-    }));
+    request.send(JSON.stringify(fleet_data));
 }
 
 function requestFleetData(urlData,callback){

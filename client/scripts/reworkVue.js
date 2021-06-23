@@ -108,7 +108,7 @@ Vue.component("fleet-shipWrap",{
                 v-for="(item, key) in ship.equips"
                 v-bind:item="item"
                 v-bind:equip_slot="key"
-                v.bind:extraData="ship.slots[key]"
+                v-bind:equip_types="JSON.stringify(ship.slots[key])"
                 v-bind:lang="lang"
             ></shipwrap-equip>
         </div>
@@ -149,6 +149,8 @@ Vue.component("shipwrap-equip",{
     template:`
     <div class="equip" v-bind:equip_slot="equip_slot" onclick="setCurrent(this)" data-target="#equipselect" data-toggle="modal">
         <img class="icon" v-bind:src="item.icon"/>
+        <img class="background" v-bind:src="item.background"/>
+        <img class="border" v-bind:src="item.border"/>
         <div class="toplablesWrap">
             <div class="toplable" >{{item.property.efficiency}}</div>
             <div class="toplable" >{{item.property.quantity}}</div>

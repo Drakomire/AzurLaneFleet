@@ -1,15 +1,15 @@
 //Ship data is not stored in the class to save space
 var ship_data={}
 
-const defaultEquip ={
-    "id":-1,
-    "name":{
-        "en":"empty",
-    },
-    "icon":"../ui/icon_back.png",
-    "type":-1,
-    "property":{},
-}
+// const defaultEquip ={
+//     "id":-1,
+//     "name":{
+//         "en":"empty",
+//     },
+//     "icon":"../ui/icon_back.png",
+//     "type":-1,
+//     "property":{},
+// }
 
 class Ship{
     constructor(id,params){
@@ -21,7 +21,7 @@ class Ship{
         this.affinity = (params.affinity+1 || 100+1) -1
         this.oathed = params.oathed || false
         this.retrofit_nodes_completed = params.retrofit_nodes_completed || []
-        this.equips = params.equips || [defaultEquip,defaultEquip,defaultEquip,defaultEquip,defaultEquip]
+        this._equips = params.equips || [new Equip(0),new Equip(0),new Equip(0),new Equip(0),new Equip(0)]
         this.empty = id == 0
     }
 
@@ -38,6 +38,19 @@ class Ship{
             //Run callback without data request
             callback(ship)
         }
+    }
+
+    set equips(val){
+        this._equips = val
+    }
+    get equips(){
+        return this._equips
+    }
+
+    setEquip(i,value){
+        let temp = this._equips
+        temp[i] = value
+        this._equips = [...temp]
     }
 
     get name(){
@@ -140,11 +153,11 @@ class Ship{
         }
     }
     get background(){
-        if (!this.empty)
-        return 'ui/bg'+this.rarity+'.png'
+        if (!this.empty) return 'ui/bg'+this.rarity+'.png'
+        else return "hide"
     }
     get border(){
-        if (!this.empty)
-        return 'ui/frame_'+this.rarity+'.png'
+        if (!this.empty) return 'ui/frame_'+this.rarity+'.png'
+        else return "hide"
     }
 }

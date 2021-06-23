@@ -115,27 +115,37 @@ for gear in api.getAllGear():
         }]
 
         gear_json[gear.id] = {
-        "nationality": gear.nationality,
-        "type": gear.type_id,
-        "attribute_2": None,
-        "rarity": gear.rarity,
-        "tech": 0,
-        "ammo": 10,
-        "ammo_icon": [],
-        "id": int(gear.id),
-        "icon": gear.id,
-        "ship_type_forbidden": gear.ship_type_forbidden,
-        "jp_name": gear.name_jp,
-        "cn_name": gear.name_cn,
-        "en_name": gear.name_en,
-        "equip_limit": gear.equip_limit
-    },
+            "nationality": gear.nationality,
+            "type": gear.type_id,
+            "attribute_2": None,
+            "rarity": gear.rarity-1,
+            "tech": 0,
+            "ammo": 10,
+            "ammo_icon": [],
+            "id": int(gear.id),
+            "icon": gear.icon,
+            "ship_type_forbidden": gear.ship_type_forbidden,
+            "jp_name": gear.name_jp,
+            "cn_name": gear.name_cn,
+            "en_name": gear.name_en,
+            "equip_limit": gear.equip_limit
+        }
 
     except IndexError:
         continue
 
+#Set the empty equip
+f = open("empty_equip.json", "r", encoding='utf-8')
+gear_json["0"] = json.loads(f.read())
+f.close()
+
+
 gear_vue.sort(key=lambda x: x["rarity"], reverse=True)
 
-f = open("gear.json","w", encoding='utf-8')
+f = open("equip.json","w", encoding='utf-8')
 f.write(json.dumps(gear_vue,ensure_ascii=False))
+f.close()
+
+f = open("equip_data.json","w", encoding='utf-8')
+f.write("var equip_data="+json.dumps(gear_json,ensure_ascii=False))
 f.close()
