@@ -196,6 +196,9 @@ img[src="hide"]{
     position: absolute;
     bottom: 0;
     transform: translateY(100%);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 .statWrap{
@@ -254,6 +257,9 @@ img[src="hide"]{
 }
 
 .fleetWrap>.DetailToggle:checked~* .equip .toplablesWrap{
+    display: none;
+}
+.fleetWrap>.DetailToggle:checked~* .equip .lable{
     display: none;
 }
 

@@ -43,7 +43,7 @@ body {
     height: 5.3rem;
     padding: 2px;
     z-index: 101;
-    object-fit: scale-down;
+    object-fit: contain;
 }
 
 .frame {
