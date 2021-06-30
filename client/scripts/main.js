@@ -371,3 +371,35 @@ function fixFleetOrder(){
     }
   });
 }
+
+// function for testing
+function getFleetDamageData(fleetDetails){
+    let fleetDamageData={}
+    let fleetType = (fleetDetails.surface)?"surface":"sub";
+    Object.keys(fleetDetails[fleetType]).forEach(ship=>{
+        let shipdata = fleetDetails[fleetType][ship]
+        fleetDamageData[ship]={
+            "fp":shipdata.stats.fp,
+            "rld":shipdata.stats.rld,
+            "fpBonus":1,
+            //TODO equip stats
+            "equipFP":65+25+70+55,
+            "equipRLD":0,
+            "equip_1_rof_base":24.22,
+            "equip_1_dmg_base":167,
+            "equip_1_dmg_mod":1.05,
+            "equip_1_dmg_base":167,
+            "equip_1_preload":shipdata.preloads[0],
+
+            "equip_2_rof_base":1.53,
+            "equip_2_dmg_base":15,
+            "equip_2_preload":shipdata.preloads[1],
+        }
+        if([7,8,18].includes(shipdata.hull_id)){// to set values incase of 3 damage equips
+            fleetDamageData[ship].equip_3_rof_base = null
+            fleetDamageData[ship].equip_3_dmg_base = null
+            fleetDamageData[ship].equip_3_preload = null
+        }
+    })
+    console.log(fleetDamageData)
+}

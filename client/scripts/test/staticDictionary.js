@@ -1,4 +1,4 @@
-const shipTypeDict = [
+    const shipTypeDict = [
     {
         "index":["Destroyer",1,"DD","驅逐","驅逐"],
         "numeric":1,
