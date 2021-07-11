@@ -16,7 +16,7 @@ Vue.component("item-container", {
                 <img class="img-fluid bg" v-bind:src="item.property.bg">
                 <img class="img-fluid frame" v-bind:src="item.property.frame">
                 <img class="img-fluid icon" v-bind:src="item.property.icon">
-                <span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity">
+                <!-- span class="d-flex justify-content-start text-monospace itemq" v-text="item.property.quantity"-->
               </div>
               <span class="justify-content-center item_name"
                 v-text="item.property[lang]"
@@ -1066,7 +1066,7 @@ function initial() {
             newitem[key] = item[parseData[key]];
         }
         // set other data
-        newitem.icon = `equips/${item.icon}.png`;
+        newitem.icon = item.icon;
         if (item.rarity != 1) {
             newitem.bg = `ui/bg${item.rarity - 1}.png`;
             newitem.frame = `ui/frame_${item.rarity - 1}.png`;
