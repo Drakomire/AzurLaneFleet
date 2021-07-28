@@ -1,9 +1,12 @@
-class Gear:
-    def __init__(self,id,level=10):
-        from .__init__ import gear
+from .._util import _APIObject
 
-        self.id = str(id)
-        self.gear = gear[self.id]
+class _Gear(_APIObject):
+    def __init__(self,url,gear_id,level=10):
+        super().__init__(url)
+        res = self._getFromAPI(f"gear/{gear_id}")
+
+        self.id = str(gear_id)
+        self.gear = res
         self.level = level
 
     @property
@@ -11,21 +14,21 @@ class Gear:
         return self.nameEN
 
     @property
-    def nameEN(self):
+    def name_en(self):
         try:
             return self.gear["name_EN"]
         except:
             return None
 
     @property
-    def nameJP(self):
+    def name_jp(self):
         try:
             return self.gear["name_JP"]
         except:
             return None
 
     @property
-    def nameCN(self):
+    def name_cn(self):
         try:
             return self.gear["name_CN"]
         except:
@@ -51,3 +54,10 @@ class Gear:
     def icon(self):
         return self.gear["image"]
 
+    @property
+    def nationality_id(self):
+        return self.gear["nationality"]
+
+    @property
+    def equip_limit(self):
+        return self.gear["equip_limit"]

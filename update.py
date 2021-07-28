@@ -50,6 +50,7 @@ f.close()
 
 out = {}
 for equip in api.getAllGear():
+    print(equip.name_en)
     out[str(equip.id + "0")] = {
         "nationality": equip.nationality_id,
         "type": equip.type_id,

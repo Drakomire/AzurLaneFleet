@@ -9,6 +9,7 @@ import requests
 from ._util import Lang, _APIObject
 from ._ships.ship import _Ship
 from ._ships import Pos
+from ._gear.gear import _Gear
 
 #Erros so user can catch them
 from ._util._erros import PerseusAPIError, PerseusAPIConnectionError, PerseusAPIPathNotFoundError, PerseusAPIReturnError
@@ -21,6 +22,9 @@ class Perseus(_APIObject):
     def Ship(self, *args, **kwargs):
         return _Ship(self.url,*args,**kwargs)
 
+    def Gear(self,*args,**kwargs):
+        return _Gear(self.url,*args,**kwargs)
+
     def update(self):
         self.initiate()
 
@@ -31,11 +35,9 @@ class Perseus(_APIObject):
         for i in self._getFromAPI(f"ship/all_ids"):
             yield self.Ship(i,*args,**kwargs)
 
-    def getAllGear(self,*args,**kwargs):
-        out = []
-        for key in self.gear_json:
-            out += [self.Gear(int(key),**kwargs)]
-        return out
+    def getAllGear(self,*args,**kwargs) -> Generator:
+        for i in self._getFromAPI(f"gear/all_ids"):
+            yield self.Gear(i//10,*args,**kwargs)
 
     def downloadImage(self,url):
         req = requests.get(url)
