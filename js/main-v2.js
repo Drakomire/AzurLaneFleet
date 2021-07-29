@@ -133,6 +133,9 @@ var default_fleet = [];
 var fleet_data = [];
 fleet_data = buildFleet();
 last_saved_fleet = [];
+// list of ids to ignore due to unobtainabiliy
+const ignore_ships = [10300040/*Uruuru*/,10300050/*Saraana*/,10300060/*Fumiruiru*/,10300020/*Nekone*/,10300030/*Rurutie*/,10300010/*Kuon*/,10200010/*22*/,10200020/*33*/];
+const ignore_gears = [34240/*Triple 460mm Mounted Gun*/,7320/*Quadruple 130mm Mle 1932 Secondary Gun Mount*/,35340/*Quintuple 610mm Torpedo*/];
 
 let c_side_dict = {
   0: "front_ship",
@@ -509,7 +512,7 @@ function shipDisplay() {
             let rarity = ship_data[id].rarity;
             let retro = ship_data[id].retro;
             let name = ship_data[id][shipSelect.lang+"_name"];
-            if (isShipSelect(nation, type, rarity, retro, name)) {
+            if (isShipSelect(nation, type, rarity, retro, name, id)) {
                 item.style.display = "";
             } else {
                 item.style.display = "none";
@@ -538,7 +541,7 @@ function hideShipInFleet() {
     });
 }
 
-function isShipSelect(nation, type, rarity, retro, name) {
+function isShipSelect(nation, type, rarity, retro, name, id) {
     let indicator_nation = false;
     let indicator_type = false;
     let indicator_rarity = false;
@@ -582,6 +585,11 @@ function isShipSelect(nation, type, rarity, retro, name) {
     let regex = new RegExp(`${search}`,'i');
     if (!regex.test(name)){
       return false;
+    }
+    
+    //Sort ignored ships
+    if(ignore_ships.includes(id)){
+        return false;
     }
 
     //Sort ship list by hull class
@@ -780,6 +788,8 @@ function equipDisplay() {
             let forbidden = equip.ship_type_forbidden;
             if (typelist.indexOf(type) != -1) {
                 if (forbidden.indexOf(shiptype) != -1) {
+                    item.style.display = "none";
+                } else if (ignore_gears.includes(id)) {
                     item.style.display = "none";
                 } else {
                     item.style.display = "";
