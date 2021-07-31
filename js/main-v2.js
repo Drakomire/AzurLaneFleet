@@ -133,7 +133,33 @@ var default_fleet = [];
 var fleet_data = [];
 fleet_data = buildFleet();
 last_saved_fleet = [];
+// list of ids to ignore due to unobtainabiliy
+const ignore_ships = [10300040/*Uruuru*/,10300050/*Saraana*/,10300060/*Fumiruiru*/,10300020/*Nekone*/,10300030/*Rurutie*/,10300010/*Kuon*/,10200010/*22*/,10200020/*33*/];
+const ignore_gears = [34240/*Triple 460mm Mounted Gun*/,7320/*Quadruple 130mm Mle 1932 Secondary Gun Mount*/,35340/*Quintuple 610mm Torpedo*/,2720/*533 mag torp equip T2*/,2700/*533 mag torp equip T1*/,2600/*type93 torp equip T1*/,2620/*type93 torp equip T2*/,1300/*T1 anti-torp bulge*/,1320/*T2 anti-torp bulge*/,2400/*T1 repair kit*/];
 
+const nation_dict = {
+    1: "Eagle Union",
+    2: "Royal Navy",
+    3: "Sakura Empire",
+    4: "Iron Blood",
+    5: "Dragon Empery",
+    6: "Sardegna Empire",
+    7: "Northern Parliament",
+    8: "Iris Libre",
+    9: "Vichya Dominion",
+    0: "Other",
+    "Eagle Union":1,
+    "Royal Navy":2,
+    "Sakura Empire":3,
+    "Iron Blood":4,
+    "Dragon Empery":5,
+    "Sardegna Empire":6,
+    "Northern Parliament":7,
+    "Iris Libre":8,
+    "Vichya Dominion":9,
+    "Other":0
+}
+const primary_nations = ["Eagle Union","Royal Navy","Sakura Empire","Iron Blood","Dragon Empery","Sardegna Empire","Northern Parliament","Iris Libre","Vichya Dominion",]
 let c_side_dict = {
   0: "front_ship",
   1: "back_ship",
@@ -501,6 +527,8 @@ function checksetting(key, value) {
 function shipDisplay() {
     let shiplist = document.getElementById("shiplist");
     shiplist = shiplist.querySelectorAll("button");
+    console.log(shipsetting)
+    console.groupCollapsed("ships")
     shiplist.forEach((item) => {
         if (item.id != "000000") {
             let id = parseInt(item.id, 10);
@@ -509,13 +537,14 @@ function shipDisplay() {
             let rarity = ship_data[id].rarity;
             let retro = ship_data[id].retro;
             let name = ship_data[id][shipSelect.lang+"_name"];
-            if (isShipSelect(nation, type, rarity, retro, name)) {
+            if (isShipSelect(nation, type, rarity, retro, name, id)) {
                 item.style.display = "";
             } else {
                 item.style.display = "none";
             }
         }
     });
+    console.groupEnd()
     //I prefer to allow duplicate ships
     // hideShipInFleet();
 }
@@ -538,14 +567,14 @@ function hideShipInFleet() {
     });
 }
 
-function isShipSelect(nation, type, rarity, retro, name) {
+function isShipSelect(nation, type, rarity, retro, name, id) {
     let indicator_nation = false;
     let indicator_type = false;
     let indicator_rarity = false;
     let other_nation = [98, 101, 103, 104, 105, 106, 107, 108, 109, 110];
     let other_front = [19];
     let other_back = [10];
-
+    
     let lang = shipSelect.lang;
     let s = search
     //Check if the ship is in the search
@@ -583,6 +612,11 @@ function isShipSelect(nation, type, rarity, retro, name) {
     if (!regex.test(name)){
       return false;
     }
+    
+    //Sort ignored ships
+    if(ignore_ships.includes(id)){
+        return false;
+    }
 
     //Sort ship list by hull class
     if (c_side === "0" && front.indexOf(type) === -1) {
@@ -618,17 +652,19 @@ function isShipSelect(nation, type, rarity, retro, name) {
     }
 
 
-
-
-    if (shipsetting.nation.indexOf(nation) != -1 || shipsetting.nation.length === 0) {
+    
+    // console.log(nation)
+    // console.log(shipsetting.nation)
+    if (shipsetting.nation.indexOf(nation_dict[nation]) != -1 || shipsetting.nation.length === 0) {
         indicator_nation = true;
     }
-    if (shipsetting.nation.indexOf(0) != -1 && other_nation.indexOf(nation) != -1) {
+    if (shipsetting.nation.indexOf(0) != -1 && !primary_nations.includes(nation)) {
         indicator_nation = true;
     }
     if (shipsetting.rarity.indexOf(rarity) != -1 || shipsetting.rarity.length === 0) {
         indicator_rarity = true;
     }
+    // console.log(indicator_nation,indicator_rarity,indicator_type)
     if (indicator_nation && indicator_type && indicator_rarity) {
         if (retrofit && retro === 1) {
             return false;
@@ -780,6 +816,8 @@ function equipDisplay() {
             let forbidden = equip.ship_type_forbidden;
             if (typelist.indexOf(type) != -1) {
                 if (forbidden.indexOf(shiptype) != -1) {
+                    item.style.display = "none";
+                } else if (ignore_gears.includes(id)) {
                     item.style.display = "none";
                 } else {
                     item.style.display = "";
@@ -1335,7 +1373,7 @@ function buildShipSelectOption() {
         { id: 4, cn: "鐵血", en: "Iron Blood", jp: "鉄血", code: "KMS" },
         { id: 5, cn: "東煌", en: "Dragon Empery", jp: "東煌", code: "PRAN/ROC" },
         { id: 6, cn: "撒丁帝國", en: "Sardegna Empire", jp: "サディア", code: "RN" },
-        { id: 7, cn: "北方聯合", en: "Northen Parliament", jp: "北連", code: "SN" },
+        { id: 7, cn: "北方聯合", en: "Northern Parliament", jp: "北連", code: "SN" },
         { id: 8, cn: "自由鳶尾", en: "Iris Libre", jp: "アイリス", code: "FFNF" },
         { id: 9, cn: "維希教廷", en: "Vichya Dominion", jp: "ヴィシア", code: "MNF" },
         { id: 0, cn: "其他", en: "Other", jp: "その他", code: "" },
