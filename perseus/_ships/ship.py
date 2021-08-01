@@ -85,11 +85,17 @@ class _Ship(_APIObject):
 
     @property
     def rarity_id(self):
-        return self.ship["data"][self._full_id]["rarity"]
+        if not self.retrofit:
+            return self.ship["data"][self._full_id]["rarity"]
+        else:
+            return self.ship["data"][self._full_id]["retrofit_rarity"]
 
     @property
     def rarity(self):
-        return self.ship["data"][self._full_id]["rarity_name"]
+        if not self.retrofit:
+            return self.ship["data"][self._full_id]["rarity_name"]
+        else:
+            return self.ship["data"][self._full_id]["retrofit_rarity_name"]
 
     @property
     def ship_class(self):
@@ -285,9 +291,9 @@ class _Ship(_APIObject):
         return self.ship["data"][self._full_id]["slot_names"]
 
     @property
-    def nationality(self):
-        return self.ship["nationality_name"]
-
-    @property
     def nationality_id(self):
         return self.ship["nationality"]
+
+    @property
+    def nationality(self):
+        return self.ship["nationality_name"]
