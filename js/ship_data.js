@@ -1018,7 +1018,7 @@ var ship_data = {
     id: 102050,
     skin_id: 102050,
     star: 0,
-    rarity: 5,
+    rarity: 4,
     retro: true,
     uni_id: "102050",
     painting:
@@ -1087,7 +1087,7 @@ var ship_data = {
     id: 102080,
     skin_id: 102080,
     star: 0,
-    rarity: 6,
+    rarity: 5,
     retro: true,
     uni_id: "102080",
     painting:
@@ -2605,7 +2605,7 @@ var ship_data = {
     id: 107220,
     skin_id: 107220,
     star: 0,
-    rarity: 5,
+    rarity: 4,
     retro: true,
     uni_id: "107220",
     painting:
@@ -2950,7 +2950,7 @@ var ship_data = {
     id: 201010,
     skin_id: 201010,
     star: 0,
-    rarity: 4,
+    rarity: 3,
     retro: true,
     uni_id: "201010",
     painting:
@@ -4100,7 +4100,7 @@ var ship_data = {
     id: 203010,
     skin_id: 203010,
     star: 0,
-    rarity: 5,
+    rarity: 4,
     retro: true,
     uni_id: "203010",
     painting:
@@ -4422,7 +4422,7 @@ var ship_data = {
     id: 205020,
     skin_id: 205020,
     star: 0,
-    rarity: 6,
+    rarity: 5,
     retro: true,
     uni_id: "205020",
     painting:
@@ -5116,7 +5116,7 @@ var ship_data = {
     retro: true,
     uni_id: "301050",
     painting:
-      "https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/lingbo_11.png",
+      "https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/lingbo_g.png",
     star_string: "★★★★",
     rarity_string: "SR",
     jp_name: "綾波",
@@ -6354,7 +6354,7 @@ var ship_data = {
     id: 302100,
     skin_id: 302100,
     star: 0,
-    rarity: 5,
+    rarity: 4,
     retro: true,
     uni_id: "302100",
     painting:
@@ -6975,7 +6975,7 @@ var ship_data = {
     id: 305010,
     skin_id: 305010,
     star: 0,
-    rarity: 4,
+    rarity: 3,
     retro: true,
     uni_id: "305010",
     painting:
@@ -6998,7 +6998,7 @@ var ship_data = {
     id: 305020,
     skin_id: 305020,
     star: 0,
-    rarity: 4,
+    rarity: 3,
     retro: true,
     uni_id: "305020",
     painting:
@@ -7021,7 +7021,7 @@ var ship_data = {
     id: 305030,
     skin_id: 305030,
     star: 0,
-    rarity: 4,
+    rarity: 3,
     retro: true,
     uni_id: "305030",
     painting:
@@ -7044,7 +7044,7 @@ var ship_data = {
     id: 305040,
     skin_id: 305040,
     star: 0,
-    rarity: 4,
+    rarity: 3,
     retro: true,
     uni_id: "305040",
     painting:
@@ -8129,7 +8129,7 @@ var ship_data = {
     retro: true,
     uni_id: "401230",
     painting:
-      "https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/z23_9.png",
+      "https://raw.githubusercontent.com/Drakomire/perseus-data/master/AzurLaneImages/assets/artresource/atlas/squareicon/z23_g.png",
     star_string: "★★★★",
     rarity_string: "SR",
     jp_name: "Z23",
@@ -8355,7 +8355,7 @@ var ship_data = {
     id: 402030,
     skin_id: 402030,
     star: 0,
-    rarity: 3,
+    rarity: 2,
     retro: true,
     uni_id: "402030",
     painting:
@@ -9919,7 +9919,7 @@ var ship_data = {
     id: 702020,
     skin_id: 702020,
     star: 0,
-    rarity: 5,
+    rarity: 4,
     retro: true,
     uni_id: "702020",
     painting:
