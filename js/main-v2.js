@@ -135,7 +135,7 @@ fleet_data = buildFleet();
 last_saved_fleet = [];
 // list of ids to ignore due to unobtainabiliy
 const ignore_ships = [10300040/*Uruuru*/,10300050/*Saraana*/,10300060/*Fumiruiru*/,10300020/*Nekone*/,10300030/*Rurutie*/,10300010/*Kuon*/,10200010/*22*/,10200020/*33*/];
-const ignore_gears = [34240/*Triple 460mm Mounted Gun*/,7320/*Quadruple 130mm Mle 1932 Secondary Gun Mount*/,35340/*Quintuple 610mm Torpedo*/,2720/*533 mag torp equip T2*/,2700/*533 mag torp equip T1*/,2600/*type93 torp equip T1*/,2620/*type93 torp equip T2*/,1300/*T1 anti-torp bulge*/,1320/*T2 anti-torp bulge*/,2400/*T1 repair kit*/];
+const ignore_gears = [34240/*Triple 460mm Mounted Gun*/,7320/*Quadruple 130mm Mle 1932 Secondary Gun Mount*/,35340/*Quintuple 610mm Torpedo*/,2720/*533 mag torp equip T2*/,2700/*533 mag torp equip T1*/,2600/*type93 torp equip T1*/,2620/*type93 torp equip T2*/,/*1300/*T1 anti-torp bulge*/,/*1320/*T2 anti-torp bulge*/,/*2400/*T1 repair kit*/];
 
 const nation_dict = {
     1: "Eagle Union",
