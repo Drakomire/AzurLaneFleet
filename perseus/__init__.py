@@ -8,8 +8,8 @@ from io import BytesIO
 import requests
 from ._util import Lang, _APIObject
 from ._ships.ship import _Ship
-from ._ships import Pos
 from ._gear.gear import _Gear
+from ._ships import Pos
 
 #Erros so user can catch them
 from ._util._erros import PerseusAPIError, PerseusAPIConnectionError, PerseusAPIPathNotFoundError, PerseusAPIReturnError
@@ -35,7 +35,7 @@ class Perseus(_APIObject):
         for i in self._getFromAPI(f"ship/all_ids"):
             yield self.Ship(i,*args,**kwargs)
 
-    def getAllGear(self,*args,**kwargs) -> Generator:
+    def getAllGear(self,*args,**kwargs):
         for i in self._getFromAPI(f"gear/all_ids"):
             yield self.Gear(i//10,*args,**kwargs)
 
