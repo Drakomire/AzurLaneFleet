@@ -628,7 +628,7 @@ function isShipSelect(nation, type, rarity, retro, name, id) {
     if (c_side === "2" && submarine.indexOf(type) === -1) {
         return false;
     }
-
+    // set type flag for vanguard
     if (c_side === "0") {
         if (shipsetting.front.indexOf(type) != -1 || shipsetting.front.length === 0) {
             indicator_type = true;
@@ -636,6 +636,7 @@ function isShipSelect(nation, type, rarity, retro, name, id) {
             indicator_type = true;
         }
     }
+    // set type flag for backline
     if (c_side === "1") {
         if (shipsetting.back.indexOf(type) != -1 || shipsetting.back.length === 0) {
             indicator_type = true;
@@ -643,6 +644,7 @@ function isShipSelect(nation, type, rarity, retro, name, id) {
             indicator_type = true;
         }
     }
+    // set type flag for submarine
     if (c_side === "2") {
         if (shipsetting.submarine.indexOf(type) != -1 || shipsetting.submarine.length === 0) {
             indicator_type = true;
@@ -652,20 +654,21 @@ function isShipSelect(nation, type, rarity, retro, name, id) {
     }
 
 
-    
-    // console.log(nation)
-    // console.log(shipsetting.nation)
+    // set nation flag for main nations
     if (shipsetting.nation.indexOf(nation_dict[nation]) != -1 || shipsetting.nation.length === 0) {
         indicator_nation = true;
     }
+    // set nation flag for other
     if (shipsetting.nation.indexOf(0) != -1 && !primary_nations.includes(nation)) {
         indicator_nation = true;
     }
+    // set rarity flag
     if (shipsetting.rarity.indexOf(rarity) != -1 || shipsetting.rarity.length === 0) {
         indicator_rarity = true;
     }
     // console.log(indicator_nation,indicator_rarity,indicator_type)
     if (indicator_nation && indicator_type && indicator_rarity) {
+        console.log(retrofit)
         if (retrofit && retro === 1) {
             return false;
         } else {
