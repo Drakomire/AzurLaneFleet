@@ -1,14 +1,17 @@
-from .__init__ import *
+from .._util import _APIObject
 
-class Gear:
-    def __init__(self,id,level=10):
-        self.id = str(id)
-        self.gear = gear[self.id]
+class _Gear(_APIObject):
+    def __init__(self,url,gear_id,level=10):
+        super().__init__(url)
+        res = self._getFromAPI(f"gear/{gear_id}")
+
+        self.id = str(gear_id)
+        self.gear = res
         self.level = level
 
     @property
     def name(self):
-        return self.name_en
+        return self.nameEN
 
     @property
     def name_en(self):
@@ -52,7 +55,7 @@ class Gear:
         return self.gear["image"]
 
     @property
-    def nationality(self):
+    def nationality_id(self):
         return self.gear["nationality"]
 
     @property

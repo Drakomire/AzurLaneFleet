@@ -1,6 +1,4 @@
 import math
-from os import stat
-from .__init__ import *
 
 class Stats:
     @staticmethod
@@ -34,7 +32,11 @@ class Stats:
             elif (ship.affinity <= 100):
                 affinity_multiplier = 1.06
 
-        value = attr + (ship.level-1)*attrs_growth/1000 + (ship.level-100)*(attrs_growth_extra/1000)
+
+        if ship.level > 100:
+            value = attr + (ship.level-1)*attrs_growth/1000 + (ship.level-100)*(attrs_growth_extra/1000)
+        else:
+            value = attr + (ship.level-1)*attrs_growth/1000
         # Add enhancement values to the stat
         if (stat in ship.ship["enhancement"] and ship.enhancements):
             value += ship.ship["enhancement"][stat]
@@ -43,19 +45,15 @@ class Stats:
 
         #Add retrofit stat boost if retrofit
         if (ship.retrofit):
-            retroStats = ship.getRetrofitStats()
-            if (stat in retroStats):
-                value += retroStats[stat]
+            retro_stats = ship.getRetrofitStats()
+            if (stat in retro_stats):
+                value += retro_stats[stat]
 
         return value
 
 
     @staticmethod
     def getMaxOilCost(ship):
-        '''
-        :param ship: the Ship class for the ship to calculate the oil cost of.
-        :return: ships oil cost at the current limit break. Rewrite is required to factor in level.
-        '''
         index = ship._full_id
         return ship.ship["data"][index]["oil"]
 
@@ -63,7 +61,7 @@ class Stats:
     def getOilCostAtLevel(ship):
       #Submarines use a different oil cost equation than other hull classes
       max_cost = Stats.getMaxOilCost(ship)
-      if (SHIP_LOCATION[ship.hull_id] == "Submarine"):
+      if (ship.team_type == "submarine"):
         return math.floor((max_cost+1)*(100+min(ship.level,99))/200)
       else:
         return math.floor(max_cost*(100+min(ship.level,99))/200)+1
@@ -100,7 +98,7 @@ class Stats:
           "oil" : Stats.getOilCostAtLevel(ship)
         }
 
-        if (SHIP_LOCATION[ship.hull_id] == "Submarine"):
+        if (ship.hull_type == "Submarine"):
             out["oxy"] = Stats.getOxy(ship)
             # out["hunting_range"] = Stats.getHuntingRange(ship)
 
