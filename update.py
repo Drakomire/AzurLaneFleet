@@ -1,5 +1,7 @@
-from perseus import Perseus
+from perseuspy.src.perseus import Perseus
 import json
+
+print(Perseus)
 
 api = Perseus()
 
