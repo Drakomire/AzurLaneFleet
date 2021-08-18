@@ -13,7 +13,7 @@ const html = require('./server/vue_objects.js')
 })();
 
 //Open the ship data json
-ship_json = JSON.parse(fs.readFileSync('./data/ships.json').toString())
+// ship_json = JSON.parse(fs.readFileSync('./data/ships.json').toString())
 
 const app = express();
 app.set('view engine', 'ejs');
