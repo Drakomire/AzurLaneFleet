@@ -1,20 +1,31 @@
-from perseus import Perseus
+from perseuspy.src.perseus import Perseus
 import json
+import time
+
+print(Perseus)
 
 api = Perseus()
+ship_data_path = ["client/data/ship_data.js","./data/ship_data.json"]
+equip_data_path = ["client/data/equip_data.js","./data/gear_data.json"]
+
+last_time = time.time_ns()
+
+debugmode = False
+
 
 out = {}
 for ship in api.getAllShips():
-    print(ship.name)
-    try:
-        if ship.retrofit:
-            thumbnail = ship.skins[-1]["thumbnail"]
-        else:
-            thumbnail = ship.skins[0]["thumbnail"]
-    except Exception as e:
-        continue
-
-    out[str(ship.id) + "0"] = {
+	if (debugmode):
+		print(str((time.time_ns() - last_time) / 1000) + " - " + ship.name)
+		last_time = time.time_ns()
+	try:
+		if ship.retrofit:
+			thumbnail = ship.skins[-1]["thumbnail"]
+		else:
+			thumbnail = ship.skins[0]["thumbnail"]
+	except Exception as e:
+	    continue
+	out[str(ship.id) + "0"] = {
 		"nationality": ship.nationality,
 		"type": ship.hull_id,
 		"base_list": [
@@ -42,35 +53,58 @@ for ship in api.getAllShips():
 		"equip_5": ship.slot_ids[4]
     }
 
-f = open("js/ship_data.js","w",encoding="utf-8")
-f.write(\
-    "var ship_data = " + json.dumps(out,ensure_ascii=False)
-    )
-f.close()
+for path in ship_data_path:
+	f = open(path,"w",encoding="utf-8")
+	if	path.split('.')[-1] == 'js':
+		f.write(
+			"var ship_data = " + json.dumps(out,ensure_ascii=False)
+			)
+	elif path.split('.')[-1] == 'json':
+		f.write(
+			json.dumps(out,ensure_ascii=False)
+			)
+	f.close()
+if(debugmode == False):
+	print(str((time.time_ns() - last_time) / 1000000000) + " - " + " finished loading ship data")
+
+
 
 out = {}
-for equip in api.getAllGear():
-    print(equip.name_en)
-    out[str(equip.id + "0")] = {
-        "nationality": equip.nationality_id,
-        "type": equip.type_id,
-        "attribute_2": None,
-        "rarity": equip.rarity,
-        "tech": 0,
-        "ammo": 10,
-        "ammo_icon": [],
-        "id": int(equip.id)*10,
-        "icon": equip.icon,
-        "ship_type_forbidden": equip.ship_type_forbidden,
-        "jp_name": equip.name_jp,
-        "cn_name": equip.name_cn,
-        # "tw_name": equip.name_tw,
-        "en_name": equip.name_en,
-        "equip_limit": equip.equip_limit
-    }
 
-f = open("js/equip_data.js","w",encoding="utf-8")
-f.write(\
-    "var equip_data = " + json.dumps(out,ensure_ascii=False)
-    )
-f.close()
+last_time = time.time_ns()
+
+for equip in api.getAllGear():
+	if(debugmode):
+		print(str((time.time_ns() - last_time) / 1000) + " - " + equip.name + " - " + str(equip.rarity))
+		last_time = time.time_ns()
+	out[str(equip.id + "0")] = {
+		"nationality": equip.nationality_id,
+		"type": equip.type_id,
+		"attribute_2": None,
+		"rarity": equip.rarity,
+		"tech": 0,
+		"ammo": 10,
+		"ammo_icon": [],
+		"id": int(equip.id)*10,
+		"icon": equip.icon,
+		"ship_type_forbidden": equip.ship_type_forbidden,
+		"jp_name": equip.name_jp,
+		"cn_name": equip.name_cn,
+		# "tw_name": equip.name_tw,
+		"en_name": equip.name_en,
+		"equip_limit": equip.equip_limit
+	}
+for path in equip_data_path:
+	f = open(path,"w",encoding="utf-8")
+	if	path.split('.')[-1] == 'js':
+		f.write(
+			"export default{" + json.dumps(out,ensure_ascii=False) + "}"
+			)
+	elif path.split('.')[-1] == 'json':
+		f.write(
+			json.dumps(out,ensure_ascii=False)
+			)
+	f.close()
+
+if(debugmode == False):
+	print(str((time.time_ns() - last_time) / 1000000000) + " - " + " finished loading equip data data")
