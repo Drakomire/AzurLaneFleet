@@ -1,0 +1,3 @@
+[submodule "percy"]
+	path = perseuspy
+	url = https://github.com/Drakomire/perseus.py.git
