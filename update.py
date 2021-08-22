@@ -53,7 +53,7 @@ f.close()
 out = {}
 for equip in api.getAllGear():
     print(equip.name_en)
-    out[str(equip.id + "0")] = {
+    out[str(equip.id)] = {
         "nationality": equip.nationality_id,
         "type": equip.type_id,
         "attribute_2": None,
@@ -61,7 +61,7 @@ for equip in api.getAllGear():
         "tech": 0,
         "ammo": 10,
         "ammo_icon": [],
-        "id": int(equip.id)*10,
+        "id": int(equip.id),
         "icon": equip.icon,
         "ship_type_forbidden": equip.ship_type_forbidden,
         "jp_name": equip.name_jp,
